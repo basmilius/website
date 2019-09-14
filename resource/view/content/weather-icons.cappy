@@ -1,0 +1,70 @@
+{% extends "@bas-website/boilerplate/skel" %}
+
+{% set nav_item = "projects" %}
+{% set title = "Weather Icons / Projects" %}
+
+{% block content %}
+
+	<div class="page-header">
+		<div class="container">
+			<div class="row no-gutters">
+				<div class="col-12 col-md-6 my-3">
+					<h1 class="text-center text-md-left">Weather Icons</h1>
+				</div>
+				<div class="col-12 col-md-6 my-3 text-center text-lg-right">
+					<latte-ripple as="a" class="btn btn-outline btn-lg btn-light" href="https://github.com/basmilius/weather-icons" rel="noopener" target="_blank">
+						<i class="mdi mdi-github-circle"></i><span>GitHub</span>
+					</latte-ripple>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section id="content">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-lg-4">
+
+					<h3>Simple animated icons</h3>
+					<p>
+						These unique icons are designed in Adobe Illustrator and animated by hand. It's a simple set without any bells and whistles.
+					</p>
+
+					<h3 class="mt-5">Svg, why not?</h3>
+					<p>
+						All icons are available in the SVG vector format to keep the file size low and animations a lot smoother.
+					</p>
+
+					<h3 class="mt-5">Free to use</h3>
+					<p>
+						This set is available under a MIT-license, which means that it's free to use. The only requirement is that you should preserve copyright notices in source files.
+					</p>
+
+				</div>
+				<div class="col-12 col-lg-7 mt-4 mt-lg-0 ml-lg-auto">
+					<div class="row">
+
+						{% for icon in icons %}
+
+							<div class="col-6 col-md-4 col-lg-4">
+								<div class="panel mb-panel-gutter">
+									<div class="panel-rich-media embed-responsive embed-responsive-1by1">
+										<div class="embed-responsive-item d-flex align-items-center justify-content-center">
+											<img src="https://g.s3.bmcdn.nl/assets/weather-icons/all/{{ icon.id }}.svg" alt="{{ icon.name }}" style="width: calc(100% - 24px)" class="img-fluid" />
+										</div>
+									</div>
+									<div class="panel-body d-flex align-items-center border-top px-3 py-2 text-center" style="--outline-color:var(--outline-color-secondary);height:60px;line-height:1.2em">
+										<strong class="w-100"><small>{{ icon.name }}</small></strong>
+									</div>
+								</div>
+							</div>
+
+						{% endfor %}
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}

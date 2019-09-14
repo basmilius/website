@@ -1,0 +1,16 @@
+{
+	"name": "@bas/website",
+	"description": "Personal website.",
+	"version": "1.0.0",
+	"contributors": [
+		{
+			"name": "Bas Milius",
+			"email": "bas@mili.us",
+			"url": "https://www.basmilius.com"
+		}
+	],
+	"namespace": "Bas\\Website",
+	"main": "Bas\\Website\\WebsiteModule",
+	"dependencies": {
+	}
+}

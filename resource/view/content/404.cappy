@@ -1,0 +1,26 @@
+{% extends "@bas-website/boilerplate/skel" %}
+
+{% set title = "404" %}
+
+{% block content %}
+
+	<div class="page-header">
+		<div class="container">
+			<h1>404 &mdash; Page not found</h1>
+		</div>
+	</div>
+
+	<section id="content">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+
+					<h1 id="page-title">Page not found</h1>
+					<p>{{ path }}</p>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}

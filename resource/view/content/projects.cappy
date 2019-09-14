@@ -1,0 +1,114 @@
+{% extends "@bas-website/boilerplate/skel" %}
+
+{% set nav_item = "projects" %}
+{% set title = "Projects" %}
+
+{% block content %}
+
+	<div class="page-header">
+		<div class="container">
+			<h1>Projects</h1>
+		</div>
+	</div>
+
+	<section id="content">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-12 col-lg-4">
+
+					<div class="panel h-100">
+						<div class="panel-header border-bottom-0"><span class="panel-title">Latte UI</span></div>
+						<div class="panel-body pt-0 pb-3">
+							A beautiful UI library created with Vue.js to create clean interfaces.
+						</div>
+						<div class="panel-footer border-top-0">
+							<latte-ripple as="a" href="https://latte-ui.com" rel="noopener" target="_blank" class="btn btn-text btn-primary text-decoration-none"><i class="mdi mdi-book-open-variant"></i><span>Docs</span></latte-ripple>
+							<latte-ripple as="a" href="https://github.com/basmilius/latte-ui" rel="noopener" target="_blank" class="btn btn-text btn-primary text-decoration-none"><i class="mdi mdi-github-circle"></i><span>GitHub</span></latte-ripple>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-12 col-lg-4 mt-panel-gutter mt-lg-0">
+
+					<div class="panel h-100">
+						<div class="panel-header border-bottom-0"><span class="panel-title">Columba</span></div>
+						<div class="panel-body pt-0">
+							A PHP library containing various features to make your life a little bit nicer.
+						</div>
+						<div class="panel-footer border-top-0">
+							<latte-ripple as="a" href="https://github.com/basmilius/Columba" rel="noopener" target="_blank" class="btn btn-text btn-primary text-decoration-none"><i class="mdi mdi-github-circle"></i><span>GitHub</span></latte-ripple>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-12 col-lg-4 mt-panel-gutter mt-lg-0">
+
+					<div class="panel h-100">
+						<div class="panel-header border-bottom-0"><span class="panel-title">Cappuccino</span></div>
+						<div class="panel-body pt-0">
+							A template engine written in PHP that is based on Twig.
+						</div>
+						<div class="panel-footer border-top-0">
+							<latte-ripple as="a" href="https://github.com/basmilius/Cappuccino" rel="noopener" target="_blank" class="btn btn-text btn-primary text-decoration-none"><i class="mdi mdi-github-circle"></i><span>GitHub</span></latte-ripple>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="row mt-panel-gutter">
+				<div class="col-12 col-lg-6">
+
+					<div class="panel h-100">
+						<div class="row align-items-center no-gutters">
+							<div class="col-12 col-lg-6">
+
+								<div class="panel-header border-bottom-0"><span class="panel-title">Weather icons</span></div>
+								<div class="panel-body pt-0 pb-3">
+									Simple animated weather icons.
+								</div>
+								<div class="panel-footer border-top-0">
+									<latte-ripple as="a" href="/projects/weather-icons" class="btn btn-text btn-primary"><span>View</span><i class="mdi mdi-arrow-right"></i></latte-ripple>
+								</div>
+
+							</div>
+							<div class="col-12 col-lg-6 py-3 text-center">
+
+								<img src="https://g.s3.bmcdn.nl/assets/weather-icons/all/clear-day.svg" class="mx-3 my-2" alt="Clear Day" height="48" width="48"/>
+								<img src="https://g.s3.bmcdn.nl/assets/weather-icons/all/partly-cloudy-day.svg" class="mx-3 my-2" alt="Partly Cloudy Day" height="48" width="48"/>
+								<br/>
+								<img src="https://g.s3.bmcdn.nl/assets/weather-icons/all/tornado.svg" class="mx-3 my-2" alt="Tornado" height="48" width="48"/>
+								<img src="https://g.s3.bmcdn.nl/assets/weather-icons/all/rain.svg" class="mx-3 my-2" alt="Rain" height="48" width="48"/>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-12 col-lg-6 mt-panel-gutter mt-lg-0">
+
+					<div class="panel h-100">
+						<div class="row align-items-center no-gutters h-100">
+							<div class="col-12 col-lg-8">
+								<div class="panel-header border-bottom-0"><span class="panel-title">More projects</span></div>
+								<div class="panel-body py-0">
+									This is just a glimpse of what I've made. Visit IdeeMedia to view more projects that I've worked on.
+								</div>
+								<div class="panel-footer border-top-0">
+									<latte-ripple as="a" href="https://ideemedia.nl" rel="noopener" target="_blank" class="btn btn-text btn-primary"><span>IdeeMedia</span><i class="mdi mdi-arrow-right"></i></latte-ripple>
+								</div>
+							</div>
+							<div class="col-12 col-lg-4 text-center">
+								<div class="panel-body">
+									<img src="//cdn.ideemedia.cloud/web-delivery/image/our-branding/ideemedia.svg" alt="IdeeMedia" height="72" width="72"/>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "@bas-website/boilerplate/skel" %}
+
+{% set nav_item = "contact" %}
+{% set title = "Contact" %}
+
+{% block content %}
+
+	<div class="page-header">
+		<div class="container">
+			<h1>Contact</h1>
+		</div>
+	</div>
+
+	<section id="content">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-lg-7 mr-lg-auto">
+
+					<h2>Contact me</h2>
+					<p>
+						You can e-mail me at <a href='ma&#105;&#108;to&#58;h&#37;&#54;5%6Cl%6F&#64;ba&#115;&#46;&#37;64ev'>&#104;ello&#64;bas&#46;d&#101;v</a> or contact me on one of the
+						social network sites listed on this page. Spam will always be reported.
+					</p>
+					<p>
+						Just a quick note… I'm currently not looking for any type of job, because I'm verry happy with my current one. So save us both some time and don't bother sending job opertunities.
+					</p>
+
+					<h3 class="mt-5">Found a bug?</h3>
+					<p>
+						All my open source projects have their own GitHub Repository where you can create issues. Explain what happend when the bug ocurred and I'll see what I can do.
+					</p>
+
+					<h3 class="mt-5">Looking for a website or app?</h3>
+					<p>
+						I personally don't sell websites or apps anymore, but you can visit the company that I work for and see what's possible there.
+					</p>
+					<latte-ripple as="a" href="https://ideemedia.nl" rel="noopener" target="_blank" class="btn btn-outline btn-primary text-decoration-none"><span>IdeeMedia</span><i class="mdi mdi-arrow-right"></i></latte-ripple>
+
+				</div>
+				<div class="col-12 col-lg-4 mt-5 mt-lg-0">
+
+					{{ include("@bas-website/mixin/socials") }}
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}

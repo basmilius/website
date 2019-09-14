@@ -1,0 +1,23 @@
+<div class="app-bar app-bar-main">
+	<div class="container px-0">
+		<div class="app-bar-row justify-content-center justify-content-lg-start">
+			<a class="d-flex align-items-center" style="text-decoration: none" href="/">
+				<i class="mdi branding" style="font-size: 36px"></i>
+				<span class="app-bar-title">Bas</span>
+			</a>
+
+			<nav class="nav nav-tabs ml-auto d-none d-lg-flex">
+				<a href="/" class="nav-link {% if nav_item == "about" %}is-active{% endif %}"><span>About</span></a>
+				<a href="/projects" class="nav-link {% if nav_item == "projects" %}is-active{% endif %}"><span>Projects</span></a>
+				<a href="/contact" class="nav-link {% if nav_item == "contact" %}is-active{% endif %}"><span>Contact</span></a>
+			</nav>
+		</div>
+		<div class="app-bar-row app-bar-auto d-flex d-lg-none">
+			<nav class="nav nav-tabs tabs-fill flex-grow-1">
+				<a href="/" class="nav-link {% if nav_item == "about" %}is-active{% endif %}"><span>About</span></a>
+				<a href="/projects" class="nav-link {% if nav_item == "projects" %}is-active{% endif %}"><span>Projects</span></a>
+				<a href="/contact" class="nav-link {% if nav_item == "contact" %}is-active{% endif %}"><span>Contact</span></a>
+			</nav>
+		</div>
+	</div>
+</div>

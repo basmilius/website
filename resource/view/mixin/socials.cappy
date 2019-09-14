@@ -1,0 +1,16 @@
+<div class="panel">
+	<div class="panel-header border-bottom-0">
+		<img src="https://avatars3.githubusercontent.com/u/978257?s=60&v=4" alt="Photo is me" class="avatar avatar-30px mr-4" />
+		<h2 class="panel-title m-0">Socials</h2>
+	</div>
+	<div class="list pt-0">
+
+		<latte-ripple as="a" href="//github.com/basmilius" target="_blank" rel="noopener" class="list-item text-decoration-none"><i class="mdi mdi-github-circle list-item-prefix"></i><div class="list-item-caption"><strong>GitHub</strong></div></latte-ripple>
+		<latte-ripple as="a" href="//linkedin.com/in/basmilius" target="_blank" rel="noopener" class="list-item text-decoration-none"><i class="mdi mdi-linkedin-box list-item-prefix"></i><div class="list-item-caption"><strong>LinkedIn</strong></div></latte-ripple>
+		<latte-ripple as="a" href="//twitter.com/basmilius" target="_blank" rel="noopener" class="list-item text-decoration-none"><i class="mdi mdi-twitter list-item-prefix"></i><div class="list-item-caption"><strong>Twitter</strong></div></latte-ripple>
+		<latte-ripple as="a" href="//instagram.com/basmilius" target="_blank" rel="noopener" class="list-item text-decoration-none"><i class="mdi mdi-instagram list-item-prefix"></i><div class="list-item-caption"><strong>Instagram</strong></div></latte-ripple>
+		<latte-ripple as="a" href="//fb.me/basmilius" target="_blank" rel="noopener" class="list-item text-decoration-none"><i class="mdi mdi-facebook-box list-item-prefix"></i><div class="list-item-caption"><strong>Facebook</strong></div></latte-ripple>
+		<latte-ripple as="a" href="//youtube.com/channel/UCW4No17OZimktwobPEOsC8g" target="_blank" rel="noopener" class="list-item text-decoration-none"><i class="mdi mdi-youtube list-item-prefix"></i><div class="list-item-caption"><strong>YouTube</strong></div></latte-ripple>
+
+	</div>
+</div>

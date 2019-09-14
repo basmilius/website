@@ -1,0 +1,128 @@
+<latte-tab-container class="panel">
+	<div class="panel-header border-bottom-0"><h2 class="panel-title m-0">Skills &amp; Experience</h2></div>
+	<latte-tab-bar class="mt-n3"></latte-tab-bar>
+
+	<latte-tab class="list" label="Languages">
+
+		<div class="list-item">
+			<i class="mdi mdi-language-php list-item-prefix"></i>
+			<div class="list-item-caption">
+				<strong>PHP</strong>
+			</div>
+			<div class="list-item-suffix">
+				<img class="emoji" src="{{ emojiUrl("2764") }}" alt="Heart"/>
+				<img class="emoji" src="{{ emojiUrl("1f4aa-1f3fc") }}" alt="Strong"/>
+			</div>
+		</div>
+
+		<div class="list-item">
+			<i class="mdi mdi-language-html5 list-item-prefix"></i>
+			<div class="list-item-caption">
+				<strong>HTML</strong>
+			</div>
+			<img class="emoji list-item-suffix" src="{{ emojiUrl("1f4aa-1f3fc") }}" alt="Strong"/>
+		</div>
+
+		<div class="list-item">
+			<i class="mdi mdi-language-css3 list-item-prefix"></i>
+			<div class="list-item-caption">
+				<strong>CSS / Sass / SCSS</strong>
+			</div>
+			<img class="emoji list-item-suffix" src="{{ emojiUrl("1f4aa-1f3fc") }}" alt="Strong"/>
+		</div>
+
+		<div class="list-item">
+			<i class="mdi mdi-language-javascript list-item-prefix"></i>
+			<div class="list-item-caption">
+				<strong>JavaScript</strong>
+			</div>
+			<img class="emoji list-item-suffix" src="{{ emojiUrl("1f4aa-1f3fc") }}" alt="Strong"/>
+		</div>
+
+		<div class="list-item">
+			<i class="mdi mdi-language-typescript list-item-prefix"></i>
+			<div class="list-item-caption">
+				<strong>TypeScript</strong>
+			</div>
+		</div>
+
+		<div class="list-item">
+			<i class="mdi mdi-language-java list-item-prefix"></i>
+			<div class="list-item-caption">
+				<strong>Java</strong>
+			</div>
+		</div>
+
+		<div class="list-item">
+			<i class="mdi mdi-language-swift list-item-prefix"></i>
+			<div class="list-item-caption">
+				<strong>Swift</strong>
+			</div>
+		</div>
+
+		<div class="list-item">
+			<i class="mdi mdi-language-csharp list-item-prefix"></i>
+			<div class="list-item-caption">
+				<strong>C# / .NET</strong>
+			</div>
+		</div>
+
+	</latte-tab>
+
+	<latte-tab class="list" label="Other">
+
+		<div class="list-item">
+			<i class="mdi mdi-vuejs list-item-prefix"></i>
+			<div class="list-item-caption">
+				<strong>Vue.js</strong>
+			</div>
+			<div class="list-item-suffix">
+				<img class="emoji" src="{{ emojiUrl("2764") }}" alt="Heart"/>
+				<img class="emoji" src="{{ emojiUrl("1f4aa-1f3fc") }}" alt="Strong"/>
+			</div>
+		</div>
+
+		<div class="list-item">
+			<i class="mdi mdi-git list-item-prefix"></i>
+			<div class="list-item-caption">
+				<strong>Git</strong>
+			</div>
+			<div class="list-item-suffix">
+				<img class="emoji" src="{{ emojiUrl("2764") }}" alt="Heart"/>
+				<img class="emoji" src="{{ emojiUrl("1f4aa-1f3fc") }}" alt="Strong"/>
+			</div>
+		</div>
+
+		<div class="list-item">
+			<i class="mdi mdi-wordpress list-item-prefix"></i>
+			<div class="list-item-caption">
+				<strong>WordPress</strong>
+			</div>
+			<img class="emoji list-item-suffix" src="{{ emojiUrl("1f4aa-1f3fc") }}" alt="Strong"/>
+		</div>
+
+		<div class="list-item">
+			<i class="mdi mdi-nodejs list-item-prefix"></i>
+			<div class="list-item-caption">
+				<strong>Node.js</strong>
+			</div>
+			<img class="emoji list-item-suffix" src="{{ emojiUrl("1f4aa-1f3fc") }}" alt="Strong"/>
+		</div>
+
+		<div class="list-item">
+			<i class="mdi mdi-angular list-item-prefix"></i>
+			<div class="list-item-caption">
+				<strong>Angular</strong>
+			</div>
+		</div>
+
+		<div class="list-item">
+			<i class="mdi mdi-react list-item-prefix"></i>
+			<div class="list-item-caption">
+				<strong>React</strong>
+			</div>
+		</div>
+
+	</latte-tab>
+
+</latte-tab-container>

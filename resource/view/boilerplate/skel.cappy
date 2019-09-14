@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="keywords" content="bas milius,basmilius,milius,developer,website,app,latte-ui,columba,cappuccino,latte"/>
+	<meta name="description" content="A 23-year old developer from Groenlo, The Netherlands."/>
+	<link rel="shortcut icon" href="{{ "/module/@bas/website/resource/image/logo-32.png"|appUrl }}" type="image/png"/>
+	<meta name="robots" content="index,follow"/>
+	<meta name="revisit-after" content="1 day"/>
+	<meta name="author" content="Bas Milius"/>
+	<meta name="theme-color" content="#377DFF"/>
+
+	<title>{% if title is defined %}{{ title|raw }} &mdash; {% endif %}Bas</title>
+
+	<link defer rel="stylesheet" href="//unpkg.com/@bybas/latte-ui@1.8.0/dist/latte-ui.css"/>
+	<style type="text/css">
+		:root
+		{
+			--app-bar-height: 84px;
+			--branding-logo: url({{ "/module/@bas/website/resource/image/logo.svg"|appUrl }});
+			--color-primary: 55, 125, 255;
+		}
+
+		.page-header
+		{
+			position: relative;
+			display: flex;
+			min-height: 240px;
+			padding: 0 24px;
+			align-items: center;
+			background: rgb(var(--color-primary)) url(/module/@bas/website/resource/image/map.png) no-repeat top 20% center;
+		}
+
+		.page-header .row
+		{
+			align-items: center;
+		}
+
+		.page-header h1
+		{
+			margin: 0;
+			color: white;
+			font-weight: 500;
+		}
+
+		.app-bar-main .nav-tabs
+		{
+			--tabs-accent: var(--color-primary);
+		}
+
+		.app-bar-main .nav-tabs .nav-link
+		{
+			padding: 9px 3px;
+		}
+
+		.app-bar-main .app-bar-row.d-lg-none .nav-tabs
+		{
+			height: 54px;
+		}
+
+		section#content
+		{
+			padding: 90px 24px 0;
+		}
+
+		@media (max-width: 991px)
+		{
+			section#content
+			{
+				padding: 30px 24px 0;
+			}
+		}
+
+		h2
+		{
+			font-size: 1.5rem;
+		}
+
+		h3
+		{
+			font-size: 1.25rem;
+		}
+
+		p
+		{
+			line-height: 1.75;
+		}
+	</style>
+</head>
+<body>
+
+	<main id="app">
+
+		{{ include("@bas-website/boilerplate/header") }}
+
+		{% block content %}{% endblock %}
+
+		{{ include("@bas-website/boilerplate/footer") }}
+
+	</main>
+
+	<link async rel="stylesheet" href="/dist/vendors.css"/>
+	<link async rel="stylesheet" href="https://font.mili.us/css?family=proxima-nova"/>
+
+	<script defer type="text/javascript" src="/dist/vendors.js"></script>
+	<script defer type="text/javascript" src="https://unpkg.com/@bybas/latte-ui@1.8.0/dist/latte-ui.js"></script>
+	<script defer type="text/javascript">
+		window.addEventListener("DOMContentLoaded", function ()
+		{
+			Vue.use(LatteUI, {
+				emojiEnabled: false
+			});
+			new Vue({el: "main#app"});
+		});
+	</script>
+
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org/",
+			"@type": "Person",
+			"name": "Bas Milius",
+			"url": "https://bas.dev",
+			"image": "https://avatars3.githubusercontent.com/u/978257",
+			"sameAs": [
+				"https://www.facebook.com/basmilius",
+				"https://twitter.com/basmilius",
+				"https://www.instagram.com/basmilius/",
+				"https://www.linkedin.com/in/basmilius/",
+				"https://github.com/basmilius",
+				"https://bas.dev"
+			],
+			"jobTitle": "Developer"
+		}
+	</script>
+
+</body>
+</html>
