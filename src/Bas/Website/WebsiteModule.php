@@ -37,9 +37,6 @@ final class WebsiteModule extends AbstractModule
 	 */
 	public final function onLoad(): void
 	{
-		if (Environment::isAdminOrAPI() || $this->getApplication()->getRequest()->pathName() === '/manifest.json')
-			return;
-
 		$this->getCappuccino()->addPath($this->getDirectory('resource/view'), 'bas-website');
 		$this->getRouter()->all('/', RootRouter::class);
 	}
