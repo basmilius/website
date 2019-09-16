@@ -14,7 +14,7 @@
 
 	<title>{% if title is defined %}{{ title|raw }} &mdash; {% endif %}Bas</title>
 
-	<link defer rel="stylesheet" href="//unpkg.com/@bybas/latte-ui@1.8.0/dist/latte-ui.css"/>
+	<link defer rel="stylesheet" href="//unpkg.com/@bybas/latte-ui@1.8.2/dist/latte-ui.css"/>
 	<style type="text/css">
 		:root
 		{
@@ -30,7 +30,7 @@
 			min-height: 240px;
 			padding: 0 24px;
 			align-items: center;
-			background: rgb(var(--color-primary)) url(/module/@bas/website/resource/image/map.png) no-repeat top 20% center;
+			background: rgb(var(--color-primary));
 		}
 
 		.page-header .row
@@ -42,7 +42,6 @@
 		{
 			margin: 0;
 			color: white;
-			font-weight: 500;
 		}
 
 		.app-bar-main .nav-tabs
@@ -87,25 +86,34 @@
 		{
 			line-height: 1.75;
 		}
+
+		h1::after
+		{
+			content: ".";
+			color: rgb(75, 228, 255);
+		}
+
+		.app-bar-title::after,
+		h2::after,
+		h3::after
+		{
+			content: ".";
+			color: rgb(var(--color-primary));
+		}
 	</style>
 </head>
 <body>
-
 	<main id="app">
-
 		{{ include("@bas-website/boilerplate/header") }}
-
 		{% block content %}{% endblock %}
-
 		{{ include("@bas-website/boilerplate/footer") }}
-
 	</main>
 
 	<link async rel="stylesheet" href="/dist/vendors.css"/>
-	<link async rel="stylesheet" href="https://font.mili.us/css?family=proxima-nova"/>
+	<link async rel="stylesheet" href="https://font.mili.us/css?family=proxima-nova:400,500,600,700"/>
 
 	<script defer type="text/javascript" src="/dist/vendors.js"></script>
-	<script defer type="text/javascript" src="https://unpkg.com/@bybas/latte-ui@1.8.0/dist/latte-ui.js"></script>
+	<script defer type="text/javascript" src="https://unpkg.com/@bybas/latte-ui@1.8.2/dist/latte-ui.js"></script>
 	<script defer type="text/javascript">
 		window.addEventListener("DOMContentLoaded", function ()
 		{
