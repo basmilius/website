@@ -53,7 +53,7 @@
 											<img src="https://g.s3.bmcdn.nl/assets/weather-icons/all/{{ icon.id }}.svg" alt="{{ icon.name }}" style="width: calc(100% - 24px)" class="img-fluid" />
 										</div>
 									</div>
-									<div class="panel-body d-flex align-items-center border-top px-3 py-2 text-center" style="--outline-color:var(--outline-color-secondary);height:60px;line-height:1.2em">
+									<div class="panel-body d-flex align-items-center border-top px-3 py-2 text-center" style="height:60px;line-height:1.2em">
 										<strong class="w-100"><small>{{ icon.name }}</small></strong>
 									</div>
 								</div>
