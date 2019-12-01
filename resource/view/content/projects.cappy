@@ -74,11 +74,11 @@
 							</div>
 							<div class="col-12 col-lg-6 py-3 text-center">
 
-								<img src="https://g.s3.bmcdn.nl/assets/weather-icons/all/clear-day.svg" class="mx-3 my-2" alt="Clear Day" height="48" width="48"/>
-								<img src="https://g.s3.bmcdn.nl/assets/weather-icons/all/partly-cloudy-day.svg" class="mx-3 my-2" alt="Partly Cloudy Day" height="48" width="48"/>
+								<img src="https://g.s3.bmcdn.nl/assets/weather-icons/all/clear-day.svg" class="d-inline-block mx-3 my-2" alt="Clear Day" height="48" width="48"/>
+								<img src="https://g.s3.bmcdn.nl/assets/weather-icons/all/partly-cloudy-day.svg" class="d-inline-block mx-3 my-2" alt="Partly Cloudy Day" height="48" width="48"/>
 								<br/>
-								<img src="https://g.s3.bmcdn.nl/assets/weather-icons/all/tornado.svg" class="mx-3 my-2" alt="Tornado" height="48" width="48"/>
-								<img src="https://g.s3.bmcdn.nl/assets/weather-icons/all/rain.svg" class="mx-3 my-2" alt="Rain" height="48" width="48"/>
+								<img src="https://g.s3.bmcdn.nl/assets/weather-icons/all/tornado.svg" class="d-inline-block mx-3 my-2" alt="Tornado" height="48" width="48"/>
+								<img src="https://g.s3.bmcdn.nl/assets/weather-icons/all/rain.svg" class="d-inline-block mx-3 my-2" alt="Rain" height="48" width="48"/>
 
 							</div>
 						</div>
