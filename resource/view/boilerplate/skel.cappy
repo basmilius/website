@@ -15,7 +15,7 @@
 	<title>{% if title is defined %}{{ title|raw }} &mdash; {% endif %}Bas</title>
 
 	<link rel="dns-prefetch" href="font.mili.us"/>
-	<link rel="stylesheet" href="//unpkg.com/@bybas/latte-ui@1.9.0-beta.14/dist/latte-ui.css"/>
+	<link rel="stylesheet" href="https://unpkg.com/@bybas/latte-ui@1.9.0-beta.14/dist/latte-ui.css"/>
 	<style type="text/css">
 		:root
 		{
