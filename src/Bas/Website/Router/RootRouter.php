@@ -13,6 +13,7 @@ declare(strict_types=1);
 namespace Bas\Website\Router;
 
 use Columba\Http\ResponseCode;
+use Columba\Router\Response\HtmlResponse;
 use Columba\Router\Route\AbstractRoute;
 use Columba\Router\Context;
 use Columba\Router\RouterException;
@@ -153,11 +154,13 @@ final class RootRouter extends AbstractRouter
 		if (StringUtil::startsWith($_SERVER['REQUEST_URI'] ?? '', '/robots.txt'))
 			return false;
 
-		$context->setResponse($context->getResponseImplementation(), $this->render('@bas-website/content/404', [
-			'path' => $_SERVER['REQUEST_URI']
-		]));
+		if (StringUtil::startsWith($_SERVER['REQUEST_URI'] ?? '', '/resource'))
+			return false;
 
 		$context->setResponseCode(ResponseCode::NOT_FOUND);
+		$context->setResponse(new HtmlResponse(), $this->render('@bas-website/content/404', [
+			'path' => $_SERVER['REQUEST_URI']
+		]));
 
 		return true;
 	}
