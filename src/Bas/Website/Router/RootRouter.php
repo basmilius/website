@@ -13,10 +13,9 @@ declare(strict_types=1);
 namespace Bas\Website\Router;
 
 use Columba\Http\ResponseCode;
+use Columba\Router\Context;
 use Columba\Router\Response\HtmlResponse;
 use Columba\Router\Route\AbstractRoute;
-use Columba\Router\Context;
-use Columba\Router\RouterException;
 use Columba\Util\StringUtil;
 use Latte\Core\Helper\Environment;
 use Latte\Core\Router\AbstractRouter;
@@ -34,7 +33,6 @@ final class RootRouter extends AbstractRouter
 	/**
 	 * RootRouter constructor.
 	 *
-	 * @throws RouterException
 	 * @author Bas Milius <bas@mili.us>
 	 * @since 1.0.0
 	 */
@@ -54,12 +52,10 @@ final class RootRouter extends AbstractRouter
 	 * Invoked when GET /about is requested.
 	 *
 	 * @return string
-	 * @throws RouterException
 	 * @author Bas Milius <bas@mili.us>
 	 * @since 1.0.0
-	 * @internal
 	 */
-	public final function onGetAbout(): string
+	protected final function onGetAbout(): string
 	{
 		return $this->render('@bas-website/content/about');
 	}
@@ -68,12 +64,10 @@ final class RootRouter extends AbstractRouter
 	 * Invoked when GET /projects is requested.
 	 *
 	 * @return string
-	 * @throws RouterException
 	 * @author Bas Milius <bas@mili.us>
 	 * @since 1.0.0
-	 * @internal
 	 */
-	public final function onGetProjects(): string
+	protected final function onGetProjects(): string
 	{
 		return $this->render('@bas-website/content/projects');
 	}
@@ -82,12 +76,10 @@ final class RootRouter extends AbstractRouter
 	 * Invoked when GET /projects/weather-icons is requested.
 	 *
 	 * @return string
-	 * @throws RouterException
 	 * @author Bas Milius <bas@mili.us>
 	 * @since 1.0.0
-	 * @internal
 	 */
-	public final function onGetProjectsWeatherIcons(): string
+	protected final function onGetProjectsWeatherIcons(): string
 	{
 		return $this->render('@bas-website/content/weather-icons', [
 			'icons' => [
@@ -120,12 +112,10 @@ final class RootRouter extends AbstractRouter
 	 * Invoked when GET /contact is requested.
 	 *
 	 * @return string
-	 * @throws RouterException
 	 * @author Bas Milius <bas@mili.us>
 	 * @since 1.0.0
-	 * @internal
 	 */
-	public final function onGetContact(): string
+	protected final function onGetContact(): string
 	{
 		return $this->render('@bas-website/content/contact');
 	}

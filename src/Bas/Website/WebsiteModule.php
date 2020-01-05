@@ -13,8 +13,6 @@ declare(strict_types=1);
 namespace Bas\Website;
 
 use Bas\Website\Router\RootRouter;
-use Cappuccino\Error\LoaderError;
-use Columba\Router\RouterException;
 use Latte\Core\Helper\Environment;
 use Latte\Core\Module\AbstractModule;
 
@@ -30,8 +28,6 @@ final class WebsiteModule extends AbstractModule
 
 	/**
 	 * {@inheritdoc}
-	 * @throws LoaderError
-	 * @throws RouterException
 	 * @author Bas Milius <bas@mili.us>
 	 * @since 1.0.0
 	 */
