@@ -15,7 +15,7 @@
 	<title>{% if title is defined %}{{ title|raw }} &mdash; {% endif %}Bas</title>
 
 	<link rel="dns-prefetch" href="font.mili.us"/>
-	<link rel="stylesheet" href="https://unpkg.com/@bybas/latte-ui@1.9.0-beta.14/dist/latte-ui.css"/>
+	<link rel="stylesheet" href="https://unpkg.com/@bybas/latte-ui@1.9.0-beta.20/dist/latte-ui.css"/>
 	<style type="text/css">
 		:root
 		{
@@ -114,7 +114,7 @@
 	<link rel="stylesheet" href="https://font.mili.us/css?family=proxima-nova:400,500,600,700"/>
 
 	<script defer type="text/javascript" src="/dist/vendors.js"></script>
-	<script defer type="text/javascript" src="https://unpkg.com/@bybas/latte-ui@1.9.0-beta.14/dist/latte-ui.js"></script>
+	<script defer type="text/javascript" src="https://unpkg.com/@bybas/latte-ui@1.9.0-beta.20/dist/latte-ui.js"></script>
 	<script defer type="text/javascript">
 		window.addEventListener("DOMContentLoaded", function ()
 		{

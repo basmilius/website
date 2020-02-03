@@ -18,11 +18,11 @@
 				<div class="col-12 col-lg-4">
 
 					<div class="panel h-100">
-						<div class="panel-header border-bottom-0"><span class="panel-title">Latte UI</span></div>
-						<div class="panel-body pt-0 pb-3">
+						<div class="panel-header"><span class="panel-title">Latte UI</span></div>
+						<div class="panel-body border-0 pt-0 pb-3">
 							A beautiful UI library created with Vue.js to create clean interfaces.
 						</div>
-						<div class="panel-footer border-top-0">
+						<div class="panel-footer border-0">
 							<latte-ripple as="a" href="https://latte-ui.com" rel="noopener" target="_blank" class="btn btn-text btn-primary text-decoration-none"><i class="mdi mdi-book-open-variant"></i><span>Docs</span></latte-ripple>
 							<latte-ripple as="a" href="https://github.com/basmilius/latte-ui" rel="noopener" target="_blank" class="btn btn-text btn-primary text-decoration-none"><i class="mdi mdi-github-circle"></i><span>GitHub</span></latte-ripple>
 						</div>
@@ -32,11 +32,11 @@
 				<div class="col-12 col-lg-4 mt-panel-gutter mt-lg-0">
 
 					<div class="panel h-100">
-						<div class="panel-header border-bottom-0"><span class="panel-title">Columba</span></div>
-						<div class="panel-body pt-0">
+						<div class="panel-header"><span class="panel-title">Columba</span></div>
+						<div class="panel-body border-0 pt-0">
 							A PHP library containing various features to make your life a little bit nicer.
 						</div>
-						<div class="panel-footer border-top-0">
+						<div class="panel-footer border-0">
 							<latte-ripple as="a" href="https://github.com/basmilius/Columba" rel="noopener" target="_blank" class="btn btn-text btn-primary text-decoration-none"><i class="mdi mdi-github-circle"></i><span>GitHub</span></latte-ripple>
 						</div>
 					</div>
@@ -45,11 +45,11 @@
 				<div class="col-12 col-lg-4 mt-panel-gutter mt-lg-0">
 
 					<div class="panel h-100">
-						<div class="panel-header border-bottom-0"><span class="panel-title">Cappuccino</span></div>
-						<div class="panel-body pt-0">
+						<div class="panel-header"><span class="panel-title">Cappuccino</span></div>
+						<div class="panel-body border-0 pt-0">
 							A template engine written in PHP that is based on Twig.
 						</div>
-						<div class="panel-footer border-top-0">
+						<div class="panel-footer border-0">
 							<latte-ripple as="a" href="https://github.com/basmilius/Cappuccino" rel="noopener" target="_blank" class="btn btn-text btn-primary text-decoration-none"><i class="mdi mdi-github-circle"></i><span>GitHub</span></latte-ripple>
 						</div>
 					</div>
@@ -63,11 +63,11 @@
 						<div class="row align-items-center no-gutters">
 							<div class="col-12 col-lg-6">
 
-								<div class="panel-header border-bottom-0"><span class="panel-title">Weather icons</span></div>
-								<div class="panel-body pt-0 pb-3">
+								<div class="panel-header"><span class="panel-title">Weather icons</span></div>
+								<div class="panel-body border-0 pt-0 pb-3">
 									Simple animated weather icons.
 								</div>
-								<div class="panel-footer border-top-0">
+								<div class="panel-footer border-0">
 									<latte-ripple as="a" href="/projects/weather-icons" class="btn btn-text btn-primary"><span>View</span><i class="mdi mdi-arrow-right"></i></latte-ripple>
 								</div>
 
@@ -90,11 +90,11 @@
 					<div class="panel h-100">
 						<div class="row align-items-center no-gutters h-100">
 							<div class="col-12 col-lg-8">
-								<div class="panel-header border-bottom-0"><span class="panel-title">More projects</span></div>
-								<div class="panel-body py-0">
+								<div class="panel-header"><span class="panel-title">More projects</span></div>
+								<div class="panel-body border-0 py-0">
 									This is just a glimpse of what I've made. Visit IdeeMedia to view more projects that I've worked on.
 								</div>
-								<div class="panel-footer border-top-0">
+								<div class="panel-footer border-0">
 									<latte-ripple as="a" href="https://ideemedia.nl" rel="noopener" target="_blank" class="btn btn-text btn-primary"><span>IdeeMedia</span><i class="mdi mdi-arrow-right"></i></latte-ripple>
 								</div>
 							</div>
