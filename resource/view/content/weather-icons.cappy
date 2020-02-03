@@ -12,7 +12,7 @@
 					<h1 class="text-center text-md-left">Weather Icons</h1>
 				</div>
 				<div class="col-12 col-md-6 my-3 text-center text-lg-right">
-					<latte-ripple as="a" class="btn btn-outline btn-lg btn-light" href="https://github.com/basmilius/weather-icons" rel="noopener" target="_blank">
+					<latte-ripple as="a" class="btn btn-outline btn-light is-large" href="https://github.com/basmilius/weather-icons" rel="noopener" target="_blank">
 						<i class="mdi mdi-github-circle"></i><span>GitHub</span>
 					</latte-ripple>
 				</div>
