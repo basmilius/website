@@ -32,10 +32,10 @@
 					</p>
 					<div class="row no-gutters">
 						<div class="col-6 d-flex">
-							<div class="embed-responsive embed-responsive-1by1 m-1 radius-default" style="background: url(https://piston.mili.us/image/remote?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzEifQ.eyJvdXQiOiJ3ZWJwLGpwZWciLCJoZWlnaHQiOjMwOSwid2lkdGgiOjMwOSwidXJsIjoiaHR0cHM6Ly9iYXMuZGV2L21vZHVsZS9AYmFzL3dlYnNpdGUvcmVzb3VyY2UvaW1hZ2UvcGhvdG9zLzEuanBnIn0.YWE2YThmNjIzNzJjMjViZGIyYzg2MDZkNmVhMzA4NjBjZTUxYjBhZA) no-repeat center center / cover"></div>
+							<div class="embed-responsive embed-responsive-1by1 m-1 radius-default" style="background: url({{ "/module/@bas/website/resource/image/photos/1.jpg" | appUrl }}) no-repeat center center / cover"></div>
 						</div>
 						<div class="col-6 d-flex">
-							<div class="embed-responsive embed-responsive-1by1 m-1 radius-default" style="background: url(https://piston.mili.us/image/remote?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzEifQ.eyJvdXQiOiJ3ZWJwLGpwZWciLCJoZWlnaHQiOjMwOSwid2lkdGgiOjMwOSwidXJsIjoiaHR0cHM6Ly9iYXMuZGV2L21vZHVsZS9AYmFzL3dlYnNpdGUvcmVzb3VyY2UvaW1hZ2UvcGhvdG9zLzIuanBnIn0.MzkwZDk3ZmNjOTg4YTE4NDMyMGFkZDNlYjg5MDFiODBmNzE3NjNhNA) no-repeat center center / cover"></div>
+							<div class="embed-responsive embed-responsive-1by1 m-1 radius-default" style="background: url({{ "/module/@bas/website/resource/image/photos/2.jpg" | appUrl }}) no-repeat center center / cover"></div>
 						</div>
 					</div>
 

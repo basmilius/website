@@ -1,0 +1,104 @@
+/*!
+ * Copyright (c) 2017 - 2020 - Bas Milius <bas@mili.us>
+ *
+ * This file is part of the Latte Framework package.
+ *
+ * For the full copyright and license information, please view the
+ * LICENSE file that was distributed with this source code.
+ */
+
+:root
+{
+	--appBarHeight: 84px;
+	--brandingLogo: url(../image/logo.svg);
+	--mainBackground: 245, 249, 255;
+	--colorPrimary: 55, 125, 255;
+}
+
+.page-header
+{
+	position: relative;
+	display: flex;
+	min-height: 240px;
+	padding: 0 24px;
+	align-items: center;
+	background: rgba(var(--colorPrimary), 1);
+}
+
+.page-header .row
+{
+	align-items: center;
+}
+
+.page-header h1
+{
+	margin: 0;
+	color: white;
+}
+
+.app-bar-main .nav-tabs
+{
+	--tabsAccent: var(--colorPrimary);
+}
+
+.app-bar-main .app-bar-title
+{
+	font-family: gilroy, sans-serif;
+	font-weight: 400;
+}
+
+section#content
+{
+	padding: 90px 24px 0;
+}
+
+@media (max-width: 991px)
+{
+	section#content
+	{
+		padding: 30px 24px 0;
+	}
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	font-family: gilroy, sans-serif;
+	font-weight: 700;
+}
+
+h2
+{
+	font-size: 1.5rem;
+}
+
+h3
+{
+	font-size: 1.25rem;
+}
+
+p
+{
+	line-height: 1.75;
+}
+
+h1::after
+{
+	content: ".";
+	color: rgb(75, 228, 255);
+}
+
+.app-bar-title,
+h2,
+h3
+{
+	&::after
+	{
+		content: ".";
+		color: rgba(var(--colorPrimary), 1);
+	}
+
+	&.questionmark::after
+	{
+		content: "?";
+	}
+}

@@ -15,93 +15,10 @@
 	<title>{% if title is defined %}{{ title|raw }} &mdash; {% endif %}Bas</title>
 
 	<link rel="dns-prefetch" href="font.mili.us"/>
-	<link rel="stylesheet" href="https://unpkg.com/@bybas/latte-ui@1.9.0-beta.20/dist/latte-ui.css"/>
-	<style type="text/css">
-		:root
-		{
-			--appBarHeight: 84px;
-			--brandingLogo: url({{ "/module/@bas/website/resource/image/logo.svg"|appUrl }});
-			--colorPrimary: 55, 125, 255;
-		}
 
-		.page-header
-		{
-			position: relative;
-			display: flex;
-			min-height: 240px;
-			padding: 0 24px;
-			align-items: center;
-			background: rgb(var(--colorPrimary));
-		}
-
-		.page-header .row
-		{
-			align-items: center;
-		}
-
-		.page-header h1
-		{
-			margin: 0;
-			color: white;
-		}
-
-		.app-bar-main .nav-tabs
-		{
-			--tabsAccent: var(--colorPrimary);
-		}
-
-		.app-bar-main .nav-tabs .nav-link
-		{
-			padding: 9px 3px;
-		}
-
-		.app-bar-main .app-bar-row.d-lg-none .nav-tabs
-		{
-			height: 54px;
-		}
-
-		section#content
-		{
-			padding: 90px 24px 0;
-		}
-
-		@media (max-width: 991px)
-		{
-			section#content
-			{
-				padding: 30px 24px 0;
-			}
-		}
-
-		h2
-		{
-			font-size: 1.5rem;
-		}
-
-		h3
-		{
-			font-size: 1.25rem;
-		}
-
-		p
-		{
-			line-height: 1.75;
-		}
-
-		h1::after
-		{
-			content: ".";
-			color: rgb(75, 228, 255);
-		}
-
-		.app-bar-title::after,
-		h2::after,
-		h3::after
-		{
-			content: ".";
-			color: rgb(var(--colorPrimary));
-		}
-	</style>
+	<link rel="stylesheet" href="https://font.mili.us/css?family=gilroy:400,700|proxima-nova:400,500,600,700"/>
+	<link rel="stylesheet" href="{{ "/module/@bas/website/dist/vendors.css" | appUrl }}"/>
+	<link rel="stylesheet" href="{{ "/module/@bas/website/dist/website.css" | appUrl }}"/>
 </head>
 <body>
 	<main id="app">
@@ -110,20 +27,8 @@
 		{{ include("@bas-website/boilerplate/footer") }}
 	</main>
 
-	<link rel="stylesheet" href="/dist/vendors.css"/>
-	<link rel="stylesheet" href="https://font.mili.us/css?family=proxima-nova:400,500,600,700"/>
-
-	<script defer type="text/javascript" src="/dist/vendors.js"></script>
-	<script defer type="text/javascript" src="https://unpkg.com/@bybas/latte-ui@1.9.0-beta.20/dist/latte-ui.js"></script>
-	<script defer type="text/javascript">
-		window.addEventListener("DOMContentLoaded", function ()
-		{
-			Vue.use(LatteUI, {
-				emojiEnabled: false
-			});
-			new Vue({el: "main#app"});
-		});
-	</script>
+	<script defer type="text/javascript" src="{{ "/module/@bas/website/dist/vendors.js" | appUrl }}"></script>
+	<script defer type="text/javascript" src="{{ "/module/@bas/website/dist/website.js" | appUrl }}"></script>
 
 	<script type="application/ld+json">
 		{

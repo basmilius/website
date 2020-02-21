@@ -1,0 +1,5 @@
+Copyright (c) 2018 - 2020 - Bas Milius <bas@mili.us>
+
+This file is part of my personal website and is therefore private.
+
+It uses @bybas/latte-ui as a base framework, which is open source.

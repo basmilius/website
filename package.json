@@ -2,6 +2,8 @@
 	"name": "@bas/website",
 	"description": "Personal website.",
 	"version": "1.0.0",
+	"license": "UNLICENSED",
+	"private": true,
 	"contributors": [
 		{
 			"name": "Bas Milius",
@@ -9,8 +11,50 @@
 			"url": "https://www.basmilius.com"
 		}
 	],
+	"scripts": {
+		"website:build": "cross-env NODE_ENV=production webpack --config dev/webpack/website.js --progress --hide-modules",
+		"website:build:vendors": "cross-env NODE_ENV=production webpack --config dev/webpack/vendors.js --progress --hide-modules",
+		"website:clean": "rimraf dist",
+		"website:serve": "cross-env NODE_ENV=development webpack --config dev/webpack/website.js --progress --hide-modules --watch",
+		"website:serve:vendors": "cross-env NODE_ENV=development webpack --config dev/webpack/vendors.js --progress --hide-modules --watch"
+	},
 	"namespace": "Bas\\Website",
 	"main": "Bas\\Website\\WebsiteModule",
 	"dependencies": {
+		"@bybas/latte-ui": "^1.9.0-beta.22",
+		"@mdi/font": "^4.9.95"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.8.4",
+		"@babel/plugin-proposal-class-properties": "^7.8.3",
+		"@babel/plugin-proposal-decorators": "^7.8.3",
+		"@babel/plugin-proposal-json-strings": "^7.8.3",
+		"@babel/plugin-syntax-dynamic-import": "^7.8.3",
+		"@babel/plugin-syntax-import-meta": "^7.8.3",
+		"@babel/preset-env": "^7.8.4",
+		"babel-loader": "^8.0.6",
+		"concurrently": "^5.1.0",
+		"copy-webpack-plugin": "^5.1.1",
+		"cross-env": "^7.0.0",
+		"css-loader": "^3.4.2",
+		"cssnano": "^4.1.10",
+		"cssnano-preset-advanced": "^4.0.7",
+		"file-loader": "^5.1.0",
+		"glob-all": "^3.1.0",
+		"mini-css-extract-plugin": "^0.9.0",
+		"node-sass": "^4.13.1",
+		"optimize-css-assets-webpack-plugin": "^5.0.3",
+		"postcss-loader": "^3.0.0",
+		"purgecss-webpack-plugin": "^2.0.6",
+		"rimraf": "^3.0.2",
+		"sass-loader": "^8.0.2",
+		"terser-webpack-plugin": "^2.3.5",
+		"uglify-template-string-loader": "^1.1.1",
+		"vue-loader": "^15.9.0",
+		"vue-style-loader": "^4.1.2",
+		"vue-template-compiler": "^2.6.11",
+		"webpack": "^4.41.6",
+		"webpack-cli": "^3.3.11",
+		"webpack-merge": "^4.2.2"
 	}
 }
