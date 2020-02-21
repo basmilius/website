@@ -11,7 +11,7 @@
 			</div>
 			<div class="list-item-suffix">
 				<img class="emoji" src="{{ emojiUrl("2764") }}" alt="Heart"/>
-				<img class="emoji" src="{{ emojiUrl("1f4aa-1f3fc") }}" alt="Strong"/>
+				<img class="emoji" src="{{ emojiUrl("1f4aa") }}" alt="Strong"/>
 			</div>
 		</div>
 
@@ -20,7 +20,7 @@
 			<div class="list-item-caption">
 				<strong>HTML</strong>
 			</div>
-			<img class="emoji list-item-suffix" src="{{ emojiUrl("1f4aa-1f3fc") }}" alt="Strong"/>
+			<img class="emoji list-item-suffix" src="{{ emojiUrl("1f4aa") }}" alt="Strong"/>
 		</div>
 
 		<div class="list-item">
@@ -28,7 +28,7 @@
 			<div class="list-item-caption">
 				<strong>CSS / Sass / SCSS</strong>
 			</div>
-			<img class="emoji list-item-suffix" src="{{ emojiUrl("1f4aa-1f3fc") }}" alt="Strong"/>
+			<img class="emoji list-item-suffix" src="{{ emojiUrl("1f4aa") }}" alt="Strong"/>
 		</div>
 
 		<div class="list-item">
@@ -36,7 +36,7 @@
 			<div class="list-item-caption">
 				<strong>JavaScript</strong>
 			</div>
-			<img class="emoji list-item-suffix" src="{{ emojiUrl("1f4aa-1f3fc") }}" alt="Strong"/>
+			<img class="emoji list-item-suffix" src="{{ emojiUrl("1f4aa") }}" alt="Strong"/>
 		</div>
 
 		<div class="list-item">
@@ -78,7 +78,7 @@
 			</div>
 			<div class="list-item-suffix">
 				<img class="emoji" src="{{ emojiUrl("2764") }}" alt="Heart"/>
-				<img class="emoji" src="{{ emojiUrl("1f4aa-1f3fc") }}" alt="Strong"/>
+				<img class="emoji" src="{{ emojiUrl("1f4aa") }}" alt="Strong"/>
 			</div>
 		</div>
 
@@ -89,7 +89,7 @@
 			</div>
 			<div class="list-item-suffix">
 				<img class="emoji" src="{{ emojiUrl("2764") }}" alt="Heart"/>
-				<img class="emoji" src="{{ emojiUrl("1f4aa-1f3fc") }}" alt="Strong"/>
+				<img class="emoji" src="{{ emojiUrl("1f4aa") }}" alt="Strong"/>
 			</div>
 		</div>
 
@@ -98,7 +98,7 @@
 			<div class="list-item-caption">
 				<strong>WordPress</strong>
 			</div>
-			<img class="emoji list-item-suffix" src="{{ emojiUrl("1f4aa-1f3fc") }}" alt="Strong"/>
+			<img class="emoji list-item-suffix" src="{{ emojiUrl("1f4aa") }}" alt="Strong"/>
 		</div>
 
 		<div class="list-item">
@@ -106,7 +106,7 @@
 			<div class="list-item-caption">
 				<strong>Node.js</strong>
 			</div>
-			<img class="emoji list-item-suffix" src="{{ emojiUrl("1f4aa-1f3fc") }}" alt="Strong"/>
+			<img class="emoji list-item-suffix" src="{{ emojiUrl("1f4aa") }}" alt="Strong"/>
 		</div>
 
 		<div class="list-item">
