@@ -50,7 +50,7 @@
 								<div class="panel mb-panel-gutter">
 									<div class="panel-rich-media embed-responsive embed-responsive-1by1">
 										<div class="embed-responsive-item d-flex align-items-center justify-content-center">
-											<img src="https://g.s3.bmcdn.nl/assets/weather-icons/all/{{ icon.id }}.svg" alt="{{ icon.name }}" style="width: calc(100% - 24px)" class="img-fluid" />
+											<img src="https://bmcdn.nl/assets/weather-icons/all/{{ icon.id }}.svg" alt="{{ icon.name }}" style="width: calc(100% - 24px)" class="img-fluid" />
 										</div>
 									</div>
 									<div class="panel-body d-flex align-items-center border-top px-3 py-2 text-center" style="height:60px;line-height:1.2em">
