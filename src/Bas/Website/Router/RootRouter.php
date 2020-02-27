@@ -141,6 +141,12 @@ final class RootRouter extends AbstractRouter
 	 */
 	public function onNotFound(string $requestPath, Context $context): bool
 	{
+		if (StringUtil::startsWith($_SERVER['REQUEST_URI'] ?? '', '/manifest.json'))
+			return false;
+
+		if (StringUtil::startsWith($_SERVER['REQUEST_URI'] ?? '', '/offline.html'))
+			return false;
+
 		if (StringUtil::startsWith($_SERVER['REQUEST_URI'] ?? '', '/robots.txt'))
 			return false;
 

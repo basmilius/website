@@ -21,7 +21,7 @@
 	"namespace": "Bas\\Website",
 	"main": "Bas\\Website\\WebsiteModule",
 	"dependencies": {
-		"@bybas/latte-ui": "^1.9.0-beta.22",
+		"@bybas/latte-ui": "^1.9.0-rc.1",
 		"@mdi/font": "^4.9.95"
 	},
 	"devDependencies": {
