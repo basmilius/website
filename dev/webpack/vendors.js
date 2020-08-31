@@ -8,29 +8,29 @@
  */
 
 const base = require("../../../../../dev/webpack/webpack.config");
-const merge = require("webpack-merge");
-const path = require("path");
+const {merge} = require("webpack-merge");
+const {resolve} = require("path");
+const {sync} = require("glob-all");
 
-const glob = require("glob-all");
 const purgeCSSPlugin = require("purgecss-webpack-plugin");
 
 module.exports = merge(base, {
-	entry: {
-		"vendors": "./resource/js/vendors.js"
-	},
-	externals: {},
-	output: {
-		path: path.resolve(__dirname, "../../dist"),
-		publicPath: "/dist/",
-		filename: "[name].js"
-	},
-	plugins: [
-		new purgeCSSPlugin({
-			paths: glob.sync([
-				"./**/*.cappy",
-				"./**/*.html",
-				"./**/*.php"
-			])
-		})
-	]
+    entry: {
+        "vendors": "./resource/js/vendors.js"
+    },
+    externals: {},
+    output: {
+        path: resolve(__dirname, "../../dist"),
+        publicPath: "/dist/",
+        filename: "[name].js"
+    },
+    plugins: [
+        new purgeCSSPlugin({
+            paths: sync([
+                "./**/*.cappy",
+                "./**/*.html",
+                "./**/*.php"
+            ])
+        })
+    ]
 });
