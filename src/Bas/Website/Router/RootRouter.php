@@ -86,6 +86,7 @@ final class RootRouter extends AbstractRouter
 				['id' => 'clear-day', 'name' => 'Clear (day)'],
 				['id' => 'clear-night', 'name' => 'Clear (night)'],
 				['id' => 'cloudy', 'name' => 'Cloudy'],
+				['id' => 'overcast', 'name' => 'Overcast'],
 				['id' => 'drizzle', 'name' => 'Drizzle'],
 				['id' => 'hail', 'name' => 'Hail'],
 				['id' => 'mist', 'name' => 'Mist'],
@@ -102,6 +103,8 @@ final class RootRouter extends AbstractRouter
 				['id' => 'rain', 'name' => 'Rain'],
 				['id' => 'snow', 'name' => 'Snow'],
 				['id' => 'thunderstorms', 'name' => 'Thunderstorms'],
+				['id' => 'thunderstorms-day', 'name' => 'Thunderstorms (day)'],
+				['id' => 'thunderstorms-night', 'name' => 'Thunderstorms (night)'],
 				['id' => 'tornado', 'name' => 'Tornado'],
 				['id' => 'wind', 'name' => 'Wind']
 			]
