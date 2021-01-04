@@ -22,9 +22,9 @@
 </head>
 <body>
 	<main id="app">
-		{{ include("@bas-website/boilerplate/header") }}
+		{{ include("@bas-website/boilerplate/header.twig") }}
 		{% block content %}{% endblock %}
-		{{ include("@bas-website/boilerplate/footer") }}
+		{{ include("@bas-website/boilerplate/footer.twig") }}
 	</main>
 
 	<script defer type="text/javascript" src="{{ "/module/@bas/website/dist/vendors.js" | appUrl }}"></script>

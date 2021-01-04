@@ -1,4 +1,4 @@
-{% extends "@bas-website/boilerplate/skel" %}
+{% extends "@bas-website/boilerplate/skel.twig" %}
 
 {% set nav_item = "about" %}
 {% set title = "About" %}
@@ -30,14 +30,6 @@
 						Below are two photos of me. The girl on the second photo is my girlfriend Fleur.
 						<a href="https://fleurnijhuis.com" target="_blank" rel="noopener">Who also has a website</a>.
 					</p>
-					<div class="row no-gutters">
-						<div class="col-6 d-flex">
-							<div class="embed-responsive embed-responsive-1by1 m-1 radius-default" style="background: url({{ "/module/@bas/website/resource/image/photos/1.jpg" | appUrl }}) no-repeat center center / cover"></div>
-						</div>
-						<div class="col-6 d-flex">
-							<div class="embed-responsive embed-responsive-1by1 m-1 radius-default" style="background: url({{ "/module/@bas/website/resource/image/photos/2.jpg" | appUrl }}) no-repeat center center / cover"></div>
-						</div>
-					</div>
 
 					<h3 class="mt-5">Programming</h3>
 					<p>
@@ -62,9 +54,9 @@
 				</div>
 				<div class="col-12 col-lg-4 mt-5 mt-lg-0">
 
-					{{ include("@bas-website/mixin/skills-and-experience") }}
+					{{ include("@bas-website/mixin/skills-and-experience.twig") }}
 
-					{{ include("@bas-website/mixin/socials") }}
+					{{ include("@bas-website/mixin/socials.twig") }}
 
 				</div>
 			</div>

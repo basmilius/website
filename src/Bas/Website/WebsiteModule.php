@@ -33,8 +33,8 @@ final class WebsiteModule extends AbstractModule
 	 */
 	public final function onLoad(): void
 	{
-		$this->getCappuccino()->addPath($this->getDirectory('resource/view'), 'bas-website');
 		$this->getRouter()->all('/', RootRouter::class);
+		$this->getTwig()->addPath($this->getDirectory('resource/view'), 'bas-website');
 	}
 
 	/**

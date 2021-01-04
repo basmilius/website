@@ -57,7 +57,7 @@ final class RootRouter extends AbstractRouter
 	 */
 	protected final function onGetAbout(): string
 	{
-		return $this->render('@bas-website/content/about');
+		return $this->render('@bas-website/content/about.twig');
 	}
 
 	/**
@@ -69,7 +69,7 @@ final class RootRouter extends AbstractRouter
 	 */
 	protected final function onGetProjects(): string
 	{
-		return $this->render('@bas-website/content/projects');
+		return $this->render('@bas-website/content/projects.twig');
 	}
 
 	/**
@@ -81,7 +81,7 @@ final class RootRouter extends AbstractRouter
 	 */
 	protected final function onGetProjectsWeatherIcons(): string
 	{
-		return $this->render('@bas-website/content/weather-icons', [
+		return $this->render('@bas-website/content/weather-icons.twig', [
 			'icons' => [
 				['id' => 'clear-day', 'name' => 'Clear (day)'],
 				['id' => 'clear-night', 'name' => 'Clear (night)'],
@@ -120,7 +120,7 @@ final class RootRouter extends AbstractRouter
 	 */
 	protected final function onGetContact(): string
 	{
-		return $this->render('@bas-website/content/contact');
+		return $this->render('@bas-website/content/contact.twig');
 	}
 
 	/**
@@ -132,8 +132,7 @@ final class RootRouter extends AbstractRouter
 	{
 		parent::onExecute($route, $context);
 
-		$this->getCappuccino()->addGlobal('is_webp_supported', Environment::isWebPSupported());
-
+		$this->getTwig()->addGlobal('is_webp_supported', Environment::isWebPSupported());
 		$this->getAssets()->clear();
 	}
 

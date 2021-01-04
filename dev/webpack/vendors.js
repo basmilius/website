@@ -27,7 +27,7 @@ module.exports = merge(base, {
     plugins: [
         new purgeCSSPlugin({
             paths: sync([
-                "./**/*.cappy",
+                "./**/*.twig",
                 "./**/*.html",
                 "./**/*.php"
             ])
