@@ -1,0 +1,21 @@
+export {
+    faAngular,
+    faCss3,
+    faDribbble,
+    faFacebook,
+    faGitAlt,
+    faGithub,
+    faHtml5,
+    faInstagram,
+    faJava,
+    faJsSquare,
+    faLinkedin,
+    faNodeJs,
+    faPhp,
+    faReact,
+    faSnapchat,
+    faSwift,
+    faTwitter,
+    faVuejs,
+    faWordpressSimple
+} from "@fortawesome/free-brands-svg-icons";

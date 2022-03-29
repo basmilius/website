@@ -1,0 +1,84 @@
+@use "../../css/api" as *;
+
+.workCard {
+    display: flex;
+    flex-flow: column;
+}
+
+.workCardVisual {
+    aspect-ratio: 16 / 9;
+    border-radius: #{$radius * 2};
+}
+
+.workCardVisualBlank {
+    composes: workCardVisual;
+
+    background: #{color-get("gray", 100)};
+}
+
+.workCardVisualImage {
+    composes: workCardVisual;
+
+    max-width: 100%;
+}
+
+.workCardBody {
+    display: flex;
+    padding: #{gutter-get(5)} #{gutter-get(1)};
+    flex-flow: column;
+    flex-grow: 1;
+}
+
+.workCardLink {
+    margin-top: auto;
+}
+
+.workGrid {
+    composes: sectionSkeleton from "../shell/Section.module.scss";
+
+    --columns: 3;
+    --gap: #{gutter-get(7)};
+
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(var(--columns), 1fr);
+}
+
+.workGridMore {
+    composes: workGrid;
+
+    --columns: 4;
+}
+
+.workGridTitle {
+    grid-column: 1 / span var(--columns);
+}
+
+.workDeck {
+    --columns: 3;
+    --gap: #{gutter-get(7)};
+
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(var(--columns), 1fr);
+}
+
+@include responsive-down(md) {
+    .workDeck {
+        --columns: 2;
+    }
+
+    .workGrid {
+        --columns: 2;
+    }
+}
+
+@include responsive-down(xs) {
+    .workDeck {
+        --columns: 1;
+    }
+
+    .workGrid {
+        --columns: 1;
+    }
+}

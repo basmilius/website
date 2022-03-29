@@ -1,0 +1,53 @@
+@use "../../css/api" as *;
+
+.timeline {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+}
+
+.timelineItem {
+    position: relative;
+    display: flex;
+    gap: #{gutter-get(6)};
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+.timelineItemDate {
+    display: block;
+    margin-top: -#{gutter-get(2)};
+    margin-bottom: #{gutter-get(3)};
+}
+
+.timelineItemLine {
+    margin-left: -#{gutter-get(4)};
+    flex-shrink: 0;
+
+    line{
+        stroke: #{color-get("gray", 200)};
+    }
+
+    circle:first-of-type {
+        stroke: #{color-get("gray", 300, .6)};
+        transition: stroke 300ms var(--swiftOut);
+        will-change: stroke;
+    }
+
+    circle:last-of-type {
+        fill: #{color-get("primary")};
+    }
+}
+
+.timelineItemContent {
+    position: relative;
+    padding: #{gutter-get(7) - 5px} 0;
+
+    p {
+        color: #{color-get("gray", 500)};
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,295 @@
+@use "../../css/api" as *;
+
+$-duration: 510ms;
+$-easing: var(--swiftOut);
+
+.canvas {
+    composes: canvas from "./Header.module.scss";
+}
+
+.header {
+    --menuBg: transparent;
+    --menuFg: #{color-get("gray", 0)};
+    --menuFontSize: 21px;
+    --menuLogo: 72px;
+    --menuSize: 150px;
+    --menuShadow: none;
+
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: var(--menuSize);
+    background: var(--menuBg);
+    box-shadow: var(--menuShadow);
+    transition: #{$-duration} #{$-easing};
+    transition-property: height, background, box-shadow;
+    user-select: none;
+    z-index: 1000;
+}
+
+.headerScrolled {
+    --menuBg: #{color-get("gray", 0)};
+    --menuFg: #{color-get("gray", 700)};
+    --menuFontSize: 18px;
+    --menuLogo: 48px;
+    --menuShadow: var(--shadow-1);
+    --menuSize: 99px;
+}
+
+.logo {
+    position: relative;
+    display: block;
+    font-size: var(--menuLogo);
+    transition: font-size #{$-duration} #{$-easing};
+}
+
+.logoImage {
+    position: relative;
+    display: block;
+    height: 1em;
+    width: 1em;
+}
+
+.nav {
+    composes: container from "./Container.module.scss";
+
+    display: flex;
+    height: var(--menuSize);
+    align-items: center;
+    flex-flow: row;
+    gap: #{gutter-get(6)};
+    transform: translateZ(0);
+    transition: height #{$-duration} #{$-easing};
+}
+
+.navItem {
+    position: relative;
+    display: block;
+    margin-left: #{gutter-get(2)};
+    margin-right: #{gutter-get(2)};
+    color: var(--menuFg);
+    font-family: rajdhani, sans-serif;
+    font-size: var(--menuFontSize);
+    font-weight: 600;
+    text-decoration: none;
+    transition: #{$-duration} #{$-easing};
+    transition-property: color, font-size;
+
+    &::before {
+        position: absolute;
+        display: block;
+        top: calc(100% + 3px);
+        left: calc(50% - 15px);
+        width: 30px;
+        content: "";
+        border-top: 5px dotted rgb(0, 165, 255);
+        opacity: 0;
+        pointer-events: none;
+        transition: #{$-duration} #{$-easing};
+        transition-property: border-color, opacity;
+    }
+
+    &:hover::before {
+        opacity: 1;
+    }
+}
+
+.navItemActive::before {
+    border-color: #{color-get("primary")};
+    opacity: 1;
+}
+
+.navVariable {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    justify-content: flex-start;
+}
+
+.navTitle {
+    color: #{color-get("gray", 800)};
+    font-size: 21px;
+    font-weight: 700;
+    opacity: 0;
+    transition: opacity #{$-duration} #{$-easing};
+}
+
+.navTitleVisible {
+    opacity: 1;
+}
+
+.navToggle {
+    position: relative;
+    display: flex;
+    height: 48px;
+    width: 48px;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 0;
+    color: white;
+    outline: 0;
+}
+
+.navToggleIcon {
+    font-size: 24px;
+}
+
+.nav .navToggle {
+    position: absolute;
+    left: #{gutter-get(6)};
+    color: var(--menuFg);
+
+    @include state-hover-focus {
+        color: var(--menuFg);
+    }
+}
+
+.skipToContent {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 50%;
+    padding: #{gutter-get(4)} #{gutter-get(6)};
+    align-items: center;
+    gap: #{gutter-get(3)};
+    justify-content: center;
+    background: #{color-get("primary")};
+    border: 2px solid #{color-get("primary", 800)};
+    border-radius: #{$radius};
+    box-shadow: 0 0 0 2px white;
+    color: #{color-get("primary", 0)};
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+    outline: 0;
+    text-decoration: none;
+    transform: translate3d(-50%, -110%, 0);
+    transition: transform 300ms var(--swiftOut);
+    z-index: 99999;
+
+    &:focus-visible {
+        transform: translate3d(-50%, 30px, 0);
+    }
+}
+
+.bigNavigation {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to bottom right, #{color-get("gray", 800)}, #{color-get("gray", 900)});
+    transition: all 600ms var(--swiftOut);
+    z-index: 100000;
+}
+
+.bigNavigationClose {
+    composes: navToggle;
+
+    position: absolute;
+    top: #{gutter-get(6)};
+    left: #{gutter-get(6)};
+}
+
+.bigNavigationCloseIcon {
+    font-size: 36px;
+}
+
+.bigNavigationNav {
+    position: relative;
+    display: flex;
+    margin: auto;
+    flex-flow: column;
+    gap: #{gutter-get(7)};
+}
+
+.bigNavigationItem {
+    position: relative;
+    padding: #{gutter-get(1)} #{gutter-get(3)};
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    transition: all 660ms var(--swiftOut);
+
+    &::before {
+        position: absolute;
+        display: block;
+        top: 100%;
+        left: calc(50% - 27px);
+        width: 54px;
+        content: "";
+        border-top: 8px dotted #{color-get("primary")};
+        opacity: 0;
+        pointer-events: none;
+        transition: #{$-duration} #{$-easing};
+        transition-property: border-color, opacity;
+    }
+
+    @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+            transition-delay: #{$i * 45ms};
+        }
+    }
+}
+
+.bigNavigationItemActive::before {
+    opacity: 1;
+}
+
+.bigNavigationClosed {
+    opacity: 0;
+    pointer-events: none;
+    transition-delay: 120ms;
+}
+
+.bigNavigationClosed .bigNavigationItem {
+    opacity: 0;
+    transform: translate3d(0, 120px, 0);
+
+    @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+            transition-delay: #{(6 - $i) * 45ms};
+        }
+    }
+}
+
+.bigNavigationOpen {
+    pointer-events: all;
+}
+
+@include responsive-down(md) {
+    .header {
+        --menuLogo: 48px;
+    }
+
+    .logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .navVariable {
+        display: none;
+    }
+
+    .nav .navItem {
+        display: none;
+    }
+}
+
+@include responsive-up(lg) {
+    .nav .navToggle {
+        display: none;
+    }
+
+    .bigNavigation {
+        display: none;
+    }
+}

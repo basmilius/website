@@ -1,0 +1,204 @@
+@use "../../css/api" as *;
+
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom right, #{color-get("gray", 800)}, #{color-get("gray", 900)});
+    user-select: none;
+}
+
+.canvas {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+
+.headerContainer {
+    composes: container from "./Container.module.scss";
+
+    position: relative;
+}
+
+.headerDefault {
+    height: 420px;
+
+    .headerContainer {
+        padding-top: 270px;
+    }
+}
+
+.headerFrontPage {
+    height: max(480px, 50vh);
+
+    .headerContainer {
+        padding-top: 60px;
+    }
+
+    h1 {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.header h1 {
+    margin: 0;
+    color: #{color-get("gray", 0)};
+    font-family: #{$font-family-monospace};
+    font-weight: 700;
+}
+
+.headerDefault h1 {
+    margin-left: -.65em;
+
+    &::before,
+    &::after {
+        color: #{color-get("primary", 200, .25)};
+    }
+
+    &::before {
+        content: "<";
+    }
+
+    &::after {
+        content: "/>";
+    }
+}
+
+.icons {
+    --iconSize: 180px;
+
+    position: absolute;
+    display: grid;
+    top: 65%;
+    right: 0;
+    gap: #{gutter-get(3)};
+    grid-template-columns: repeat(2, 1fr);
+    transform: translate3d(0, -21%, 0);
+    z-index: 1;
+}
+
+.icon {
+    position: relative;
+    display: flex;
+    height: var(--iconSize);
+    width: var(--iconSize);
+    align-items: center;
+    justify-content: center;
+    background: #{color-get("gray", 0)};
+    border-radius: #{$radius * 2};
+    box-shadow: var(--shadow-2);
+    color: #{color-get("gray", 700)};
+    font-size: calc(var(--iconSize) * .4);
+    transform-origin: center;
+    transition: transform 1s var(--swiftOut);
+    animation: iconAnimationKeyframes 1s var(--decelerationCurve) both;
+
+    &:nth-child(1) {
+        animation-delay: .2s;
+        transform: translate3d(-5%, calc(-10% + (var(--scroll, 0px) * -.1)), 0);
+    }
+
+    &:nth-child(2) {
+        animation-delay: .4s;
+        transform: translate3d(10%, calc(-5% + (var(--scroll, 0px) * -.15)), 0);
+    }
+
+    &:nth-child(3) {
+        animation-delay: .3s;
+        transform: translate3d(-5%, calc(5% + (var(--scroll, 0px) * -.2)), 0);
+    }
+
+    &:nth-child(4) {
+        animation-delay: .5s;
+        transform: translate3d(10%, calc(10% + (var(--scroll, 0px) * -.15)), 0);
+    }
+
+    img {
+        height: 84px;
+        width: 84px;
+    }
+}
+
+.iconsSmall {
+    --iconSize: 120px;
+
+    gap: #{gutter-get(2)};
+}
+
+@keyframes iconAnimationKeyframes {
+    from {
+        opacity: 0;
+        transform: scale3d(.9, .9, .9);
+    }
+}
+
+@include responsive-down(lg) {
+    .icons {
+        --iconSize: 150px;
+
+        right: #{gutter-get(3)};
+    }
+}
+
+@include responsive-down(md) {
+    .header {
+        margin-bottom: #{gutter-get(7)};
+    }
+
+    .headerFrontPage,
+    .headerDefault {
+        height: 360px;
+    }
+
+    .header h1 {
+        margin: 0;
+        text-align: center;
+    }
+
+    .header .headerContainer {
+        padding-top: 180px;
+    }
+
+    .headerDefault.headerHasIcons {
+        margin-bottom: #{gutter-get(11)};
+    }
+
+    .icons {
+        --iconSize: 72px;
+
+        top: 100%;
+        left: 50%;
+        right: unset;
+        gap: #{gutter-get(5)};
+        grid-template-columns: repeat(4, 1fr);
+        transform: translate3d(-50%, 50%, 0);
+    }
+
+    .icon {
+        img {
+            height: 60px;
+            width: 60px;
+        }
+
+        &:nth-child(1) {
+            transform: translate3d(0, calc(10% + var(--scroll) * .025), 0);
+        }
+
+        &:nth-child(2) {
+            transform: translate3d(0, calc(-10% + var(--scroll) * .1), 0);
+        }
+
+        &:nth-child(3) {
+            transform: translate3d(0, calc(5% + var(--scroll) * .05), 0);
+        }
+
+        &:nth-child(4) {
+            transform: translate3d(0, calc(-5% + var(--scroll) * .06), 0);
+        }
+    }
+}

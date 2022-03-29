@@ -1,0 +1,84 @@
+@use "../../css/api" as *;
+
+.information {
+    position: relative;
+    display: grid;
+    grid-gap: #{gutter-get(2)};
+    grid-template-columns: 1fr 1fr;
+}
+
+.informationItem {
+    position: relative;
+    display: flex;
+    padding: #{gutter-get(3)};
+    align-items: flex-start;
+    gap: #{gutter-get(5)};
+    background: transparent;
+    border: 0;
+    border-radius: #{$radius};
+    text-align: left;
+    transition: background 240ms var(--swiftOut);
+
+    &:hover {
+        background: #{color-get("gray", 200, .5)};
+    }
+
+    &:hover .informationItemIcon {
+        background: #{color-get("primary", 200, .5)};
+        color: #{color-get("primary", 600)};
+    }
+}
+
+.informationItemIcon {
+    display: flex;
+    height: 48px;
+    width: 48px;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: center;
+    background: #{color-get("gray", 200, .5)};
+    border-radius: 30px;
+    color: #{color-get("gray")};
+    font-size: 21px;
+    transition: 240ms var(--swiftOut);
+    transition-property: background, color;
+}
+
+.informationItemCaption {
+    display: flex;
+    flex-flow: column;
+    gap: #{gutter-get(1)};
+    line-height: 1.2;
+}
+
+.informationItemValue {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.informationItemTitle {
+    font-size: 16px;
+}
+
+.informationCopied .informationItemTitle {
+    color: #{color-get("primary")};
+    font-weight: 700;
+}
+
+@include responsive-down(md) {
+    .information {
+        grid-template-columns: 1fr;
+    }
+}
+
+@include responsive-down(sm) {
+    .information {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@include responsive-down(xs) {
+    .information {
+        grid-template-columns: 1fr;
+    }
+}

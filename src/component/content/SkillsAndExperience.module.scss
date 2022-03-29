@@ -1,0 +1,58 @@
+@use "../../css/api" as *;
+
+.skillsGrid {
+    position: relative;
+    display: grid;
+    grid-gap: #{gutter-get(2)};
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.skill {
+    --color: 0 0% 0%;
+
+    position: relative;
+    display: flex;
+    height: 120px;
+    align-items: center;
+    flex-flow: column;
+    justify-content: center;
+    background: #{color-get("gray", 50, .5)};
+    border: 1px solid #{color-get("gray", 100, .5)};
+    border-radius: #{$radius * 2};
+    text-align: center;
+
+    strong {
+        color: #{color-get("gray", 700)};
+        font-weight: 600;
+    }
+}
+
+.skillIcon {
+    margin: 0 0 #{gutter-get(1)};
+    color: hsl(var(--color));
+    font-size: 30px;
+}
+
+@include responsive-down(lg) {
+    .skillsGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@include responsive-down(md) {
+    .skillsGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@include responsive-down(sm) {
+    .skillsGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@include responsive-down(xs) {
+    .skillsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

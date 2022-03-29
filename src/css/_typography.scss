@@ -1,0 +1,81 @@
+@use "api" as *;
+
+p {
+    font-weight: 500;
+}
+
+p.lead {
+    font-weight: 600;
+}
+
+h2 {
+    color: #{color-get("gray", 800)};
+    font-size: 30px;
+    line-height: 1.2;
+
+    &::after {
+        margin-left: -4px;
+        content: ".";
+        color: #{color-get("primary")};
+        font-family: #{$font-family-monospace};
+    }
+}
+
+h3 {
+    color: #{color-get("gray", 800)};
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+hr {
+    margin: #{gutter-get(3)} auto;
+    max-width: 30px;
+    background: transparent;
+    border-top: 5px dotted #{color-get("gray", 300)};
+}
+
+a:not([class]) {
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+ul:not([class]) {
+    margin-bottom: 2rem;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+        position: relative;
+        margin: 0;
+        padding: 0 0 0 #{gutter-get(9)};
+        font-weight: 500;
+
+        &::before {
+            position: absolute;
+            display: block;
+            top: 8px;
+            left: 15px;
+            height: 12px;
+            width: 12px;
+            content: "";
+            background: #{color-get("primary", 600)};
+            border-radius: 99px;
+        }
+    }
+
+    li + li {
+        margin-top: 12px;
+    }
+}
+
+@include responsive-down(md) {
+    h2 {
+        font-size: 27px;
+        line-height: 1.1;
+    }
+
+    h3 {
+        font-size: 21px;
+        line-height: 1.1;
+    }
+}

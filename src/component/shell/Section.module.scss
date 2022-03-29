@@ -1,0 +1,108 @@
+@use "../../css/api" as *;
+
+.sectionSkeleton {
+    composes: container from "./Container.module.scss";
+
+    margin: #{gutter-get(11)} auto;
+}
+
+.section {
+    composes: sectionSkeleton;
+
+    display: grid;
+    grid-gap: #{gutter-get(10)};
+    grid-template-columns: 300px 1fr;
+
+    > div:only-child {
+        grid-column: 1 / span 2;
+    }
+}
+
+.sectionBody {
+    position: relative;
+}
+
+.sectionDetails {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    align-self: stretch;
+    flex-flow: column;
+
+    h2 {
+        margin: 0 0 #{gutter-get(1)};
+    }
+
+    p {
+        color: #{color-get("gray", 500)};
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+.sectionIndented .sectionDetails {
+    padding-top: #{gutter-get(5)};
+    padding-bottom: #{gutter-get(5)};
+}
+
+.sectionPicture {
+    height: 150px;
+    width: 150px;
+    margin-bottom: #{gutter-get(8)};
+    border-radius: 999px;
+}
+
+.sectionCenterizedPicture {
+    composes: sectionPicture;
+
+    margin: 0 auto #{gutter-get(6)};
+}
+
+@include responsive-down(md) {
+    .sectionSkeleton {
+        margin: #{gutter-get(10)} auto;
+    }
+
+    .section {
+        grid-gap: #{gutter-get(7)};
+        grid-template-columns: 210px 1fr;
+    }
+}
+
+@include responsive-down(sm) {
+    .sectionSkeleton {
+        margin: #{gutter-get(9)} auto;
+    }
+
+    .section {
+        margin: #{gutter-get(10)} auto;
+        grid-gap: #{gutter-get(9)};
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+
+        > div:only-child {
+            grid-column: 1;
+        }
+    }
+}
+
+@include responsive-up(md) {
+    .sectionAlternate {
+        grid-template-columns: 1fr 210px;
+    }
+
+    .sectionAlternate .sectionDetails {
+        order: 1;
+    }
+
+    .sectionSticky .sectionDetails {
+        position: sticky;
+        top: #{gutter-get(7) + 99px};
+    }
+}
+
+@include responsive-up(lg) {
+    .sectionAlternate {
+        grid-template-columns: 1fr 300px;
+    }
+}
