@@ -7,8 +7,8 @@ specifiers:
   '@fortawesome/free-brands-svg-icons': 6.1.1
   '@fortawesome/pro-regular-svg-icons': 6.1.1
   '@fortawesome/pro-solid-svg-icons': 6.1.1
-  '@latte-ui/core': 2.0.0-dev.12
-  '@latte-ui/css': 2.0.0-dev.12
+  '@latte-ui/core': 2.0.0-dev.14
+  '@latte-ui/css': 2.0.0-dev.14
   '@types/node': ^17.0.23
   '@types/react': 17.0.43
   '@types/react-dom': 17.0.14
@@ -30,8 +30,8 @@ dependencies:
   '@fortawesome/free-brands-svg-icons': 6.1.1
   '@fortawesome/pro-regular-svg-icons': 6.1.1
   '@fortawesome/pro-solid-svg-icons': 6.1.1
-  '@latte-ui/core': 2.0.0-dev.12_016e8fee7e983a3099f9eec5cadc4623
-  '@latte-ui/css': 2.0.0-dev.12
+  '@latte-ui/core': 2.0.0-dev.14_016e8fee7e983a3099f9eec5cadc4623
+  '@latte-ui/css': 2.0.0-dev.14
   deepmerge: 4.2.2
   framer-motion: 6.2.8_react-dom@17.0.2+react@17.0.2
   lodash: 4.17.21
@@ -325,8 +325,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.11
     dev: false
 
-  /@latte-ui/core/2.0.0-dev.12_016e8fee7e983a3099f9eec5cadc4623:
-    resolution: {integrity: sha512-LxERqH6053Fg2JJYSiG4Q0txkS9mxBxgZ4bZHfplWQ98uYvLbg8oF36HGVUXOXWAJLGrcyIMuFSAm8wBy4vpeQ==}
+  /@latte-ui/core/2.0.0-dev.14_016e8fee7e983a3099f9eec5cadc4623:
+    resolution: {integrity: sha512-bCY/D0n6FCHOhEk5fhmPud41A93C8Tei5xz/DGiuvIExBhoAhHddTE4Yl1oq32orOgPjny0oGawtZh1/1TZo3w==}
     peerDependencies:
       deepmerge: 4.2.2
       framer-motion: 6.2.8
@@ -343,8 +343,8 @@ packages:
       tslib: 2.3.1
     dev: false
 
-  /@latte-ui/css/2.0.0-dev.12:
-    resolution: {integrity: sha512-UescfDIzit+i1pU/135l8Zn1cCRDDNrOUVVUUFZL5fq6wTozYC7Amj5ARsEFUHhZiO2doLxb6AXp8tarDyAZ7A==}
+  /@latte-ui/css/2.0.0-dev.14:
+    resolution: {integrity: sha512-RJcvTrRHKSkyF0RrweZVaji7zpcUyR/cWBdmgp0/qY4ur5aj3A+ED+HObenjwhPQsGe9Kq9H31ku4qrgCidF/g==}
     dev: false
 
   /@next/env/12.1.0:
