@@ -41,7 +41,7 @@ export default memo(() => {
 
                     <BMTextButton
                         label="Download"
-                        icon="fas arrow-down-long"
+                        icon="fas down"
                         tag="a"
                         target="_blank"
                         href="https://github.com/basmilius/weather-icons/archive/refs/heads/master.zip"/>

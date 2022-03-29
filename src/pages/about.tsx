@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { BMSchooling, BMSkillsAndExperience, BMSocials, BMWorkExperience } from "@/component/content";
-import { Head, Link } from "@/component/platform";
+import { Head } from "@/component/platform";
 import { BMHeader, BMSection, BMTextButton } from "@/component/shell";
 
 import basImage from "../image/bas.jpg";
@@ -13,6 +13,7 @@ export default memo(() => (<>
     <BMHeader title="About"/>
 
     <BMSection
+        title="This is me"
         details={<>
             <BMSection.Picture
                 src={basImage.src}
@@ -24,12 +25,12 @@ export default memo(() => (<>
             <BMTextButton.Stack>
                 <BMTextButton
                     label="Curriculum Vitae"
-                    icon="fas arrow-right-long"/>
+                    icon="fas up-right"/>
 
                 <BMTextButton.Link
                     href="/contact"
                     label="Contact Me"
-                    icon="fas arrow-right-long"/>
+                    icon="fas right"/>
             </BMTextButton.Stack>
         </>}>
         <h3>Hi! I'm Bas</h3>

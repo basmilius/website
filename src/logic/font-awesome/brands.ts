@@ -10,6 +10,7 @@ export {
     faJava,
     faJsSquare,
     faLinkedin,
+    faMicrosoft,
     faNodeJs,
     faPhp,
     faReact,

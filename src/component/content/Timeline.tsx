@@ -16,12 +16,12 @@ const Timeline = memo(({children}: PropsWithChildren<{}>) => (
 const Item = memo(({children, date, title}: PropsWithChildren<ItemProps>) => (
     <div className={styles.timelineItem}>
         <svg className={styles.timelineItemLine} width="60px">
-            <line x1={30} x2={30} y1="3px" y2="100%" strokeWidth={6} strokeLinecap="round" strokeDasharray="0, 14.6"/>
-            <circle cx={30} cy={40.5} r={22} fill="#fdfeff" strokeWidth={6} strokeLinecap="round" strokeDasharray="0, 13.8" strokeDashoffset={7}/>
-            <circle cx={30} cy={40.5} r={9}/>
+            <line x1={30} x2={30} y1="3px" y2="100%" strokeWidth={2} strokeLinecap="round"/>
+            <circle cx={30} cy={40.5} r={18} fill="#fdfeff" strokeWidth={2} strokeLinecap="round"/>
+            <circle cx={30} cy={40.5} r={6}/>
         </svg>
         <div className={styles.timelineItemContent}>
-            <h4>{title}</h4>
+            <h3>{title}</h3>
             <span className={styles.timelineItemDate}>{date}</span>
             {children}
         </div>

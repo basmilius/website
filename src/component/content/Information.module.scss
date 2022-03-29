@@ -12,7 +12,7 @@
     display: flex;
     padding: #{gutter-get(3)};
     align-items: flex-start;
-    gap: #{gutter-get(5)};
+    gap: #{gutter-get(6)};
     background: transparent;
     border: 0;
     border-radius: #{$radius};
@@ -20,26 +20,29 @@
     transition: background 240ms var(--swiftOut);
 
     &:hover {
-        background: #{color-get("gray", 200, .5)};
+        background: #{color-get("gray", 100, .5)};
     }
 
-    &:hover .informationItemIcon {
+    &:hover .informationItemIconMount {
         background: #{color-get("primary", 200, .5)};
         color: #{color-get("primary", 600)};
     }
 }
 
 .informationItemIcon {
+    font-size: 20px;
+}
+
+.informationItemIconMount {
     display: flex;
-    height: 48px;
-    width: 48px;
+    height: 42px;
+    width: 42px;
     align-items: center;
     flex-shrink: 0;
     justify-content: center;
     background: #{color-get("gray", 200, .5)};
     border-radius: 30px;
     color: #{color-get("gray")};
-    font-size: 21px;
     transition: 240ms var(--swiftOut);
     transition-property: background, color;
 }
@@ -52,11 +55,13 @@
 }
 
 .informationItemValue {
+    color: #{color-get("gray", 700)};
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .informationItemTitle {
+    color: #{color-get("gray", 500)};
     font-size: 16px;
 }
 

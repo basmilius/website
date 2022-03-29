@@ -8,8 +8,8 @@ export default memo(({icon, title, value}: Props) => {
 
     return (
         <button className={`${styles.informationItem} ${isCopied ? styles.informationCopied : ""}`} onClick={copy}>
-            <div className={styles.informationItemIcon}>
-                <Icon name={icon}/>
+            <div className={styles.informationItemIconMount}>
+                <Icon name={icon} className={styles.informationItemIcon}/>
             </div>
 
             <div className={styles.informationItemCaption}>

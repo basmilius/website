@@ -3,6 +3,7 @@
 .header {
     position: relative;
     display: flex;
+    height: 420px;
     align-items: center;
     background: linear-gradient(to bottom right, #{color-get("gray", 800)}, #{color-get("gray", 900)});
     user-select: none;
@@ -22,51 +23,31 @@
     composes: container from "./Container.module.scss";
 
     position: relative;
-}
-
-.headerDefault {
-    height: 420px;
-
-    .headerContainer {
-        padding-top: 270px;
-    }
+    display: flex;
+    padding-top: 90px;
+    align-items: center;
+    height: inherit;
 }
 
 .headerFrontPage {
-    height: max(480px, 50vh);
+    height: max(540px, 60vh);
 
     .headerContainer {
-        padding-top: 60px;
-    }
-
-    h1 {
-        width: 100%;
-        text-align: center;
+        padding-top: 54px;
     }
 }
 
 .header h1 {
     margin: 0;
+    flex-grow: 1;
     color: #{color-get("gray", 0)};
-    font-family: #{$font-family-monospace};
+    font-size: 72px;
     font-weight: 700;
+    line-height: 1;
 }
 
-.headerDefault h1 {
-    margin-left: -.65em;
-
-    &::before,
-    &::after {
-        color: #{color-get("primary", 200, .25)};
-    }
-
-    &::before {
-        content: "<";
-    }
-
-    &::after {
-        content: "/>";
-    }
+.headerFrontPage h1 {
+    text-align: center;
 }
 
 .icons {
@@ -138,6 +119,10 @@
 }
 
 @include responsive-down(lg) {
+    .header h1 {
+        font-size: 60px;
+    }
+
     .icons {
         --iconSize: 150px;
 
@@ -156,8 +141,7 @@
     }
 
     .header h1 {
-        margin: 0;
-        text-align: center;
+        font-size: 60px;
     }
 
     .header .headerContainer {
@@ -200,5 +184,11 @@
         &:nth-child(4) {
             transform: translate3d(0, calc(-5% + var(--scroll) * .06), 0);
         }
+    }
+}
+
+@include responsive-down(sm) {
+    .header h1 {
+        font-size: 42px;
     }
 }

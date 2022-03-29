@@ -47,7 +47,7 @@
     border: 0;
     border-radius: unset;
     color: #{color-get("gray")};
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1;
     outline: 0;
     text-decoration: none;
@@ -58,8 +58,8 @@
 .textButtonIcon {
     position: relative;
     display: flex;
-    height: 30px;
-    width: 30px;
+    height: 33px;
+    width: 33px;
     align-items: center;
     justify-content: center;
     background: #{color-get("gray", 200, .5)};
@@ -70,20 +70,20 @@
     transition-property: background, color;
 
     svg {
-        font-size: 16px;
+        font-size: 18px;
         transition: inherit;
         transition-property: transform;
     }
 }
 
 .textButtonSmall {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .textButtonSmall .textButtonIcon {
     margin-top: -1px;
-    height: 27px;
-    width: 27px;
+    height: 30px;
+    width: 30px;
 
     svg {
         font-size: 15px;
@@ -99,12 +99,16 @@
         background: transparent;
         color: #{color-get("primary")};
 
-        svg[data-icon="arrow-right-long"] {
+        svg[data-icon="right"] {
             transform: translate3d(3px, 0, 0);
         }
 
-        svg[data-icon="arrow-down-long"] {
+        svg[data-icon="down"] {
             transform: translate3d(0, 3px, 0);
+        }
+
+        svg[data-icon="up-right"] {
+            transform: translate3d(3px, -3px, 0);
         }
     }
 }

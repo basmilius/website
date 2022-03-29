@@ -8,8 +8,8 @@ export default function BDocument() {
                 <meta name="author" content="Bas Milius"/>
                 <meta name="revisit-after" content="1 day"/>
                 <meta name="theme-color" content="#0b63e9"/>
-                <link rel="preload" href="https://font.bmcdn.nl/css2?family=rajdhani|jetbrains-mono:ital" as="style"/>
-                <link rel="stylesheet" href="https://font.bmcdn.nl/css2?family=rajdhani|jetbrains-mono:ital"/>
+                <link rel="preload" href="https://font.bmcdn.nl/css2?family=outfit" as="style"/>
+                <link rel="stylesheet" href="https://font.bmcdn.nl/css2?family=outfit"/>
             </Head>
             <body>
                 <Main/>

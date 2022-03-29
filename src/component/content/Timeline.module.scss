@@ -21,15 +21,16 @@
 }
 
 .timelineItemLine {
+    margin-top: -#{gutter-get(1\/2)};
     margin-left: -#{gutter-get(4)};
     flex-shrink: 0;
 
     line{
-        stroke: #{color-get("gray", 200)};
+        stroke: #{color-get("primary", 50)};
     }
 
     circle:first-of-type {
-        stroke: #{color-get("gray", 300, .6)};
+        stroke: #{color-get("primary", 50)};
         transition: stroke 300ms var(--swiftOut);
         will-change: stroke;
     }
@@ -41,7 +42,11 @@
 
 .timelineItemContent {
     position: relative;
-    padding: #{gutter-get(7) - 5px} 0;
+    padding: #{gutter-get(7) - 6px} 0;
+
+    h3 {
+        font-size: 18px;
+    }
 
     p {
         color: #{color-get("gray", 500)};

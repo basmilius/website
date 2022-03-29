@@ -62,7 +62,7 @@ const WorkCard = memo(({title, description, buttonIcon, buttonLabel, buttonSmall
                     target="_blank"
                     className={styles.workCardLink}
                     isSmall={buttonSmall}
-                    icon={buttonIcon || "fas arrow-right-long"}
+                    icon={buttonIcon || "fas right"}
                     label={buttonLabel || "Read more"}/>
             )}
 
@@ -72,7 +72,7 @@ const WorkCard = memo(({title, description, buttonIcon, buttonLabel, buttonSmall
                         tag="a"
                         className={styles.workCardLink}
                         isSmall={buttonSmall}
-                        icon={buttonIcon || "fas arrow-right-long"}
+                        icon={buttonIcon || "fas right"}
                         label={buttonLabel || "Read more"}/>
                 </Link>
             )}
@@ -88,6 +88,7 @@ export default Object.assign(WorkCard, {
                 title="Meteocons"
                 description="A set of handcrafted animated weather icons in various formats."
                 buttonLabel="View project"
+                buttonSmall
                 buttonUrl="/work/meteocons"/>
         )),
 
@@ -98,6 +99,7 @@ export default Object.assign(WorkCard, {
                 description="Custom made building blocks for PHP frameworks."
                 buttonIcon="fab github"
                 buttonLabel="GitHub"
+                buttonSmall
                 buttonUrl="https://github.com/basmilius/raxos"/>
         )),
 
@@ -108,6 +110,7 @@ export default Object.assign(WorkCard, {
                 description="Custom made WordPress framework that I use to create custom themes."
                 buttonIcon="fab github"
                 buttonLabel="GitHub"
+                buttonSmall
                 buttonUrl="https://github.com/glybe/typewriter"/>
         )),
 
@@ -118,6 +121,7 @@ export default Object.assign(WorkCard, {
                 description="A set of fun visual effects that can be used on any website."
                 buttonIcon="fab github"
                 buttonLabel="GitHub"
+                buttonSmall
                 buttonUrl="https://github.com/basmilius/visual-effects"/>
         )),
 
@@ -126,7 +130,7 @@ export default Object.assign(WorkCard, {
                 imageUrl={glybeImage.src}
                 title="Glybe"
                 description="Dutch online community for everyone, come chat about everything!"
-                buttonIcon="fas up-right-from-square"
+                buttonIcon="fas up-right"
                 buttonLabel="glybe.nl"
                 buttonSmall
                 buttonUrl="https://glybe.nl"/>
@@ -137,7 +141,7 @@ export default Object.assign(WorkCard, {
                 imageUrl={basToolsImage.src}
                 title="Bas Tools"
                 description="Plugin that adds a custom theme and a few features to JetBrains IDE's"
-                buttonIcon="fas up-right-from-square"
+                buttonIcon="fas up-right"
                 buttonLabel="jetbrains.com"
                 buttonSmall
                 buttonUrl="https://plugins.jetbrains.com/plugin/15420-bas-tools"/>
@@ -148,7 +152,7 @@ export default Object.assign(WorkCard, {
                 imageUrl={flantImage.src}
                 title="Flant.nl"
                 description="Not yet available, it's coming soon though!"
-                buttonIcon="fas up-right-from-square"
+                buttonIcon="fas up-right"
                 buttonLabel="flant.nl"
                 buttonSmall
                 buttonUrl="https://flant.nl"/>
@@ -159,7 +163,7 @@ export default Object.assign(WorkCard, {
                 imageUrl={isHetPatatImage.src}
                 title="Patat of Friet?"
                 description="Little website for fun that shows if you should be #TeamPatat or #TeamFriet."
-                buttonIcon="fas up-right-from-square"
+                buttonIcon="fas up-right"
                 buttonLabel="ishetpatat.nl"
                 buttonSmall
                 buttonUrl="https://ishetpatat.nl"/>
@@ -171,7 +175,7 @@ export default Object.assign(WorkCard, {
                 imageUrl={ditoGroenloImage.src}
                 title="DITO Groenlo"
                 description="Fun drama club in my local town, Groenlo."
-                buttonIcon="fas up-right-from-square"
+                buttonIcon="fas up-right"
                 buttonLabel="dito-groenlo.nl"
                 buttonSmall
                 buttonUrl="https://dito-groenlo.nl"/>
@@ -182,7 +186,7 @@ export default Object.assign(WorkCard, {
                 imageUrl={ervetankImage.src}
                 title="Erve Tank"
                 description="Modern holiday apartment in Eibergen."
-                buttonIcon="fas up-right-from-square"
+                buttonIcon="fas up-right"
                 buttonLabel="ervetank.nl"
                 buttonSmall
                 buttonUrl="https://ervetank.nl"/>
@@ -193,7 +197,7 @@ export default Object.assign(WorkCard, {
                 imageUrl={fleurNijhuisImage.src}
                 title="Fleur Nijhuis"
                 description="Portfolio website built with WordPress and React."
-                buttonIcon="fas up-right-from-square"
+                buttonIcon="fas up-right"
                 buttonLabel="fleur.graphics"
                 buttonSmall
                 buttonUrl="https://fleur.graphics"/>
@@ -204,7 +208,7 @@ export default Object.assign(WorkCard, {
                 imageUrl={jaimieVosImage.src}
                 title="Jaimie Vos"
                 description="Portfolio website built with React and Next.js."
-                buttonIcon="fas up-right-from-square"
+                buttonIcon="fas up-right"
                 buttonLabel="jaimie.dev"
                 buttonSmall
                 buttonUrl="https://jaimie.dev"/>
@@ -215,7 +219,7 @@ export default Object.assign(WorkCard, {
                 imageUrl={kapsalonLichtenbergImage.src}
                 title="Kapsalon Lichtenberg"
                 description="Hair salon in my local town, Groenlo."
-                buttonIcon="fas up-right-from-square"
+                buttonIcon="fas up-right"
                 buttonLabel="kapsalon-lichtenberg.nl"
                 buttonSmall
                 buttonUrl="https://kapsalon-lichtenberg.nl"/>
@@ -226,7 +230,7 @@ export default Object.assign(WorkCard, {
                 imageUrl={manegeNijhuisImage.src}
                 title="Manage Nijhuis"
                 description="Horse riding school in Eibergen."
-                buttonIcon="fas up-right-from-square"
+                buttonIcon="fas up-right"
                 buttonLabel="manege-nijhuis.nl"
                 buttonSmall
                 buttonUrl="https://manege-nijhuis.nl"/>
@@ -237,7 +241,7 @@ export default Object.assign(WorkCard, {
                 imageUrl={studiovierentwintigImage.src}
                 title="Studio Vierentwintig"
                 description="Photo studio in my local town, Groenlo."
-                buttonIcon="fas up-right-from-square"
+                buttonIcon="fas up-right"
                 buttonLabel="studiovierentwintig.nl"
                 buttonSmall
                 buttonUrl="https://studiovierentwintig.nl"/>
@@ -248,7 +252,7 @@ export default Object.assign(WorkCard, {
                 imageUrl={wervincImage.src}
                 title="Wervinc."
                 description={<span>A custom WordPress theme I made together with <a href="https://vienna.nu" rel="noopener" target="_blank">Vienna</a>.</span>}
-                buttonIcon="fas up-right-from-square"
+                buttonIcon="fas up-right"
                 buttonLabel="wervinc.nl"
                 buttonSmall
                 buttonUrl="https://wervinc.nl"/>

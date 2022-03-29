@@ -22,8 +22,9 @@
     text-align: center;
 
     strong {
-        color: #{color-get("gray", 700)};
-        font-weight: 600;
+        color: #{color-get("gray", 500)};
+        font-size: 16px;
+        font-weight: 500;
     }
 }
 

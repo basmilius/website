@@ -41,12 +41,12 @@ export default memo(() => (<>
             <BMTextButton.Link
                 href={"/about"}
                 label="About me"
-                icon="fas arrow-right-long"/>
+                icon="fas right"/>
 
             <BMTextButton.Link
                 href={"/contact"}
                 label="Contact"
-                icon="fas arrow-right-long"/>
+                icon="fas right"/>
         </BMTextButton.Group>
     </BMSection>
 
@@ -60,7 +60,7 @@ export default memo(() => (<>
                 <BMTextButton.Link
                     href="/work"
                     label="All work"
-                    icon="fas arrow-right-long"/>
+                    icon="fas right"/>
 
                 <BMTextButton
                     tag="a"

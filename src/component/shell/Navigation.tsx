@@ -51,7 +51,7 @@ export default memo(() => {
 
                 <NavigationItemDefault label="Home" url="/" isExact/>
                 <NavigationItemDefault label="About me" url="/about" isExact/>
-                <NavigationItemDefault label="My work" url="/work" notActiveFor={["/work/meteocons"]}/>
+                <NavigationItemDefault label="Work" url="/work" notActiveFor={["/work/meteocons"]}/>
                 <NavigationItemDefault label="Meteocons" url="/work/meteocons" isExact/>
                 <NavigationItemDefault label="Contact" url="/contact" isExact/>
             </nav>
@@ -66,13 +66,13 @@ export default memo(() => {
                 aria-label="Toggle navigation">
                 <Icon
                     className={styles.bigNavigationCloseIcon}
-                    name="far xmark"/>
+                    name="far xmark-large"/>
             </button>
 
             <nav className={styles.bigNavigationNav}>
                 <NavigationItemMobile label="Home" url="/" isExact/>
                 <NavigationItemMobile label="About me" url="/about" isExact/>
-                <NavigationItemMobile label="My work" url="/work" notActiveFor={["/work/meteocons"]}/>
+                <NavigationItemMobile label="Work" url="/work" notActiveFor={["/work/meteocons"]}/>
                 <NavigationItemMobile label="Meteocons" url="/work/meteocons" isExact/>
                 <NavigationItemMobile label="Contact" url="/contact" isExact/>
             </nav>

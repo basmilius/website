@@ -27,6 +27,14 @@
     padding: #{gutter-get(5)} #{gutter-get(1)};
     flex-flow: column;
     flex-grow: 1;
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 16px;
+    }
 }
 
 .workCardLink {

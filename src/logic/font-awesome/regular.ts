@@ -1,8 +1,4 @@
 export {
     faBars,
-    faBarsSort,
-    faBarsStaggered,
-    faLaptopMobile,
-    faPaintBrushFine,
-    faXmark
+    faXmarkLarge
 } from "@fortawesome/pro-regular-svg-icons";

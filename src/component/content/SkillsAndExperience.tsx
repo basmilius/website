@@ -83,7 +83,7 @@ export default memo(() => (
             </div>
 
             <div className={styles.skill} style={{"--color": "262 80% 51%"} as CSSProperties}>
-                <Icon className={styles.skillIcon} name="fas code"/>
+                <Icon className={styles.skillIcon} name="fab microsoft"/>
                 <strong>C# / .NET</strong>
             </div>
         </div>
