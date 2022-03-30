@@ -24,13 +24,7 @@ export default memo(() => (<>
                 loading="lazy"/>
         }>
         <h2>Full-Stack<br/>Developer</h2>
-
-        <p className="lead">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at cum cumque deleniti doloremque
-            est exercitationem harum illo iusto labore nesciunt nobis, officiis omnis placeat quasi quidem
-            sapiente ullam voluptates!
-        </p>
-
+        <h4>With a passion for creating websites, apps and backend applications.</h4>
         <p>
             Cumque, delectus incidunt laudantium libero magni rerum sapiente similique? Eum inventore
             laboriosam molestiae officiis omnis quia quisquam repellat repudiandae! Delectus deserunt error
@@ -56,7 +50,7 @@ export default memo(() => (<>
         title="Latest work"
         subTitle="These are the latest projects that I've worked on. It includes personal work and work that I did for clients."
         details={(
-            <BMTextButton.Stack alignToBottom>
+            <BMTextButton.Stack>
                 <BMTextButton.Link
                     href="/work"
                     label="All work"
@@ -75,6 +69,9 @@ export default memo(() => (<>
             <BMWorkCard.OfMe.WeatherIcons/>
             <BMWorkCard.ForOthers.JaimieVos/>
             <BMWorkCard.ForOthers.FleurNijhuis/>
+            <BMWorkCard.OfMe.Flant/>
+            <BMWorkCard.ForOthers.ManegeNijhuis/>
+            <BMWorkCard.ForOthers.StudioVierentwintig/>
         </BMWorkCardDeck>
     </BMSection>
 </>));

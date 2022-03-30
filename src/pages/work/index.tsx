@@ -13,14 +13,17 @@ export default memo(() => (<>
     <BMWorkCardGrid title="Featured">
         <BMWorkCard.OfMe.WeatherIcons/>
         <BMWorkCard.OfMe.VisualEffects/>
-        <BMWorkCard.OfMe.TypeWriter/>
+        <BMWorkCard.OfMe.Glybe/>
     </BMWorkCardGrid>
 
-    <BMWorkCardGrid more title="Products">
+    <BMWorkCardGrid more title="Projects">
         <BMWorkCard.OfMe.Glybe/>
         <BMWorkCard.OfMe.BasTools/>
-        <BMWorkCard.OfMe.Flant/>
         <BMWorkCard.OfMe.IsHetPatat/>
+        <BMWorkCard.OfMe.IsHetFriet/>
+        <BMWorkCard.OfMe.StartDeTijd/>
+        <BMWorkCard.OfMe.Flant/>
+        <BMWorkCard.OfMe.MandLink/>
     </BMWorkCardGrid>
 
     <BMWorkCardGrid more title="Open source">
@@ -33,10 +36,11 @@ export default memo(() => (<>
     <BMWorkCardGrid more title="For others">
         <BMWorkCard.ForOthers.JaimieVos/>
         <BMWorkCard.ForOthers.FleurNijhuis/>
-        <BMWorkCard.ForOthers.Wervinc/>
-        <BMWorkCard.ForOthers.ErveTank/>
-        <BMWorkCard.ForOthers.ManegeNijhuis/>
         <BMWorkCard.ForOthers.StudioVierentwintig/>
+        <BMWorkCard.ForOthers.ManegeNijhuis/>
+        <BMWorkCard.ForOthers.ErveNijhuis/>
+        <BMWorkCard.ForOthers.ErveTank/>
+        <BMWorkCard.ForOthers.Wervinc/>
         <BMWorkCard.ForOthers.KapsalonLichtenberg/>
         <BMWorkCard.ForOthers.DitoGroenlo/>
     </BMWorkCardGrid>

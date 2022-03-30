@@ -4,22 +4,26 @@ import { Link } from "@/component/platform";
 
 import styles from "./Work.module.scss";
 
-import basToolsImage from "../../image/work/bas-tools.svg";
-import ditoGroenloImage from "../../image/work/dito-groenlo.svg";
-import ervetankImage from "../../image/work/ervetank.svg";
-import flantImage from "../../image/work/flant.svg";
-import fleurNijhuisImage from "../../image/work/fleur-nijhuis.svg";
-import glybeImage from "../../image/work/glybe.svg";
-import isHetPatatImage from "../../image/work/is-het-patat.svg";
-import jaimieVosImage from "../../image/work/jaimie-vos.svg";
-import kapsalonLichtenbergImage from "../../image/work/kapsalon-lichtenberg.svg";
-import manegeNijhuisImage from "../../image/work/manege-nijhuis.svg";
-import raxosImage from "../../image/work/raxos.svg";
-import studiovierentwintigImage from "../../image/work/studio-vierentwintig.svg";
-import typeWriterImage from "../../image/work/typewriter.svg";
-import visualEffectsImage from "../../image/work/visual-effects.svg";
-import weatherIconsImage from "../../image/work/weather-icons.svg";
-import wervincImage from "../../image/work/wervinc.svg";
+import basToolsImage from "../../image/work/blueprint/blueprint-bas-tools.svg";
+import ditoGroenloImage from "../../image/work/blueprint/blueprint-dito.svg";
+import ervenijhuisImage from "../../image/work/blueprint/blueprint-erve-nijhuis.svg";
+import ervetankImage from "../../image/work/blueprint/blueprint-erve-tank.svg";
+import flantImage from "../../image/work/blueprint/blueprint-flant.svg";
+import fleurNijhuisImage from "../../image/work/blueprint/blueprint-fleur-nijhuis.svg";
+import glybeImage from "../../image/work/blueprint/blueprint-glybe.svg";
+import isHetPatatImage from "../../image/work/blueprint/blueprint-ishetpatat.svg";
+import isHetFrietImage from "../../image/work/blueprint/blueprint-ishetfriet.svg";
+import jaimieVosImage from "../../image/work/blueprint/blueprint-jaimie-vos.svg";
+import kapsalonLichtenbergImage from "../../image/work/blueprint/blueprint-kapsalon-lichtenberg.svg";
+import mandLinkImage from "../../image/work/blueprint/blueprint-mandlink.svg";
+import manegeNijhuisImage from "../../image/work/blueprint/blueprint-manege-nijhuis.svg";
+import raxosImage from "../../image/work/blueprint/blueprint-raxos.svg";
+import startDeTijdImage from "../../image/work/blueprint/blueprint-startdetijd.svg";
+import studiovierentwintigImage from "../../image/work/blueprint/blueprint-studiovierentwintig.svg";
+import typeWriterImage from "../../image/work/blueprint/blueprint-typewriter.svg";
+import visualEffectsImage from "../../image/work/blueprint/blueprint-visual-effects.svg";
+import weatherIconsImage from "../../image/work/blueprint/blueprint-meteocons.svg";
+import wervincImage from "../../image/work/blueprint/blueprint-wervinc.svg";
 
 interface Props {
     title: string;
@@ -39,13 +43,14 @@ const WorkCard = memo(({title, description, buttonIcon, buttonLabel, buttonSmall
         )}
 
         {!visual && imageUrl && (
-            <img
-                className={styles.workCardVisualImage}
-                src={imageUrl}
-                alt={title}
-                height={394}
-                width={700}
-                style={{height: "auto", objectFit: "cover", objectPosition: "center"}}/>
+            <div className={styles.workCardVisualMount}>
+                <img
+                    className={styles.workCardVisualImage}
+                    src={imageUrl}
+                    alt={title}
+                    height={394}
+                    width={700}/>
+            </div>
         )}
 
         {visual}
@@ -161,12 +166,45 @@ export default Object.assign(WorkCard, {
         IsHetPatat: memo(() => (
             <WorkCard
                 imageUrl={isHetPatatImage.src}
-                title="Patat of Friet?"
-                description="Little website for fun that shows if you should be #TeamPatat or #TeamFriet."
+                title="Is het Patat?"
+                description="Little website that shows if you should be on #TeamPatat."
                 buttonIcon="fas up-right"
                 buttonLabel="ishetpatat.nl"
                 buttonSmall
                 buttonUrl="https://ishetpatat.nl"/>
+        )),
+
+        IsHetFriet: memo(() => (
+            <WorkCard
+                imageUrl={isHetFrietImage.src}
+                title="Is het Friet?"
+                description="Little website that shows if you should be on #TeamFriet."
+                buttonIcon="fas up-right"
+                buttonLabel="ishetfriet.nl"
+                buttonSmall
+                buttonUrl="https://ishetfriet.nl"/>
+        )),
+
+        StartDeTijd: memo(() => (
+            <WorkCard
+                imageUrl={startDeTijdImage.src}
+                title="Start de Tijd"
+                description="An online timer and clock that I made in ten minutes :-)"
+                buttonIcon="fas up-right"
+                buttonLabel="startdetijd.nl"
+                buttonSmall
+                buttonUrl="https://startdetijd.nl"/>
+        )),
+
+        MandLink: memo(() => (
+            <WorkCard
+                imageUrl={mandLinkImage.src}
+                title="Mand.link"
+                description="Free to use url shortener. Create as many short urls as you'd like!"
+                buttonIcon="fas up-right"
+                buttonLabel="mand.link"
+                buttonSmall
+                buttonUrl="https://mand.link"/>
         ))
     },
     ForOthers: {
@@ -181,6 +219,17 @@ export default Object.assign(WorkCard, {
                 buttonUrl="https://dito-groenlo.nl"/>
         )),
 
+        ErveNijhuis: memo(() => (
+            <WorkCard
+                imageUrl={ervenijhuisImage.src}
+                title="Erve Tank"
+                description="Modern holiday house in Eibergen."
+                buttonIcon="fas up-right"
+                buttonLabel="manege-nijhuis.nl"
+                buttonSmall
+                buttonUrl="https://manege-nijhuis.nl/erve-nijhuis"/>
+        )),
+
         ErveTank: memo(() => (
             <WorkCard
                 imageUrl={ervetankImage.src}
@@ -189,7 +238,7 @@ export default Object.assign(WorkCard, {
                 buttonIcon="fas up-right"
                 buttonLabel="ervetank.nl"
                 buttonSmall
-                buttonUrl="https://ervetank.nl"/>
+                buttonUrl="https://manege-nijhuis.nl/erve-tank"/>
         )),
 
         FleurNijhuis: memo(() => (
