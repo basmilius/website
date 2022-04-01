@@ -1,5 +1,5 @@
-import { useBreakpoints, useInView, useWindowScroll } from "@latte-ui/core";
-import { CSSProperties, memo, ReactNode, useEffect, useMemo, useRef } from "react";
+import { useBreakpoints, useInView } from "@latte-ui/core";
+import { memo, ReactNode, useEffect, useMemo, useRef } from "react";
 import { BlobCanvas } from "@/logic/util/blobs";
 
 import styles from "./Header.module.scss";
@@ -8,7 +8,6 @@ export default memo(({cards, isFrontPage, title}: Props) => {
     const canvasRef = useRef<HTMLCanvasElement>();
     const inView = useInView(canvasRef);
     const {isDown, width} = useBreakpoints();
-    const {y} = useWindowScroll();
 
     const isSmallMode = useMemo(() => isDown("md"), [width]);
 
@@ -27,14 +26,14 @@ export default memo(({cards, isFrontPage, title}: Props) => {
     }, [canvasRef, inView, isSmallMode]);
 
     return (<>
-        <header className={`${styles.header} ${isFrontPage ? styles.headerFrontPage : styles.headerDefault} ${cards && cards.length > 0 ? styles.headerHasIcons : ""}`} style={{"--scroll": `${y}px`} as CSSProperties}>
+        <header className={`${styles.header} ${isFrontPage ? styles.headerFrontPage : styles.headerDefault} ${cards && cards.length > 0 ? styles.headerHasIcons : ""}`}>
             <canvas ref={canvasRef} className={styles.canvas}/>
 
             <div className={styles.headerContainer}>
                 <h1>{title}</h1>
 
                 {cards && cards.length > 0 && (
-                    <div className={`${styles.icons} ${styles.iconsSmall}`}>
+                    <div className={styles.icons}>
                         {cards.map((card, index) => (
                             <div key={index} className={styles.icon}>
                                 {card}

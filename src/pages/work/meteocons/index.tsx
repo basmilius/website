@@ -97,11 +97,12 @@ export default memo(() => {
 const Icon = memo(({icon, style}: { icon: string; style: IconStyle; }) => {
     const ref = useRef();
     const inView = useInView(ref, {initialValue: false, threshold: .25});
+    const name = useMemo(() => icon.split("-").map(w => w[0].toUpperCase() + w.substring(1)).join(" "), [icon]);
 
     return (
         <div ref={ref} className={styles.weatherIcon}>
             {inView && (
-                <Tooltip content={icon} location="top">
+                <Tooltip content={name} location="top">
                     <img
                         key={style}
                         className={styles.weatherIconImage}

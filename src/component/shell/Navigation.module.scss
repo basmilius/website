@@ -111,7 +111,7 @@ $-easing: var(--swiftOut);
 .navTitle {
     color: #{color-get("gray", 800)};
     font-size: 21px;
-    font-weight: 700;
+    font-weight: 600;
     opacity: 0;
     transition: opacity #{$-duration} #{$-easing};
 }

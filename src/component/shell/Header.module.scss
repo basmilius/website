@@ -51,15 +51,17 @@
 }
 
 .icons {
-    --iconSize: 180px;
+    --iconGap: #{gutter-get(5)};
+    --iconSize: 150px;
+    --iconSizeImage: 99px;
 
     position: absolute;
     display: grid;
-    top: 65%;
+    top: 100%;
     right: 0;
-    gap: #{gutter-get(3)};
+    gap: var(--iconGap);
     grid-template-columns: repeat(2, 1fr);
-    transform: translate3d(0, -21%, 0);
+    transform: translate3d(0, -78%, 0);
     z-index: 1;
 }
 
@@ -72,43 +74,23 @@
     justify-content: center;
     background: #{color-get("gray", 0)};
     border-radius: #{$radius * 2};
-    box-shadow: var(--shadow-2);
+    box-shadow: var(--shadow-3);
     color: #{color-get("gray", 700)};
     font-size: calc(var(--iconSize) * .4);
     transform-origin: center;
     transition: transform 1s var(--swiftOut);
-    animation: iconAnimationKeyframes 1s var(--decelerationCurve) both;
+    animation: iconAnimationKeyframes 660ms var(--decelerationCurve) both;
 
-    &:nth-child(1) {
-        animation-delay: .2s;
-        transform: translate3d(-5%, calc(-10% + (var(--scroll, 0px) * -.1)), 0);
-    }
-
-    &:nth-child(2) {
-        animation-delay: .4s;
-        transform: translate3d(10%, calc(-5% + (var(--scroll, 0px) * -.15)), 0);
-    }
-
-    &:nth-child(3) {
-        animation-delay: .3s;
-        transform: translate3d(-5%, calc(5% + (var(--scroll, 0px) * -.2)), 0);
-    }
-
-    &:nth-child(4) {
-        animation-delay: .5s;
-        transform: translate3d(10%, calc(10% + (var(--scroll, 0px) * -.15)), 0);
+    @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+            animation-delay: #{$i * 90ms + 240ms};
+        }
     }
 
     img {
-        height: 84px;
-        width: 84px;
+        height: var(--iconSizeImage);
+        width: var(--iconSizeImage);
     }
-}
-
-.iconsSmall {
-    --iconSize: 120px;
-
-    gap: #{gutter-get(2)};
 }
 
 @keyframes iconAnimationKeyframes {
@@ -124,9 +106,8 @@
     }
 
     .icons {
-        --iconSize: 150px;
-
-        right: #{gutter-get(3)};
+        --iconSize: 120px;
+        --iconSizeImage: 84px;
     }
 }
 
@@ -149,46 +130,32 @@
     }
 
     .headerDefault.headerHasIcons {
-        margin-bottom: #{gutter-get(11)};
+        margin-bottom: #{gutter-get(10)};
     }
 
     .icons {
-        --iconSize: 72px;
-
-        top: 100%;
-        left: 50%;
-        right: unset;
-        gap: #{gutter-get(5)};
-        grid-template-columns: repeat(4, 1fr);
-        transform: translate3d(-50%, 50%, 0);
-    }
-
-    .icon {
-        img {
-            height: 60px;
-            width: 60px;
-        }
-
-        &:nth-child(1) {
-            transform: translate3d(0, calc(10% + var(--scroll) * .025), 0);
-        }
-
-        &:nth-child(2) {
-            transform: translate3d(0, calc(-10% + var(--scroll) * .1), 0);
-        }
-
-        &:nth-child(3) {
-            transform: translate3d(0, calc(5% + var(--scroll) * .05), 0);
-        }
-
-        &:nth-child(4) {
-            transform: translate3d(0, calc(-5% + var(--scroll) * .06), 0);
-        }
+        --iconSize: 90px;
+        --iconSizeImage: 54px;
     }
 }
 
 @include responsive-down(sm) {
     .header h1 {
         font-size: 42px;
+        text-align: center;
+    }
+
+    .headerDefault.headerHasIcons {
+        margin-bottom: #{gutter-get(10)};
+    }
+
+    .icons {
+        --iconSize: 66px;
+        --iconSizeImage: 48px;
+
+        left: 50%;
+        right: unset;
+        grid-template-columns: repeat(4, 1fr);
+        transform: translate3d(-50%, -50%, 0);
     }
 }
