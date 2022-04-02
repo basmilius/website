@@ -23,6 +23,7 @@
     top: 99px;
     margin-top: #{gutter-get(5)};
     padding-top: #{gutter-get(4) + 1px};
+    padding-right: #{gutter-get(1\/2) - 1px};
     padding-bottom: #{gutter-get(4) + 1px};
     align-items: center;
     justify-content: space-between;

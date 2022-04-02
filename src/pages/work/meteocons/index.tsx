@@ -192,8 +192,7 @@ interface IconStyleSwitcherProps {
 const iconStyles: IconStyles = {
     fill: "Fill",
     line: "Outline",
-    monochrome: "Monochrome",
-    cartoon: "Cartoon"
+    monochrome: "Monochrome"
 };
 
 const iconGroups: IconGroup[] = [{
@@ -486,5 +485,5 @@ interface IconGroup {
     readonly icons: string[][];
 }
 
-type IconStyle = "fill" | "monochrome" | "line" | "cartoon";
+type IconStyle = "fill" | "monochrome" | "line";
 type IconStyles = { [key in IconStyle]: string; };

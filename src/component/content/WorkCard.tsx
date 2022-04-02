@@ -32,11 +32,12 @@ interface Props {
     buttonLabel?: string;
     buttonSmall?: boolean;
     buttonUrl?: string;
+    comingSoon?: boolean;
     imageUrl?: string;
     visual?: ReactNode;
 }
 
-const WorkCard = memo(({title, description, buttonIcon, buttonLabel, buttonSmall, buttonUrl, imageUrl, visual}: Props) => (
+const WorkCard = memo(({title, description, buttonIcon, buttonLabel, buttonSmall, buttonUrl, comingSoon, imageUrl, visual}: Props) => (
     <div className={styles.workCard}>
         {!visual && !imageUrl && (
             <div className={styles.workCardVisualBlank}/>
@@ -50,6 +51,10 @@ const WorkCard = memo(({title, description, buttonIcon, buttonLabel, buttonSmall
                     alt={title}
                     height={394}
                     width={700}/>
+
+                {comingSoon && (
+                    <div className={styles.workCardComingSoon}>Soon</div>
+                )}
             </div>
         )}
 
@@ -160,7 +165,8 @@ export default Object.assign(WorkCard, {
                 buttonIcon="fas up-right"
                 buttonLabel="flant.nl"
                 buttonSmall
-                buttonUrl="https://flant.nl"/>
+                buttonUrl="https://flant.nl"
+                comingSoon/>
         )),
 
         IsHetPatat: memo(() => (
@@ -204,7 +210,8 @@ export default Object.assign(WorkCard, {
                 buttonIcon="fas up-right"
                 buttonLabel="mand.link"
                 buttonSmall
-                buttonUrl="https://mand.link"/>
+                buttonUrl="https://mand.link"
+                comingSoon/>
         ))
     },
     ForOthers: {

@@ -8,7 +8,7 @@
 .workCardVisual {
     height: auto;
     aspect-ratio: 12 / 7;
-    border-radius: 4% / 7%;
+    border-radius: inherit;
     object-fit: cover;
     object-position: center;
 }
@@ -27,6 +27,8 @@
 
 .workCardVisualMount {
     position: relative;
+    border-radius: 4% / 7%;
+    overflow: hidden;
 
     &::after {
         position: absolute;
@@ -36,7 +38,7 @@
         height: 100%;
         width: 100%;
         content: "";
-        border-radius: 4% / 7%;
+        border-radius: inherit;
         box-shadow: inset 0 0 0 1px #{color-get("gray", 100)};
     }
 }
@@ -54,6 +56,21 @@
     p {
         font-size: 16px;
     }
+}
+
+.workCardComingSoon {
+    position: absolute;
+    top: -#{gutter-get(1\/2)};
+    right: -#{gutter-get(7)};
+    padding: #{gutter-get(4)} #{gutter-get(7)} #{gutter-get(1\/2)};
+    background: #{color-get("primary")};
+    color: #{color-get("primary", 0)};
+    font-size: 10px;
+    font-weight: 700;
+    pointer-events: none;
+    text-transform: uppercase;
+    transform: rotate(45deg);
+    user-select: none;
 }
 
 .workCardLink {
