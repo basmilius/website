@@ -1,7 +1,8 @@
-import { Tooltip, useInView, useObserveSticky } from "@latte-ui/core";
+import { Tooltip, useInView } from "@latte-ui/core";
 import { memo, useMemo, useRef, useState } from "react";
 import { Head } from "@/component/platform";
 import { BMHeader, BMNavigationTitle, BMSection, BMTextButton } from "@/component/shell";
+import { useObserveSticky } from "@/pages/work/meteocons/useObserveSticky";
 
 import styles from "./styles.module.scss";
 
@@ -145,8 +146,20 @@ const IconSectionHeader = memo(({group, style, setStyle}: IconSectionProps & Ico
         threshold: 30
     });
 
+    const className = useMemo(() => {
+        if (isAfter) {
+            return styles.weatherIconSectionHeaderStickyAfter;
+        }
+
+        if (isSticky) {
+            return styles.weatherIconSectionHeaderSticky;
+        }
+
+        return styles.weatherIconSectionHeaderDefault;
+    }, [isSticky, isAfter, ref]);
+
     return (
-        <div ref={ref} className={`${styles.weatherIconSectionHeader} ${isSticky ? styles.weatherIconSectionHeaderSticky : ""} ${isAfter ? styles.weatherIconSectionHeaderStickyAfter : ""}`}>
+        <div ref={ref} className={className}>
             <h3>{group.label}</h3>
 
             <IconStyleSwitcher
@@ -196,7 +209,7 @@ const iconStyles: IconStyles = {
 };
 
 const iconGroups: IconGroup[] = [{
-    label: "Forecast",
+    label: "Weather",
     icons: [[
         "clear-day",
         "clear-night",
@@ -367,6 +380,7 @@ const iconGroups: IconGroup[] = [{
         "thermometer-mercury-cold",
         "thermometer-sun",
         "thermometer-moon",
+        "thermometer-raindrop",
         "thermometer-snow",
         "thermometer-water"
     ]]
@@ -379,7 +393,6 @@ const iconGroups: IconGroup[] = [{
         "windsock-weak",
         "humidity",
         "raindrop-measure",
-        "thermometer-raindrop",
         "tide-high",
         "tide-low",
         "pressure-high",

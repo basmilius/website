@@ -18,20 +18,20 @@ export default memo(() => (<>
             contact me!
         </p>
         <BMTextButton.Group>
-            <BMTextButton
+            <BMTextButton.Link
                 href="/about"
                 label="About me"
-                icon="fas arrow-right-long"/>
+                icon="fas right"/>
 
-            <BMTextButton
+            <BMTextButton.Link
                 href="/work"
                 label="My work"
-                icon="fas arrow-right-long"/>
+                icon="fas right"/>
 
-            <BMTextButton
+            <BMTextButton.Link
                 href="/contact"
                 label="Contact"
-                icon="fas arrow-right-long"/>
+                icon="fas right"/>
         </BMTextButton.Group>
     </BMSection>
 
