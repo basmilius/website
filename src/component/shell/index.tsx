@@ -10,12 +10,12 @@ export { default as BMNavigation, BMNavigationTitle } from "./Navigation";
 export { default as BMSection } from "./Section";
 export { default as BMTextButton } from "./TextButton";
 
-const LazyTooltip = dynamic(() => import("./Tooltip").then(m => m.Tooltip));
+const LazyTooltip = dynamic(() => import("./Tooltip").then(m => m.Tooltip), {ssr: false});
 
 type CompleteTooltipProps = PropsWithChildren<TooltipProps>;
 
 export const BMTooltip = memo((props: CompleteTooltipProps) => (
-    <Suspense fallback={props.children}>
+    <Suspense fallback={<>{props.children}</>}>
         <LazyTooltip {...props} />
     </Suspense>
 ));

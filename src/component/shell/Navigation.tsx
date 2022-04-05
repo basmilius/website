@@ -46,9 +46,11 @@ export default memo(() => {
                 </Link>
 
                 <div className={styles.navVariable}>
-                    <span className={`${styles.navTitle} ${isTitleVisible ? styles.navTitleVisible : ""}`}>
-                        <Slot/>
-                    </span>
+                    {isMounted && (
+                        <span className={`${styles.navTitle} ${isTitleVisible ? styles.navTitleVisible : ""}`}>
+                            <Slot/>
+                        </span>
+                    )}
                 </div>
 
                 <NavigationItemDefault label="Home" url="/" isExact/>
