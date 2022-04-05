@@ -51,8 +51,7 @@
 .weatherIconSectionHeaderStickyAfter {
     composes: weatherIconSectionHeader;
 
-    background: rgb(254 254 255 / .85);
-    backdrop-filter: blur(6px) saturate(180%);
+    background: rgb(254 254 255);
     border-bottom: 1px solid #{color-get("gray", 100, .5)};
 }
 

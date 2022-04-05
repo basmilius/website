@@ -7,7 +7,7 @@ html {
 
 //noinspection CssReplaceWithShorthandSafely
 body {
-    background: linear-gradient(to bottom, transparent calc(100% - 1px), #{color-get("primary", 50, .65)} calc(100% - 1px)), linear-gradient(to right, #{color-get("primary", 50, .1)} calc(100% - 1px), #{color-get("primary", 50, .65)} calc(100% - 1px));
+    background: linear-gradient(to bottom, transparent calc(100% - 1px), #{color-get("primary", 50, .75)} calc(100% - 1px)), linear-gradient(to right, #{color-get("primary", 50, .1)} calc(100% - 1px), #{color-get("primary", 50, .75)} calc(100% - 1px));
     background-attachment: fixed;
     background-position: top center;
     background-size: 90px 90px, 90px 90px;
