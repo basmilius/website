@@ -1,29 +1,12 @@
-import { LatteUi, LatteUiContext } from "@latte-ui/core";
+import { SlotFillProvider } from "@latte-ui/slot-fill";
 import { Head } from "@/component/platform";
-import { BMFooter, BMNavigation } from "@/component/shell";
-import { initializeFontAwesome, renderIcon } from "@/logic/font-awesome";
+import { BMFooter, BMNavigation, BMTooltip } from "@/component/shell";
+import { initializeFontAwesome } from "@/logic/font-awesome";
 
 import "../css/latte.scss";
 import "../css/index.scss";
 
 initializeFontAwesome();
-
-const latteUiConfig = LatteUiContext.withDefaults({
-    emoji: {
-        baseUrl: "https://bmcdn.nl/assets/joypixels/v6.6",
-        fileName: "/svg/%s.svg"
-    },
-    icon: {
-        named: {
-            angleLeft: "fas angle-left",
-            anglesLeft: "fas angles-left",
-            angleRight: "fas angle-right",
-            anglesRight: "fas angles-right",
-            calendar: "fas calendar"
-        },
-        renderer: renderIcon
-    }
-});
 
 export default function BApp({Component, pageProps}) {
     return (<>
@@ -36,12 +19,12 @@ export default function BApp({Component, pageProps}) {
             <title>Bas</title>
         </Head>
 
-        <LatteUi {...latteUiConfig}>
+        <SlotFillProvider>
+            <BMTooltip.Portal/>
+
             <BMNavigation/>
-
             <Component {...pageProps}/>
-
             <BMFooter/>
-        </LatteUi>
+        </SlotFillProvider>
     </>);
 }

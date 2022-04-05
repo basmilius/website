@@ -1,4 +1,4 @@
-import { useBreakpoints, useInView } from "@latte-ui/core";
+import { useInView, useWindowSize } from "@latte-ui/hooks";
 import { memo, ReactNode, useEffect, useMemo, useRef } from "react";
 import { BlobCanvas } from "@/logic/util/blobs";
 
@@ -7,9 +7,9 @@ import styles from "./Header.module.scss";
 export default memo(({cards, isFrontPage, title}: Props) => {
     const canvasRef = useRef<HTMLCanvasElement>();
     const inView = useInView(canvasRef);
-    const {isDown, width} = useBreakpoints();
+    const {width} = useWindowSize();
 
-    const isSmallMode = useMemo(() => isDown("md"), [width]);
+    const isSmallMode = useMemo(() => width < 768, [width]);
 
     useEffect(() => {
         if (!canvasRef.current || !inView) {

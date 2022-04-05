@@ -50,7 +50,8 @@ const WorkCard = memo(({title, description, buttonIcon, buttonLabel, buttonSmall
                     src={imageUrl}
                     alt={title}
                     height={394}
-                    width={700}/>
+                    width={700}
+                    loading="lazy"/>
 
                 {comingSoon && (
                     <div className={styles.workCardComingSoon}>Soon</div>

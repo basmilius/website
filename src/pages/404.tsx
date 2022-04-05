@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { BMWorkCard, BMWorkCardGrid } from "@/component/content";
-import { Head, Link } from "@/component/platform";
+import { Head } from "@/component/platform";
 import { BMHeader, BMSection, BMTextButton } from "@/component/shell";
 
 export default memo(() => (<>

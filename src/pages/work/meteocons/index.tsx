@@ -1,8 +1,7 @@
-import { Tooltip, useInView } from "@latte-ui/core";
+import { useInView, useObserveSticky } from "@latte-ui/hooks";
 import { memo, useMemo, useRef, useState } from "react";
 import { Head } from "@/component/platform";
-import { BMHeader, BMNavigationTitle, BMSection, BMTextButton } from "@/component/shell";
-import { useObserveSticky } from "@/pages/work/meteocons/useObserveSticky";
+import { BMHeader, BMNavigationTitle, BMSection, BMTextButton, BMTooltip } from "@/component/shell";
 
 import styles from "./styles.module.scss";
 
@@ -103,14 +102,14 @@ const Icon = memo(({icon, style}: { icon: string; style: IconStyle; }) => {
     return (
         <div ref={ref} className={styles.weatherIcon}>
             {inView && (
-                <Tooltip content={name} location="top">
+                <BMTooltip content={name} location="top">
                     <img
                         key={style}
                         className={styles.weatherIconImage}
                         src={`https://bmcdn.nl/assets/weather-icons/v3.0/${style}/svg/${icon}.svg`}
                         alt={icon}
                         loading="lazy"/>
-                </Tooltip>
+                </BMTooltip>
             )}
         </div>
     );
@@ -172,7 +171,7 @@ const IconSectionHeader = memo(({group, style, setStyle}: IconSectionProps & Ico
 const IconStyleSwitcher = memo(({style, setStyle}: IconStyleSwitcherProps) => (
     <nav className={styles.weatherIconSectionStyleSwitcher}>
         {Object.keys(iconStyles).map(key => (
-            <Tooltip
+            <BMTooltip
                 key={key}
                 content={iconStyles[key]}
                 location="bottom"
@@ -188,7 +187,7 @@ const IconStyleSwitcher = memo(({style, setStyle}: IconStyleSwitcherProps) => (
                         alt={iconStyles[key]}
                         loading="lazy"/>
                 </button>
-            </Tooltip>
+            </BMTooltip>
         ))}
     </nav>
 ));

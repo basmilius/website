@@ -1,5 +1,6 @@
-import { Icon, useClipboard } from "@latte-ui/core";
+import { useClipboard } from "@latte-ui/hooks";
 import { memo } from "react";
+import { BMIcon } from "@/component/shell";
 
 import styles from "./Information.module.scss";
 
@@ -9,7 +10,7 @@ export default memo(({icon, title, value}: Props) => {
     return (
         <button className={`${styles.informationItem} ${isCopied ? styles.informationCopied : ""}`} onClick={copy}>
             <div className={styles.informationItemIconMount}>
-                <Icon name={icon} className={styles.informationItemIcon}/>
+                <BMIcon name={icon} className={styles.informationItemIcon}/>
             </div>
 
             <div className={styles.informationItemCaption}>

@@ -1,10 +1,12 @@
-import { createSlotFill, Icon, useBoolean, useDebounce, useMounted, useWindowScroll } from "@latte-ui/core";
+import { useBoolean, useDebounce, useMounted, useWindowScroll } from "@latte-ui/hooks";
+import { createSlotFill } from "@latte-ui/slot-fill";
 import { memo, useEffect, useMemo, useRef } from "react";
 import { Link, useRouter } from "@/component/platform";
 import { BlobCanvas } from "@/logic/util/blobs";
 
 import styles from "./Navigation.module.scss";
 import logo from "../../image/logo.svg";
+import { BMIcon } from "@/component/shell/index";
 
 const {Fill, Slot} = createSlotFill("bm-navigation");
 
@@ -22,7 +24,7 @@ export default memo(() => {
 
     return (<>
         <a href={"#content"} className={styles.skipToContent}>
-            <Icon name="fas down-to-line"/>
+            <BMIcon name="fas down-to-line"/>
             <span>Skip to content</span>
         </a>
 
@@ -32,7 +34,7 @@ export default memo(() => {
                     className={styles.navToggle}
                     onClick={() => setMobileMenuOpen(true)}
                     aria-label="Toggle navigation">
-                    <Icon
+                    <BMIcon
                         className={styles.navToggleIcon}
                         name="far bars"/>
                 </button>
@@ -64,7 +66,7 @@ export default memo(() => {
                 className={styles.bigNavigationClose}
                 onClick={() => setMobileMenuOpen(false)}
                 aria-label="Toggle navigation">
-                <Icon
+                <BMIcon
                     className={styles.bigNavigationCloseIcon}
                     name="far xmark-large"/>
             </button>

@@ -1,10 +1,11 @@
-import { Icon, useAriaAttributes, useClasses } from "@latte-ui/core";
+import { useAriaAttributes, useClasses } from "@latte-ui/hooks";
 import { ButtonProps } from "@latte-ui/core/src/component/button/Button";
 import { LatteClassStyle } from "@latte-ui/core/src/types/prop-types";
 import { ElementType, forwardRef, memo, PropsWithChildren } from "react";
 import { Link as LinkComponent } from "@/component/platform";
 
 import styles from "./TextButton.module.scss";
+import { BMIcon } from "@/component/shell/index";
 
 interface Props {
     isSmall?: boolean;
@@ -40,7 +41,7 @@ const Button = memo(forwardRef<HTMLElement, ButtonProps & Props>(({className, st
 
             {typeof icon === "string" && (
                 <div className={styles.textButtonIcon}>
-                    <Icon name={icon}/>
+                    <BMIcon name={icon}/>
                 </div>
             )}
 
@@ -48,7 +49,7 @@ const Button = memo(forwardRef<HTMLElement, ButtonProps & Props>(({className, st
 
             {typeof iconAfter === "string" && (
                 <div className={styles.textButtonIcon}>
-                    <Icon name={iconAfter}/>
+                    <BMIcon name={iconAfter}/>
                 </div>
             )}
 
