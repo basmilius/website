@@ -7,10 +7,10 @@ specifiers:
   '@fortawesome/free-brands-svg-icons': 6.1.1
   '@fortawesome/pro-regular-svg-icons': 6.1.1
   '@fortawesome/pro-solid-svg-icons': 6.1.1
-  '@latte-ui/core': 2.0.0-dev.23
-  '@latte-ui/css': 2.0.0-dev.23
-  '@latte-ui/hooks': 2.0.0-dev.23
-  '@latte-ui/slot-fill': 2.0.0-dev.23
+  '@latte-ui/core': 2.0.0-dev.24
+  '@latte-ui/css': 2.0.0-dev.24
+  '@latte-ui/hooks': 2.0.0-dev.24
+  '@latte-ui/slot-fill': 2.0.0-dev.24
   '@next/bundle-analyzer': 12.1.5-canary.1
   '@types/node': 17.0.23
   '@types/react': 17.0.43
@@ -33,10 +33,10 @@ dependencies:
   '@fortawesome/free-brands-svg-icons': 6.1.1
   '@fortawesome/pro-regular-svg-icons': 6.1.1
   '@fortawesome/pro-solid-svg-icons': 6.1.1
-  '@latte-ui/core': 2.0.0-dev.23_ef1431c46a06f6ddeb48ecf04de94c82
-  '@latte-ui/css': 2.0.0-dev.23
-  '@latte-ui/hooks': 2.0.0-dev.23_912d1149b0e793b749141ec1379c32ac
-  '@latte-ui/slot-fill': 2.0.0-dev.23_10e1fb9204dc58f656ce0f5c5dc236f9
+  '@latte-ui/core': 2.0.0-dev.24_168e0a4fb1bde97276c19d95a49d1db6
+  '@latte-ui/css': 2.0.0-dev.24
+  '@latte-ui/hooks': 2.0.0-dev.24_912d1149b0e793b749141ec1379c32ac
+  '@latte-ui/slot-fill': 2.0.0-dev.24_72a476857130266e06f72a0786962c5c
   deepmerge: 4.2.2
   framer-motion: 6.2.8_react-dom@18.0.0+react@18.0.0
   lodash: 4.17.21
@@ -331,17 +331,19 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.11
     dev: false
 
-  /@latte-ui/core/2.0.0-dev.23_ef1431c46a06f6ddeb48ecf04de94c82:
-    resolution: {integrity: sha512-+JzB+/NTp1II0Yf8NU3cOEp2T13K1LD4aSV8yJ0M0hsd/CkhT/5ns5ZbKmlkAacYR79CS7CuKIYGuC1XE61p2A==}
+  /@latte-ui/core/2.0.0-dev.24_168e0a4fb1bde97276c19d95a49d1db6:
+    resolution: {integrity: sha512-OufO0N4aR6p2t5vqKx5lXJ2W3oVMTWd/yUcsoccVXo79pgTXvUl0IGaHlI/7DTwLdUcnXUd7PE3SBF8xGzjJsg==}
     peerDependencies:
-      '@latte-ui/hooks': 2.0.0-dev.19
+      '@latte-ui/hooks': 2.0.0-dev.24
+      '@latte-ui/slot-fill': 2.0.0-dev.24
       deepmerge: 4.2.2
       framer-motion: 6.2.8
       react: 18.0.0
       react-dom: 18.0.0
       tslib: 2.3.1
     dependencies:
-      '@latte-ui/hooks': 2.0.0-dev.23_912d1149b0e793b749141ec1379c32ac
+      '@latte-ui/hooks': 2.0.0-dev.24_912d1149b0e793b749141ec1379c32ac
+      '@latte-ui/slot-fill': 2.0.0-dev.24_72a476857130266e06f72a0786962c5c
       deepmerge: 4.2.2
       framer-motion: 6.2.8_react-dom@18.0.0+react@18.0.0
       react: 18.0.0
@@ -349,12 +351,12 @@ packages:
       tslib: 2.3.1
     dev: false
 
-  /@latte-ui/css/2.0.0-dev.23:
-    resolution: {integrity: sha512-kzuJYchj9viLQ5LoIUtHLjDqhvRMpylaIAi4Q4c4MAH8iXmax517MsqZuZdlgLtBr8/mZ5ufHr5EAuxkVijBjw==}
+  /@latte-ui/css/2.0.0-dev.24:
+    resolution: {integrity: sha512-XlZlA2rF1rMF0GziG+IwN2x0LLWdcRIZwjruKr2K15Pul09gXOqFe0OQPEJTNd+L04tCoJwANrOOwqImkFNQVg==}
     dev: false
 
-  /@latte-ui/hooks/2.0.0-dev.23_912d1149b0e793b749141ec1379c32ac:
-    resolution: {integrity: sha512-HNWQ5sTqxwajnSEHpP9K750Rdv7kGLHE2VzV0FoKi/5oEKOgZKsCgu5P2uiCMqtRvhkY8ByKjvKM2jYUIMHW1g==}
+  /@latte-ui/hooks/2.0.0-dev.24_912d1149b0e793b749141ec1379c32ac:
+    resolution: {integrity: sha512-PI9mjFjMkeQZ+0K8COLJfLmxyr05GODzshy+8163GTf1vISJ3m7GFsL97XUeZdxLlb1BmFPbE41fL9qWCaeAPg==}
     peerDependencies:
       lodash: 4.17.21
       react: 18.0.0
@@ -367,10 +369,10 @@ packages:
       tslib: 2.3.1
     dev: false
 
-  /@latte-ui/slot-fill/2.0.0-dev.23_10e1fb9204dc58f656ce0f5c5dc236f9:
-    resolution: {integrity: sha512-kNDCzpEFs/pqslrTGvdt6Gn9FoD0TWsClbA4lxN4+gdUufqghi010JmUHITXqElwyvh1nClx+2nzCy3SrslmrA==}
+  /@latte-ui/slot-fill/2.0.0-dev.24_72a476857130266e06f72a0786962c5c:
+    resolution: {integrity: sha512-8ahA/yYhS1ZogCWNYMks8PKVa7l6YcnG6F6HBETcoo/cTtVYV1IaGe68LDBfcRQkTJqqO18T+N0q6lG4hncPTQ==}
     peerDependencies:
-      '@latte-ui/hooks': 2.0.0-dev.19
+      '@latte-ui/hooks': 2.0.0-dev.24
       deepmerge: 4.2.2
       framer-motion: 6.2.8
       lodash: 4.17.21
@@ -378,7 +380,7 @@ packages:
       react-dom: 18.0.0
       tslib: 2.3.1
     dependencies:
-      '@latte-ui/hooks': 2.0.0-dev.23_912d1149b0e793b749141ec1379c32ac
+      '@latte-ui/hooks': 2.0.0-dev.24_912d1149b0e793b749141ec1379c32ac
       deepmerge: 4.2.2
       framer-motion: 6.2.8_react-dom@18.0.0+react@18.0.0
       lodash: 4.17.21
