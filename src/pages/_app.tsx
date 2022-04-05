@@ -1,6 +1,6 @@
-import { SlotFillProvider } from "@latte-ui/slot-fill";
+import { Slot, SlotFillProvider } from "@latte-ui/slot-fill";
 import { Head } from "@/component/platform";
-import { BMFooter, BMNavigation, BMTooltip } from "@/component/shell";
+import { BMFooter, BMNavigation } from "@/component/shell";
 import { initializeFontAwesome } from "@/logic/font-awesome";
 
 import "../css/latte.scss";
@@ -20,7 +20,7 @@ export default function BApp({Component, pageProps}) {
         </Head>
 
         <SlotFillProvider>
-            <BMTooltip.Portal/>
+           <Slot name="bm:tooltips"/>
 
             <BMNavigation/>
             <Component {...pageProps}/>

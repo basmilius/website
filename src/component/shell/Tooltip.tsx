@@ -1,10 +1,8 @@
 import { Children, cloneElement, forwardRef, memo, PropsWithChildren, ReactElement, ReactNode, RefObject, useEffect, useMemo, useRef } from "react";
 import { LatteSides } from "@latte-ui/core/src/types/prop-types";
 import { clamp, off, on, useBoolean, useRect, useWindowScroll, useWindowSize } from "@latte-ui/hooks";
-import { AnimatePresence, motion } from "framer-motion";
-import { createSlotFill } from "@latte-ui/slot-fill";
-
-const {Fill, Slot} = createSlotFill("bm:tooltip");
+import { Fill } from "@latte-ui/slot-fill";
+import { AnimatePresence, domAnimation, LazyMotion, m } from "framer-motion";
 
 export interface TooltipProps {
     content: ReactNode;
@@ -43,17 +41,19 @@ const Tooltip = memo(forwardRef<HTMLElement, PropsWithChildren<TooltipProps>>(({
     }, []);
 
     return (<>
-        <Fill>
-            <AnimatePresence>
-                {isOpen && (
-                    <Content
-                        content={content}
-                        delay={delay}
-                        location={location}
-                        offset={offset}
-                        openerRect={openerRect}/>
-                )}
-            </AnimatePresence>
+        <Fill name="bm:tooltips">
+            <LazyMotion features={domAnimation}>
+                <AnimatePresence>
+                    {isOpen && (
+                        <Content
+                            content={content}
+                            delay={delay}
+                            location={location}
+                            offset={offset}
+                            openerRect={openerRect}/>
+                    )}
+                </AnimatePresence>
+            </LazyMotion>
         </Fill>
 
         {cloneElement(child, {
@@ -109,7 +109,7 @@ const Content = memo(({content, delay, location, offset, openerRect}: any) => {
     }, [height, width, rect, offset, openerRect, location]);
 
     return (
-        <motion.div
+        <m.div
             ref={ref}
             transition={{type: "tween", duration: .18}}
             animate={{opacity: 1, translateX: 0, translateY: 0, transition: {delay: delay / 1000}}}
@@ -119,13 +119,8 @@ const Content = memo(({content, delay, location, offset, openerRect}: any) => {
             className="tooltip"
             role="tooltip">
             {content}
-        </motion.div>
+        </m.div>
     );
 });
 
-const Portal = memo(() => (<Slot/>));
-
-export default Object.assign(Tooltip, {
-    Content,
-    Portal
-});
+export { Tooltip };
