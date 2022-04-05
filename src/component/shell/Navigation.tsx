@@ -36,7 +36,7 @@ export default memo(() => {
                     aria-label="Toggle navigation">
                     <BMIcon
                         className={styles.navToggleIcon}
-                        name="far bars"/>
+                        name="fas bars"/>
                 </button>
 
                 <Link passHref href="/">
@@ -70,7 +70,7 @@ export default memo(() => {
                 aria-label="Toggle navigation">
                 <BMIcon
                     className={styles.bigNavigationCloseIcon}
-                    name="far xmark-large"/>
+                    name="fas xmark-large"/>
             </button>
 
             <nav className={styles.bigNavigationNav}>

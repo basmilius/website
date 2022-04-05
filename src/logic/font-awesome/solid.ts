@@ -1,6 +1,7 @@
 export {
     faAt,
     faBadgePercent,
+    faBars,
     faBriefcase,
     faCode,
     faDown,
@@ -8,4 +9,5 @@ export {
     faPhone,
     faRight,
     faUpRight,
+    faXmarkLarge
 } from "@fortawesome/pro-solid-svg-icons";
