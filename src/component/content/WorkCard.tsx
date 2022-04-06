@@ -230,7 +230,7 @@ export default Object.assign(WorkCard, {
         ErveNijhuis: memo(() => (
             <WorkCard
                 imageUrl={ervenijhuisImage.src}
-                title="Erve Tank"
+                title="Erve Nijhuis"
                 description="Modern holiday house in Eibergen."
                 buttonIcon="fas up-right"
                 buttonLabel="manege-nijhuis.nl"
