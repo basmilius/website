@@ -37,7 +37,7 @@
         "@latte-ui/hooks": "2.0.0-dev.26",
         "@latte-ui/slot-fill": "2.0.0-dev.26",
         "framer-motion": "6.2.9",
-        "next": "12.1.5-canary.2",
+        "next": "12.1.5-canary.3",
         "react": "18.0.0",
         "react-dom": "18.0.0",
         "tslib": "2.3.1"
