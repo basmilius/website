@@ -11,7 +11,8 @@ $-easing: var(--swiftOut);
     --menuBg: transparent;
     --menuFg: #{color-get("gray", 0)};
     --menuFontSize: 18px;
-    --menuLogo: 72px;
+    --menuLogo: 84px;
+    --menuLogoRotation: 0deg;
     --menuSize: 150px;
     --menuShadow: none;
 
@@ -33,7 +34,8 @@ $-easing: var(--swiftOut);
     --menuBg: #{color-get("gray", 0)};
     --menuFg: #{color-get("gray", 700)};
     --menuFontSize: 18px;
-    --menuLogo: 48px;
+    --menuLogo: 54px;
+    --menuLogoRotation: 9deg;
     --menuShadow: var(--shadow-1);
     --menuSize: 99px;
 }
@@ -42,7 +44,9 @@ $-easing: var(--swiftOut);
     position: relative;
     display: block;
     font-size: var(--menuLogo);
-    transition: font-size #{$-duration} #{$-easing};
+    transform: rotate(var(--menuLogoRotation));
+    transition: #{$-duration} #{$-easing};
+    transition-property: font-size, transform;
 }
 
 .logoImage {
