@@ -6,6 +6,8 @@ import { initializeFontAwesome } from "@/logic/font-awesome";
 import "../css/latte.scss";
 import "../css/index.scss";
 
+import basImage from "../image/bas.jpg";
+
 initializeFontAwesome();
 
 export default function BApp({Component, pageProps}) {
@@ -26,5 +28,26 @@ export default function BApp({Component, pageProps}) {
             <Component {...pageProps}/>
             <BMFooter/>
         </SlotFillProvider>
+
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `
+            {
+                "@context": "https://schema.org/",
+                "@type": "Person",
+                "name": "Bas Milius",
+                "url": "https://bas.dev",
+                "image": "${basImage.src}",
+                "sameAs": [
+                    "https://github.com/basmilius",
+                    "https://twitter.com/basmilius",
+                    "https://linkedin.com/in/basmilius",
+                    "https://dribbble.com/basmilius",
+                    "https://snapchat.com/add/basmilius/",
+                    "https://instagram.com/basmilius/",
+                    "https://facebook.com/basmilius",
+                    "https://bas.dev"
+                ],
+                "jobTitle": "Full-Stack Developer"
+            }
+        `}}></script>
     </>);
 }
