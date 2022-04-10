@@ -7,6 +7,9 @@
 # Personal Website
 Source code of my personal website [bas.dev](https://bas.dev).
 
+### ‼️ Please note
+This website requires a Font Awesome Pro license. You can get one [here](https://fontawesome.com/).
+
 ### 🎲 Get started
 To run the local development server, follow the following steps in order and
 make sure npm environment variables for font awesome are predefined and that
