@@ -26,9 +26,9 @@ export default memo(() => (<>
         <h2>Full-Stack<br/>Developer</h2>
         <h4>With a passion for creating websites, apps and backend applications.</h4>
         <p>
-            Cumque, delectus incidunt laudantium libero magni rerum sapiente similique? Eum inventore
-            laboriosam molestiae officiis omnis quia quisquam repellat repudiandae! Delectus deserunt error
-            placeat totam voluptas. Fugit molestiae possimus quaerat vel!
+            Likes to experiment with new techniques and to mess around in programs like
+            Adobe XD and Adobe After Effects every now and then. As a Full-Stack Developer
+            I enjoy programming on my own projects and on projects for others.
         </p>
 
         <BMTextButton.Group>

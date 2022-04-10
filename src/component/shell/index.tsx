@@ -1,4 +1,4 @@
-import { memo, PropsWithChildren, Suspense } from "react";
+import { FC, memo, PropsWithChildren, Suspense } from "react";
 import { dynamic } from "@/component/platform";
 import { TooltipProps } from "@/component/shell/Tooltip";
 
@@ -10,7 +10,7 @@ export { default as BMNavigation, BMNavigationTitle } from "./Navigation";
 export { default as BMSection } from "./Section";
 export { default as BMTextButton } from "./TextButton";
 
-const LazyTooltip = dynamic(() => import("./Tooltip").then(m => m.Tooltip), {ssr: false});
+const LazyTooltip = dynamic(() => import("./Tooltip").then(m => m.Tooltip), {ssr: false}) as FC<CompleteTooltipProps>;
 
 type CompleteTooltipProps = PropsWithChildren<TooltipProps>;
 

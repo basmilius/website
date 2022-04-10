@@ -18,6 +18,8 @@
     display: block;
     margin-top: -#{gutter-get(2)};
     margin-bottom: #{gutter-get(3)};
+    color: #{color-get("primary")};
+    font-size: 15px;
 }
 
 .timelineItemLine {

@@ -1,8 +1,8 @@
-import { Children, cloneElement, forwardRef, memo, PropsWithChildren, ReactElement, ReactNode, RefObject, useEffect, useMemo, useRef } from "react";
 import { LatteSides } from "@latte-ui/core/src/types/prop-types";
 import { clamp, off, on, useBoolean, useRect, useWindowScroll, useWindowSize } from "@latte-ui/hooks";
 import { Fill } from "@latte-ui/slot-fill";
-import { AnimatePresence, domAnimation, LazyMotion, m } from "framer-motion";
+import { AnimatePresence as _AnimatePresence, AnimatePresenceProps, domAnimation, LazyMotion, m } from "framer-motion";
+import { Children, cloneElement, FC, forwardRef, memo, PropsWithChildren, ReactElement, ReactNode, RefObject, useEffect, useMemo, useRef } from "react";
 
 export interface TooltipProps {
     content: ReactNode;
@@ -11,6 +11,8 @@ export interface TooltipProps {
     location?: LatteSides;
     offset?: number;
 }
+
+const AnimatePresence = _AnimatePresence as FC<PropsWithChildren<AnimatePresenceProps>>;
 
 const Tooltip = memo(forwardRef<HTMLElement, PropsWithChildren<TooltipProps>>(({children, content, delay = 0, isEnabled = true, location = "bottom", offset = 0}: PropsWithChildren<TooltipProps>, ref: RefObject<any>) => {
     const openerRef = ref || useRef(null);

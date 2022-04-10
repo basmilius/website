@@ -13,12 +13,13 @@ export default memo(() => (<>
     <BMSection title="Send a message" subTitle="For questions and new projects.">
         <p className="lead">
             Good to see you are interested in me or one of my projects! If you are looking for a website
-            or app please email me at bas@mili.us, fill in the form underneath or say hi at one of the
-            social networks listed at the bottom. Spam will always be reported.
+            or app please email me or say hi at one of the social networks listed at the
+            bottom. Spam will always be reported.
         </p>
         <p>
             All my open source projects have their own GitHub Repository where you can create issues if
-            you find a bug. Explain what happened when the bug occurred and I’ll see what I can do.
+            you find a bug. Explain what happened when the bug occurred and I’ll see what I can do. Please
+            do note that I'm not always available due to my daily job.
         </p>
     </BMSection>
 

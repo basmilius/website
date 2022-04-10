@@ -24,7 +24,7 @@
 
     position: relative;
     display: flex;
-    padding-top: 90px;
+    padding-top: 240px;
     align-items: center;
     height: inherit;
 }
@@ -77,26 +77,10 @@
     box-shadow: var(--shadow-3);
     color: #{color-get("gray", 700)};
     font-size: calc(var(--iconSize) * .4);
-    transform-origin: center;
-    transition: transform 1s var(--swiftOut);
-    animation: iconAnimationKeyframes 660ms var(--decelerationCurve) both;
-
-    @for $i from 1 through 4 {
-        &:nth-child(#{$i}) {
-            animation-delay: #{$i * 90ms + 240ms};
-        }
-    }
 
     img {
         height: var(--iconSizeImage);
         width: var(--iconSizeImage);
-    }
-}
-
-@keyframes iconAnimationKeyframes {
-    from {
-        opacity: 0;
-        transform: scale3d(.9, .9, .9);
     }
 }
 

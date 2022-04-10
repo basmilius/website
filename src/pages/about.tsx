@@ -13,7 +13,7 @@ export default memo(() => (<>
     <BMHeader title="About"/>
 
     <BMSection
-        title="This is me"
+        title="Bas Milius"
         details={<>
             <BMSection.Picture
                 src={basImage.src}
@@ -34,7 +34,7 @@ export default memo(() => (<>
             </BMTextButton.Stack>
         </>}>
         <h3>Hi! I'm Bas</h3>
-        <p>A 26-year old developer from Groenlo, The Netherlands. By day I work as a web/app developer at a local agency, <a href="https://ideemedia.nl" rel="noopener" target="_blank">IdeeMedia</a>. By night I spend most of my time working on open source projects and finding/trying out what's new in tech.</p>
+        <p>A 26-year old developer from Groenlo, The Netherlands. By day I work as a Full-Stack Developer at a local agency, <a href="https://ideemedia.nl" rel="noopener" target="_blank">IdeeMedia</a>. By night I spend most of my time working on open source projects and finding/trying out what's new in tech.</p>
         <p>My most recent project is Meteocons, a free to use set of animated weather icons. Another one of my recent projects is latte-ui, an UI library built for React, you can use it for free in your own projects.</p>
 
         <h3>Programming</h3>
