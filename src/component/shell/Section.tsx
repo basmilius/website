@@ -53,7 +53,7 @@ const _PictureRaw = memo(({className, defaultSrc, jpg, webp, alt, ...props}: Pic
         <picture className={className} {...props}>
             {webpSrcSet !== "" && <source type="image/webp" srcSet={webpSrcSet}/>}
             {jpgSrcSet !== "" && <source type="image/jpg" srcSet={jpgSrcSet}/>}
-            <img alt={alt} src={defaultSrc}/>
+            <img alt={alt} src={defaultSrc} height={props.height} width={props.width}/>
         </picture>
     );
 });
