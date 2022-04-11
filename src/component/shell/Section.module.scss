@@ -56,6 +56,13 @@
     margin-top: #{gutter-get(5)};
     margin-bottom: #{gutter-get(8)};
     border-radius: 999px;
+
+    img {
+        height: inherit;
+        width: inherit;
+        margin: 0;
+        border-radius: inherit;
+    }
 }
 
 .sectionCenterizedPicture {
@@ -97,7 +104,7 @@
 
     .sectionPicture {
         position: absolute;
-        top: -#{gutter-get(5)};
+        top: #{gutter-get(3)};
         right: 0;
         height: 90px;
         width: 90px;

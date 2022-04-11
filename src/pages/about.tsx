@@ -4,6 +4,7 @@ import { Head } from "@/component/platform";
 import { BMHeader, BMSection, BMTextButton } from "@/component/shell";
 
 import basImage from "../image/bas.jpg";
+import basImageWebp from "../image/bas.webp";
 
 export default memo(() => (<>
     <Head>
@@ -17,6 +18,7 @@ export default memo(() => (<>
         details={<>
             <BMSection.Picture
                 src={basImage.src}
+                webpSrc={basImageWebp.src}
                 alt="Bas looking at the view in Spain."
                 height={basImage.height}
                 width={basImage.width}

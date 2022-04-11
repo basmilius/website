@@ -31,20 +31,20 @@ const Section = memo(({children, className, isAlternate, isIndented, isSmallTitl
     </section>
 ));
 
-const CenterizedPicture = memo((props: ImgHTMLAttributes<HTMLImageElement>) => (
-    <img
-        className={styles.sectionCenterizedPicture}
-        alt={props.alt}
-        src={props.src}
-        {...props}/>
+const CenterizedPicture = memo(({webpSrc, ...props}: ImgHTMLAttributes<HTMLImageElement> & { webpSrc: string; }) => (
+    <picture className={styles.sectionCenterizedPicture} {...props}>
+        <source type="image/webp" srcSet={webpSrc}/>
+        <source type="image/jpg" srcSet={props.src}/>
+        <img alt={props.alt} src={props.src}/>
+    </picture>
 ));
 
-const Picture = memo((props: ImgHTMLAttributes<HTMLImageElement>) => (
-    <img
-        className={styles.sectionPicture}
-        alt={props.alt}
-        src={props.src}
-        {...props}/>
+const Picture = memo(({webpSrc, ...props}: ImgHTMLAttributes<HTMLImageElement> & { webpSrc: string; }) => (
+    <picture className={styles.sectionPicture} {...props}>
+        <source type="image/webp" srcSet={webpSrc}/>
+        <source type="image/jpg" srcSet={props.src}/>
+        <img alt={props.alt} src={props.src}/>
+    </picture>
 ));
 
 export default Object.assign(Section, {
