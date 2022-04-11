@@ -1,4 +1,4 @@
-import { ImgHTMLAttributes, memo, PropsWithChildren, ReactNode } from "react";
+import { ImgHTMLAttributes, memo, PropsWithChildren, ReactNode, useMemo } from "react";
 
 import styles from "./Section.module.scss";
 
@@ -12,6 +12,20 @@ interface Props {
     subTitle?: string;
     details?: ReactNode;
 }
+
+interface PictureProps {
+    alt: string;
+    defaultSrc: string;
+    jpg: PicturePropsSource[];
+    webp: PicturePropsSource[];
+}
+
+interface PicturePropsSource {
+    scale: number;
+    src: string;
+}
+
+type PicturePropsComplete = Omit<ImgHTMLAttributes<HTMLImageElement>, "src"> & PictureProps;
 
 const Section = memo(({children, className, isAlternate, isIndented, isSmallTitle, isSticky, title, subTitle, details}: PropsWithChildren<Props>) => (
     <section className={`${className ?? ""} ${styles.section} ${isAlternate ? styles.sectionAlternate : ""} ${isIndented ? styles.sectionIndented : ""} ${isSticky ? styles.sectionSticky : ""}`}>
@@ -31,23 +45,36 @@ const Section = memo(({children, className, isAlternate, isIndented, isSmallTitl
     </section>
 ));
 
-const CenterizedPicture = memo(({webpSrc, ...props}: ImgHTMLAttributes<HTMLImageElement> & { webpSrc: string; }) => (
-    <picture className={styles.sectionCenterizedPicture} {...props}>
-        <source type="image/webp" srcSet={webpSrc}/>
-        <source type="image/jpg" srcSet={props.src}/>
-        <img alt={props.alt} src={props.src}/>
-    </picture>
+const _PictureRaw = memo(({className, defaultSrc, jpg, webp, alt, ...props}: PicturePropsComplete & { className: string; }) => {
+    const jpgSrcSet = useMemo(() => generateSrcSet(jpg), [jpg]);
+    const webpSrcSet = useMemo(() => generateSrcSet(webp), [webp]);
+
+    return (
+        <picture className={className} {...props}>
+            {webpSrcSet !== "" && <source type="image/webp" srcSet={webpSrcSet}/>}
+            {jpgSrcSet !== "" && <source type="image/jpg" srcSet={jpgSrcSet}/>}
+            <img alt={alt} src={defaultSrc}/>
+        </picture>
+    );
+});
+
+const CenterizedPicture = memo((props: PicturePropsComplete) => (
+    <_PictureRaw
+        className={styles.sectionCenterizedPicture}
+        {...props}/>
 ));
 
-const Picture = memo(({webpSrc, ...props}: ImgHTMLAttributes<HTMLImageElement> & { webpSrc: string; }) => (
-    <picture className={styles.sectionPicture} {...props}>
-        <source type="image/webp" srcSet={webpSrc}/>
-        <source type="image/jpg" srcSet={props.src}/>
-        <img alt={props.alt} src={props.src}/>
-    </picture>
+const Picture = memo(({...props}: PicturePropsComplete) => (
+    <_PictureRaw
+        className={styles.sectionPicture}
+        {...props}/>
 ));
 
 export default Object.assign(Section, {
     CenterizedPicture,
     Picture
 });
+
+function generateSrcSet(sources: PicturePropsSource[]) {
+    return sources.map(source => `${source.src} ${source.scale}x`).join(", ");
+}

@@ -3,8 +3,10 @@ import { BMSchooling, BMSkillsAndExperience, BMSocials, BMWorkExperience } from 
 import { Head } from "@/component/platform";
 import { BMHeader, BMSection, BMTextButton } from "@/component/shell";
 
-import basImage from "../image/bas.jpg";
-import basImageWebp from "../image/bas.webp";
+import basSpainImageJpg1x from "../image/me/spain-1x.jpg"
+import basSpainImageJpg2x from "../image/me/spain-2x.jpg"
+import basSpainImageWebp1x from "../image/me/spain-1x.webp"
+import basSpainImageWebp2x from "../image/me/spain-2x.webp"
 
 export default memo(() => (<>
     <Head>
@@ -17,11 +19,18 @@ export default memo(() => (<>
         title="Bas Milius"
         details={<>
             <BMSection.Picture
-                src={basImage.src}
-                webpSrc={basImageWebp.src}
+                defaultSrc={basSpainImageJpg1x.src}
+                jpg={[
+                    {scale: 2, src: basSpainImageJpg2x.src},
+                    {scale: 1, src: basSpainImageJpg1x.src}
+                ]}
+                webp={[
+                    {scale: 2, src: basSpainImageWebp2x.src},
+                    {scale: 1, src: basSpainImageWebp1x.src}
+                ]}
                 alt="Bas looking at the view in Spain."
-                height={basImage.height}
-                width={basImage.width}
+                height={basSpainImageJpg1x.height}
+                width={basSpainImageJpg1x.width}
                 loading="lazy"/>
 
             <BMTextButton.Stack>
