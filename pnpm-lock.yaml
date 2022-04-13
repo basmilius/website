@@ -6,10 +6,10 @@ specifiers:
   '@fortawesome/fontawesome-svg-core': 6.1.1
   '@fortawesome/free-brands-svg-icons': 6.1.1
   '@fortawesome/pro-solid-svg-icons': 6.1.1
-  '@latte-ui/core': 2.0.0-dev.28
-  '@latte-ui/css': 2.0.0-dev.28
-  '@latte-ui/hooks': 2.0.0-dev.28
-  '@latte-ui/slot-fill': 2.0.0-dev.28
+  '@latte-ui/core': 2.0.0-dev.29
+  '@latte-ui/css': 2.0.0-dev.29
+  '@latte-ui/hooks': 2.0.0-dev.29
+  '@latte-ui/slot-fill': 2.0.0-dev.29
   '@next/bundle-analyzer': 12.1.5
   '@types/node': 17.0.23
   '@types/react': 18.0.3
@@ -29,10 +29,10 @@ dependencies:
   '@fortawesome/fontawesome-svg-core': 6.1.1
   '@fortawesome/free-brands-svg-icons': 6.1.1
   '@fortawesome/pro-solid-svg-icons': 6.1.1
-  '@latte-ui/core': 2.0.0-dev.28_b9e837b720bc0cfe0f5ab62a13f741cc
-  '@latte-ui/css': 2.0.0-dev.28
-  '@latte-ui/hooks': 2.0.0-dev.28_3e4d4e863d57fa0f2fd3dde11e05f894
-  '@latte-ui/slot-fill': 2.0.0-dev.28_2e0a9fdc1b42a2a112f96a3f7d488f22
+  '@latte-ui/core': 2.0.0-dev.29_b50fb30747127704d255f81af2b055b2
+  '@latte-ui/css': 2.0.0-dev.29
+  '@latte-ui/hooks': 2.0.0-dev.29_react-dom@18.0.0+react@18.0.0
+  '@latte-ui/slot-fill': 2.0.0-dev.29_f7234bfa672ef062a4de4debf680ea8a
   framer-motion: 6.2.10_react-dom@18.0.0+react@18.0.0
   next: 12.1.5_0204d69bf2f8579eb9ee18cac7cd6c1a
   react: 18.0.0
@@ -309,54 +309,48 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.11
     dev: false
 
-  /@latte-ui/core/2.0.0-dev.28_b9e837b720bc0cfe0f5ab62a13f741cc:
-    resolution: {integrity: sha512-snPQX1yxxnYm4twpZtjwYoUFBuY4mvAlJe+k+EAVqVGRVeYDCsJY7xus2Qnwl8umemgrB8ga6ak01Gd2IRB64Q==}
+  /@latte-ui/core/2.0.0-dev.29_b50fb30747127704d255f81af2b055b2:
+    resolution: {integrity: sha512-0QnoXxbioqv4haj1O94K1HV7dhBqdEuMih7KCIyFSMen43s7BROENgf8ZyElT5Gq/DrnOCj/jIKjOp5Y2oz8EQ==}
     peerDependencies:
-      '@latte-ui/hooks': 2.0.0-dev.28
-      '@latte-ui/slot-fill': 2.0.0-dev.28
-      framer-motion: 6.2.9
+      '@latte-ui/hooks': 2.0.0-dev.29
+      '@latte-ui/slot-fill': 2.0.0-dev.29
+      framer-motion: 6.2.10
       react: 18.0.0
       react-dom: 18.0.0
-      tslib: 2.3.1
     dependencies:
-      '@latte-ui/hooks': 2.0.0-dev.28_3e4d4e863d57fa0f2fd3dde11e05f894
-      '@latte-ui/slot-fill': 2.0.0-dev.28_2e0a9fdc1b42a2a112f96a3f7d488f22
+      '@latte-ui/hooks': 2.0.0-dev.29_react-dom@18.0.0+react@18.0.0
+      '@latte-ui/slot-fill': 2.0.0-dev.29_f7234bfa672ef062a4de4debf680ea8a
       framer-motion: 6.2.10_react-dom@18.0.0+react@18.0.0
       react: 18.0.0
       react-dom: 18.0.0_react@18.0.0
-      tslib: 2.3.1
     dev: false
 
-  /@latte-ui/css/2.0.0-dev.28:
-    resolution: {integrity: sha512-/gA7HmnUJwH0sGttP7Yp6VTaQxJR2e1uyOGFg4DEa09rfUbCX2Hp5i6JP0gEQjlbP7fG5jhxYSFZyemqvqRlNQ==}
+  /@latte-ui/css/2.0.0-dev.29:
+    resolution: {integrity: sha512-L5ygr+3Rze4MW9Y0Q/WzpLDWBnh28KhFUgUcRm7mSm723FWCeS1d8FTXSlcP9Ht0OpSzIY1k5wsUFbL6vcWWKg==}
     dev: false
 
-  /@latte-ui/hooks/2.0.0-dev.28_3e4d4e863d57fa0f2fd3dde11e05f894:
-    resolution: {integrity: sha512-Tns4h9ZyxRtHwkSCm5Inxpi4V4epLcDOGiK4dIcbXxqpsVznR5c1706JdKsM1L/akPRqOvMjIfcq6yDmXSf4ww==}
+  /@latte-ui/hooks/2.0.0-dev.29_react-dom@18.0.0+react@18.0.0:
+    resolution: {integrity: sha512-c9/hIyizRFxDauoiJmKek3Hy3W4lRrr1DdcD+aP/MSrn31viKJawRt0/FKPpD1vbXjFd8zH6cQhn5QMHete5RQ==}
     peerDependencies:
       react: 18.0.0
       react-dom: 18.0.0
-      tslib: 2.3.1
     dependencies:
       lodash: 4.17.21
       react: 18.0.0
       react-dom: 18.0.0_react@18.0.0
-      tslib: 2.3.1
     dev: false
 
-  /@latte-ui/slot-fill/2.0.0-dev.28_2e0a9fdc1b42a2a112f96a3f7d488f22:
-    resolution: {integrity: sha512-fg3R7c+tumwrXH5ztbRXp113jitUoORJWQdcV1uEA+dt99KhrfxR9oCFMf6fLcy3nOq0ykj/Cz9ILt2CI7/IJg==}
+  /@latte-ui/slot-fill/2.0.0-dev.29_f7234bfa672ef062a4de4debf680ea8a:
+    resolution: {integrity: sha512-nQ4GPawvkBrnw/GgVKxSHpNKCUdW4NIvQyTYK8BbM2l3jA8HHSnRQTCaF9hIHP9+53mt1T8E3hjXLy/3tRQRmw==}
     peerDependencies:
-      '@latte-ui/hooks': 2.0.0-dev.28
+      '@latte-ui/hooks': 2.0.0-dev.29
       react: 18.0.0
       react-dom: 18.0.0
-      tslib: 2.3.1
     dependencies:
-      '@latte-ui/hooks': 2.0.0-dev.28_3e4d4e863d57fa0f2fd3dde11e05f894
+      '@latte-ui/hooks': 2.0.0-dev.29_react-dom@18.0.0+react@18.0.0
       lodash: 4.17.21
       react: 18.0.0
       react-dom: 18.0.0_react@18.0.0
-      tslib: 2.3.1
     dev: false
 
   /@next/bundle-analyzer/12.1.5:
