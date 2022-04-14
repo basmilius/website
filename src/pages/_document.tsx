@@ -9,8 +9,8 @@ export default function BDocument() {
                 <meta name="revisit-after" content="1 day"/>
                 <meta name="theme-color" content="#0155ce"/>
                 <link rel="preconnect" href="https://font.bmcdn.nl" crossOrigin="anonymous"/>
-                <link rel="preload" href="https://font.bmcdn.nl/css2?family=outfit" as="style"/>
-                <link rel="stylesheet" href="https://font.bmcdn.nl/css2?family=outfit"/>
+                <link rel="preload" href="https://font.bmcdn.nl/css2?family=outfit-variable" as="style"/>
+                <link rel="stylesheet" href="https://font.bmcdn.nl/css2?family=outfit-variable"/>
             </Head>
             <body>
                 <Main/>
