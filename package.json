@@ -32,23 +32,23 @@
         "@fortawesome/fontawesome-svg-core": "6.1.1",
         "@fortawesome/free-brands-svg-icons": "6.1.1",
         "@fortawesome/pro-solid-svg-icons": "6.1.1",
-        "@latte-ui/core": "2.0.0-dev.29",
-        "@latte-ui/css": "2.0.0-dev.29",
-        "@latte-ui/hooks": "2.0.0-dev.29",
-        "@latte-ui/slot-fill": "2.0.0-dev.29",
-        "framer-motion": "6.2.10",
-        "next": "12.1.5",
+        "@latte-ui/core": "2.0.0-dev.30",
+        "@latte-ui/css": "2.0.0-dev.30",
+        "@latte-ui/hooks": "2.0.0-dev.30",
+        "@latte-ui/slot-fill": "2.0.0-dev.30",
+        "framer-motion": "6.3.1",
+        "next": "12.1.6-canary.6",
         "react": "18.0.0",
         "react-dom": "18.0.0",
-        "tslib": "2.3.1"
+        "tslib": "2.4.0"
     },
     "devDependencies": {
         "@next/bundle-analyzer": "12.1.5",
-        "@types/node": "17.0.23",
-        "@types/react": "18.0.3",
-        "@types/react-dom": "18.0.0",
+        "@types/node": "17.0.25",
+        "@types/react": "18.0.6",
+        "@types/react-dom": "18.0.2",
         "css-class-generator": "2.0.0",
-        "sass": "1.50.0",
+        "sass": "1.50.1",
         "typescript": "4.6.3"
     }
 }
