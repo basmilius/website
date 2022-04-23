@@ -9,7 +9,7 @@ export default memo(() => (
 
         <BMTimeline>
             <BMTimeline.Item
-                date="2020 — Now"
+                date="June 2020 — Now"
                 title="Self-employed">
                 <p>
                     In 2020 I started my own company. I got more and more questions about making small websites
@@ -20,13 +20,21 @@ export default memo(() => (
             </BMTimeline.Item>
 
             <BMTimeline.Item
-                date="2016 — Now"
+                date="June 2022"
+                title="Fancee Software / Tibbaa">
+                <p>
+                    Senior Developer &mdash; Soon<small><sup>TM</sup></small>
+                </p>
+            </BMTimeline.Item>
+
+            <BMTimeline.Item
+                date="June 2016 — June 2022"
                 title="IdeeMedia">
                 <p>
                     Full-Stack Developer &mdash; My career as a developer really started at IdeeMedia. I work on
                     a lot of projects here. From small websites for local companies to large order systems for
-                    the Marveld holiday park in Groenlo. I also do some server management here and make sure
-                    everything runs smoothly online.
+                    the Marveld holiday park in Groenlo. I also did some server management here and made sure
+                    everything ran smoothly online.
                 </p>
             </BMTimeline.Item>
 

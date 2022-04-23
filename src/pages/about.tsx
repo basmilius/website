@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { BMSchooling, BMSkillsAndExperience, BMSocials, BMWorkExperience } from "@/component/content";
-import { Head } from "@/component/platform";
+import { Head, Link } from "@/component/platform";
 import { BMHeader, BMSection, BMTextButton } from "@/component/shell";
 
 import basSpainImageJpg1x from "../image/me/spain-1x.jpg"
@@ -35,8 +35,18 @@ export default memo(() => (<>
 
             <BMTextButton.Stack>
                 <BMTextButton
-                    label="Curriculum Vitae"
-                    icon="fas up-right"/>
+                    tag="a"
+                    href="https://github.com/basmilius"
+                    target="_blank"
+                    label="GitHub Profile"
+                    icon="fab github"/>
+
+                <BMTextButton
+                    tag="a"
+                    href="https://dribbble.com/basmilius"
+                    target="_blank"
+                    label="Dribbble Profile"
+                    icon="fab dribbble"/>
 
                 <BMTextButton.Link
                     href="/contact"
@@ -46,7 +56,7 @@ export default memo(() => (<>
         </>}>
         <h3>Hi! I'm Bas</h3>
         <p>A 26-year old developer from Groenlo, The Netherlands. By day I work as a Full-Stack Developer at a local agency, <a href="https://ideemedia.nl" rel="noopener" target="_blank">IdeeMedia</a>. By night I spend most of my time working on open source projects and finding/trying out what's new in tech.</p>
-        <p>My most recent project is Meteocons, a free to use set of animated weather icons. Another one of my recent projects is latte-ui, an UI library built for React, you can use it for free in your own projects.</p>
+        <p>My most recent project is <Link href="/work/meteocons">Meteocons</Link>, a free to use set of animated weather icons. Another one of my recent projects is latte-ui, an UI library built for React, you can use it for free in your own projects.</p>
 
         <h3>Programming</h3>
         <p>I started experimenting with code back in 2008, I tweaked a lot to existing projects from other people to see what happened when I changed something. Since then I gained a lot of experience and developed my own (code) style. In 2013 I won two gold medals for programming.</p>
