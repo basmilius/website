@@ -30,7 +30,7 @@ module.exports = () => withBundleAnalyzer({
 
     pageExtensions: ["tsx"],
 
-    swcMinify: true,
+    swcMinify: false,
 
     experimental: {
         cpus: 4,
