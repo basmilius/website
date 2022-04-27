@@ -24,7 +24,7 @@ export default memo(() => (
                 <p>
                     Application developer &mdash; I wanted to explore this interest in programming even more. I
                     already had some self knowledge of programming which made the education really easy for me,
-                    maybe even a bit too easy… It was also the reason why I quit school for few years.
+                    maybe even a bit too easy… It was also the reason why I quit school for a few years.
                 </p>
             </BMTimeline.Item>
 
