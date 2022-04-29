@@ -285,7 +285,7 @@ export default Object.assign(WorkCard, {
         ManegeNijhuis: memo(() => (
             <WorkCard
                 imageUrl={manegeNijhuisImage.src}
-                title="Manage Nijhuis"
+                title="Manege Nijhuis"
                 description="Horse riding school in Eibergen."
                 buttonIcon="fas up-right"
                 buttonLabel="manege-nijhuis.nl"
