@@ -1,9 +1,9 @@
 {
-    "name": "@bybas/website",
+    "name": "@basmilius/website",
     "description": "The frontend source code of bas.dev",
     "license": "MIT",
     "private": true,
-    "version": "21.0.0-dev",
+    "version": "22.0.0",
     "author": {
         "email": "bas@mili.us",
         "name": "Bas Milius",
@@ -11,8 +11,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/basmilius/latte-ui.git",
-        "directory": "packages/bas"
+        "url": "https://github.com/basmilius/website.git"
     },
     "scripts": {
         "dev": "next dev -p 8080",
