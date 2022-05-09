@@ -40,7 +40,6 @@ export default memo(() => (<>
         <BMWorkCard.ForOthers.ManegeNijhuis/>
         <BMWorkCard.ForOthers.ErveNijhuis/>
         <BMWorkCard.ForOthers.ErveTank/>
-        <BMWorkCard.ForOthers.Wervinc/>
         <BMWorkCard.ForOthers.KapsalonLichtenberg/>
         <BMWorkCard.ForOthers.DitoGroenlo/>
     </BMWorkCardGrid>
