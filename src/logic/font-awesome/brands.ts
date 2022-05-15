@@ -1,5 +1,4 @@
 export {
-    faAngular,
     faCss3,
     faDribbble,
     faFacebook,

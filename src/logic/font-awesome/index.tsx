@@ -25,9 +25,27 @@ export function renderIcon(ref: ForwardedRef<HTMLElement> | undefined, name: str
         return null;
     }
 
+    if (name === "fab flutter") {
+        return (
+            <svg role="img" className={styles.icon} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 371.44">
+                <path fill="currentColor" d="m300 171.43-100 100 100 100H185.72l-42.86-42.86-57.15-57.15 100-100ZM185.72 0 0 185.72l57.15 57.15L300 0Z"/>
+                <path fill="currentColor" d="M300 171.43H185.72L85.73 271.45l57.13 57.12L300 171.43z"/>
+                <path fill="currentColor" d="m300 171.43-100 100 100 100H185.72l-42.86-42.86-57.15-57.15 100-100ZM185.72 0 0 185.72l57.15 57.15L300 0Z"/>
+                <path fill="currentColor" d="M57.15 242.87 0 185.72 185.72 0H300L57.15 242.87z"/>
+                <path fill="currentColor" d="m300 171.43-100 100 100 100H185.72l-42.86-42.86-57.15-57.15 100-100ZM185.72 0 0 185.72l57.15 57.15L300 0Z"/>
+                <path fill="currentColor" d="m142.86 328.57 42.86 42.87H300l-99.99-99.99-57.15 57.12z"/>
+                <path fill="currentColor" d="m300 171.43-100 100 100 100H185.72l-42.86-42.86-57.15-57.15 100-100ZM185.72 0 0 185.72l57.15 57.15L300 0Z"/>
+                <path fill="currentColor" d="m142.86 328.57 84.75-29.33-27.6-27.79-57.15 57.12z"/>
+                <path fill="currentColor" d="m300 171.43-100 100 100 100H185.72l-42.86-42.86-57.15-57.15 100-100ZM185.72 0 0 185.72l57.15 57.15L300 0Z"/>
+                <path fill="currentColor" d="m85.72 271.43 57.14-57.14 57.15 57.14-57.15 57.14z"/>
+                <path fill="currentColor" d="m300 171.43-100 100 100 100H185.72l-42.86-42.86-57.15-57.15 100-100ZM185.72 0 0 185.72l57.15 57.15L300 0Z"/>
+            </svg>
+        );
+    }
+
     if (name === "fab kotlin") {
         return (
-            <svg className={styles.icon} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+            <svg role="img" className={styles.icon} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
                 <path d="M500 500H0V0h500L250 250z" fill="currentColor" transform="translate(50, 50)"/>
             </svg>
         );
@@ -35,7 +53,7 @@ export function renderIcon(ref: ForwardedRef<HTMLElement> | undefined, name: str
 
     if (name === "fab typescript") {
         return (
-            <svg className={styles.icon} fill="none" viewBox="0 0 612 612" xmlns="http://www.w3.org/2000/svg">
+            <svg role="img" className={styles.icon} fill="none" viewBox="0 0 612 612" xmlns="http://www.w3.org/2000/svg">
                 <g transform="translate(50, 50)">
                     <rect fill="currentColor" height="512" rx="50" width="512"/>
                     <rect fill="currentColor" height="512" rx="50" width="512"/>
