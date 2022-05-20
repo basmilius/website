@@ -1,10 +1,6 @@
 const {createHash} = require("crypto");
 const generateName = require("css-class-generator");
 
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true",
-});
-
 const names = {};
 
 const sha1 = str => {
@@ -24,7 +20,7 @@ const getLocalIdent = ({rootContext, resourcePath}, _, name) => {
     return names[key] = generateName(parseInt(key, 16));
 };
 
-module.exports = () => withBundleAnalyzer({
+module.exports = () => ({
     poweredByHeader: false,
     reactStrictMode: true,
 
