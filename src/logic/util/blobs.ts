@@ -35,11 +35,11 @@ export class BlobsSimulator extends LimitedFrameRateCanvas {
         this.canvas.height = this.canvas.offsetHeight * devicePixelRatio;
 
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-        blobs.forEach(blob => blob.tick());
         blobs.forEach(blob => blob.draw(this.context, this.canvas.width, this.canvas.height));
     }
 
     tick() {
+        blobs.forEach(blob => blob.tick());
     }
 
 }
