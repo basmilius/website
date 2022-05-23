@@ -17,7 +17,7 @@ const blobPoints = new Float64Array(sevenPointCircle.length);
 const blobs: Blob[] = [];
 const random = mulberry32();
 
-export class BlobCanvas extends LimitedFrameRateCanvas {
+export class BlobsSimulator extends LimitedFrameRateCanvas {
 
     constructor(canvas: HTMLCanvasElement, public readonly smallMode: boolean) {
         super(canvas, smallMode ? 15 : 60);

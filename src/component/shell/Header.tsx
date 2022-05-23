@@ -1,6 +1,6 @@
 import { useInView, useWindowSize } from "@latte-ui/hooks";
 import { memo, ReactNode, useEffect, useMemo, useRef } from "react";
-import { BlobCanvas } from "@/logic/util/blobs";
+import { BlobsSimulator } from "@/logic/util/blobs";
 
 import styles from "./Header.module.scss";
 
@@ -16,12 +16,12 @@ export default memo(({cards, isFrontPage, title}: Props) => {
             return;
         }
 
-        let blobsCanvas = new BlobCanvas(canvasRef.current, isSmallMode);
-        blobsCanvas.start();
+        let simulator = new BlobsSimulator(canvasRef.current, isSmallMode);
+        simulator.start();
 
         return () => {
-            blobsCanvas.stop();
-            blobsCanvas.destroy();
+            simulator.stop();
+            simulator.destroy();
         };
     }, [canvasRef, inView, isSmallMode]);
 
