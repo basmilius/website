@@ -26,7 +26,7 @@ module.exports = () => ({
 
     pageExtensions: ["tsx"],
 
-    swcMinify: false,
+    swcMinify: true,
 
     experimental: {
         cpus: 4,

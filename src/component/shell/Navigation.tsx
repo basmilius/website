@@ -3,7 +3,7 @@ import { createSlotFill } from "@latte-ui/slot-fill";
 import { memo, useEffect, useMemo, useRef } from "react";
 import { Link, useRouter } from "@/component/platform";
 import { BMIcon } from "@/component/shell";
-import { BlobCanvas } from "@/logic/util/blobs";
+import { BlobsSimulator } from "@/logic/util/blobs";
 
 import styles from "./Navigation.module.scss";
 import logo from "../../image/logo.svg";
@@ -130,7 +130,7 @@ const BigNavigationCanvas = memo(() => {
             return;
         }
 
-        let blobsCanvas = new BlobCanvas(canvasRef.current, true);
+        let blobsCanvas = new BlobsSimulator(canvasRef.current, true);
         blobsCanvas.start();
 
         return () => {
