@@ -1,19 +1,14 @@
-import { memo, PropsWithChildren } from "react";
-
 import styles from "./Timeline.module.scss";
 
-interface ItemProps {
-    date: string;
-    title: string;
-}
+import { memo, PropsWithChildren } from "react";
 
-const Timeline = memo(({children}: PropsWithChildren<{}>) => (
+const Timeline = memo(({ children }: PropsWithChildren<{}>) => (
     <div className={styles.timeline}>
         {children}
     </div>
 ));
 
-const Item = memo(({children, date, title}: PropsWithChildren<ItemProps>) => (
+const Item = memo(({ children, date, title }: PropsWithChildren<ItemProps>) => (
     <div className={styles.timelineItem}>
         <svg className={styles.timelineItemLine} width="60px">
             <line x1={30} x2={30} y1="0" y2="100%" strokeWidth={2} strokeLinecap="round"/>
@@ -31,3 +26,8 @@ const Item = memo(({children, date, title}: PropsWithChildren<ItemProps>) => (
 export default Object.assign(Timeline, {
     Item
 });
+
+interface ItemProps {
+    date: string;
+    title: string;
+}

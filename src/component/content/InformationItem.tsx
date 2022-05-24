@@ -1,11 +1,11 @@
+import styles from "./Information.module.scss";
+
 import { useClipboard } from "@latte-ui/hooks";
 import { memo } from "react";
 import { BMIcon } from "@/component/shell";
 
-import styles from "./Information.module.scss";
-
-export default memo(({icon, title, value}: Props) => {
-    const [isCopied, copy] = useClipboard(value, 2000);
+export default memo(({ icon, title, value }: Props) => {
+    const [ isCopied, copy ] = useClipboard(value, 2000);
 
     return (
         <button className={`${styles.informationItem} ${isCopied ? styles.informationCopied : ""}`} onClick={copy}>

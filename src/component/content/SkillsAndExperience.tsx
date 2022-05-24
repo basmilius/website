@@ -1,16 +1,10 @@
+import styles from "./SkillsAndExperience.module.scss";
+
 import { CSSProperties, memo } from "react";
 import { BMIcon, BMSection } from "@/component/shell";
 
-import styles from "./SkillsAndExperience.module.scss";
-
-interface SkillProps {
-    color: string;
-    icon: string;
-    label: string;
-}
-
-const Skill = memo(({color, icon, label}: SkillProps) => (
-    <div className={styles.skill} style={{"--color": color} as CSSProperties}>
+const Skill = memo(({ color, icon, label }: SkillProps) => (
+    <div className={styles.skill} style={{ "--color": color } as CSSProperties}>
         <BMIcon className={styles.skillIcon} name={icon}/>
         <strong>{label}</strong>
     </div>
@@ -43,3 +37,9 @@ export default memo(() => (
 
     </BMSection>
 ));
+
+interface SkillProps {
+    color: string;
+    icon: string;
+    label: string;
+}

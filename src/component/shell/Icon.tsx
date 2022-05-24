@@ -7,7 +7,7 @@ export interface IconProps extends AriaAttributes, LatteClassStyle {
     name: string;
 }
 
-export default memo(forwardRef<HTMLElement, IconProps>(({className, style, name}, ref) => {
+export default memo(forwardRef<HTMLElement, IconProps>(({ className, style, name }, ref) => {
     const result = renderIcon(ref, name);
 
     if (!result) {

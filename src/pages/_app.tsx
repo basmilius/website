@@ -1,16 +1,15 @@
+import "../css/latte.scss";
+import "../css/index.scss";
+import basImage from "../image/bas.jpg";
+
 import { Slot, SlotFillProvider } from "@latte-ui/slot-fill";
 import { Head } from "@/component/platform";
 import { BMFooter, BMNavigation } from "@/component/shell";
 import { initializeFontAwesome } from "@/logic/font-awesome";
 
-import "../css/latte.scss";
-import "../css/index.scss";
-
-import basImage from "../image/bas.jpg";
-
 initializeFontAwesome();
 
-export default function BApp({Component, pageProps}) {
+export default function BApp({ Component, pageProps }) {
     return (<>
         <Head>
             <meta name="description" content="A 26-year old developer from Groenlo, The Netherlands."/>
@@ -22,14 +21,15 @@ export default function BApp({Component, pageProps}) {
         </Head>
 
         <SlotFillProvider>
-           <Slot name="bm:tooltips"/>
+            <Slot name="bm:tooltips"/>
 
             <BMNavigation/>
             <Component {...pageProps}/>
             <BMFooter/>
         </SlotFillProvider>
 
-        <script type="application/ld+json" dangerouslySetInnerHTML={{__html: `
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+            __html: `
             {
                 "@context": "https://schema.org/",
                 "@type": "Person",
@@ -48,6 +48,7 @@ export default function BApp({Component, pageProps}) {
                 ],
                 "jobTitle": "Full-Stack Developer"
             }
-        `}}></script>
+        `
+        }}></script>
     </>);
 }

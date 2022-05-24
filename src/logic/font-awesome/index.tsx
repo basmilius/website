@@ -8,7 +8,7 @@ import styles from "./styles.module.scss";
 const REGISTRY: { [key: string]: { [key: string]: IconDefinition; }; } = {};
 
 export function initializeFontAwesome() {
-    [brandsIcons, solidIcons]
+    [ brandsIcons, solidIcons ]
         .forEach(icons => Object.keys(icons)
             .map(i => icons[i])
             .forEach((i: IconDefinition) => {
@@ -69,11 +69,11 @@ export function renderIcon(ref: ForwardedRef<HTMLElement> | undefined, name: str
         return null;
     }
 
-    const {icon, iconName, prefix} = REGISTRY[definition.prefix][definition.iconName];
-    let [width, height, , , paths] = icon;
+    const { icon, iconName, prefix } = REGISTRY[definition.prefix][definition.iconName];
+    let [ width, height, , , paths ] = icon;
 
     if (!Array.isArray(paths)) {
-        paths = [paths];
+        paths = [ paths ];
     }
 
     return (
@@ -98,7 +98,7 @@ export function renderIcon(ref: ForwardedRef<HTMLElement> | undefined, name: str
 
 function normalizeIconName(icon: string | string[] | IconLookup): IconLookup | null {
     if (Array.isArray(icon)) {
-        return icon.length === 2 ? {prefix: icon[0] as IconPrefix, iconName: icon[1] as IconName} : null;
+        return icon.length === 2 ? { prefix: icon[0] as IconPrefix, iconName: icon[1] as IconName } : null;
     }
 
     if (typeof icon === "object") {
@@ -108,8 +108,8 @@ function normalizeIconName(icon: string | string[] | IconLookup): IconLookup | n
     icon = icon.split(" ");
 
     if (icon.length === 2) {
-        return {prefix: icon[0] as IconPrefix, iconName: icon[1] as IconName};
+        return { prefix: icon[0] as IconPrefix, iconName: icon[1] as IconName };
     }
 
-    return {prefix: "far", iconName: icon[0] as IconName};
+    return { prefix: "far", iconName: icon[0] as IconName };
 }

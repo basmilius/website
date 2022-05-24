@@ -1,12 +1,12 @@
-import { memo } from "react";
-import { Head } from "@/component/platform";
-import { BMWorkCard, BMWorkCardDeck } from "@/component/content";
-import { BMHeader, BMSection, BMTextButton } from "@/component/shell";
-
 import basSpainImageJpg1x from "../image/me/spain-1x.jpg"
 import basSpainImageJpg2x from "../image/me/spain-2x.jpg"
 import basSpainImageWebp1x from "../image/me/spain-1x.webp"
 import basSpainImageWebp2x from "../image/me/spain-2x.webp"
+
+import { memo } from "react";
+import { Head } from "@/component/platform";
+import { BMWorkCard, BMWorkCardDeck } from "@/component/content";
+import { BMHeader, BMSection, BMTextButton } from "@/component/shell";
 
 export default memo(() => (<>
     <Head>
@@ -22,12 +22,12 @@ export default memo(() => (<>
             <BMSection.CenterizedPicture
                 defaultSrc={basSpainImageJpg1x.src}
                 jpg={[
-                    {scale: 2, src: basSpainImageJpg2x.src},
-                    {scale: 1, src: basSpainImageJpg1x.src}
+                    { scale: 2, src: basSpainImageJpg2x.src },
+                    { scale: 1, src: basSpainImageJpg1x.src }
                 ]}
                 webp={[
-                    {scale: 2, src: basSpainImageWebp2x.src},
-                    {scale: 1, src: basSpainImageWebp1x.src}
+                    { scale: 2, src: basSpainImageWebp2x.src },
+                    { scale: 1, src: basSpainImageWebp1x.src }
                 ]}
                 alt="Bas looking at the view in Spain."
                 height={basSpainImageJpg1x.height}

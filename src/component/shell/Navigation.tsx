@@ -1,3 +1,6 @@
+import logo from "../../image/logo.svg";
+import styles from "./Navigation.module.scss";
+
 import { useBoolean, useDebounce, useMounted, useWindowScroll } from "@latte-ui/hooks";
 import { createSlotFill } from "@latte-ui/slot-fill";
 import { memo, useEffect, useMemo, useRef } from "react";
@@ -5,22 +8,19 @@ import { Link, useRouter } from "@/component/platform";
 import { BMIcon } from "@/component/shell";
 import { BlobsSimulator } from "@/logic/util/blobs";
 
-import styles from "./Navigation.module.scss";
-import logo from "../../image/logo.svg";
-
-const {Fill, Slot} = createSlotFill("bm-navigation");
+const { Fill, Slot } = createSlotFill("bm-navigation");
 
 export default memo(() => {
     const isMounted = useMounted();
-    const {pathname} = useRouter();
-    const {y} = useWindowScroll();
-    const [isMobileMenuOpen, setMobileMenuOpen] = useBoolean();
+    const { pathname } = useRouter();
+    const { y } = useWindowScroll();
+    const [ isMobileMenuOpen, setMobileMenuOpen ] = useBoolean();
 
     const isMobileMenuCanvasVisible = useDebounce(isMobileMenuOpen, 600);
-    const isMenuCollapsed = useMemo(() => isMounted && y > 0, [y, isMounted]);
-    const isTitleVisible = useMemo(() => isMounted && y > 320, [y, isMounted]);
+    const isMenuCollapsed = useMemo(() => isMounted && y > 0, [ y, isMounted ]);
+    const isTitleVisible = useMemo(() => isMounted && y > 320, [ y, isMounted ]);
 
-    useEffect(() => setMobileMenuOpen(false), [pathname]);
+    useEffect(() => setMobileMenuOpen(false), [ pathname ]);
 
     return (<>
         <a href={"#content"} className={styles.skipToContent}>
@@ -55,7 +55,7 @@ export default memo(() => {
 
                 <NavigationItemDefault label="Home" url="/" isExact/>
                 <NavigationItemDefault label="About me" url="/about" isExact/>
-                <NavigationItemDefault label="Work" url="/work" notActiveFor={["/work/meteocons"]}/>
+                <NavigationItemDefault label="Work" url="/work" notActiveFor={[ "/work/meteocons" ]}/>
                 <NavigationItemDefault label="Meteocons" url="/work/meteocons" isExact/>
                 <NavigationItemDefault label="Contact" url="/contact" isExact/>
             </nav>
@@ -76,7 +76,7 @@ export default memo(() => {
             <nav className={styles.bigNavigationNav}>
                 <NavigationItemMobile label="Home" url="/" isExact/>
                 <NavigationItemMobile label="About me" url="/about" isExact/>
-                <NavigationItemMobile label="Work" url="/work" notActiveFor={["/work/meteocons"]}/>
+                <NavigationItemMobile label="Work" url="/work" notActiveFor={[ "/work/meteocons" ]}/>
                 <NavigationItemMobile label="Meteocons" url="/work/meteocons" isExact/>
                 <NavigationItemMobile label="Contact" url="/contact" isExact/>
             </nav>
@@ -84,10 +84,10 @@ export default memo(() => {
     </>);
 });
 
-const NavigationItem = memo(({className, classNameActive, isExact, label, notActiveFor, url, onClick}: NavigationItemProps) => {
-    const {pathname} = useRouter();
+const NavigationItem = memo(({ className, classNameActive, isExact, label, notActiveFor, url, onClick }: NavigationItemProps) => {
+    const { pathname } = useRouter();
 
-    const isActive = useMemo(() => isExact ? pathname === url : pathname.startsWith(url) && !notActiveFor?.includes(pathname), [pathname, url, isExact]);
+    const isActive = useMemo(() => isExact ? pathname === url : pathname.startsWith(url) && !notActiveFor?.includes(pathname), [ pathname, url, isExact ]);
 
     return (
         <Link passHref href={url}>
@@ -100,7 +100,7 @@ const NavigationItem = memo(({className, classNameActive, isExact, label, notAct
     );
 });
 
-const NavigationItemDefault = memo(({isExact, label, notActiveFor, url, onClick}: Omit<NavigationItemProps, "className" | "classNameActive">) => (
+const NavigationItemDefault = memo(({ isExact, label, notActiveFor, url, onClick }: Omit<NavigationItemProps, "className" | "classNameActive">) => (
     <NavigationItem
         className={styles.navItem}
         classNameActive={styles.navItemActive}
@@ -111,7 +111,7 @@ const NavigationItemDefault = memo(({isExact, label, notActiveFor, url, onClick}
         onClick={onClick}/>
 ));
 
-const NavigationItemMobile = memo(({isExact, label, notActiveFor, url, onClick}: Omit<NavigationItemProps, "className" | "classNameActive">) => (
+const NavigationItemMobile = memo(({ isExact, label, notActiveFor, url, onClick }: Omit<NavigationItemProps, "className" | "classNameActive">) => (
     <NavigationItem
         className={styles.bigNavigationItem}
         classNameActive={styles.bigNavigationItemActive}
@@ -137,14 +137,14 @@ const BigNavigationCanvas = memo(() => {
             blobsCanvas.stop();
             blobsCanvas.destroy();
         };
-    }, [canvasRef]);
+    }, [ canvasRef ]);
 
     return (
         <canvas ref={canvasRef} className={styles.canvas}/>
     );
 });
 
-export const BMNavigationTitle = memo(({title}: { title: string; }) => (
+export const BMNavigationTitle = memo(({ title }: { title: string; }) => (
     <Fill>{title}</Fill>
 ));
 

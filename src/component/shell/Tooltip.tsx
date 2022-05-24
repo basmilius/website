@@ -1,25 +1,16 @@
-import { LatteSides } from "@latte-ui/core/src/types/prop-types";
 import { clamp, off, on, useBoolean, useRect, useWindowScroll, useWindowSize } from "@latte-ui/hooks";
 import { Fill } from "@latte-ui/slot-fill";
 import { AnimatePresence as _AnimatePresence, AnimatePresenceProps, domAnimation, LazyMotion, m } from "framer-motion";
 import { Children, cloneElement, FC, forwardRef, memo, PropsWithChildren, ReactElement, ReactNode, RefObject, useEffect, useMemo, useRef } from "react";
 
-export interface TooltipProps {
-    content: ReactNode;
-    delay?: number;
-    isEnabled?: boolean;
-    location?: LatteSides;
-    offset?: number;
-}
-
 const AnimatePresence = _AnimatePresence as FC<PropsWithChildren<AnimatePresenceProps>>;
 
-const Tooltip = memo(forwardRef<HTMLElement, PropsWithChildren<TooltipProps>>(({children, content, delay = 0, isEnabled = true, location = "bottom", offset = 0}: PropsWithChildren<TooltipProps>, ref: RefObject<any>) => {
+const Tooltip = memo(forwardRef<HTMLElement, PropsWithChildren<TooltipProps>>(({ children, content, delay = 0, isEnabled = true, location = "bottom", offset = 0 }: PropsWithChildren<TooltipProps>, ref: RefObject<any>) => {
     const openerRef = ref || useRef(null);
 
-    const [isOpen, setOpen] = useBoolean();
-    const [openerRect, setOpenerRect] = useRect(openerRef);
-    const {x, y} = useWindowScroll();
+    const [ isOpen, setOpen ] = useBoolean();
+    const [ openerRect, setOpenerRect ] = useRect(openerRef);
+    const { x, y } = useWindowScroll();
 
     const child = Children.only(children) as ReactElement;
 
@@ -28,12 +19,12 @@ const Tooltip = memo(forwardRef<HTMLElement, PropsWithChildren<TooltipProps>>(({
 
     useEffect(() => {
         isOpen && setOpenerRect();
-    }, [x, y, isOpen]);
+    }, [ x, y, isOpen ]);
 
     useEffect(() => {
-        on(openerRef.current, "mouseenter", onEnter, {passive: true});
-        on(openerRef.current, "mouseleave", onLeave, {passive: true});
-        on(openerRef.current, "click", onLeave, {passive: true});
+        on(openerRef.current, "mouseenter", onEnter, { passive: true });
+        on(openerRef.current, "mouseleave", onLeave, { passive: true });
+        on(openerRef.current, "click", onLeave, { passive: true });
 
         return () => {
             off(openerRef.current, "mouseenter", onEnter);
@@ -64,12 +55,12 @@ const Tooltip = memo(forwardRef<HTMLElement, PropsWithChildren<TooltipProps>>(({
     </>);
 }));
 
-const Content = memo(({content, delay, location, offset, openerRect}: any) => {
+const Content = memo(({ content, delay, location, offset, openerRect }: any) => {
     const ref = useRef(null);
-    const [rect] = useRect(ref);
-    const {height, width} = useWindowSize();
+    const [ rect ] = useRect(ref);
+    const { height, width } = useWindowSize();
 
-    const {x, y, tx, ty} = useMemo(() => {
+    const { x, y, tx, ty } = useMemo(() => {
         let x, y, tx = 0, ty = 0;
         let margin = 9 + offset;
 
@@ -108,16 +99,16 @@ const Content = memo(({content, delay, location, offset, openerRect}: any) => {
             tx,
             ty
         };
-    }, [height, width, rect, offset, openerRect, location]);
+    }, [ height, width, rect, offset, openerRect, location ]);
 
     return (
         <m.div
             ref={ref}
-            transition={{type: "tween", duration: .18}}
-            animate={{opacity: 1, translateX: 0, translateY: 0, transition: {delay: delay / 1000}}}
-            exit={{opacity: 0}}
-            initial={{opacity: 0, translateX: tx, translateY: ty}}
-            style={{x, y}}
+            transition={{ type: "tween", duration: .18 }}
+            animate={{ opacity: 1, translateX: 0, translateY: 0, transition: { delay: delay / 1000 } }}
+            exit={{ opacity: 0 }}
+            initial={{ opacity: 0, translateX: tx, translateY: ty }}
+            style={{ x, y }}
             className="tooltip"
             role="tooltip">
             {content}
@@ -126,3 +117,11 @@ const Content = memo(({content, delay, location, offset, openerRect}: any) => {
 });
 
 export { Tooltip };
+
+export interface TooltipProps {
+    content: ReactNode;
+    delay?: number;
+    isEnabled?: boolean;
+    location?: "top" | "left" | "right" | "bottom";
+    offset?: number;
+}

@@ -1,8 +1,8 @@
+import styles from "./Work.module.scss";
+
 import { memo, ReactNode } from "react";
 import { BMTextButton } from "@/component/shell";
 import { Link } from "@/component/platform";
-
-import styles from "./Work.module.scss";
 
 import basToolsImage from "../../image/work/blueprint/blueprint-bas-tools.svg";
 import ditoGroenloImage from "../../image/work/blueprint/blueprint-dito.svg";
@@ -37,7 +37,7 @@ interface Props {
     visual?: ReactNode;
 }
 
-const WorkCard = memo(({title, description, buttonIcon, buttonLabel, buttonSmall, buttonUrl, comingSoon, imageUrl, visual}: Props) => (
+const WorkCard = memo(({ title, description, buttonIcon, buttonLabel, buttonSmall, buttonUrl, comingSoon, imageUrl, visual }: Props) => (
     <div className={styles.workCard}>
         {!visual && !imageUrl && (
             <div className={styles.workCardVisualBlank}/>

@@ -1,1 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 720 420"><defs><linearGradient id="b" x1="361" y1="421" x2="361" y2="1" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#fff"/></linearGradient><linearGradient id="d" x1="332" y1="161.49" x2="388" y2="258.51" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fbbf24"/><stop offset=".45" stop-color="#fbbf24"/><stop offset="1" stop-color="#f59e0b"/></linearGradient><clipPath id="a"><path fill="none" d="M1 1h720v420H1z"/></clipPath><symbol id="c" viewBox="0 0 722 422"><g clip-path="url(#a)"><path fill="url(#b)" d="M1 1h720v420H1z"/><path fill="none" stroke="#f8fafc" stroke-miterlimit="10" stroke-width="2" d="M1 1h60v60H1zm60 0h60v60H61zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zM1 61h60v60H1zm60 0h60v60H61zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zM1 121h60v60H1zm60 0h60v60H61zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zM1 181h60v60H1zm60 0h60v60H61zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zM1 241h60v60H1zm60 0h60v60H61zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zM1 301h60v60H1zm60 0h60v60H61zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zM1 361h60v60H1zm60 0h60v60H61zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60z"/><rect x="16" y="16" width="690" height="390" rx="18" ry="18" fill="none" stroke="#f8fafc" stroke-miterlimit="10" stroke-width="2"/></g></symbol></defs><use width="722" height="422" transform="translate(-1 -1)" xlink:href="#c"/><g stroke-miterlimit="10"><circle cx="360" cy="210" r="56" fill="url(#d)" stroke="#f8af18" stroke-width="3"/><path d="M360 123.1V90m0 240v-33.1m61.45-148.34 23.41-23.41M275.15 294.86l23.41-23.41m0-122.89-23.41-23.41m169.71 169.71-23.41-23.41M273.11 210h-33.1m240 0h-33.1" fill="none" stroke="#fbbf24" stroke-linecap="round" stroke-width="12"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 720 420">
+    <defs>
+        <linearGradient id="b" x1="361" y1="421" x2="361" y2="1" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#f8fafc"/>
+            <stop offset="1" stop-color="#fff"/>
+        </linearGradient>
+        <linearGradient id="d" x1="332" y1="161.49" x2="388" y2="258.51" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fbbf24"/>
+            <stop offset=".45" stop-color="#fbbf24"/>
+            <stop offset="1" stop-color="#f59e0b"/>
+        </linearGradient>
+        <clipPath id="a">
+            <path fill="none" d="M1 1h720v420H1z"/>
+        </clipPath>
+        <symbol id="c" viewBox="0 0 722 422">
+            <g clip-path="url(#a)">
+                <path fill="url(#b)" d="M1 1h720v420H1z"/>
+                <path fill="none" stroke="#f8fafc" stroke-miterlimit="10" stroke-width="2" d="M1 1h60v60H1zm60 0h60v60H61zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zM1 61h60v60H1zm60 0h60v60H61zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zM1 121h60v60H1zm60 0h60v60H61zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zM1 181h60v60H1zm60 0h60v60H61zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zM1 241h60v60H1zm60 0h60v60H61zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zM1 301h60v60H1zm60 0h60v60H61zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zM1 361h60v60H1zm60 0h60v60H61zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60zm60 0h60v60h-60z"/>
+                <rect x="16" y="16" width="690" height="390" rx="18" ry="18" fill="none" stroke="#f8fafc" stroke-miterlimit="10" stroke-width="2"/>
+            </g>
+        </symbol>
+    </defs>
+    <use width="722" height="422" transform="translate(-1 -1)" xlink:href="#c"/>
+    <g stroke-miterlimit="10">
+        <circle cx="360" cy="210" r="56" fill="url(#d)" stroke="#f8af18" stroke-width="3"/>
+        <path d="M360 123.1V90m0 240v-33.1m61.45-148.34 23.41-23.41M275.15 294.86l23.41-23.41m0-122.89-23.41-23.41m169.71 169.71-23.41-23.41M273.11 210h-33.1m240 0h-33.1" fill="none" stroke="#fbbf24" stroke-linecap="round" stroke-width="12"/>
+    </g>
+</svg>

@@ -1,21 +1,13 @@
+import styles from "./TextButton.module.scss";
+
+import type { ButtonProps } from "@latte-ui/core/src/component/button/Button";
+import type { LatteClassStyle } from "@latte-ui/core/src/types/prop-types";
 import { useAriaAttributes, useClasses } from "@latte-ui/hooks";
-import { ButtonProps } from "@latte-ui/core/src/component/button/Button";
-import { LatteClassStyle } from "@latte-ui/core/src/types/prop-types";
 import { ElementType, forwardRef, memo, PropsWithChildren } from "react";
 import { Link as LinkComponent } from "@/component/platform";
+import { BMIcon } from "@/component/shell";
 
-import styles from "./TextButton.module.scss";
-import { BMIcon } from "@/component/shell/index";
-
-interface Props {
-    isSmall?: boolean;
-}
-
-interface GroupProps {
-    alignToBottom?: boolean;
-}
-
-const Button = memo(forwardRef<HTMLElement, ButtonProps & Props>(({className, style, tag = "button", buttonType = "button", href, rel, target, label, icon, iconAfter, isDisabled, isSmall, onClick, ...props}, ref) => {
+const Button = memo(forwardRef<HTMLElement, ButtonProps & Props>(({ className, style, tag = "button", buttonType = "button", href, rel, target, label, icon, iconAfter, isDisabled, isSmall, onClick, ...props }, ref) => {
     const Tag = tag as ElementType;
 
     const ariaAttributes = useAriaAttributes(props, {
@@ -32,7 +24,7 @@ const Button = memo(forwardRef<HTMLElement, ButtonProps & Props>(({className, st
         <Tag
             ref={ref}
             {...ariaAttributes}
-            {...(tag === "a" ? {href, rel, target} : {})}
+            {...(tag === "a" ? { href, rel, target } : {})}
             type={buttonType}
             className={classes}
             style={style}
@@ -57,13 +49,13 @@ const Button = memo(forwardRef<HTMLElement, ButtonProps & Props>(({className, st
     );
 }));
 
-const Grid = memo(({children, className, style}: PropsWithChildren<LatteClassStyle>) => (
+const Grid = memo(({ children, className, style }: PropsWithChildren<LatteClassStyle>) => (
     <div className={`${styles.textButtonGrid} ${className || ""}`} style={style}>
         {children}
     </div>
 ));
 
-const Group = memo(({children, alignToBottom, className, style}: PropsWithChildren<LatteClassStyle & GroupProps>) => (
+const Group = memo(({ children, alignToBottom, className, style }: PropsWithChildren<LatteClassStyle & GroupProps>) => (
     <div className={`${alignToBottom ? styles.textButtonGroupAlignToBottom : styles.textButtonGroup} ${className || ""}`} style={style}>
         {children}
     </div>
@@ -75,7 +67,7 @@ const Link = memo((props: ButtonProps & Props) => (
     </LinkComponent>
 ));
 
-const Stack = memo(({children, alignToBottom, className, style}: PropsWithChildren<LatteClassStyle & GroupProps>) => (
+const Stack = memo(({ children, alignToBottom, className, style }: PropsWithChildren<LatteClassStyle & GroupProps>) => (
     <div className={`${alignToBottom ? styles.textButtonStackAlignToBottom : styles.textButtonStack} ${className || ""}`} style={style}>
         {children}
     </div>
@@ -87,3 +79,11 @@ export default Object.assign(Button, {
     Link,
     Stack
 });
+
+interface Props {
+    isSmall?: boolean;
+}
+
+interface GroupProps {
+    alignToBottom?: boolean;
+}

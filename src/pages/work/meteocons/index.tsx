@@ -1,12 +1,12 @@
+import styles from "./styles.module.scss";
+
 import { useInView, useObserveSticky } from "@latte-ui/hooks";
 import { memo, useMemo, useRef, useState } from "react";
 import { Head } from "@/component/platform";
 import { BMHeader, BMNavigationTitle, BMSection, BMTextButton, BMTooltip } from "@/component/shell";
 
-import styles from "./styles.module.scss";
-
 export default memo(() => {
-    const [style, setStyle] = useState<IconStyle>("fill");
+    const [ style, setStyle ] = useState<IconStyle>("fill");
 
     const iconCount = useMemo(() => iconGroups.map(g => g.icons.flat().length).reduce((acc, val) => acc + val, 0), []);
 
@@ -20,10 +20,10 @@ export default memo(() => {
 
         <BMHeader
             cards={[
-                <img src={`https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/clear-day.svg`} alt="Clear day icon from Meteocons" loading="lazy"/>,
-                <img src={`https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/overcast-rain.svg`} alt="Overcast rain icon from Meteocons" loading="lazy"/>,
-                <img src={`https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/partly-cloudy-day-snow.svg`} alt="Partly cloudy snow icon from Meteocons" loading="lazy"/>,
-                <img src={`https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/partly-cloudy-night-sleet.svg`} alt="Partly cloudy sleet at night icon from Meteocons" loading="lazy"/>
+                <img src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/clear-day.svg" alt="Clear day icon from Meteocons" loading="lazy"/>,
+                <img src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/overcast-rain.svg" alt="Overcast rain icon from Meteocons" loading="lazy"/>,
+                <img src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/partly-cloudy-day-snow.svg" alt="Partly cloudy snow icon from Meteocons" loading="lazy"/>,
+                <img src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/partly-cloudy-night-sleet.svg" alt="Partly cloudy sleet at night icon from Meteocons" loading="lazy"/>
             ]}
             title="Meteocons"/>
 
@@ -94,10 +94,10 @@ export default memo(() => {
     </>);
 });
 
-const Icon = memo(({icon, style}: { icon: string; style: IconStyle; }) => {
+const Icon = memo(({ icon, style }: { icon: string; style: IconStyle; }) => {
     const ref = useRef();
-    const inView = useInView(ref, {initialValue: false, threshold: .25});
-    const name = useMemo(() => icon.split("-").map(w => w[0].toUpperCase() + w.substring(1)).join(" "), [icon]);
+    const inView = useInView(ref, { initialValue: false, threshold: .25 });
+    const name = useMemo(() => icon.split("-").map(w => w[0].toUpperCase() + w.substring(1)).join(" "), [ icon ]);
 
     return (
         <div ref={ref} className={styles.weatherIcon}>
@@ -115,7 +115,7 @@ const Icon = memo(({icon, style}: { icon: string; style: IconStyle; }) => {
     );
 });
 
-const IconSection = memo(({group, style, setStyle}: IconSectionProps & IconStyleSwitcherProps) => (
+const IconSection = memo(({ group, style, setStyle }: IconSectionProps & IconStyleSwitcherProps) => (
     <div className={styles.weatherIconSection}>
         <IconSectionHeader
             group={group}
@@ -139,9 +139,9 @@ const IconSection = memo(({group, style, setStyle}: IconSectionProps & IconStyle
     </div>
 ));
 
-const IconSectionHeader = memo(({group, style, setStyle}: IconSectionProps & IconStyleSwitcherProps) => {
+const IconSectionHeader = memo(({ group, style, setStyle }: IconSectionProps & IconStyleSwitcherProps) => {
     const ref = useRef(null);
-    const {isSticky, isAfter} = useObserveSticky(ref, {
+    const { isSticky, isAfter } = useObserveSticky(ref, {
         threshold: 30
     });
 
@@ -155,7 +155,7 @@ const IconSectionHeader = memo(({group, style, setStyle}: IconSectionProps & Ico
         }
 
         return styles.weatherIconSectionHeaderDefault;
-    }, [isSticky, isAfter, ref]);
+    }, [ isSticky, isAfter, ref ]);
 
     return (
         <div ref={ref} className={className}>
@@ -168,7 +168,7 @@ const IconSectionHeader = memo(({group, style, setStyle}: IconSectionProps & Ico
     );
 });
 
-const IconStyleSwitcher = memo(({style, setStyle}: IconStyleSwitcherProps) => (
+const IconStyleSwitcher = memo(({ style, setStyle }: IconStyleSwitcherProps) => (
     <nav className={styles.weatherIconSectionStyleSwitcher}>
         {Object.keys(iconStyles).map(key => (
             <BMTooltip
@@ -206,9 +206,9 @@ const iconStyles: IconStyles = {
     line: "Outline"
 };
 
-const iconGroups: IconGroup[] = [{
+const iconGroups: IconGroup[] = [ {
     label: "Weather",
-    icons: [[
+    icons: [ [
         "clear-day",
         "clear-night",
         "cloudy",
@@ -338,10 +338,10 @@ const iconGroups: IconGroup[] = [{
         "thunderstorms-extreme-snow",
         "thunderstorms-day-extreme-snow",
         "thunderstorms-night-extreme-snow"
-    ]]
+    ] ]
 }, {
     label: "Astronomical",
-    icons: [[
+    icons: [ [
         "horizon",
         "sunrise",
         "sunset",
@@ -350,10 +350,10 @@ const iconGroups: IconGroup[] = [{
         "falling-stars",
         "solar-eclipse",
         "starry-night"
-    ]]
+    ] ]
 }, {
     label: "Moon Phases",
-    icons: [[
+    icons: [ [
         "moon-new",
         "moon-waxing-crescent",
         "moon-first-quarter",
@@ -362,10 +362,10 @@ const iconGroups: IconGroup[] = [{
         "moon-waning-gibbous",
         "moon-last-quarter",
         "moon-waning-crescent"
-    ]]
+    ] ]
 }, {
     label: "Thermometer",
-    icons: [[
+    icons: [ [
         "thermometer",
         "thermometer-colder",
         "thermometer-warmer",
@@ -381,10 +381,10 @@ const iconGroups: IconGroup[] = [{
         "thermometer-raindrop",
         "thermometer-snow",
         "thermometer-water"
-    ]]
+    ] ]
 }, {
     label: "Miscellaneous",
-    icons: [[
+    icons: [ [
         "barometer",
         "compass",
         "windsock",
@@ -410,28 +410,28 @@ const iconGroups: IconGroup[] = [{
         "umbrella-wind-alt",
         "wind-offshore",
         "wind-onshore"
-    ]]
+    ] ]
 }, {
     label: "Particles",
-    icons: [[
+    icons: [ [
         "lightning-bolt",
         "raindrop",
         "raindrops",
         "snowflake",
         "star",
         "smoke-particles"
-    ]]
+    ] ]
 }, {
     label: "Pollen",
-    icons: [[
+    icons: [ [
         "pollen",
         "pollen-flower",
         "pollen-grass",
         "pollen-tree"
-    ]]
+    ] ]
 }, {
     label: "Beaufort Wind Scale",
-    icons: [[
+    icons: [ [
         "wind-beaufort-0",
         "wind-beaufort-1",
         "wind-beaufort-2",
@@ -445,10 +445,10 @@ const iconGroups: IconGroup[] = [{
         "wind-beaufort-10",
         "wind-beaufort-11",
         "wind-beaufort-12"
-    ]]
+    ] ]
 }, {
     label: "UV Index",
-    icons: [[
+    icons: [ [
         "uv-index",
         "uv-index-1",
         "uv-index-2",
@@ -461,10 +461,10 @@ const iconGroups: IconGroup[] = [{
         "uv-index-9",
         "uv-index-10",
         "uv-index-11"
-    ]]
+    ] ]
 }, {
     label: "Time",
-    icons: [[
+    icons: [ [
         "time-night",
         "time-late-night",
         "time-morning",
@@ -473,10 +473,10 @@ const iconGroups: IconGroup[] = [{
         "time-late-afternoon",
         "time-evening",
         "time-late-evening"
-    ]]
+    ] ]
 }, {
     label: "Alarm",
-    icons: [[
+    icons: [ [
         "code-green",
         "code-yellow",
         "code-orange",
@@ -488,8 +488,8 @@ const iconGroups: IconGroup[] = [{
         "flag-small-craft-advisory",
         "flag-storm-warning",
         "flag-hurricane-warning"
-    ]]
-}];
+    ] ]
+} ];
 
 interface IconGroup {
     readonly label: string;

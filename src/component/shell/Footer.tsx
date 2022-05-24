@@ -1,6 +1,6 @@
-import { memo } from "react";
-
 import styles from "./Footer.module.scss";
+
+import { memo } from "react";
 
 export default memo(() => (
     <footer className={styles.footer}>
