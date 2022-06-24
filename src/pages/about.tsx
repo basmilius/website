@@ -76,7 +76,7 @@ export default memo(() => (<>
         </p>
         <p>
             For programming I primarily use the tools of JetBrains, such as PhpStorm and IntelliJ
-            Idea, those applications are a perfect fit for me. All of my projects are stored on
+            Idea; those applications are a perfect fit for me. All of my projects are stored on
             their own GitHub repository and I host everything on my own Debian-based server. I also
             have another beefy Debian-based server for private projects and tools.
         </p>
