@@ -1,4 +1,5 @@
 @use "api" as *;
 
-@use "@latte-ui/css/src/base";
+@use "@latte-ui/css/src/base/reboot";
+@use "@latte-ui/css/src/base/root";
 @use "@latte-ui/css/src/component/tooltip";

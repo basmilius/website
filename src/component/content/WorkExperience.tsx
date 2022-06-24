@@ -20,10 +20,12 @@ export default memo(() => (
             </BMTimeline.Item>
 
             <BMTimeline.Item
-                date="June 2022"
-                title="Fancee Software / Tibbaa">
+                date="June 2022 — Now"
+                title="Tibbaa / Fancee Software">
                 <p>
-                    Senior Developer &mdash; Soon<small><sup>TM</sup></small>
+                    Senior Full-Stack Engineer &mdash; My main tasks are working on an organizer dashboard and
+                    an app. The dashboard is created with Vue and uses Vite as build tool, our app is created
+                    using Flutter. I created the Flutter app from scratch.
                 </p>
             </BMTimeline.Item>
 
@@ -31,10 +33,10 @@ export default memo(() => (
                 date="June 2016 — June 2022"
                 title="IdeeMedia">
                 <p>
-                    Full-Stack Developer &mdash; My career as a developer really started at IdeeMedia. I work on
-                    a lot of projects here. From small websites for local companies to large order systems for
-                    the Marveld holiday park in Groenlo. I also did some server management here and made sure
-                    everything ran smoothly online.
+                    Full-Stack Developer &mdash; My career as a developer really started at IdeeMedia. I worked
+                    on lots of projects here. From small websites for local companies to large order systems for
+                    the Marveld holiday park in Groenlo. I also did server management here and created a new
+                    hosting platform from scratch.
                 </p>
             </BMTimeline.Item>
 

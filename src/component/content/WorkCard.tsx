@@ -62,8 +62,8 @@ const WorkCard = memo(({ title, description, buttonIcon, buttonLabel, buttonSmal
         {visual}
 
         <div className={styles.workCardBody}>
-            <h3>{title}</h3>
-            <p>{description}</p>
+            <h3 className={styles.workCardTitle}>{title}</h3>
+            <p className={styles.workCardExcerpt}>{description}</p>
 
             {buttonUrl && buttonUrl.startsWith("http") && (
                 <BMTextButton

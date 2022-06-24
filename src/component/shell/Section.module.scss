@@ -36,10 +36,6 @@
     align-self: stretch;
     flex-flow: column;
 
-    h2 {
-        margin: 0 0 #{gutter-get(3)};
-    }
-
     p {
         color: #{color-get("gray", 500)};
     }

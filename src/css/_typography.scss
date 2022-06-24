@@ -1,10 +1,37 @@
 @use "api" as *;
 
+$-headings: (h1, h2, h3, h4, h5, h6, ".tah");
+$-elements: (p, ul, ol, li, hr, ".tae");
+
+:where(#{$-headings}) {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+:where(#{$-elements}) + :is(#{$-elements}) {
+    margin-top: #{gutter-get(4)};
+}
+
+:where(#{$-headings}) + :is(#{$-headings}, #{$-elements}) {
+    margin-top: #{gutter-get(2)};
+}
+
+:where(#{$-elements}) + :is(#{$-headings}) {
+    margin-top: #{gutter-get(9)};
+}
+
+:where(#{$-headings}, #{$-elements}) + :is(.tal) {
+    margin-top: #{gutter-get(7)};
+}
+
 p {
     font-weight: 300;
 }
 
 p.lead {
+    color: #{color-get("gray", 700)};
     font-weight: 500;
 }
 
@@ -18,7 +45,7 @@ h2 {
         display: inline-block;
         content: ".";
         color: #{color-get("primary")};
-        transform: scale(1.2) translate3d(0, -.05em, 0);
+        transform: scale(1.1) translate3d(0, -.03em, 0);
     }
 }
 
@@ -37,27 +64,27 @@ h4 {
 }
 
 h2 + h3 {
-    margin-top: 0 !important;
     color: #{color-get("primary")};
     font-size: 18px;
     font-weight: 400;
 }
 
-h2 + h4,
-h3 + h4 {
-    margin-top: 0 !important;
-}
-
 hr {
-    margin: #{gutter-get(3)} auto;
     max-width: 30px;
     background: transparent;
     border-top: 5px dotted #{color-get("gray", 300)};
 }
 
 a:not([class]) {
+    color: #{color-get("primary")};
+    text-decoration: underline #{color-get("gray", 200)};
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
+    transition: text-decoration-color 120ms var(--swiftOut);
+
+    &:hover {
+        text-decoration-color: currentColor;
+    }
 }
 
 ul:not([class]) {

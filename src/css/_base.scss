@@ -1,6 +1,11 @@
 @use "api" as *;
 
+:root {
+    --fg: #{color-get("gray", 600)};
+}
+
 html {
+    font-family: #{$font-family};
     font-size: 17px;
     scroll-padding-top: 99px;
 }
@@ -10,6 +15,13 @@ body {
     background: linear-gradient(to bottom, transparent calc(100% - 1px), #{color-get("primary", 50, .75)} calc(100% - 1px)), linear-gradient(to right, #{color-get("primary", 50, .1)} calc(100% - 1px), #{color-get("primary", 50, .75)} calc(100% - 1px));
     background-attachment: fixed;
     background-position: top center;
-    background-size: 90px 90px, 90px 90px;
-    line-height: 1.6;
+    background-size: 90px 90px;
+    color: var(--fg);
+    line-height: 1.5;
+}
+
+a,
+button,
+input[type=submit] {
+    cursor: pointer;
 }

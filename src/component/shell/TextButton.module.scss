@@ -12,7 +12,7 @@
     align-items: flex-start;
     flex-flow: row wrap;
     justify-content: flex-start;
-    gap: #{gutter-get(5)};
+    gap: #{gutter-get(6)};
 }
 
 .textButtonGroupAlignToBottom {
@@ -26,7 +26,7 @@
     align-items: flex-start;
     flex-flow: column;
     justify-content: flex-start;
-    gap: #{gutter-get(5)};
+    gap: #{gutter-get(2)};
 }
 
 .textButtonStackAlignToBottom {
@@ -39,7 +39,7 @@
     position: relative;
     display: inline-flex;
     padding: 0;
-    gap: #{gutter-get(3)};
+    gap: #{gutter-get(2)};
     align-items: center;
     align-self: flex-start;
     justify-self: flex-start;
@@ -47,7 +47,8 @@
     border: 0;
     border-radius: unset;
     color: #{color-get("gray")};
-    font-weight: 500;
+    font-size: 17px;
+    font-weight: 450;
     line-height: 1;
     outline: 0;
     text-decoration: none;
@@ -58,14 +59,13 @@
 .textButtonIcon {
     position: relative;
     display: flex;
-    height: 33px;
-    width: 33px;
+    height: 36px;
+    width: 36px;
     align-items: center;
     justify-content: center;
     background: #{color-get("gray", 200, .5)};
     border-radius: 18px;
     color: #{color-get("gray")};
-    font-size: 18px;
     transition: inherit;
     transition-property: background, color;
 
@@ -77,16 +77,15 @@
 }
 
 .textButtonSmall {
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .textButtonSmall .textButtonIcon {
-    margin-top: -1px;
     height: 30px;
     width: 30px;
 
     svg {
-        font-size: 15px;
+        font-size: 16px;
     }
 }
 

@@ -1,11 +1,12 @@
 import styles from "./Section.module.scss";
 
+import { classNames } from "@latte-ui/hooks";
 import { ImgHTMLAttributes, memo, PropsWithChildren, ReactNode, useMemo } from "react";
 
 type PicturePropsComplete = Omit<ImgHTMLAttributes<HTMLImageElement>, "src"> & PictureProps;
 
 const Section = memo(({ children, className, isAlternate, isIndented, isSmallTitle, isSticky, title, subTitle, details }: PropsWithChildren<Props>) => (
-    <section className={`${className ?? ""} ${styles.section} ${isAlternate ? styles.sectionAlternate : ""} ${isIndented ? styles.sectionIndented : ""} ${isSticky ? styles.sectionSticky : ""}`}>
+    <section className={classNames(className, styles.section, isAlternate ? styles.sectionAlternate : null, isIndented ? styles.sectionIndented : null, isSticky ? styles.sectionSticky : null)}>
         {(title || subTitle || details) && (
             <div className={styles.sectionDetails}>
                 {title && !isSmallTitle && <h2>{title}</h2>}

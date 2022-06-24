@@ -2,7 +2,7 @@ import styles from "./TextButton.module.scss";
 
 import type { ButtonProps } from "@latte-ui/core/src/component/button/Button";
 import type { LatteClassStyle } from "@latte-ui/core/src/types/prop-types";
-import { useAriaAttributes, useClasses } from "@latte-ui/hooks";
+import { classNames, useAriaAttributes } from "@latte-ui/hooks";
 import { ElementType, forwardRef, memo, PropsWithChildren } from "react";
 import { Link as LinkComponent } from "@/component/platform";
 import { BMIcon } from "@/component/shell";
@@ -14,19 +14,17 @@ const Button = memo(forwardRef<HTMLElement, ButtonProps & Props>(({ className, s
         "aria-disabled": isDisabled
     });
 
-    const classes = useClasses(
-        className,
-        styles.textButton,
-        isSmall ? styles.textButtonSmall : null
-    );
-
     return (
         <Tag
             ref={ref}
             {...ariaAttributes}
             {...(tag === "a" ? { href, rel, target } : {})}
             type={buttonType}
-            className={classes}
+            className={classNames(
+                className,
+                styles.textButton,
+                isSmall ? styles.textButtonSmall : null
+            )}
             style={style}
             disabled={isDisabled}
             onClick={onClick}>
@@ -44,7 +42,6 @@ const Button = memo(forwardRef<HTMLElement, ButtonProps & Props>(({ className, s
                     <BMIcon name={iconAfter}/>
                 </div>
             )}
-
         </Tag>
     );
 }));
@@ -56,7 +53,7 @@ const Grid = memo(({ children, className, style }: PropsWithChildren<LatteClassS
 ));
 
 const Group = memo(({ children, alignToBottom, className, style }: PropsWithChildren<LatteClassStyle & GroupProps>) => (
-    <div className={`${alignToBottom ? styles.textButtonGroupAlignToBottom : styles.textButtonGroup} ${className || ""}`} style={style}>
+    <div className={classNames("tal", alignToBottom ? styles.textButtonGroupAlignToBottom : styles.textButtonGroup, className)} style={style}>
         {children}
     </div>
 ));
@@ -68,7 +65,7 @@ const Link = memo((props: ButtonProps & Props) => (
 ));
 
 const Stack = memo(({ children, alignToBottom, className, style }: PropsWithChildren<LatteClassStyle & GroupProps>) => (
-    <div className={`${alignToBottom ? styles.textButtonStackAlignToBottom : styles.textButtonStack} ${className || ""}`} style={style}>
+    <div className={classNames("tal", alignToBottom ? styles.textButtonStackAlignToBottom : styles.textButtonStack, className)} style={style}>
         {children}
     </div>
 ));

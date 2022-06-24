@@ -39,7 +39,7 @@
         width: 100%;
         content: "";
         border-radius: inherit;
-        box-shadow: inset 0 0 0 1px #{color-get("gray", 100)};
+        box-shadow: inset 0 0 0 1px #{color-get("gray", 200, .75)};
     }
 }
 
@@ -48,14 +48,6 @@
     padding: #{gutter-get(5)} #{gutter-get(1)};
     flex-flow: column;
     flex-grow: 1;
-
-    h3 {
-        font-size: 18px;
-    }
-
-    p {
-        font-size: 16px;
-    }
 }
 
 .workCardComingSoon {
@@ -73,8 +65,17 @@
     user-select: none;
 }
 
+.workCardTitle {
+    font-size: 17px;
+}
+
+.workCardExcerpt {
+    margin-bottom: auto;
+    font-size: 16px;
+}
+
 .workCardLink {
-    margin-top: auto;
+    margin-top: #{gutter-get(4)};
 }
 
 .workGrid {
