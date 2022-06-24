@@ -63,13 +63,13 @@ export default memo(() => (<>
         </p>
         <p>
             Besides working full time, I also have a few open source projects that can be
-            found on <Link href="/work">my work page</Link>. My most recent project is called <Link href="/work/meteocons">Meteocons</Link>, a free to
+            found on <Link href="/work">my work page</Link>. My most recent project is called <Link href="/work/meteocons">Meteocons</Link>, a free-to
             use set of animated weather icons.
         </p>
 
         <h3>Programming</h3>
         <p>
-            I started experimenting with code back in 2008, I tweaked a lot to existing projects
+            I started experimenting with code back in 2008. I tweaked a lot to existing projects
             from other people to see what happened when I changed something. Since then I gained
             a lot of experience and developed my own (code) style. In 2013 I won two gold medals
             for programming.
