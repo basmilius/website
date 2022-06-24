@@ -6,7 +6,7 @@ export default memo(() => (
         title="Socials"
         subTitle="Where you can find even more.">
         <p>
-            Follow me on one of the social media platforms below if you want. Occasionally I'll post designs, work
+            Follow me on one of the social media platforms below if you want. Occasionally I'll post designs, work,
             and releases. For a more daily and raw look, add me on Snapchat!
         </p>
 

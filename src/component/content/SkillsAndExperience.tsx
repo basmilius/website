@@ -15,7 +15,7 @@ export default memo(() => (
         isAlternate
         isIndented
         title="Skills & Experience"
-        subTitle="Programming languages, frameworks and more that I've worked with.">
+        subTitle="Programming languages, frameworks, and more that I've worked with.">
 
         <div className={styles.skillsGrid}>
             <Skill color="189 100% 50%" icon="fab react" label="React"/>

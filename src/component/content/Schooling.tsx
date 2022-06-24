@@ -5,7 +5,7 @@ import { BMSection } from "@/component/shell";
 export default memo(() => (
     <BMSection
         title="Schooling"
-        subTitle="It was a bit rough, but eventually I've managed to successfully get my degree!">
+        subTitle="It was a bit rough, but eventually I managed to successfully get my degree!">
 
         <BMTimeline>
             <BMTimeline.Item
@@ -13,8 +13,8 @@ export default memo(() => (
                 title="Deltion College">
                 <p>
                     Application developer &mdash; After a two year gap I was still motivated to get my degree,
-                    so I decided to restart my education at Deltion College. All the effort I put into the
-                    education was worth it because I managed to get my degree!
+                    so I decided to restart my education at Deltion College. All the effort I put into education
+                    was worth it because I managed to get my degree!
                 </p>
             </BMTimeline.Item>
 
@@ -23,8 +23,8 @@ export default memo(() => (
                 title="Graafschap College">
                 <p>
                     Application developer &mdash; I wanted to explore this interest in programming even more. I
-                    already had some self knowledge of programming which made the education really easy for me,
-                    maybe even a bit too easy… It was also the reason why I quit school for a few years.
+                    already had some self-knowledge of programming which made school really easy for me, maybe
+                    even a bit too easy… It was also the reason why I quit school for a few years.
                 </p>
             </BMTimeline.Item>
 

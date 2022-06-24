@@ -9,22 +9,22 @@ export default memo(() => (
 
         <BMTimeline>
             <BMTimeline.Item
-                date="June 2020 — Now"
+                date="June 2020 — now"
                 title="Self-employed">
                 <p>
-                    In 2020 I started my own company. I got more and more questions about making small websites
-                    for acquaintances or collaborating on projects with others. With my company I am not actively
-                    looking for new customers, but if someone knocks on the door for a website, app or simple
-                    design, I am always happy to help.
+                    Back in 2020, I started my own company. After receiving more and more questions about making
+                    small websites for acquaintances or collaborating on projects with others. With my company I
+                    am not actively looking for new customers, but if someone knocks on the door for a website,
+                    app or simple design, I am always happy to help.
                 </p>
             </BMTimeline.Item>
 
             <BMTimeline.Item
-                date="June 2022 — Now"
+                date="June 2022 — now"
                 title="Tibbaa / Fancee Software">
                 <p>
                     Senior Full-Stack Engineer &mdash; My main tasks are working on an organizer dashboard and
-                    an app. The dashboard is created with Vue and uses Vite as build tool, our app is created
+                    an app. The dashboard is created with Vue, and uses Vite as a build tool; our app is created
                     using Flutter. I created the Flutter app from scratch.
                 </p>
             </BMTimeline.Item>
