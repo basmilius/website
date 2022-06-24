@@ -107,7 +107,7 @@ export default Object.assign(WorkCard, {
             <WorkCard
                 imageUrl={raxosImage.src}
                 title="Raxos"
-                description="Custom made building blocks for PHP frameworks."
+                description="Custom built building blocks for PHP frameworks."
                 buttonIcon="fab github"
                 buttonLabel="GitHub"
                 buttonSmall
