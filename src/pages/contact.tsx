@@ -13,7 +13,7 @@ export default memo(() => (<>
     <BMSection title="Send a message" subTitle="For questions and new projects.">
         <p className="lead">
             Good to see you are interested in me or one of my projects! If you are looking for a website
-            or app please email me or say hi at one of the social networks listed at the
+            or app, please email me or say hi at one of the social networks listed at the
             bottom. Spam will always be reported.
         </p>
         <p>

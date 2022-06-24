@@ -35,9 +35,9 @@ export default memo(() => (<>
                 loading="lazy"/>
         }>
         <h2>Full-Stack<br/>Developer</h2>
-        <h3>With a passion for creating websites, apps and backend applications.</h3>
+        <h3>With a passion for creating websites, apps, and backend applications.</h3>
         <p>
-            Likes to experiment with new techniques and to mess around in programs like
+            Likes to experiment with new techniques and to mess around with programs like
             Adobe XD and Adobe After Effects every now and then. As a Full-Stack Developer
             I enjoy programming on my own projects and on projects for others.
         </p>

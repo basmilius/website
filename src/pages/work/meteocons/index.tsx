@@ -49,7 +49,7 @@ export default memo(() => {
             )}>
 
             <p className="lead">
-                These hand crafted icons are designed in Adobe Illustrator and animated to SVG files
+                These hand-crafted icons are designed in Adobe Illustrator and animated to SVG files
                 using code and Lottie files using Adobe After Effects. They'll look amazing in your
                 own project.
             </p>
@@ -62,7 +62,7 @@ export default memo(() => {
 
             <ul>
                 <li>
-                    High performant Lottie animations are available for every style. These animations are
+                    High performant Lottie animations are available for every style. These animations were
                     created using the LottieFiles plugin for Adobe After Effects.
                 </li>
                 <li>
@@ -70,7 +70,7 @@ export default memo(() => {
                     be used on mobile and desktop apps as far as I know. Use the Lottie animations for that.
                 </li>
                 <li>
-                    The monochrome style has various font formats available to use on desktop and on the
+                    Monochrome style has various font formats available to use on desktop and on the
                     web. These fonts are not animated.
                 </li>
                 <li>
