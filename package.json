@@ -26,27 +26,27 @@
         "not dead"
     ],
     "dependencies": {
-        "@babel/core": "7.18.5",
+        "@babel/core": "7.18.13",
         "@basmilius/effects-common": "1.0.2",
-        "@fortawesome/fontawesome-svg-core": "6.1.1",
-        "@fortawesome/free-brands-svg-icons": "6.1.1",
-        "@fortawesome/pro-solid-svg-icons": "6.1.1",
-        "@latte-ui/core": "2.0.0-dev.37",
-        "@latte-ui/css": "2.0.0-dev.37",
-        "@latte-ui/hooks": "2.0.0-dev.37",
-        "@latte-ui/slot-fill": "2.0.0-dev.37",
-        "framer-motion": "6.3.16",
-        "next": "12.2.0",
+        "@fortawesome/fontawesome-svg-core": "6.1.2",
+        "@fortawesome/free-brands-svg-icons": "6.1.2",
+        "@fortawesome/pro-solid-svg-icons": "6.1.2",
+        "@latte-ui/core": "2.0.0-dev.38",
+        "@latte-ui/css": "2.0.0-dev.38",
+        "@latte-ui/hooks": "2.0.0-dev.38",
+        "@latte-ui/slot-fill": "2.0.0-dev.38",
+        "framer-motion": "7.2.1",
+        "next": "12.2.5",
         "react": "18.2.0",
         "react-dom": "18.2.0",
         "tslib": "2.4.0"
     },
     "devDependencies": {
-        "@types/node": "18.0.0",
-        "@types/react": "18.0.14",
-        "@types/react-dom": "18.0.5",
+        "@types/node": "18.7.13",
+        "@types/react": "18.0.17",
+        "@types/react-dom": "18.0.6",
         "css-class-generator": "2.0.0",
-        "sass": "1.53.0",
-        "typescript": "4.7.4"
+        "sass": "1.54.5",
+        "typescript": "4.8.2"
     }
 }

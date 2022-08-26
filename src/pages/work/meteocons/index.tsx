@@ -45,6 +45,13 @@ export default memo(() => {
                         tag="a"
                         target="_blank"
                         href="https://github.com/basmilius/weather-icons/archive/refs/heads/master.zip"/>
+
+                    <BMTextButton
+                        label="Download (Pre-release)"
+                        icon="fas down"
+                        tag="a"
+                        target="_blank"
+                        href="https://github.com/basmilius/weather-icons/archive/refs/heads/dev.zip"/>
                 </BMTextButton.Stack>
             )}>
 
