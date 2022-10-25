@@ -78,7 +78,7 @@ const WorkCard = memo(({ title, description, buttonIcon, buttonLabel, buttonSmal
             )}
 
             {buttonUrl && !buttonUrl.startsWith("http") && (
-                <Link href={buttonUrl} passHref>
+                <Link href={buttonUrl} passHref legacyBehavior>
                     <BMTextButton
                         tag="a"
                         className={styles.workCardLink}

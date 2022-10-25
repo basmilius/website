@@ -39,7 +39,7 @@ export default memo(() => {
                         name="fas bars"/>
                 </button>
 
-                <Link passHref href="/">
+                <Link href="/" passHref legacyBehavior>
                     <a className={styles.logo}>
                         <img src={logo.src} alt="Logo" className={styles.logoImage}/>
                     </a>
@@ -90,7 +90,7 @@ const NavigationItem = memo(({ className, classNameActive, isExact, label, notAc
     const isActive = useMemo(() => isExact ? pathname === url : pathname.startsWith(url) && !notActiveFor?.includes(pathname), [ pathname, url, isExact ]);
 
     return (
-        <Link passHref href={url}>
+        <Link href={url} passHref legacyBehavior>
             <a
                 onClick={() => onClick?.()}
                 className={`${className} ${isActive ? classNameActive : ""}`}>

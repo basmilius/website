@@ -59,7 +59,7 @@ const Group = memo(({ children, alignToBottom, className, style }: PropsWithChil
 ));
 
 const Link = memo((props: ButtonProps & Props) => (
-    <LinkComponent href={props.href} passHref>
+    <LinkComponent href={props.href} passHref legacyBehavior>
         <Button {...props} tag="a"/>
     </LinkComponent>
 ));
