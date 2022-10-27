@@ -10,8 +10,8 @@ specifiers:
   '@latte-ui/css': 2.0.0-dev.38
   '@latte-ui/hooks': 2.0.0-dev.38
   '@latte-ui/slot-fill': 2.0.0-dev.38
-  '@types/node': 18.11.5
-  '@types/react': 18.0.22
+  '@types/node': 18.11.7
+  '@types/react': 18.0.23
   '@types/react-dom': 18.0.7
   css-class-generator: 2.0.0
   framer-motion: 7.6.1
@@ -39,8 +39,8 @@ dependencies:
   tslib: 2.4.0
 
 devDependencies:
-  '@types/node': 18.11.5
-  '@types/react': 18.0.22
+  '@types/node': 18.11.7
+  '@types/react': 18.0.23
   '@types/react-dom': 18.0.7
   css-class-generator: 2.0.0
   sass: 1.55.0
@@ -545,8 +545,8 @@ packages:
       tslib: 2.4.0
     dev: false
 
-  /@types/node/18.11.5:
-    resolution: {integrity: sha512-3JRwhbjI+cHLAkUorhf8RnqUbFXajvzX4q6fMn5JwkgtuwfYtRQYI3u4V92vI6NJuTsbBQWWh3RZjFsuevyMGQ==}
+  /@types/node/18.11.7:
+    resolution: {integrity: sha512-LhFTglglr63mNXUSRYD8A+ZAIu5sFqNJ4Y2fPuY7UlrySJH87rRRlhtVmMHplmfk5WkoJGmDjE9oiTfyX94CpQ==}
     dev: true
 
   /@types/prop-types/15.7.5:
@@ -556,11 +556,11 @@ packages:
   /@types/react-dom/18.0.7:
     resolution: {integrity: sha512-HaXc+BbqAZE1RdsK3tC8SbkFy6UL2xF76lT9rQs5JkPrJg3rWA3Ou/Lhw3YJQzEDkBpmJ79nBsfnd05WrBd2QQ==}
     dependencies:
-      '@types/react': 18.0.22
+      '@types/react': 18.0.23
     dev: true
 
-  /@types/react/18.0.22:
-    resolution: {integrity: sha512-4yWc5PyCkZN8ke8K9rQHkTXxHIWHxLzzW6RI1kXVoepkD3vULpKzC2sDtAMKn78h92BRYuzf+7b/ms7ajE6hFw==}
+  /@types/react/18.0.23:
+    resolution: {integrity: sha512-R1wTULtCiJkudAN2DJGoYYySbGtOdzZyUWAACYinKdiQC8auxso4kLDUhQ7AJ2kh3F6A6z4v69U6tNY39hihVQ==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
