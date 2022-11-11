@@ -41,14 +41,15 @@ module.exports = () => ({
 
     webpack: (config, {dev, isServer}) => {
         // note(Bas): If preact is up-to-date with react 18, this can be used.
-        // if (!dev && !isServer) {
-        //     Object.assign(config.resolve.alias, {
-        //         "react": "preact/compat",
-        //         "react-dom": "preact/compat"
-        //     });
-        // }
+        if (!dev && !isServer) {
+            Object.assign(config.resolve.alias, {
+                "react/jsx-runtime.js": "preact/compat/jsx-runtime",
+                "react": "preact/compat",
+                "react-dom": "preact/compat"
+            });
+        }
 
-        config.module.rules[2].oneOf?.forEach(moduleLoader => {
+        config.module.rules[3]?.oneOf?.forEach(moduleLoader => {
             Array.isArray(moduleLoader.use) && moduleLoader.use.forEach(l => {
                 if (!l.loader) {
                     return;
