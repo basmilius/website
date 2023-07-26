@@ -21,7 +21,7 @@ export default memo(() => (
 
             <BMTimeline.Item
                 date="June 2022 — now"
-                title="Tibbaa / Fancee Software">
+                title="WeAreFancee / Tibbaa">
                 <p>
                     Senior Full-Stack Engineer &mdash; My main tasks are working on an organizer dashboard and
                     an app. The dashboard is created with Vue, and uses Vite as a build tool; our app is created
