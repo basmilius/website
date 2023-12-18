@@ -33,6 +33,8 @@ module.exports = () => ({
         removeConsole: true
     },
 
+    output: 'export',
+
     webpack: (config, {dev, isServer}) => {
         // note(Bas): If preact is up-to-date with react 18, this can be used.
         if (!dev && !isServer) {
