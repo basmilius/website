@@ -7,7 +7,7 @@ export {
     faHtml5,
     faInstagram,
     faJava,
-    faJsSquare,
+    faJs,
     faLinkedin,
     faMicrosoft,
     faNodeJs,

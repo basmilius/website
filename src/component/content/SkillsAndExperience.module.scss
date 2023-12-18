@@ -16,8 +16,8 @@
     align-items: center;
     flex-flow: column;
     justify-content: center;
-    background: #{color-get("gray", 50, .5)};
-    border: 1px solid #{color-get("gray", 100, .5)};
+    background: #{color-get("gray", 50)};
+    border: 2px solid #{color-get("gray", 100)};
     border-radius: #{$radius * 2};
     text-align: center;
 

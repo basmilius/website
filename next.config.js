@@ -28,12 +28,6 @@ module.exports = () => ({
 
     swcMinify: true,
 
-    experimental: {
-        cpus: 4,
-        esmExternals: true,
-        workerThreads: true
-    },
-
     compiler: {
         reactRemoveProperties: true,
         removeConsole: true
@@ -49,33 +43,17 @@ module.exports = () => ({
             });
         }
 
-        config.module.rules[3]?.oneOf?.forEach(moduleLoader => {
-            Array.isArray(moduleLoader.use) && moduleLoader.use.forEach(l => {
-                if (!l.loader) {
-                    return;
-                }
+        const rules = config.module.rules
+            .find(rule => typeof rule.oneOf === 'object')
+            .oneOf.filter(rule => Array.isArray(rule.use));
 
-                if (typeof l.loader !== "string") {
-                    throw new Error("Loader is not a string.")
-                }
+        rules.forEach(rule => rule.use.forEach(moduleLoader => {
+            if (!moduleLoader.loader?.includes('css-loader') || moduleLoader.loader?.includes('postcss-loader')) {
+                return;
+            }
 
-                if (l.loader.indexOf("css-loader") > -1 && l.loader.indexOf("postcss-loader") === -1) {
-                    if (!l.options.modules) {
-                        return;
-                    }
-
-                    const {getLocalIdent: _, ...others} = l.options.modules;
-
-                    l.options = {
-                        ...l.options,
-                        modules: {
-                            ...others,
-                            getLocalIdent
-                        }
-                    };
-                }
-            });
-        });
+            moduleLoader.options.modules.getLocalIdent = getLocalIdent;
+        }));
 
         return config;
     }

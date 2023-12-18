@@ -2,7 +2,6 @@ import { FC, memo, PropsWithChildren, Suspense } from "react";
 import { dynamic } from "@/component/platform";
 import { TooltipProps } from "@/component/shell/Tooltip";
 
-export { default as BMContainer } from "./Container";
 export { default as BMFooter } from "./Footer";
 export { default as BMHeader } from "./Header";
 export { default as BMIcon } from "./Icon";

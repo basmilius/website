@@ -8,14 +8,12 @@ import basToolsImage from "../../image/work/blueprint/blueprint-bas-tools.svg";
 import ditoGroenloImage from "../../image/work/blueprint/blueprint-dito.svg";
 import ervenijhuisImage from "../../image/work/blueprint/blueprint-erve-nijhuis.svg";
 import ervetankImage from "../../image/work/blueprint/blueprint-erve-tank.svg";
-import flantImage from "../../image/work/blueprint/blueprint-flant.svg";
 import fleurNijhuisImage from "../../image/work/blueprint/blueprint-fleur-nijhuis.svg";
 import glybeImage from "../../image/work/blueprint/blueprint-glybe.svg";
 import isHetPatatImage from "../../image/work/blueprint/blueprint-ishetpatat.svg";
 import isHetFrietImage from "../../image/work/blueprint/blueprint-ishetfriet.svg";
 import jaimieVosImage from "../../image/work/blueprint/blueprint-jaimie-vos.svg";
 import kapsalonLichtenbergImage from "../../image/work/blueprint/blueprint-kapsalon-lichtenberg.svg";
-import mandLinkImage from "../../image/work/blueprint/blueprint-mandlink.svg";
 import manegeNijhuisImage from "../../image/work/blueprint/blueprint-manege-nijhuis.svg";
 import raxosImage from "../../image/work/blueprint/blueprint-raxos.svg";
 import startDeTijdImage from "../../image/work/blueprint/blueprint-startdetijd.svg";
@@ -158,18 +156,6 @@ export default Object.assign(WorkCard, {
                 buttonUrl="https://plugins.jetbrains.com/plugin/15420-bas-tools"/>
         )),
 
-        Flant: memo(() => (
-            <WorkCard
-                imageUrl={flantImage.src}
-                title="Flant.nl"
-                description="Not yet available, it's coming soon though!"
-                buttonIcon="fas up-right"
-                buttonLabel="flant.nl"
-                buttonSmall
-                buttonUrl="https://flant.nl"
-                comingSoon/>
-        )),
-
         IsHetPatat: memo(() => (
             <WorkCard
                 imageUrl={isHetPatatImage.src}
@@ -201,18 +187,6 @@ export default Object.assign(WorkCard, {
                 buttonLabel="startdetijd.nl"
                 buttonSmall
                 buttonUrl="https://startdetijd.nl"/>
-        )),
-
-        MandLink: memo(() => (
-            <WorkCard
-                imageUrl={mandLinkImage.src}
-                title="Mand.link"
-                description="Free to use url shortener. Create as many short urls as you'd like!"
-                buttonIcon="fas up-right"
-                buttonLabel="mand.link"
-                buttonSmall
-                buttonUrl="https://mand.link"
-                comingSoon/>
         ))
     },
     ForOthers: {

@@ -27,11 +27,11 @@
     flex-shrink: 0;
 
     line {
-        stroke: #{color-get("primary", 50)};
+        stroke: #{color-get("primary", 100)};
     }
 
     circle:first-of-type {
-        stroke: #{color-get("primary", 50)};
+        stroke: #{color-get("primary", 100)};
         transition: stroke 300ms var(--swiftOut);
         will-change: stroke;
     }
@@ -39,6 +39,14 @@
     circle:last-of-type {
         fill: #{color-get("primary")};
     }
+}
+
+.timelineItem:first-child .timelineItemLine line {
+    translate: 0 21px;
+}
+
+.timelineItem:last-child .timelineItemLine line {
+    translate: 0 calc(-100% + 21px);
 }
 
 .timelineItemContent {

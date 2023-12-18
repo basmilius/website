@@ -37,9 +37,10 @@ export default memo(() => (<>
         <h2>Full-Stack<br/>Developer</h2>
         <h3>With a passion for creating websites, apps, and backend applications.</h3>
         <p>
-            Likes to experiment with new techniques and to mess around with programs like
-            Adobe XD and Adobe After Effects every now and then. As a Full-Stack Developer
-            I enjoy programming on my own projects and on projects for others.
+
+            I enjoy experimenting with new techniques and occasionally tinkering with tools
+            like Figma and Docker. As a Full-Stack Developer, I find fulfillment in coding
+            for personal projects as well as collaborating on projects for others.
         </p>
 
         <BMTextButton.Group>
@@ -80,7 +81,7 @@ export default memo(() => (<>
             <BMWorkCard.OfMe.WeatherIcons/>
             <BMWorkCard.ForOthers.JaimieVos/>
             <BMWorkCard.ForOthers.FleurNijhuis/>
-            <BMWorkCard.OfMe.Flant/>
+            <BMWorkCard.OfMe.Raxos/>
             <BMWorkCard.ForOthers.ManegeNijhuis/>
             <BMWorkCard.ForOthers.StudioVierentwintig/>
         </BMWorkCardDeck>

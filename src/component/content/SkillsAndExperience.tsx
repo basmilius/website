@@ -25,7 +25,7 @@ export default memo(() => (
             <Skill color="211 60% 48%" icon="fab typescript" label="TypeScript"/>
             <Skill color="13 77% 52%" icon="fab html5" label="HTML"/>
             <Skill color="228 78% 52%" icon="fab css3" label="CSS"/>
-            <Skill color="53 93% 54%" icon="fab js-square" label="JavaScript"/>
+            <Skill color="53 93% 54%" icon="fab js" label="JavaScript"/>
             <Skill color="256 100% 66%" icon="fab kotlin" label="Kotlin"/>
             <Skill color="139 45% 24%" icon="fab node-js" label="Node.js"/>
             <Skill color="153 47% 49%" icon="fab vuejs" label="Vue.js"/>

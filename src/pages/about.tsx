@@ -38,14 +38,14 @@ export default memo(() => (<>
                     tag="a"
                     href="https://github.com/basmilius"
                     target="_blank"
-                    label="GitHub Profile"
+                    label="GitHub"
                     icon="fab github"/>
 
                 <BMTextButton
                     tag="a"
                     href="https://dribbble.com/basmilius"
                     target="_blank"
-                    label="Dribbble Profile"
+                    label="Dribbble"
                     icon="fab dribbble"/>
 
                 <BMTextButton.Link
@@ -56,8 +56,8 @@ export default memo(() => (<>
         </>}>
         <h3>Hi! I'm Bas</h3>
         <p>
-            I'm a 27 year-old self-taught developer from The Netherlands. Currently working
-            fulltime at <a href="https://tibbaa.com" rel="noopener" target="_blank">Tibbaa</a>, a ticketing solutions provider. Programming started as a hobby
+            I'm a 27-year-old self-taught developer from The Netherlands. Currently working
+            fulltime at <a href="https://wearefancee.com" rel="noopener" target="_blank">WeAreFancee (formerly Tibbaa)</a>, a ticketing solutions provider. Programming started as a hobby
             for me and I managed to create a career out of it. When I have some spare time, I
             really like to try new things that are related to programming.
         </p>

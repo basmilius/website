@@ -22,8 +22,6 @@ export default memo(() => (<>
         <BMWorkCard.OfMe.IsHetPatat/>
         <BMWorkCard.OfMe.IsHetFriet/>
         <BMWorkCard.OfMe.StartDeTijd/>
-        <BMWorkCard.OfMe.Flant/>
-        <BMWorkCard.OfMe.MandLink/>
     </BMWorkCardGrid>
 
     <BMWorkCardGrid more title="Open source">
