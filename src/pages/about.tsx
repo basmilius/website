@@ -56,7 +56,7 @@ export default memo(() => (<>
         </>}>
         <h3>Hi! I'm Bas</h3>
         <p>
-            I'm a 27-year-old self-taught developer from The Netherlands. Currently working
+            I'm a 28-year-old self-taught developer from The Netherlands. Currently working
             fulltime at <a href="https://wearefancee.com" rel="noopener" target="_blank">WeAreFancee (formerly Tibbaa)</a>, a ticketing solutions provider. Programming started as a hobby
             for me and I managed to create a career out of it. When I have some spare time, I
             really like to try new things that are related to programming.
