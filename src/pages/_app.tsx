@@ -12,7 +12,7 @@ initializeFontAwesome();
 export default function BApp({ Component, pageProps }) {
     return (<>
         <Head>
-            <meta name="description" content="A 27-year-old full stack developer from Groenlo, The Netherlands."/>
+            <meta name="description" content="A 28-year-old full stack developer from Groenlo, The Netherlands."/>
             <meta name="keywords" content="bas milius,basmilius,milius,developer,website,app,latte-ui,raxos,weather icons,latte,meteocons"/>
             <meta name="robots" content="index,follow" key="robots"/>
             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover"/>
