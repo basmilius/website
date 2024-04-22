@@ -48,6 +48,6 @@
         "@types/react-dom": "^18.2.25",
         "css-class-generator": "^2.0.0",
         "sass": "^1.75.0",
-        "typescript": "^5.4.5"
+        "typescript": "4.8.4"
     }
 }
