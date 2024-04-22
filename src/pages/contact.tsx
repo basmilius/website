@@ -48,7 +48,7 @@ export default memo(() => (<>
             <BMInformationItem
                 icon="fas location-dot"
                 title="Address"
-                value="Van Limburg Styrumstraat 47, 7141 KX Groenlo, Netherlands"/>
+                value="Het Blik 60, 7141 TK Groenlo, Netherlands"/>
         </BMInformation>
     </BMSection>
 
