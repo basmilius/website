@@ -5,16 +5,19 @@ import { BMTextButton } from "@/component/shell";
 import { Link } from "@/component/platform";
 
 import basToolsImage from "../../image/work/blueprint/blueprint-bas-tools.svg";
+import didietNlImage from "../../image/work/blueprint/blueprint-didiet-nl.svg";
 import ditoGroenloImage from "../../image/work/blueprint/blueprint-dito.svg";
 import ervenijhuisImage from "../../image/work/blueprint/blueprint-erve-nijhuis.svg";
 import ervetankImage from "../../image/work/blueprint/blueprint-erve-tank.svg";
 import fleurNijhuisImage from "../../image/work/blueprint/blueprint-fleur-nijhuis.svg";
+import fluxImage from "../../image/work/blueprint/blueprint-flux.svg";
 import glybeImage from "../../image/work/blueprint/blueprint-glybe.svg";
 import isHetPatatImage from "../../image/work/blueprint/blueprint-ishetpatat.svg";
 import isHetFrietImage from "../../image/work/blueprint/blueprint-ishetfriet.svg";
 import jaimieVosImage from "../../image/work/blueprint/blueprint-jaimie-vos.svg";
 import kapsalonLichtenbergImage from "../../image/work/blueprint/blueprint-kapsalon-lichtenberg.svg";
 import manegeNijhuisImage from "../../image/work/blueprint/blueprint-manege-nijhuis.svg";
+import marveldImage from "../../image/work/blueprint/blueprint-marveld.svg";
 import raxosImage from "../../image/work/blueprint/blueprint-raxos.svg";
 import startDeTijdImage from "../../image/work/blueprint/blueprint-startdetijd.svg";
 import studiovierentwintigImage from "../../image/work/blueprint/blueprint-studiovierentwintig.svg";
@@ -99,6 +102,17 @@ export default Object.assign(WorkCard, {
                 buttonLabel="View project"
                 buttonSmall
                 buttonUrl="/work/meteocons"/>
+        )),
+
+        Flux: memo(() => (
+            <WorkCard
+                imageUrl={fluxImage.src}
+                title="Flux (Soon™)"
+                description="A Vue 3 UI framework that I use for most of my projects."
+                buttonIcon="fab github"
+                buttonLabel="GitHub (Soon™)"
+                buttonSmall
+                buttonUrl="https://github.com/basmilius/flux"/>
         )),
 
         Raxos: memo(() => (
@@ -190,6 +204,17 @@ export default Object.assign(WorkCard, {
         ))
     },
     ForOthers: {
+        DidietNl: memo(() => (
+            <WorkCard
+                imageUrl={didietNlImage.src}
+                title="Didiet.nl"
+                description="Corporate website for my brother."
+                buttonIcon="fas up-right"
+                buttonLabel="didiet.nl"
+                buttonSmall
+                buttonUrl="https://didiet.nl"/>
+        )),
+
         DitoGroenlo: memo(() => (
             <WorkCard
                 imageUrl={ditoGroenloImage.src}
@@ -265,6 +290,17 @@ export default Object.assign(WorkCard, {
                 buttonLabel="manege-nijhuis.nl"
                 buttonSmall
                 buttonUrl="https://manege-nijhuis.nl"/>
+        )),
+
+        Marveld: memo(() => (
+            <WorkCard
+                imageUrl={marveldImage.src}
+                title="Marveld Recreatie"
+                description="Bungalow park, camping and hotel. Backend applications by me."
+                buttonIcon="fas up-right"
+                buttonLabel="marveld.nl"
+                buttonSmall
+                buttonUrl="https://marveld.nl"/>
         )),
 
         StudioVierentwintig: memo(() => (
