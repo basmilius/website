@@ -21,7 +21,7 @@ export default memo(() => (
             <Skill color="189 100% 50%" icon="fab react" label="React"/>
             <Skill color="229 30% 44%" icon="fab php" label="PHP"/>
             <Skill color="217 68% 49%" icon="fab flutter" label="Flutter"/>
-            <Skill color="102 53% 52%" icon="fab git-alt" label="Git"/>
+            <Skill color="10 80% 55%" icon="fab git-alt" label="Git"/>
             <Skill color="211 60% 48%" icon="fab typescript" label="TypeScript"/>
             <Skill color="13 77% 52%" icon="fab html5" label="HTML"/>
             <Skill color="228 78% 52%" icon="fab css3" label="CSS"/>
