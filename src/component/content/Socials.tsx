@@ -1,8 +1,7 @@
-import { memo } from "react";
-import { BMSection, BMTextButton } from "@/component/shell";
+import { Row, TextButton } from '@/component/shell';
 
-export default memo(() => (
-    <BMSection
+export default () => (
+    <Row
         title="Socials"
         subTitle="Where you can find even more.">
         <p>
@@ -10,8 +9,8 @@ export default memo(() => (
             and releases. For a more daily and raw look, add me on Snapchat!
         </p>
 
-        <BMTextButton.Grid>
-            <BMTextButton
+        <TextButton.Grid>
+            <TextButton
                 tag="a"
                 rel="noopener"
                 target="_blank"
@@ -19,7 +18,7 @@ export default memo(() => (
                 label="GitHub"
                 icon="fab github"/>
 
-            <BMTextButton
+            <TextButton
                 tag="a"
                 rel="noopener"
                 target="_blank"
@@ -27,7 +26,7 @@ export default memo(() => (
                 label="Twitter"
                 icon="fab twitter"/>
 
-            <BMTextButton
+            <TextButton
                 tag="a"
                 rel="noopener"
                 target="_blank"
@@ -35,7 +34,7 @@ export default memo(() => (
                 label="LinkedIn"
                 icon="fab linkedin"/>
 
-            <BMTextButton
+            <TextButton
                 tag="a"
                 rel="noopener"
                 target="_blank"
@@ -43,7 +42,7 @@ export default memo(() => (
                 label="Dribbble"
                 icon="fab dribbble"/>
 
-            <BMTextButton
+            <TextButton
                 tag="a"
                 rel="noopener"
                 target="_blank"
@@ -51,7 +50,7 @@ export default memo(() => (
                 label="Snapchat"
                 icon="fab snapchat"/>
 
-            <BMTextButton
+            <TextButton
                 tag="a"
                 rel="noopener"
                 target="_blank"
@@ -59,13 +58,13 @@ export default memo(() => (
                 label="Instagram"
                 icon="fab instagram"/>
 
-            <BMTextButton
+            <TextButton
                 tag="a"
                 rel="noopener"
                 target="_blank"
                 href="https://facebook.com/basmilius"
                 label="Facebook"
                 icon="fab facebook"/>
-        </BMTextButton.Grid>
-    </BMSection>
-));
+        </TextButton.Grid>
+    </Row>
+);

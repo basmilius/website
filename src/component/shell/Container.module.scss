@@ -1,7 +1,14 @@
-@use "../../css/api" as *;
+@use "../../asset/css/breakpoints" as *;
+
+$-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px
+);
 
 .container {
-    --gutter: #{gutter-get(7)};
+    --gutter: 30px;
 
     margin-left: auto;
     margin-right: auto;
@@ -10,15 +17,15 @@
     width: 100%;
 }
 
-@each $breakpoint, $max-width in $container-widths {
-    @include responsive-up($breakpoint) {
+@each $breakpoint, $width in $-widths {
+    @include breakpoint-up($breakpoint) {
         .container {
-            max-width: #{$max-width};
+            max-width: #{$width};
         }
     }
 }
 
-@include responsive-up(md) {
+@include breakpoint-up(md) {
     .container {
         --gutter: 0;
     }

@@ -1,9 +1,17 @@
-import styles from "./Information.module.scss";
+import styles from './Information.module.scss';
 
-import { memo, PropsWithChildren } from "react";
+import { PropsWithChildren } from 'react';
+import InformationItem from './InformationItem';
 
-export default memo(({ children }: PropsWithChildren<{}>) => (
-    <div className={styles.information}>
+export const Grid = ({children}: PropsWithChildren) => (
+    <div className={styles.informationGrid}>
         {children}
     </div>
-));
+);
+
+export const Item = InformationItem;
+
+export default Object.assign({}, {
+    Grid,
+    Item
+});

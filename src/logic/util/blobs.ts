@@ -1,4 +1,4 @@
-import { LimitedFrameRateCanvas, mulberry32 } from "@basmilius/effects-common";
+import { LimitedFrameRateCanvas, mulberry32 } from '@basmilius/effects-common';
 
 const maxPointDistance = 0.5;
 
@@ -9,7 +9,7 @@ const sevenPointCircle = new Float64Array([
     0.708, 0.769, 0.434, 0.901, 0.16, 1.033,
     -0.16, 1.033, -0.434, 0.901, -0.708, 0.769,
     -0.907, 0.519, -0.975, 0.223, -1.043, -0.074,
-    -0.972, -0.386, -0.782, -0.623, -0.592, -0.861,
+    -0.972, -0.386, -0.782, -0.623, -0.592, -0.861
 ]);
 
 const entriesPerPoint = 6;
@@ -18,15 +18,14 @@ const blobs: Blob[] = [];
 const random = mulberry32();
 
 export class BlobsSimulator extends LimitedFrameRateCanvas {
-
     constructor(canvas: HTMLCanvasElement, public readonly smallMode: boolean) {
         super(canvas, smallMode ? 15 : 60);
 
         if (blobs.length === 0) {
-            blobs.push(new FillBlob(0, 0, .5, "#111827", .25));
-            blobs.push(new FillBlob(1, 1, .5, "#1f2937", .5));
-            blobs.push(new LineBlob(.15, 0, smallMode ? .4 : .2, "#0064f2", .5));
-            blobs.push(new LineBlob(.85, 1, smallMode ? .3 : .15, "#00a5ff", .25));
+            blobs.push(new FillBlob(0, 0, .5, '#111827', .25));
+            blobs.push(new FillBlob(1, 1, .5, '#1f2937', .5));
+            blobs.push(new LineBlob(.15, 0, smallMode ? .4 : .2, '#0064f2', .5));
+            blobs.push(new LineBlob(.85, 1, smallMode ? .3 : .15, '#00a5ff', .25));
         }
     }
 
@@ -45,11 +44,9 @@ export class BlobsSimulator extends LimitedFrameRateCanvas {
         this.canvas.width = this.width * devicePixelRatio;
         this.canvas.height = this.height * devicePixelRatio;
     }
-
 }
 
 class Blob {
-
     private distance: { [key: number]: number; } = {};
     private variance: { [key: number]: number; } = {};
 
@@ -94,7 +91,7 @@ class Blob {
                 this.size * width * blobPoints[nextI],
                 this.size * width * blobPoints[nextI + 1],
                 this.size * width * blobPoints[nextI + 2],
-                this.size * width * blobPoints[nextI + 3],
+                this.size * width * blobPoints[nextI + 3]
             );
         }
 
@@ -121,11 +118,9 @@ class Blob {
             blobPoints[i + 5] += yShift;
         }
     }
-
 }
 
 class FillBlob extends Blob {
-
     draw(ctx: CanvasRenderingContext2D, width: number, height: number) {
         ctx.fillStyle = this.color;
         ctx.strokeStyle = this.color;
@@ -136,11 +131,9 @@ class FillBlob extends Blob {
         ctx.fill();
         ctx.stroke();
     }
-
 }
 
 class LineBlob extends Blob {
-
     private frame: number;
 
     draw(ctx: CanvasRenderingContext2D, width: number, height: number) {
@@ -151,7 +144,7 @@ class LineBlob extends Blob {
         const lineWidth = (9 + (Math.cos(++this.frame / 100) * 6)) * devicePixelRatio;
 
         if (lineWidth > 0) {
-            ctx.fillStyle = "transparent";
+            ctx.fillStyle = 'transparent';
             ctx.strokeStyle = this.color;
             ctx.lineWidth = lineWidth;
 

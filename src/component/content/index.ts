@@ -1,10 +1,7 @@
-export { default as BMInformation } from "./Information";
-export { default as BMInformationItem } from "./InformationItem";
-export { default as BMSkillsAndExperience } from "./SkillsAndExperience";
-export { default as BMSchooling } from "./Schooling";
-export { default as BMSocials } from "./Socials";
-export { default as BMTimeline } from "./Timeline";
-export { default as BMWorkCard } from "./WorkCard";
-export { default as BMWorkCardDeck } from "./WorkCardDeck";
-export { default as BMWorkCardGrid } from "./WorkCardGrid";
-export { default as BMWorkExperience } from "./WorkExperience";
+export { default as Information } from './Information';
+export { default as SkillsAndExperience } from './SkillsAndExperience';
+export { default as Schooling } from './Schooling';
+export { default as Socials } from './Socials';
+export { default as Timeline } from './Timeline';
+export { default as Work } from './Work';
+export { default as WorkExperience } from './WorkExperience';

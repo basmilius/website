@@ -1,0 +1,63 @@
+@use "sass:color";
+
+@function to-rgb($hex) {
+    @return color.red($hex) color.green($hex) color.blue($hex);
+}
+
+@mixin -colors {
+    --gray-0: #{to-rgb(#ffffff)};
+    --gray-1: #{to-rgb(#fcfcfd)};
+    --gray-2: #{to-rgb(#f8fafc)};
+    --gray-3: #{to-rgb(#eef2f6)};
+    --gray-4: #{to-rgb(#e3e8ef)};
+    --gray-5: #{to-rgb(#cdd5df)};
+    --gray-6: #{to-rgb(#9aa4b2)};
+    --gray-7: #{to-rgb(#697586)};
+    --gray-8: #{to-rgb(#4b5565)};
+    --gray-9: #{to-rgb(#364152)};
+    --gray-10: #{to-rgb(#202939)};
+    --gray-11: #{to-rgb(#121926)};
+
+    --primary-0: #{to-rgb(#ffffff)};
+    --primary-1: #{to-rgb(#f5f8ff)};
+    --primary-2: #{to-rgb(#eff4ff)};
+    --primary-3: #{to-rgb(#d1e0ff)};
+    --primary-4: #{to-rgb(#b2ccff)};
+    --primary-5: #{to-rgb(#84adff)};
+    --primary-6: #{to-rgb(#528bff)};
+    --primary-7: #{to-rgb(#2970ff)};
+    --primary-8: #{to-rgb(#155eef)};
+    --primary-9: #{to-rgb(#004eeb)};
+    --primary-10: #{to-rgb(#0040c1)};
+    --primary-11: #{to-rgb(#00359e)};
+}
+
+@mixin -easings {
+    --acceleration-curve: cubic-bezier(0.4, 0, 1, 1);
+    --deceleration-curve: cubic-bezier(0, 0, 0.2, 1);
+    --standard-curve: cubic-bezier(0.4, 0, 0.2, 1);
+    --swift-out: cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+@mixin -shadows {
+    --shadow-px: 0 1px 1px rgb(var(--gray-9) / .025);
+    --shadow-xs: 0 1px 2px 0 rgb(var(--gray-9) / .025);
+    --shadow-sm: 0 1px 3px rgb(var(--gray-9) / .05), 0 1px 2px -1px rgb(var(--gray-9) / .05);
+    --shadow-md: 0 4px 6px -1px rgb(var(--gray-9) / .05), 0 2px 4px -2px rgb(var(--gray-9) / .05);
+    --shadow-lg: 0 10px 15px -3px rgb(var(--gray-9) / .05), 0 4px 6px -4px rgb(var(--gray-9) / .05);
+    --shadow-xl: 0 20px 25px -5px rgb(var(--gray-9) / .05), 0 8px 10px -6px rgb(var(--gray-9) / .05);
+    --shadow-2xl: 0 25px 50px -12px rgb(var(--gray-9) / .125);
+}
+
+:root {
+    @include -colors;
+    @include -easings;
+    @include -shadows;
+
+    --radius: 9px;
+
+    --background: rgb(var(--gray-2));
+    --foreground: rgb(var(--gray-7));
+    --foreground-prominent: rgb(var(--gray-9));
+    --foreground-secondary: rgb(var(--gray-6));
+}

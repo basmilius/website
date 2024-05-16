@@ -1,0 +1,134 @@
+@use "../../asset/css/breakpoints" as *;
+
+.baseRow {
+    composes: container from 'Container.module.scss';
+
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+.row {
+    composes: baseRow;
+
+    display: grid;
+    gap: 60px;
+    grid-template-columns: 300px 1fr;
+
+    > div:only-child {
+        grid-column: 1 / span 2;
+    }
+}
+
+.rowBody {
+    position: relative;
+
+    &:only-child {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: calc(100% - 300px - 60px);
+    }
+}
+
+.rowDetails {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    align-self: stretch;
+    flex-flow: column;
+
+    p {
+        color: var(--foreground-secondary);
+    }
+}
+
+.rowIndented .rowDetails {
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.rowPicture {
+    height: 150px;
+    width: 150px;
+    margin-top: 18px;
+    margin-bottom: 36px;
+    border-radius: 999px;
+
+    img {
+        height: inherit;
+        width: inherit;
+        margin: 0;
+        border-radius: inherit;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.rowCenterizedPicture {
+    composes: rowPicture;
+
+    margin: 0 auto 24px;
+}
+
+@include breakpoint-down(md) {
+    .baseRow {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .row {
+        gap: 30px;
+        grid-template-columns: 210px 1fr;
+    }
+
+    .rowBody:only-child {
+        max-width: 100%;
+    }
+}
+
+@include breakpoint-down(sm) {
+    .baseRow {
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+
+    .row {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        gap: 48px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+
+        > div:only-child {
+            grid-column: 1;
+        }
+    }
+
+    .rowPicture {
+        position: absolute;
+        top: 12px;
+        right: 0;
+        height: 90px;
+        width: 90px;
+    }
+}
+
+@include breakpoint-up(md) {
+    .rowAlternate {
+        grid-template-columns: 1fr 210px;
+    }
+
+    .rowAlternate .rowDetails {
+        order: 1;
+    }
+
+    .rowSticky .rowDetails {
+        position: sticky;
+        top: calc(30px + 99px);
+    }
+}
+
+@include breakpoint-up(lg) {
+    .rowAlternate {
+        grid-template-columns: 1fr 300px;
+    }
+}

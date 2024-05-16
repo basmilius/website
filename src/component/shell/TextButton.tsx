@@ -1,74 +1,74 @@
-import styles from "./TextButton.module.scss";
+import styles from './TextButton.module.scss';
 
-import type { ButtonProps } from "@latte-ui/core/src/component/button/Button";
-import type { LatteClassStyle } from "@latte-ui/core/src/types/prop-types";
-import { classNames, useAriaAttributes } from "@latte-ui/hooks";
-import { ElementType, forwardRef, memo, PropsWithChildren } from "react";
-import { Link as LinkComponent } from "@/component/platform";
-import { BMIcon } from "@/component/shell";
+import { Link as LinkComponent } from 'next-view-transitions';
+import { AriaAttributes, CSSProperties, ElementType, PropsWithChildren, ReactNode } from 'react';
+import classNames from 'classnames';
+import useAriaAttributes from '@/hook/useAriaAttributes';
+import Icon from './Icon';
 
-const Button = memo(forwardRef<HTMLElement, ButtonProps & Props>(({ className, style, tag = "button", buttonType = "button", href, rel, target, label, icon, iconAfter, isDisabled, isSmall, onClick, ...props }, ref) => {
-    const Tag = tag as ElementType;
-
+const Button = ({className, style, tag: Tag = 'button', buttonType = 'button', href, rel, target, label, icon, iconAfter, isDisabled, isSmall, onClick, ...props}: Props) => {
     const ariaAttributes = useAriaAttributes(props, {
-        "aria-disabled": isDisabled
+        'aria-disabled': isDisabled
     });
 
     return (
         <Tag
-            ref={ref}
             {...ariaAttributes}
-            {...(tag === "a" ? { href, rel, target } : {})}
+            {...(Tag === 'a' || Tag === LinkComponent ? {href, rel, target} : {})}
             type={buttonType}
             className={classNames(
                 className,
-                styles.textButton,
-                isSmall ? styles.textButtonSmall : null
+                isSmall ? styles.textButtonSmall : styles.textButton
             )}
             style={style}
             disabled={isDisabled}
             onClick={onClick}>
-
-            {typeof icon === "string" && (
+            {typeof icon === 'string' && (
                 <div className={styles.textButtonIcon}>
-                    <BMIcon name={icon}/>
+                    <Icon name={icon}/>
                 </div>
             )}
 
             <span>{label}</span>
 
-            {typeof iconAfter === "string" && (
+            {typeof iconAfter === 'string' && (
                 <div className={styles.textButtonIcon}>
-                    <BMIcon name={iconAfter}/>
+                    <Icon name={iconAfter}/>
                 </div>
             )}
         </Tag>
     );
-}));
+};
 
-const Grid = memo(({ children, className, style }: PropsWithChildren<LatteClassStyle>) => (
-    <div className={`${styles.textButtonGrid} ${className || ""}`} style={style}>
+const Grid = ({children, className, style}: PropsWithChildren<ContainerProps>) => (
+    <div
+        className={classNames(styles.textButtonGrid, className)}
+        style={style}>
         {children}
     </div>
-));
+);
 
-const Group = memo(({ children, alignToBottom, className, style }: PropsWithChildren<LatteClassStyle & GroupProps>) => (
-    <div className={classNames("tal", alignToBottom ? styles.textButtonGroupAlignToBottom : styles.textButtonGroup, className)} style={style}>
+const Group = ({children, alignToBottom, className, style}: PropsWithChildren<GroupProps>) => (
+    <div
+        className={classNames('tal', alignToBottom ? styles.textButtonGroupAlignToBottom : styles.textButtonGroup, className)}
+        style={style}>
         {children}
     </div>
-));
+);
 
-const Link = memo((props: ButtonProps & Props) => (
-    <LinkComponent href={props.href} passHref legacyBehavior>
-        <Button {...props} tag="a"/>
-    </LinkComponent>
-));
+const Link = (props: Props) => (
+    <Button
+        {...props}
+        tag={LinkComponent}/>
+);
 
-const Stack = memo(({ children, alignToBottom, className, style }: PropsWithChildren<LatteClassStyle & GroupProps>) => (
-    <div className={classNames("tal", alignToBottom ? styles.textButtonStackAlignToBottom : styles.textButtonStack, className)} style={style}>
+const Stack = ({children, alignToBottom, className, style}: PropsWithChildren<GroupProps>) => (
+    <div
+        className={classNames('tal', alignToBottom ? styles.textButtonStackAlignToBottom : styles.textButtonStack, className)}
+        style={style}>
         {children}
     </div>
-));
+);
 
 export default Object.assign(Button, {
     Grid,
@@ -77,10 +77,30 @@ export default Object.assign(Button, {
     Stack
 });
 
-interface Props {
-    isSmall?: boolean;
-}
+type Props = AriaAttributes & {
+    readonly buttonType?: 'submit' | 'button' | 'reset';
+    readonly icon?: string | ReactNode;
+    readonly iconAfter?: string | ReactNode;
+    readonly isDisabled?: boolean;
+    readonly isSmall?: boolean;
+    readonly label?: string;
+    readonly tag?: ElementType;
 
-interface GroupProps {
-    alignToBottom?: boolean;
-}
+    readonly className?: string;
+    readonly style?: CSSProperties;
+
+    readonly href?: string;
+    readonly rel?: string;
+    readonly target?: string;
+
+    readonly onClick?: ((evt: MouseEvent) => void) | ((evt: MouseEvent) => Promise<void>);
+};
+
+type ContainerProps = {
+    readonly className?: string;
+    readonly style?: CSSProperties;
+};
+
+type GroupProps = ContainerProps & {
+    readonly alignToBottom?: boolean;
+};

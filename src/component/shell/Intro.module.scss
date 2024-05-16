@@ -1,0 +1,160 @@
+@use "../../asset/css/breakpoints" as *;
+
+.intro {
+    position: relative;
+    display: flex;
+    height: 420px;
+    align-items: center;
+    background: linear-gradient(to bottom right, rgb(var(--gray-10)), rgb(var(--gray-11)));
+    user-select: none;
+}
+
+.introDefault {
+    composes: intro;
+}
+
+.introCards {
+    composes: introDefault;
+}
+
+.introFrontPage {
+    composes: intro;
+
+    height: max(540px, 55dvh);
+
+    .introContainer {
+        padding-top: 54px;
+    }
+}
+
+.introCanvas {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+
+.introContainer {
+    composes: container from 'Container.module.scss';
+
+    position: relative;
+    display: flex;
+    height: inherit;
+    padding-top: 240px;
+    align-items: center;
+}
+
+.intro h1 {
+    width: fit-content;
+    color: rgb(var(--gray-0));
+    font-size: 72px;
+    line-height: 1;
+    view-transition-name: intro-title;
+}
+
+.introFrontPage h1 {
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+    text-align: center;
+}
+
+.introIcons {
+    --icon-gap: 18px;
+    --icon-size: 150px;
+    --icon-size-image: 99px;
+
+    position: absolute;
+    display: grid;
+    top: 100%;
+    right: 0;
+    gap: var(--icon-gap);
+    grid-template-columns: repeat(2, 1fr);
+    transform: translate3d(0, -78%, 0);
+    z-index: 1;
+}
+
+.introIconsItem {
+    position: relative;
+    display: flex;
+    height: var(--icon-size);
+    width: var(--icon-size);
+    align-items: center;
+    justify-content: center;
+    background: rgb(var(--gray-0));
+    border-radius: calc(var(--radius) * 2);
+    box-shadow: var(--shadow-lg);
+    color: var(--foreground-prominent);
+    font-size: calc(var(--icon-size) * .4);
+
+    img {
+        height: var(--icon-size-image);
+        width: var(--icon-size-image);
+    }
+}
+
+@include breakpoint-down(lg) {
+    .intro h1 {
+        font-size: 60px;
+    }
+
+    .icons {
+        --icon-size: 120px;
+        --icon-size-image: 84px;
+    }
+}
+
+@include breakpoint-down(md) {
+    .intro {
+        margin-bottom: 30px;
+    }
+
+    .introDefault,
+    .introFrontPage {
+        height: 360px;
+    }
+
+    .intro h1 {
+        font-size: 60px;
+    }
+
+    .introContainer {
+        padding-top: 180px;
+    }
+
+    .introCards {
+        margin-bottom: 10px;
+    }
+
+    .introIcons {
+        --icon-size: 90px;
+        --icon-size-image: 54px;
+    }
+}
+
+@include breakpoint-down(sm) {
+    .intro h1 {
+        margin-left: auto;
+        margin-right: auto;
+        align-self: center;
+        font-size: 42px;
+        text-align: center;
+    }
+
+    .introCards {
+        margin-bottom: 60px;
+    }
+
+    .introIcons {
+        --icon-size: 66px;
+        --icon-size-image: 48px;
+
+        left: 50%;
+        right: unset;
+        grid-template-columns: repeat(4, 1fr);
+        transform: translate3d(-50%, -50%, 0);
+    }
+}

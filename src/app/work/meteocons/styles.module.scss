@@ -1,0 +1,163 @@
+@use "../../../asset/css/breakpoints" as *;
+
+.weatherIconSection {
+    --icon-columns: 7;
+    --icon-size: 90px;
+    --section-gutter: 120px;
+    --switcher-gutter: 9px;
+    --switcher-size: 48px;
+    --switcher-size-image: 36px;
+
+    display: flex;
+    margin-top: var(--section-gutter);
+    margin-bottom: var(--section-gutter);
+    flex-flow: column;
+    z-index: 0;
+}
+
+.weatherIconSectionContainer {
+    composes: container from "../../../component/shell/Container.module.scss";
+}
+
+.weatherIconSectionHeader {
+    composes: container from "../../../component/shell/Container.module.scss";
+
+    position: sticky;
+    display: flex;
+    top: 99px;
+    margin-top: 18px;
+    padding-top: 16px;
+    padding-right: 2px;
+    padding-bottom: 16px;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    transition: opacity 300ms var(--swift-out);
+    z-index: 1;
+
+    h3 {
+        margin: 0;
+    }
+}
+
+.weatherIconSectionHeaderDefault {
+    composes: weatherIconSectionHeader;
+
+    background: rgb(254 254 255 / 0);
+    border-bottom: 1px solid rgb(var(--gray-3) / 0);
+}
+
+.weatherIconSectionHeaderSticky,
+.weatherIconSectionHeaderStickyAfter {
+    composes: weatherIconSectionHeader;
+
+    background: rgb(254 254 255);
+    border-bottom: 1px solid rgb(var(--gray-3) / .5);
+}
+
+.weatherIconSectionHeaderStickyAfter {
+    opacity: 0;
+}
+
+.weatherIconSectionStyleSwitcher {
+    display: flex;
+    align-items: center;
+    gap: var(--switcher-gutter);
+}
+
+.weatherIconSectionStyleSwitcherItem {
+    display: flex;
+    height: var(--switcher-size);
+    width: var(--switcher-size);
+    align-items: center;
+    flex: 0 0 var(--switcher-size);
+    justify-content: center;
+    background: white;
+    border: 0;
+    border-radius: calc(var(--radius) * 1.5);
+    box-shadow: 0 0 0 1px rgb(var(--gray-4) / .5);
+    outline: 0;
+    overflow: hidden;
+    transition: all 180ms var(--swift-out);
+    transition-property: background, box-shadow;
+
+    &:hover {
+        background: rgb(var(--gray-2) / .5);
+    }
+
+    img {
+        height: var(--switcher-size-image);
+        width: var(--switcher-size-image);
+    }
+}
+
+.weatherIconSectionStyleSwitcherItemActive {
+    box-shadow: 0 0 0 2px rgb(var(--primary-7));
+}
+
+.weatherIconGroup {
+    position: relative;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(var(--icon-columns), 1fr);
+
+    + .weatherIconGroup {
+        margin-top: 30px;
+    }
+}
+
+.weatherIcon {
+    position: relative;
+    display: block;
+    padding-bottom: calc(100% - 4px);
+    background: white;
+    border: 1px solid rgb(var(--gray-3));
+    border-radius: calc(var(--radius) * 2);
+}
+
+.weatherIconImage {
+    position: absolute;
+    display: block;
+    top: calc(50% - var(--icon-size) / 2);
+    left: calc(50% - var(--icon-size) / 2);
+    height: var(--icon-size);
+    width: var(--icon-size);
+    animation: wiIn 1s var(--swift-out);
+}
+
+@include breakpoint-down(lg) {
+    .weatherIconSection {
+        --icon-size: 72px;
+    }
+}
+
+@include breakpoint-down(md) {
+    .weatherIconSection {
+        --icon-columns: 5;
+        --section-gutter: 36px;
+    }
+}
+
+@include breakpoint-down(sm) {
+    .weatherIconSection {
+        --icon-columns: 4;
+        --icon-size: 90px;
+        --switcher-gutter: 9px;
+        --switcher-size: 36px;
+        --switcher-size-image: 24px;
+    }
+}
+
+@include breakpoint-down(xs) {
+    .weatherIconSection {
+        --icon-columns: 3;
+        --icon-size: 72px;
+    }
+}
+
+@keyframes wiIn {
+    from {
+        opacity: 0;
+        transform: scale3d(.75, .75, .75);
+    }
+}

@@ -18,4 +18,4 @@ export {
     faTwitter,
     faVuejs,
     faWordpressSimple
-} from "@fortawesome/free-brands-svg-icons";
+} from '@fortawesome/free-brands-svg-icons';

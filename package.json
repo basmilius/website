@@ -3,7 +3,7 @@
     "description": "The frontend source code of bas.dev",
     "license": "MIT",
     "private": true,
-    "version": "22.0.0",
+    "version": "24.0.0",
     "author": {
         "email": "bas@mili.us",
         "name": "Bas Milius",
@@ -26,28 +26,25 @@
         "not dead"
     ],
     "dependencies": {
-        "@babel/core": "^7.24.4",
+        "@babel/core": "^7.24.5",
         "@basmilius/effects-common": "^1.0.2",
         "@fortawesome/fontawesome-svg-core": "^6.5.2",
         "@fortawesome/free-brands-svg-icons": "^6.5.2",
         "@fortawesome/pro-solid-svg-icons": "^6.5.2",
-        "@latte-ui/core": "2.0.0-dev.38",
-        "@latte-ui/css": "2.0.0-dev.38",
-        "@latte-ui/hooks": "2.0.0-dev.38",
-        "@latte-ui/slot-fill": "2.0.0-dev.38",
-        "framer-motion": "^11.1.7",
-        "next": "^14.2.2",
-        "preact": "^10.20.2",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
+        "classnames": "^2.5.1",
+        "framer-motion": "^11.2.3",
+        "next": "^14.2.3",
+        "next-view-transitions": "^0.1.1",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
         "tslib": "^2.6.2"
     },
     "devDependencies": {
-        "@types/node": "^20.12.7",
-        "@types/react": "^18.2.79",
-        "@types/react-dom": "^18.2.25",
+        "@types/node": "^20.12.12",
+        "@types/react": "^18.3.2",
+        "@types/react-dom": "^18.3.0",
         "css-class-generator": "^2.0.0",
-        "sass": "^1.75.0",
-        "typescript": "4.8.4"
+        "sass": "^1.77.1",
+        "typescript": "^5.4.5"
     }
 }

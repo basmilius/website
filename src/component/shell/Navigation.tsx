@@ -1,159 +1,188 @@
-import logo from "../../image/logo.svg";
-import styles from "./Navigation.module.scss";
+'use client';
 
-import { useBoolean, useDebounce, useMounted, useWindowScroll } from "@latte-ui/hooks";
-import { createSlotFill } from "@latte-ui/slot-fill";
-import { memo, useEffect, useMemo, useRef } from "react";
-import { Link, useRouter } from "@/component/platform";
-import { BMIcon } from "@/component/shell";
-import { BlobsSimulator } from "@/logic/util/blobs";
+import logo from '@/asset/image/logo.svg';
+import styles from './Navigation.module.scss';
 
-const { Fill, Slot } = createSlotFill("bm-navigation");
+import { usePathname } from 'next/navigation';
+import { Link } from 'next-view-transitions';
+import { useEffect, useState } from 'react';
+import { useDebounced, useMounted, useWindowScroll } from '@/hook';
+import Icon from './Icon';
 
-export default memo(() => {
+export default () => {
+    const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const {y} = useWindowScroll();
     const isMounted = useMounted();
-    const { pathname } = useRouter();
-    const { y } = useWindowScroll();
-    const [ isMobileMenuOpen, setMobileMenuOpen ] = useBoolean();
+    const pathname = usePathname();
 
-    const isMobileMenuCanvasVisible = useDebounce(isMobileMenuOpen, 600);
-    const isMenuCollapsed = useMemo(() => isMounted && y > 0, [ y, isMounted ]);
-    const isTitleVisible = useMemo(() => isMounted && y > 320, [ y, isMounted ]);
+    const isMobileMenuCanvasVisible = useDebounced(isMobileMenuOpen, 600);
+    const isMenuCollapsed = isMounted && y > 0;
+    const isTitleVisible = isMounted && y > 320;
 
-    useEffect(() => setMobileMenuOpen(false), [ pathname ]);
+    useEffect(() => setMobileMenuOpen(false), [pathname]);
 
     return (<>
-        <a href={"#content"} className={styles.skipToContent}>
-            <BMIcon name="fas down-to-line"/>
+        <a
+            className={styles.skipToContent}
+            href={'#content'}>
+            <Icon name="fas down-to-line"/>
             <span>Skip to content</span>
         </a>
 
-        <header className={`${styles.header} ${isMenuCollapsed ? styles.headerScrolled : ""}`}>
-            <nav className={styles.nav}>
-                <button
-                    className={styles.navToggle}
-                    onClick={() => setMobileMenuOpen(true)}
-                    aria-label="Toggle navigation">
-                    <BMIcon
-                        className={styles.navToggleIcon}
-                        name="fas bars"/>
-                </button>
+        <header className={isMenuCollapsed ? styles.navigationScrolled : styles.navigation}>
+            <nav className={styles.navigationNav}>
+                <Toggle onClick={() => setMobileMenuOpen(true)}/>
 
-                <Link href="/" passHref legacyBehavior>
-                    <a className={styles.logo}>
-                        <img src={logo.src} alt="Logo" className={styles.logoImage}/>
-                    </a>
+                <Link
+                    className={styles.navigationLogo}
+                    href="/">
+                    <img
+                        className={styles.navigationLogoImage}
+                        src={logo.src}
+                        alt="Logo"/>
                 </Link>
 
-                <div className={styles.navVariable}>
+                <div className={styles.navigationVariable}>
                     {isMounted && (
-                        <span className={`${styles.navTitle} ${isTitleVisible ? styles.navTitleVisible : ""}`}>
-                            <Slot/>
+                        <span className={isTitleVisible ? styles.navigationVariableTitleVisible : styles.navigationVariableTitle}>
+                            {/* SlotFill.Slot */}
                         </span>
                     )}
                 </div>
 
-                <NavigationItemDefault label="Home" url="/" isExact/>
-                <NavigationItemDefault label="About me" url="/about" isExact/>
-                <NavigationItemDefault label="Work" url="/work" notActiveFor={[ "/work/meteocons" ]}/>
-                <NavigationItemDefault label="Meteocons" url="/work/meteocons" isExact/>
-                <NavigationItemDefault label="Contact" url="/contact" isExact/>
+                <DefaultItem
+                    label="Home"
+                    url="/"
+                    isExact/>
+
+                <DefaultItem
+                    label="About"
+                    url="/about"
+                    isExact/>
+
+                <DefaultItem
+                    label="Work"
+                    url="/work"
+                    notActiveFor={['/work/meteocons']}/>
+
+                <DefaultItem
+                    label="Meteocons"
+                    url="/work/meteocons"
+                    isExact/>
+
+                <DefaultItem
+                    label="Contact"
+                    url="/contact"
+                    isExact/>
             </nav>
         </header>
 
-        <div className={`${styles.bigNavigation} ${isMobileMenuOpen ? styles.bigNavigationOpen : styles.bigNavigationClosed}`}>
-            {(isMobileMenuOpen || isMobileMenuCanvasVisible) && <BigNavigationCanvas/>}
+        <div className={isMobileMenuOpen ? styles.mobileNavigationOpened : styles.mobileNavigationClosed}>
+            {(isMobileMenuOpen || isMobileMenuCanvasVisible) && <MobileCanvas/>}
 
-            <button
-                className={styles.bigNavigationClose}
-                onClick={() => setMobileMenuOpen(false)}
-                aria-label="Toggle navigation">
-                <BMIcon
-                    className={styles.bigNavigationCloseIcon}
-                    name="fas xmark-large"/>
-            </button>
+            <MobileToggle onClick={() => setMobileMenuOpen(false)}/>
 
-            <nav className={styles.bigNavigationNav}>
-                <NavigationItemMobile label="Home" url="/" isExact/>
-                <NavigationItemMobile label="About me" url="/about" isExact/>
-                <NavigationItemMobile label="Work" url="/work" notActiveFor={[ "/work/meteocons" ]}/>
-                <NavigationItemMobile label="Meteocons" url="/work/meteocons" isExact/>
-                <NavigationItemMobile label="Contact" url="/contact" isExact/>
+            <nav className={styles.mobileNavigationNav}>
+                <MobileItem
+                    label="Home"
+                    url="/"
+                    isExact/>
+
+                <MobileItem
+                    label="About"
+                    url="/about"
+                    isExact/>
+
+                <MobileItem
+                    label="Work"
+                    url="/work"
+                    notActiveFor={['/work/meteocons']}/>
+
+                <MobileItem
+                    label="Meteocons"
+                    url="/work/meteocons"
+                    isExact/>
+
+                <MobileItem
+                    label="Contact"
+                    url="/contact"
+                    isExact/>
             </nav>
         </div>
     </>);
-});
+};
 
-const NavigationItem = memo(({ className, classNameActive, isExact, label, notActiveFor, url, onClick }: NavigationItemProps) => {
-    const { pathname } = useRouter();
+const Item = ({className, classNameActive, isExact, label, notActiveFor, url, onClick}: ItemProps) => {
+    const pathname = usePathname();
 
-    const isActive = useMemo(() => isExact ? pathname === url : pathname.startsWith(url) && !notActiveFor?.includes(pathname), [ pathname, url, isExact ]);
+    const isActive = isExact ? pathname === url : pathname.startsWith(url) && !notActiveFor.includes(pathname);
 
     return (
-        <Link href={url} passHref legacyBehavior>
-            <a
-                onClick={() => onClick?.()}
-                className={`${className} ${isActive ? classNameActive : ""}`}>
-                {label}
-            </a>
+        <Link
+            className={isActive ? classNameActive : className}
+            href={url}
+            onClick={() => onClick?.()}>
+            {label}
         </Link>
     );
-});
+};
 
-const NavigationItemDefault = memo(({ isExact, label, notActiveFor, url, onClick }: Omit<NavigationItemProps, "className" | "classNameActive">) => (
-    <NavigationItem
-        className={styles.navItem}
-        classNameActive={styles.navItemActive}
+const DefaultItem = ({isExact, label, notActiveFor, url, onClick}: Omit<ItemProps, 'className' | 'classNameActive'>) => (
+    <Item
+        className={styles.defaultNavigationItem}
+        classNameActive={styles.defaultNavigationItemActive}
         isExact={isExact}
         label={label}
         notActiveFor={notActiveFor}
         url={url}
         onClick={onClick}/>
-));
+);
 
-const NavigationItemMobile = memo(({ isExact, label, notActiveFor, url, onClick }: Omit<NavigationItemProps, "className" | "classNameActive">) => (
-    <NavigationItem
-        className={styles.bigNavigationItem}
-        classNameActive={styles.bigNavigationItemActive}
+const MobileItem = ({isExact, label, notActiveFor, url, onClick}: Omit<ItemProps, 'className' | 'classNameActive'>) => (
+    <Item
+        className={styles.mobileNavigationItem}
+        classNameActive={styles.mobileNavigationItemActive}
         isExact={isExact}
         label={label}
         notActiveFor={notActiveFor}
         url={url}
         onClick={onClick}/>
-));
+);
 
-const BigNavigationCanvas = memo(() => {
-    const canvasRef = useRef<HTMLCanvasElement>();
+const MobileCanvas = () => null;
 
-    useEffect(() => {
-        if (!canvasRef.current) {
-            return;
-        }
+const MobileToggle = ({onClick}: ToggleProps) => (
+    <button
+        className={styles.mobileNavigationClose}
+        onClick={() => onClick?.()}
+        aria-label="Toggle navigation">
+        <Icon
+            className={styles.mobileNavigationCloseIcon}
+            name="fas xmark-large"/>
+    </button>
+);
 
-        let blobsCanvas = new BlobsSimulator(canvasRef.current, true);
-        blobsCanvas.start();
+const Toggle = ({onClick}: ToggleProps) => (
+    <button
+        className={styles.navigationToggle}
+        onClick={() => onClick?.()}
+        aria-label="Toggle navigation">
+        <Icon
+            className={styles.navigationToggleIcon}
+            name="fas bars"/>
+    </button>
+);
 
-        return () => {
-            blobsCanvas.stop();
-            blobsCanvas.destroy();
-        };
-    }, [ canvasRef ]);
+type ItemProps = {
+    readonly className: string;
+    readonly classNameActive: string;
+    readonly isExact?: boolean;
+    readonly label: string;
+    readonly notActiveFor?: string[];
+    readonly url: string;
+    readonly onClick?: Function;
+};
 
-    return (
-        <canvas ref={canvasRef} className={styles.canvas}/>
-    );
-});
-
-export const BMNavigationTitle = memo(({ title }: { title: string; }) => (
-    <Fill>{title}</Fill>
-));
-
-interface NavigationItemProps {
-    className: string;
-    classNameActive: string;
-    isExact?: boolean;
-    label: string;
-    notActiveFor?: string[];
-    url: string;
-    onClick?: Function;
-}
+type ToggleProps = {
+    readonly onClick?: Function;
+};

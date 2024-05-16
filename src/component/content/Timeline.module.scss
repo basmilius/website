@@ -1,5 +1,3 @@
-@use "../../css/api" as *;
-
 .timeline {
     position: relative;
     display: flex;
@@ -9,35 +7,35 @@
 .timelineItem {
     position: relative;
     display: flex;
-    gap: #{gutter-get(6)};
+    gap: 24px;
     align-items: stretch;
     justify-content: flex-start;
 }
 
 .timelineItemDate {
     display: block;
-    margin-bottom: #{gutter-get(2)};
-    color: #{color-get("primary")};
+    margin-bottom: 9px;
+    color: rgb(var(--primary-7));
     font-size: 15px;
 }
 
 .timelineItemLine {
-    margin-top: -#{gutter-get(1\/2)};
-    margin-left: -#{gutter-get(4)};
+    margin-top: -3px;
+    margin-left: -15px;
     flex-shrink: 0;
 
     line {
-        stroke: #{color-get("primary", 100)};
+        stroke: rgb(var(--primary-2));
     }
 
     circle:first-of-type {
-        stroke: #{color-get("primary", 100)};
-        transition: stroke 300ms var(--swiftOut);
+        stroke: rgb(var(--primary-2));
+        transition: stroke 300ms var(--swift-out);
         will-change: stroke;
     }
 
     circle:last-of-type {
-        fill: #{color-get("primary")};
+        fill: rgb(var(--primary-7));
     }
 }
 
@@ -51,14 +49,14 @@
 
 .timelineItemContent {
     position: relative;
-    padding: #{gutter-get(7) - 6px} 0;
+    padding: 24px 0;
 
     h3 {
         font-size: 18px;
     }
 
     p {
-        color: #{color-get("gray", 500)};
+        color: var(--foreground-secondary);
     }
 
     p:last-child {

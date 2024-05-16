@@ -1,16 +1,21 @@
-import styles from "./Information.module.scss";
+'use client';
 
-import { useClipboard } from "@latte-ui/hooks";
-import { memo } from "react";
-import { BMIcon } from "@/component/shell";
+import styles from './Information.module.scss';
 
-export default memo(({ icon, title, value }: Props) => {
-    const [ isCopied, copy ] = useClipboard(value, 2000);
+import { Icon } from '@/component/shell';
+import { useClipboard } from '@/hook';
+
+export default ({icon, title, value}: Props) => {
+    const [didCopy, copy] = useClipboard(value, 2000);
 
     return (
-        <button className={`${styles.informationItem} ${isCopied ? styles.informationCopied : ""}`} onClick={copy}>
+        <button
+            className={didCopy ? styles.informationItemCopied : styles.informationItem}
+            onClick={copy}>
             <div className={styles.informationItemIconMount}>
-                <BMIcon name={icon} className={styles.informationItemIcon}/>
+                <Icon
+                    name={icon}
+                    className={styles.informationItemIcon}/>
             </div>
 
             <div className={styles.informationItemCaption}>
@@ -19,16 +24,16 @@ export default memo(({ icon, title, value }: Props) => {
                 </div>
 
                 <div className={styles.informationItemTitle}>
-                    {!isCopied && title}
-                    {isCopied && "Copied!"}
+                    {!didCopy && title}
+                    {didCopy && 'Copied!'}
                 </div>
             </div>
         </button>
     );
-});
+};
 
-interface Props {
-    icon: string;
-    title: string;
-    value: string;
-}
+type Props = {
+    readonly icon: string;
+    readonly title: string;
+    readonly value: string;
+};

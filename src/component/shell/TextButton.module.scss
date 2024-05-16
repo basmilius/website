@@ -1,9 +1,9 @@
-@use "../../css/api" as *;
+@use "../../asset/css/breakpoints" as *;
 
 .textButtonGrid {
     display: grid;
-    margin-top: #{gutter-get(6)};
-    gap: #{gutter-get(4)};
+    margin-top: 24px;
+    gap: 15px;
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -12,7 +12,7 @@
     align-items: flex-start;
     flex-flow: row wrap;
     justify-content: flex-start;
-    gap: #{gutter-get(6)};
+    gap: 24px;
 }
 
 .textButtonGroupAlignToBottom {
@@ -26,7 +26,7 @@
     align-items: flex-start;
     flex-flow: column;
     justify-content: flex-start;
-    gap: #{gutter-get(2)};
+    gap: 9px;
 }
 
 .textButtonStackAlignToBottom {
@@ -39,20 +39,20 @@
     position: relative;
     display: inline-flex;
     padding: 0;
-    gap: #{gutter-get(2)};
+    gap: 9px;
     align-items: center;
     align-self: flex-start;
     justify-self: flex-start;
     background: transparent;
     border: 0;
     border-radius: unset;
-    color: #{color-get("gray")};
+    color: var(--foreground);
     font-size: 17px;
     font-weight: 450;
     line-height: 1;
     outline: 0;
     text-decoration: none;
-    transition: 180ms var(--swiftOut);
+    transition: 180ms var(--swift-out);
     transition-property: color;
 }
 
@@ -63,9 +63,9 @@
     width: 36px;
     align-items: center;
     justify-content: center;
-    background: #{color-get("gray", 200, .5)};
+    background: rgb(var(--gray-3));
     border-radius: 18px;
-    color: #{color-get("gray")};
+    color: rgb(var(--gray-8));
     transition: inherit;
     transition-property: background, color;
 
@@ -77,6 +77,8 @@
 }
 
 .textButtonSmall {
+    composes: textButton;
+
     font-size: 14px;
 }
 
@@ -92,11 +94,11 @@
 .textButton:hover,
 .textButton:focus-visible {
     background: transparent;
-    color: #{color-get("primary", 600)};
+    color: rgb(var(--primary-6));
 
     .textButtonIcon {
         background: transparent;
-        color: #{color-get("primary")};
+        color: rgb(var(--primary-7));
 
         svg[data-icon="right"] {
             transform: translate3d(3px, 0, 0);
@@ -112,7 +114,7 @@
     }
 }
 
-@include responsive-down(sm) {
+@include breakpoint-down(sm) {
     .textButtonGrid {
         grid-template-columns: repeat(2, 1fr);
     }

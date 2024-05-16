@@ -1,14 +1,12 @@
-import { memo } from "react";
-import { BMTimeline } from "@/component/content";
-import { BMSection } from "@/component/shell";
+import { Row } from '@/component/shell';
+import Timeline from './Timeline';
 
-export default memo(() => (
-    <BMSection
+export default () => (
+    <Row
         title="Work experience"
         subTitle="A few things that I've done to gain work experience in my field.">
-
-        <BMTimeline>
-            <BMTimeline.Item
+        <Timeline.Lane>
+            <Timeline.Item
                 date="June 2020 — now"
                 title="Self-employed">
                 <p>
@@ -17,9 +15,9 @@ export default memo(() => (
                     am not actively looking for new customers, but if someone knocks on the door for a website,
                     app or simple design, I am always happy to help.
                 </p>
-            </BMTimeline.Item>
+            </Timeline.Item>
 
-            <BMTimeline.Item
+            <Timeline.Item
                 date="June 2022 — now"
                 title="WeAreFancee / Tibbaa">
                 <p>
@@ -27,9 +25,9 @@ export default memo(() => (
                     an app. The dashboard is created with Vue, and uses Vite as a build tool; our app is created
                     using Flutter. I created the Flutter app from scratch.
                 </p>
-            </BMTimeline.Item>
+            </Timeline.Item>
 
-            <BMTimeline.Item
+            <Timeline.Item
                 date="June 2016 — June 2022"
                 title="IdeeMedia">
                 <p>
@@ -38,9 +36,9 @@ export default memo(() => (
                     the Marveld holiday park in Groenlo. I also did server management here and created a new
                     hosting platform from scratch.
                 </p>
-            </BMTimeline.Item>
+            </Timeline.Item>
 
-            <BMTimeline.Item
+            <Timeline.Item
                 date="2015"
                 title="IMTheSolution">
                 <p>
@@ -48,8 +46,7 @@ export default memo(() => (
                     internship at IMTheSolution. Here I learned to work with Xamarin, among other things, and
                     I found out that mobile app development does interest me, but not with Xamarin.
                 </p>
-            </BMTimeline.Item>
-        </BMTimeline>
-
-    </BMSection>
-));
+            </Timeline.Item>
+        </Timeline.Lane>
+    </Row>
+);

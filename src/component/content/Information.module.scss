@@ -1,31 +1,40 @@
-@use "../../css/api" as *;
+@use "../../asset/css/breakpoints" as *;
 
-.information {
+.informationGrid {
     position: relative;
     display: grid;
-    grid-gap: #{gutter-get(2)};
+    grid-gap: 9px;
     grid-template-columns: 1fr 1fr;
 }
 
 .informationItem {
     position: relative;
     display: flex;
-    padding: #{gutter-get(3)};
+    padding: 12px;
     align-items: flex-start;
-    gap: #{gutter-get(6)};
+    gap: 24px;
     background: transparent;
     border: 0;
-    border-radius: #{$radius};
+    border-radius: var(--radius);
     text-align: left;
-    transition: background 240ms var(--swiftOut);
+    transition: background 240ms var(--swift-out);
 
     &:hover {
-        background: #{color-get("gray", 100, .5)};
+        background: rgb(var(--gray-2));
     }
 
     &:hover .informationItemIconMount {
-        background: #{color-get("primary", 200, .5)};
-        color: #{color-get("primary", 600)};
+        background: rgb(var(--primary-2));
+        color: rgb(var(--primary-7));
+    }
+}
+
+.informationItemCopied {
+    composes: informationItem;
+
+    .informationItemTitle {
+        color: rgb(var(--primary-7));
+        font-weight: 700;
     }
 }
 
@@ -40,49 +49,44 @@
     align-items: center;
     flex-shrink: 0;
     justify-content: center;
-    background: #{color-get("gray", 200, .5)};
+    background: rgb(var(--gray-2));
     border-radius: 30px;
-    color: #{color-get("gray")};
-    transition: 240ms var(--swiftOut);
+    color: var(--foreground-secondary);
+    transition: 240ms var(--swift-out);
     transition-property: background, color;
 }
 
 .informationItemCaption {
     display: flex;
     flex-flow: column;
-    gap: #{gutter-get(1)};
+    gap: 6px;
     line-height: 1.2;
 }
 
 .informationItemValue {
-    color: #{color-get("gray", 700)};
+    color: var(--foreground-prominent);
     font-size: 18px;
     font-weight: 500;
 }
 
 .informationItemTitle {
-    color: #{color-get("gray", 500)};
+    color: var(--foreground);
     font-size: 16px;
 }
 
-.informationCopied .informationItemTitle {
-    color: #{color-get("primary")};
-    font-weight: 700;
-}
-
-@include responsive-down(md) {
+@include breakpoint-down(md) {
     .information {
         grid-template-columns: 1fr;
     }
 }
 
-@include responsive-down(sm) {
+@include breakpoint-down(sm) {
     .information {
         grid-template-columns: 1fr 1fr;
     }
 }
 
-@include responsive-down(xs) {
+@include breakpoint-down(xs) {
     .information {
         grid-template-columns: 1fr;
     }

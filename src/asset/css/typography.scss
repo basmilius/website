@@ -1,0 +1,115 @@
+$-headings: (h1, h2, h3, h4, h5, h6, ".tah");
+$-elements: (p, ul, ol, li, hr, ".tae");
+
+:where(#{$-headings}) {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+:where(#{$-elements}) + :is(#{$-elements}) {
+    margin-top: 15px;
+}
+
+:where(#{$-headings}) + :is(#{$-headings}, #{$-elements}) {
+    margin-top: 9px;
+}
+
+:where(#{$-elements}) + :is(#{$-headings}) {
+    margin-top: 48px;
+}
+
+:where(#{$-headings}, #{$-elements}) + :is(.tal) {
+    margin-top: 30px;
+}
+
+p {
+    font-weight: 300;
+}
+
+p.lead {
+    color: var(--foreground-prominent);
+    font-weight: 500;
+}
+
+h2 {
+    color: var(--foreground-prominent);
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.3;
+
+    &::after {
+        display: inline-block;
+        content: ".";
+        color: rgb(var(--primary-8));
+        transform: scale(1.1) translate3d(0, -.03em, 0);
+    }
+}
+
+h3 {
+    color: var(--foreground-prominent);
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+h4 {
+    color: rgb(var(--primary-7));
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+h2 + h3 {
+    color: rgb(var(--primary-7));
+    font-size: 18px;
+    font-weight: 400;
+}
+
+hr {
+    max-width: 30px;
+    background: transparent;
+    border-top: 5px dotted rgb(var(--gray-3));
+}
+
+a:not([class]) {
+    color: rgb(var(--primary-7));
+    text-decoration: underline rgb(var(--gray-2));
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: text-decoration-color 120ms var(--swift-out);
+
+    &:hover {
+        text-decoration-color: currentColor;
+    }
+}
+
+ul:not([class]) {
+    margin-bottom: 2rem;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+        position: relative;
+        margin: 0;
+        padding: 0 0 0 36px;
+        font-weight: 300;
+
+        &::before {
+            position: absolute;
+            display: block;
+            top: 10px;
+            left: 9px;
+            height: 9px;
+            width: 9px;
+            content: "";
+            background: rgb(var(--primary-7));
+            border-radius: 99px;
+        }
+    }
+
+    li + li {
+        margin-top: 15px;
+    }
+}

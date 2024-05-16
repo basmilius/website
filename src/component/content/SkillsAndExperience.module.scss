@@ -1,11 +1,4 @@
-@use "../../css/api" as *;
-
-.skillsGrid {
-    position: relative;
-    display: grid;
-    grid-gap: #{gutter-get(2)};
-    grid-template-columns: repeat(5, 1fr);
-}
+@use "../../asset/css/breakpoints" as *;
 
 .skill {
     --color: 0 0% 0%;
@@ -16,44 +9,51 @@
     align-items: center;
     flex-flow: column;
     justify-content: center;
-    background: #{color-get("gray", 50)};
-    border: 2px solid #{color-get("gray", 100)};
-    border-radius: #{$radius * 2};
+    background: rgb(var(--gray-2));
+    border: 2px solid rgb(var(--gray-3) / .75);
+    border-radius: calc(var(--radius) * 2);
     text-align: center;
 
     strong {
-        color: #{color-get("gray", 500)};
+        color: var(--foreground-prominent);
         font-size: 16px;
         font-weight: 500;
     }
 }
 
 .skillIcon {
-    margin: 0 0 #{gutter-get(1)};
+    margin: 0 0 6px;
     color: hsl(var(--color));
-    font-size: 30px;
+    font-size: 30px !important;
 }
 
-@include responsive-down(lg) {
-    .skillsGrid {
+.skills {
+    position: relative;
+    display: grid;
+    gap: 9px;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+@include breakpoint-down(lg) {
+    .skills {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@include responsive-down(md) {
-    .skillsGrid {
+@include breakpoint-down(md) {
+    .skills {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@include responsive-down(sm) {
-    .skillsGrid {
+@include breakpoint-down(sm) {
+    .skills {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@include responsive-down(xs) {
-    .skillsGrid {
+@include breakpoint-down(xs) {
+    .skills {
         grid-template-columns: repeat(2, 1fr);
     }
 }
