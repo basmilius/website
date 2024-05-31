@@ -30,6 +30,10 @@ const config = {
         removeConsole: true
     },
 
+    experimental: {
+        reactCompiler: true
+    },
+
     output: 'export',
 
     webpack: (config, {}) => {

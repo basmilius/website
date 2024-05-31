@@ -24,6 +24,7 @@ import typeWriterImage from "@/asset/image/work/blueprint/blueprint-typewriter.s
 import visualEffectsImage from "@/asset/image/work/blueprint/blueprint-visual-effects.svg";
 import weatherIconsImage from "@/asset/image/work/blueprint/blueprint-meteocons.svg";
 import wervincImage from "@/asset/image/work/blueprint/blueprint-wervinc.svg";
+import wpistImage from "@/asset/image/work/blueprint/blueprint-wpist.svg";
 
 const Card = ({title, description, buttonIcon, buttonLabel, buttonSmall, buttonUrl, comingSoon, imageUrl, visual}: CardProps) => (
     <div className={styles.workCard}>
@@ -324,6 +325,17 @@ export default Object.assign({}, {
                 buttonLabel="wervinc.nl"
                 buttonSmall
                 buttonUrl="https://wervinc.nl"/>
+        )),
+
+        WPIST: memo(() => (
+            <Card
+                imageUrl={wpistImage.src}
+                title="WPIST Registration"
+                description="Custom made registration form for the football tournament."
+                buttonIcon="fas up-right"
+                buttonLabel="wpist-indoorsoccer.nl"
+                buttonSmall
+                buttonUrl="https://wpist-indoorsoccer.nl"/>
         ))
     }
 });

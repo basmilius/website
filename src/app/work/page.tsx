@@ -41,12 +41,13 @@ export default () => (<>
         <Work.ForOthers.JaimieVos/>
         <Work.ForOthers.FleurNijhuis/>
         <Work.ForOthers.Marveld/>
-        <Work.ForOthers.StudioVierentwintig/>
+        <Work.ForOthers.WPIST/>
         <Work.ForOthers.ManegeNijhuis/>
         <Work.ForOthers.ErveNijhuis/>
+        <Work.ForOthers.StudioVierentwintig/>
         <Work.ForOthers.ErveTank/>
+        <Work.ForOthers.DidietNl/>
         <Work.ForOthers.KapsalonLichtenberg/>
         <Work.ForOthers.DitoGroenlo/>
-        <Work.ForOthers.DidietNl/>
     </Work.Grid>
 </>);
