@@ -1,4 +1,6 @@
 .idea/
++.idea/icon.svg
++.idea/.name
 dist/
 node_modules/
 
