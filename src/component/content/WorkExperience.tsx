@@ -18,12 +18,12 @@ export default () => (
             </Timeline.Item>
 
             <Timeline.Item
-                date="June 2022 — now"
+                date="June 2022 — June 2024"
                 title="WeAreFancee / Tibbaa">
                 <p>
-                    Senior Full-Stack Engineer &mdash; My main tasks are working on an organizer dashboard and
-                    an app. The dashboard is created with Vue, and uses Vite as a build tool; our app is created
-                    using Flutter. I created the Flutter app from scratch.
+                    Senior Full-Stack Engineer &mdash; My main tasks involved working on an organizer dashboard
+                    and an app. The dashboard was created with Vue and used Vite as a build tool. Our app was
+                    developed using Flutter, which I built from scratch. Unfortunately, the company went bankrupt.
                 </p>
             </Timeline.Item>
 
