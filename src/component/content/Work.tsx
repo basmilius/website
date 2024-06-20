@@ -109,12 +109,12 @@ export default Object.assign({}, {
         Flux: memo(() => (
             <Card
                 imageUrl={fluxImage.src}
-                title="Flux (Soon™)"
+                title="Flux"
                 description="A Vue 3 UI framework that I use for most of my projects."
-                buttonIcon="fab github"
-                buttonLabel="GitHub (Soon™)"
+                buttonIcon="fas up-right"
+                buttonLabel="Website"
                 buttonSmall
-                buttonUrl="https://github.com/basmilius/flux"/>
+                buttonUrl="https://flux.bas.dev"/>
         )),
 
         Raxos: memo(() => (
