@@ -43,7 +43,7 @@ const Standard = () => (<>
     <Item
         color="217 68% 49%"
         icon="fab flutter"
-        label="Flutter"/>
+        label="Flutter & Dart"/>
 
     <Item
         color="10 80% 55%"
@@ -93,7 +93,7 @@ const Standard = () => (<>
     <Item
         color="8 87% 58%"
         icon="fab swift"
-        label="Swift"/>
+        label="Swift (Beginner)"/>
 
     <Item
         color="0 100% 49%"
