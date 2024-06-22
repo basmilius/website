@@ -4,7 +4,6 @@
     "license": "MIT",
     "private": true,
     "version": "24.0.0",
-    "packageManager": "pnpm@9.1.4",
     "author": {
         "email": "bas@mili.us",
         "name": "Bas Milius",
