@@ -52,6 +52,14 @@ export default () => (<>
                     href="/contact"
                     label="Contact Me"
                     icon="fas right"/>
+
+                <TextButton.Link
+                    download="Bas Milius CV 2024.pdf"
+                    href="/bas-milius-cv.pdf"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    label="Download CV"
+                    icon="fas down"/>
             </TextButton.Stack>
         </>)}>
         <h3>Hi! I'm Bas</h3>

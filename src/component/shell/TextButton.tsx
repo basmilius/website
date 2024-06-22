@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import useAriaAttributes from '@/hook/useAriaAttributes';
 import Icon from './Icon';
 
-const Button = ({className, style, tag: Tag = 'button', buttonType = 'button', href, rel, target, label, icon, iconAfter, isDisabled, isSmall, onClick, ...props}: Props) => {
+const Button = ({className, style, tag: Tag = 'button', buttonType = 'button', download, href, rel, target, label, icon, iconAfter, isDisabled, isSmall, onClick, ...props}: Props) => {
     const ariaAttributes = useAriaAttributes(props, {
         'aria-disabled': isDisabled
     });
@@ -14,8 +14,7 @@ const Button = ({className, style, tag: Tag = 'button', buttonType = 'button', h
     return (
         <Tag
             {...ariaAttributes}
-            {...(Tag === 'a' || Tag === LinkComponent ? {href, rel, target} : {})}
-            type={buttonType}
+            {...(Tag === 'a' || Tag === LinkComponent ? {download, href, rel, target} : {type: buttonType})}
             className={classNames(
                 className,
                 isSmall ? styles.textButtonSmall : styles.textButton
@@ -89,6 +88,7 @@ type Props = AriaAttributes & {
     readonly className?: string;
     readonly style?: CSSProperties;
 
+    readonly download?: string;
     readonly href?: string;
     readonly rel?: string;
     readonly target?: string;
