@@ -18,6 +18,15 @@ export default () => (
             </Timeline.Item>
 
             <Timeline.Item
+                date="August 2024 — Now"
+                title="Axilium">
+                <p>
+                    Senior Full-Stack Developer &mdash; Currently working on a project called Solvidi, which
+                    is used in the education system here in The Netherlands.
+                </p>
+            </Timeline.Item>
+
+            <Timeline.Item
                 date="June 2022 — June 2024"
                 title="WeAreFancee / Tibbaa">
                 <p>
