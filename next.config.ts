@@ -1,36 +1,29 @@
-import { createHash } from 'node:crypto';
+import type { NextConfig } from 'next';
 import generateName from 'css-class-generator';
 
 const names = {};
 
-const sha1 = str => {
-    const shasum = createHash('sha1');
-    shasum.update(str);
-
-    return shasum.digest('hex').substring(0, 7);
-};
-
-const getLocalIdent = ({rootContext, resourcePath}, _, name) => {
-    const key = sha1(`${rootContext}//${resourcePath}//${name}`);
+const getLocalIdent = ({resourcePath}: { resourcePath: string; }, _: string, name: string): string => {
+    const key = `${resourcePath}::${name}`;
 
     if (key in names) {
         return names[key];
     }
 
-    return names[key] = generateName(parseInt(key, 16));
+    return names[key] = generateName(Object.values(names).length);
 };
 
-/** @type {import('next').NextConfig} */
-const config = {
+const config: NextConfig = {
     poweredByHeader: false,
     reactStrictMode: true,
 
     compiler: {
         reactRemoveProperties: true,
-        removeConsole: true
+        removeConsole: false
     },
 
     experimental: {
+        cssChunking: 'strict',
         reactCompiler: true
     },
 
