@@ -109,9 +109,9 @@ const MyWorkPage = () => (
 
 const WorkingCompanyLink = () => (
     <a
-        href="https://wearefancee.com"
+        href="https://www.axilium.com/"
         rel="noopener"
         target="_blank">
-        WeAreFancee (formerly Tibbaa)
+        Axilium
     </a>
 );
