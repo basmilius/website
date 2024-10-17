@@ -19,7 +19,7 @@ const random = mulberry32();
 
 export class BlobsSimulator extends LimitedFrameRateCanvas {
     constructor(canvas: HTMLCanvasElement, public readonly smallMode: boolean) {
-        super(canvas, smallMode ? 15 : 60);
+        super(canvas, smallMode ? 15 : 60, {colorSpace: 'srgb'});
 
         if (blobs.length === 0) {
             blobs.push(new FillBlob(0, 0, .5, '#111827', .25));
