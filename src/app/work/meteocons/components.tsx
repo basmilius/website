@@ -10,7 +10,7 @@ import { IconStyleContext } from './context';
 
 export const Icon = ({icon}: { icon: string; }) => {
     const {style} = useContext(IconStyleContext);
-    const ref = useRef();
+    const ref = useRef<HTMLDivElement>(null);
     const inView = useInView(ref, {amount: 'some'});
 
     const name = icon
@@ -21,7 +21,8 @@ export const Icon = ({icon}: { icon: string; }) => {
     return (
         <div
             ref={ref}
-            className={styles.weatherIcon}>
+            className={styles.weatherIcon}
+            aria-label={`Icon: ${name}`}>
             {inView && (
                 <img
                     key={style}

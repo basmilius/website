@@ -3,7 +3,7 @@
     "description": "The frontend source code of bas.dev",
     "license": "MIT",
     "private": true,
-    "version": "24.0.0",
+    "version": "25.5.0",
     "author": {
         "email": "bas@mili.us",
         "name": "Bas Milius",
@@ -26,27 +26,33 @@
         "not dead"
     ],
     "dependencies": {
-        "@babel/core": "^7.24.9",
-        "@basmilius/effects-common": "^1.0.3",
-        "@fortawesome/fontawesome-svg-core": "^6.6.0",
-        "@fortawesome/free-brands-svg-icons": "^6.6.0",
-        "@fortawesome/pro-solid-svg-icons": "^6.6.0",
+        "@babel/core": "^7.27.1",
+        "@basmilius/effects-common": "^1.4.0",
+        "@fortawesome/fontawesome-svg-core": "^6.7.2",
+        "@fortawesome/free-brands-svg-icons": "^6.7.2",
+        "@fortawesome/pro-solid-svg-icons": "^6.7.2",
         "babel-plugin-react-compiler": "latest",
         "classnames": "^2.5.1",
-        "framer-motion": "^11.3.17",
-        "next": "canary",
-        "next-view-transitions": "^0.2.0",
-        "react": "canary",
-        "react-dom": "canary",
-        "sharp": "^0.33.4",
-        "tslib": "^2.6.3"
+        "framer-motion": "^12.11.3",
+        "next": "^15.3.2",
+        "next-view-transitions": "^0.3.4",
+        "react": "^19.1.0",
+        "react-dom": "^19.1.0",
+        "sharp": "^0.34.1",
+        "tslib": "^2.8.1"
     },
     "devDependencies": {
-        "@types/node": "^20.14.12",
-        "@types/react": "^18.3.3",
-        "@types/react-dom": "^18.3.0",
+        "@types/node": "^22.15.18",
+        "@types/react": "^19.1.4",
+        "@types/react-dom": "^19.1.5",
         "css-class-generator": "^2.0.0",
-        "sass": "^1.77.8",
-        "typescript": "^5.5.4"
+        "sass": "^1.88.0",
+        "typescript": "^5.8.3"
+    },
+    "pnpm": {
+        "onlyBuiltDependencies": [
+            "@parcel/watcher",
+            "sharp"
+        ]
     }
 }

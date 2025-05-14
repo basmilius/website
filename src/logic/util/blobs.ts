@@ -15,7 +15,7 @@ const sevenPointCircle = new Float64Array([
 const entriesPerPoint = 6;
 const blobPoints = new Float64Array(sevenPointCircle.length);
 const blobs: Blob[] = [];
-const random = mulberry32();
+const random = mulberry32(13);
 
 export class BlobsSimulator extends LimitedFrameRateCanvas {
     constructor(canvas: HTMLCanvasElement, public readonly smallMode: boolean) {

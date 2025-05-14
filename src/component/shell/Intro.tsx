@@ -15,10 +15,10 @@ type Props = {
 
 export default ({cards, isFrontPage, title}: Props) => {
     if (isFrontPage && cards?.length) {
-        throw new Error('<Intro/> component can not show cards when isFrontPage is used.');
+        throw new Error('<Intro/> component cannot show cards when isFrontPage is used.');
     }
 
-    const canvasRef = useRef<HTMLCanvasElement>();
+    const canvasRef = useRef<HTMLCanvasElement>(null);
     const inView = useInView(canvasRef);
     const {width} = useWindowSize();
 

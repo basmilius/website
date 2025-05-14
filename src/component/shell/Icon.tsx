@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 
-import { AriaAttributes, cloneElement, CSSProperties } from 'react';
+import { AriaAttributes, cloneElement, CSSProperties, type ReactElement } from 'react';
 import { renderIcon } from '@/logic/font-awesome';
 
 type Props = AriaAttributes & {
@@ -10,7 +10,7 @@ type Props = AriaAttributes & {
 };
 
 export default ({className, style, name}: Props) => {
-    const result = renderIcon(name);
+    const result: ReactElement<Props> = renderIcon(name) as ReactElement<Props>;
 
     if (!result) {
         return null;
