@@ -39,6 +39,6 @@ export default () => (<>
     <Work.Grid title="Featured work">
         <Work.OfMe.WeatherIcons/>
         <Work.OfMe.Flux/>
-        <Work.OfMe.VisualEffects/>
+        <Work.OfMe.Passly/>
     </Work.Grid>
 </>);

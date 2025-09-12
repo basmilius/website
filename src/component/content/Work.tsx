@@ -17,6 +17,7 @@ import jaimieVosImage from "@/asset/image/work/blueprint/blueprint-jaimie-vos.sv
 import kapsalonLichtenbergImage from "@/asset/image/work/blueprint/blueprint-kapsalon-lichtenberg.svg";
 import manegeNijhuisImage from "@/asset/image/work/blueprint/blueprint-manege-nijhuis.svg";
 import marveldImage from "@/asset/image/work/blueprint/blueprint-marveld.svg";
+import passlyImage from "@/asset/image/work/blueprint/blueprint-passly.svg";
 import raxosImage from "@/asset/image/work/blueprint/blueprint-raxos.svg";
 import startDeTijdImage from "@/asset/image/work/blueprint/blueprint-startdetijd.svg";
 import studiovierentwintigImage from "@/asset/image/work/blueprint/blueprint-studiovierentwintig.svg";
@@ -159,6 +160,17 @@ export default Object.assign({}, {
                 buttonLabel="glybe.nl"
                 buttonSmall
                 buttonUrl="https://glybe.nl"/>
+        )),
+
+        Passly: memo(() => (
+            <Card
+                imageUrl={passlyImage.src}
+                title="Passly"
+                description="A self-service online ticketing provider for events."
+                buttonIcon="fas up-right"
+                buttonLabel="passly.nl"
+                buttonSmall
+                buttonUrl="https://passly.nl"/>
         )),
 
         BasTools: memo(() => (

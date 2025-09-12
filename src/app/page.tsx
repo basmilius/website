@@ -73,11 +73,11 @@ export default () => (<>
         )}>
         <Work.Deck>
             <Work.OfMe.WeatherIcons/>
-            <Work.ForOthers.JaimieVos/>
+            <Work.OfMe.Passly/>
             <Work.ForOthers.FleurNijhuis/>
             <Work.OfMe.Raxos/>
             <Work.ForOthers.ManegeNijhuis/>
-            <Work.ForOthers.StudioVierentwintig/>
+            <Work.ForOthers.JaimieVos/>
         </Work.Deck>
     </Row>
 </>);

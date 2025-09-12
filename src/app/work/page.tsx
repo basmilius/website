@@ -28,8 +28,7 @@ export default () => (<>
     <Work.Grid
         more
         title="Projects">
-        <Work.OfMe.Glybe/>
-        <Work.OfMe.BasTools/>
+        <Work.OfMe.Passly/>
         <Work.OfMe.IsHetPatat/>
         <Work.OfMe.IsHetFriet/>
         <Work.OfMe.StartDeTijd/>
