@@ -22,7 +22,6 @@ export default () => (<>
         <Work.OfMe.Raxos/>
         <Work.OfMe.Flux/>
         <Work.OfMe.VisualEffects/>
-        <Work.OfMe.TypeWriter/>
     </Work.Grid>
 
     <Work.Grid
