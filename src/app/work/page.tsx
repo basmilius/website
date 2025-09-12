@@ -12,7 +12,7 @@ export default () => (<>
     <Work.Grid title="Featured">
         <Work.OfMe.WeatherIcons/>
         <Work.OfMe.Flux/>
-        <Work.OfMe.VisualEffects/>
+        <Work.OfMe.Passly/>
     </Work.Grid>
 
     <Work.Grid
