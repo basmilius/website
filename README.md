@@ -13,13 +13,13 @@ This website requires a Font Awesome Pro license. You can get one [here](https:/
 ### 🎲 Get started
 To run the local development server, follow the following steps in order and
 make sure npm environment variables for font awesome are predefined and that
-the `pnpm` package manager is installed.
+the `bun` package manager is installed.
 - **Clone** the project with `git clone https://github.com/basmilius/website`.
-- **Install** dependencies with `pnpm install`.
-- **Start** the development server with `pnpm run dev`.
+- **Install** dependencies with `bun install`.
+- **Start** the development server with `bun run dev`.
 
 ### 🚀 Production build
 Before publishing the website, follow the following steps.
-- **Build** a production version with `pnpm run build`.
-- **Export** the production static code `pnpm run export`.
+- **Build** a production version with `bun run build`.
+- **Export** the production static code `bun run export`.
 - **Upload** the `out` folder to a webhosting solution.
