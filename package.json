@@ -3,7 +3,8 @@
     "description": "The frontend source code of bas.dev",
     "license": "MIT",
     "private": true,
-    "version": "25.5.0",
+    "version": "25.9.0",
+    "packageManager": "bun@1.2.15",
     "author": {
         "email": "bas@mili.us",
         "name": "Bas Milius",
