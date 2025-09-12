@@ -40,6 +40,7 @@ export default () => (<>
         <Work.ForOthers.JaimieVos/>
         <Work.ForOthers.FleurNijhuis/>
         <Work.ForOthers.Marveld/>
+        <Work.ForOthers.DeGrolscheGracht/>
         <Work.ForOthers.WPIST/>
         <Work.ForOthers.ManegeNijhuis/>
         <Work.ForOthers.ErveNijhuis/>

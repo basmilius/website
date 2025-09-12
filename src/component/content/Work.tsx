@@ -4,6 +4,7 @@ import { memo, PropsWithChildren, ReactNode } from 'react';
 import TextButton from '../shell/TextButton';
 
 import basToolsImage from "@/asset/image/work/blueprint/blueprint-bas-tools.svg";
+import degrolschegrachtImage from "@/asset/image/work/blueprint/blueprint-degrolschegracht.svg";
 import didietNlImage from "@/asset/image/work/blueprint/blueprint-didiet-nl.svg";
 import ditoGroenloImage from "@/asset/image/work/blueprint/blueprint-dito.svg";
 import ervenijhuisImage from "@/asset/image/work/blueprint/blueprint-erve-nijhuis.svg";
@@ -218,6 +219,17 @@ export default Object.assign({}, {
         ))
     },
     ForOthers: {
+        DeGrolscheGracht: memo(() => (
+            <Card
+                imageUrl={degrolschegrachtImage.src}
+                title="De Grolsche Gracht"
+                description="Discover the best pubs along the Grolsche Gracht"
+                buttonIcon="fas up-right"
+                buttonLabel="degrolschegracht.nl"
+                buttonSmall
+                buttonUrl="https://degrolschegracht.nl"/>
+        )),
+
         DidietNl: memo(() => (
             <Card
                 imageUrl={didietNlImage.src}
