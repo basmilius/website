@@ -116,7 +116,7 @@ export default Object.assign({}, {
                 buttonIcon="fas up-right"
                 buttonLabel="Website"
                 buttonSmall
-                buttonUrl="https://flux.bas.dev"/>
+                buttonUrl="https://flux-ui.dev"/>
         )),
 
         Raxos: memo(() => (
