@@ -27,7 +27,7 @@ const config: NextConfig = {
         reactCompiler: true
     },
 
-    output: 'export',
+    // output: 'export',
 
     webpack: (config, {}) => {
         const rules = config.module.rules

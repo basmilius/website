@@ -17,3 +17,4 @@ out/
 
 .vercel
 .env.local
+.open-next
