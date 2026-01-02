@@ -14,6 +14,7 @@ const getLocalIdent = ({resourcePath}: { resourcePath: string; }, _: string, nam
 };
 
 const config: NextConfig = {
+    output: 'export',
     poweredByHeader: false,
     reactStrictMode: true,
 
