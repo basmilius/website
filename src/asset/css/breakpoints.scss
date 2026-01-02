@@ -17,24 +17,36 @@ $-breakpoints: (
         @error 'Breakpoint "#{$breakpoint}" not found in "#{$names}".';
     }
 
-    @return if($n < list.length($names), list.nth($names, $n + 1), null);
+    @if $n < list.length($names) {
+        @return list.nth($names, $n + 1);
+    }
+
+    @return null;
 }
 
-@function -max-width($breakpoint) {
+@function -maxWidth($breakpoint) {
     $next: -next($breakpoint);
 
-    @return if($next, -min-width($next) - .02, null);
+    @if $next {
+        @return -minWidth($next) - .02;
+    }
+
+    @return null;
 }
 
-@function -min-width($breakpoint) {
+@function -minWidth($breakpoint) {
     $min: map.get($-breakpoints, $breakpoint);
 
-    @return if($min != 0, $min, null);
+    @if $min != 0 {
+        @return $min;
+    }
+
+    @return null;
 }
 
 @mixin breakpoint-between($lower, $upper) {
-    $max: -max-width($upper);
-    $min: -min-width($lower);
+    $max: -maxWidth($upper);
+    $min: -minWidth($lower);
 
     @if $max != null and $min != null {
         @media (max-width: #{$max}) and (min-width: #{$min}) {
@@ -48,7 +60,7 @@ $-breakpoints: (
 }
 
 @mixin breakpoint-down($breakpoint) {
-    $max: -max-width($breakpoint);
+    $max: -maxWidth($breakpoint);
 
     @if $max {
         @media (max-width: #{$max}) {
@@ -64,7 +76,7 @@ $-breakpoints: (
 }
 
 @mixin breakpoint-up($breakpoint) {
-    $min: -min-width($breakpoint);
+    $min: -minWidth($breakpoint);
 
     @if $min {
         @media (min-width: #{$min}) {
@@ -72,5 +84,41 @@ $-breakpoints: (
         }
     } @else {
         @content;
+    }
+}
+
+@mixin container-breakpoint-down($container, $breakpoint) {
+    $max: -maxWidth($breakpoint);
+
+    @if $max {
+        @container #{$container} (max-width: #{$max}) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+@mixin container-breakpoint-up($container, $breakpoint) {
+    $min: -minWidth($breakpoint);
+
+    @if $min {
+        @container #{$container} (min-width: #{$min}) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+@mixin breakpoint-max-widths {
+    @each $-breakpoint, $-max-width in $-breakpoints {
+        @if $-breakpoint != xs {
+            @include breakpoint-up($-breakpoint) {
+                & {
+                    max-width: #{$-max-width};
+                }
+            }
+        }
     }
 }

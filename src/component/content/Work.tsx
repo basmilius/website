@@ -3,30 +3,34 @@ import styles from './Work.module.scss';
 import { memo, PropsWithChildren, ReactNode } from 'react';
 import TextButton from '../shell/TextButton';
 
-import basToolsImage from "@/asset/image/work/blueprint/blueprint-bas-tools.svg";
-import degrolschegrachtImage from "@/asset/image/work/blueprint/blueprint-degrolschegracht.svg";
-import didietNlImage from "@/asset/image/work/blueprint/blueprint-didiet-nl.svg";
-import ditoGroenloImage from "@/asset/image/work/blueprint/blueprint-dito.svg";
-import ervenijhuisImage from "@/asset/image/work/blueprint/blueprint-erve-nijhuis.svg";
-import ervetankImage from "@/asset/image/work/blueprint/blueprint-erve-tank.svg";
-import fleurNijhuisImage from "@/asset/image/work/blueprint/blueprint-fleur-nijhuis.svg";
-import fluxImage from "@/asset/image/work/blueprint/blueprint-flux.svg";
-import glybeImage from "@/asset/image/work/blueprint/blueprint-glybe.svg";
-import isHetPatatImage from "@/asset/image/work/blueprint/blueprint-ishetpatat.svg";
-import isHetFrietImage from "@/asset/image/work/blueprint/blueprint-ishetfriet.svg";
-import jaimieVosImage from "@/asset/image/work/blueprint/blueprint-jaimie-vos.svg";
-import kapsalonLichtenbergImage from "@/asset/image/work/blueprint/blueprint-kapsalon-lichtenberg.svg";
-import manegeNijhuisImage from "@/asset/image/work/blueprint/blueprint-manege-nijhuis.svg";
-import marveldImage from "@/asset/image/work/blueprint/blueprint-marveld.svg";
-import passlyImage from "@/asset/image/work/blueprint/blueprint-passly.svg";
-import raxosImage from "@/asset/image/work/blueprint/blueprint-raxos.svg";
-import startDeTijdImage from "@/asset/image/work/blueprint/blueprint-startdetijd.svg";
-import studiovierentwintigImage from "@/asset/image/work/blueprint/blueprint-studiovierentwintig.svg";
-import typeWriterImage from "@/asset/image/work/blueprint/blueprint-typewriter.svg";
-import visualEffectsImage from "@/asset/image/work/blueprint/blueprint-visual-effects.svg";
-import weatherIconsImage from "@/asset/image/work/blueprint/blueprint-meteocons.svg";
-import wervincImage from "@/asset/image/work/blueprint/blueprint-wervinc.svg";
-import wpistImage from "@/asset/image/work/blueprint/blueprint-wpist.svg";
+import appleImage from '@/asset/image/work/homey/com.basmilius.apple.png';
+import basToolsImage from '@/asset/image/work/blueprint/blueprint-bas-tools.svg';
+import degrolschegrachtImage from '@/asset/image/work/blueprint/blueprint-degrolschegracht.svg';
+import didietNlImage from '@/asset/image/work/blueprint/blueprint-didiet-nl.svg';
+import ditoGroenloImage from '@/asset/image/work/blueprint/blueprint-dito.svg';
+import ervenijhuisImage from '@/asset/image/work/blueprint/blueprint-erve-nijhuis.svg';
+import ervetankImage from '@/asset/image/work/blueprint/blueprint-erve-tank.svg';
+import fleurNijhuisImage from '@/asset/image/work/blueprint/blueprint-fleur-nijhuis.svg';
+import flowBitsImage from '@/asset/image/work/homey/com.basmilius.flowbits.png';
+import fluxImage from '@/asset/image/work/blueprint/blueprint-flux.svg';
+import glybeImage from '@/asset/image/work/blueprint/blueprint-glybe.svg';
+import isHetPatatImage from '@/asset/image/work/blueprint/blueprint-ishetpatat.svg';
+import isHetFrietImage from '@/asset/image/work/blueprint/blueprint-ishetfriet.svg';
+import listriImage from '@/asset/image/work/homey/com.basmilius.listri.png';
+import jaimieVosImage from '@/asset/image/work/blueprint/blueprint-jaimie-vos.svg';
+import kapsalonLichtenbergImage from '@/asset/image/work/blueprint/blueprint-kapsalon-lichtenberg.svg';
+import manegeNijhuisImage from '@/asset/image/work/blueprint/blueprint-manege-nijhuis.svg';
+import marveldImage from '@/asset/image/work/blueprint/blueprint-marveld.svg';
+import passlyImage from '@/asset/image/work/blueprint/blueprint-passly.svg';
+import raxosImage from '@/asset/image/work/blueprint/blueprint-raxos.svg';
+import sajr5Image from '@/asset/image/work/homey/com.basmilius.sajr5.png';
+import startDeTijdImage from '@/asset/image/work/blueprint/blueprint-startdetijd.svg';
+import studiovierentwintigImage from '@/asset/image/work/blueprint/blueprint-studiovierentwintig.svg';
+import typeWriterImage from '@/asset/image/work/blueprint/blueprint-typewriter.svg';
+import visualEffectsImage from '@/asset/image/work/blueprint/blueprint-visual-effects.svg';
+import weatherIconsImage from '@/asset/image/work/blueprint/blueprint-meteocons.svg';
+import wervincImage from '@/asset/image/work/blueprint/blueprint-wervinc.svg';
+import wpistImage from '@/asset/image/work/blueprint/blueprint-wpist.svg';
 
 const Card = ({title, description, buttonIcon, buttonLabel, buttonSmall, buttonUrl, comingSoon, imageUrl, visual}: CardProps) => (
     <div className={styles.workCard}>
@@ -64,8 +68,8 @@ const Card = ({title, description, buttonIcon, buttonLabel, buttonSmall, buttonU
                     target="_blank"
                     className={styles.workCardLink}
                     isSmall={buttonSmall}
-                    icon={buttonIcon || "fas right"}
-                    label={buttonLabel || "Read more"}/>
+                    icon={buttonIcon || 'fas right'}
+                    label={buttonLabel || 'Read more'}/>
             )}
 
             {buttonUrl && !buttonUrl.startsWith('http') && (
@@ -73,8 +77,8 @@ const Card = ({title, description, buttonIcon, buttonLabel, buttonSmall, buttonU
                     className={styles.workCardLink}
                     href={buttonUrl}
                     isSmall={buttonSmall}
-                    icon={buttonIcon || "fas right"}
-                    label={buttonLabel || "Read more"}/>
+                    icon={buttonIcon || 'fas right'}
+                    label={buttonLabel || 'Read more'}/>
             )}
         </div>
     </div>
@@ -218,6 +222,51 @@ export default Object.assign({}, {
                 buttonUrl="https://startdetijd.nl"/>
         ))
     },
+    Homey: {
+        Apple: memo(() => (
+            <Card
+                imageUrl={appleImage.src}
+                title="Apple TV & HomePod"
+                description="Control your Apple devices from your Homey."
+                buttonIcon="fas up-right"
+                buttonLabel="Homey App Store"
+                buttonSmall
+                buttonUrl="https://homey.app/a/com.basmilius.apple/"/>
+        )),
+
+        FlowBits: memo(() => (
+            <Card
+                imageUrl={flowBitsImage.src}
+                title="FlowBits"
+                description="Small bits of logic, big difference in your Flows."
+                buttonIcon="fas up-right"
+                buttonLabel="Homey App Store"
+                buttonSmall
+                buttonUrl="https://homey.app/a/com.basmilius.flowbits/"/>
+        )),
+
+        Lists: memo(() => (
+            <Card
+                imageUrl={listriImage.src}
+                title="Lists"
+                description="Create and manage shopping lists, tasks, and notes—right from your dashboard."
+                buttonIcon="fas up-right"
+                buttonLabel="Homey App Store"
+                buttonSmall
+                buttonUrl="https://homey.app/a/com.basmilius.listri/"/>
+        )),
+
+        SAJR5: memo(() => (
+            <Card
+                imageUrl={sajr5Image.src}
+                title="SAJ R5"
+                description="Monitor your SAJ R5 solar inverter with real-time energy insights."
+                buttonIcon="fas up-right"
+                buttonLabel="Homey App Store"
+                buttonSmall
+                buttonUrl="https://homey.app/a/com.basmilius.sajr5/"/>
+        ))
+    },
     ForOthers: {
         DeGrolscheGracht: memo(() => (
             <Card
@@ -344,7 +393,10 @@ export default Object.assign({}, {
             <Card
                 imageUrl={wervincImage.src}
                 title="Wervinc."
-                description={<span>A custom WordPress theme I made together with <a href="https://vienna.nu" rel="noopener" target="_blank">Vienna</a>.</span>}
+                description={<span>A custom WordPress theme I made together with <a
+                    href="https://vienna.nu"
+                    rel="noopener"
+                    target="_blank">Vienna</a>.</span>}
                 buttonIcon="fas up-right"
                 buttonLabel="wervinc.nl"
                 buttonSmall

@@ -26,6 +26,15 @@ export default () => (<>
 
     <Work.Grid
         more
+        title="Apps for Homey">
+        <Work.Homey.FlowBits/>
+        <Work.Homey.Apple/>
+        <Work.Homey.Lists/>
+        <Work.Homey.SAJR5/>
+    </Work.Grid>
+
+    <Work.Grid
+        more
         title="Projects">
         <Work.OfMe.Passly/>
         <Work.OfMe.IsHetPatat/>

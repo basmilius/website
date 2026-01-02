@@ -10,7 +10,7 @@ const getLocalIdent = ({resourcePath}: { resourcePath: string; }, _: string, nam
         return names[key];
     }
 
-    return names[key] = generateName(Object.values(names).length);
+    return names[key] = generateName(Object.values(names).length * 2);
 };
 
 const config: NextConfig = {
@@ -21,13 +21,6 @@ const config: NextConfig = {
         reactRemoveProperties: true,
         removeConsole: false
     },
-
-    experimental: {
-        cssChunking: 'strict',
-        reactCompiler: true
-    },
-
-    // output: 'export',
 
     webpack: (config, {}) => {
         const rules = config.module.rules
