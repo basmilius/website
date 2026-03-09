@@ -8,8 +8,8 @@ import basImage from '@/asset/image/bas.jpg';
 
 export const metadata: Metadata = {
     title: 'Bas Milius — Full-Stack Developer',
-    description: 'A 29-year-old full stack developer from Groenlo, The Netherlands.',
-    keywords: 'bas milius,basmilius,milius,developer,website,app,latte-ui,raxos,weather icons,latte,meteocons',
+    description: 'I\'m a full stack developer from Groenlo, The Netherlands.',
+    keywords: 'bas milius,basmilius,milius,developer,website,app,latte-ui,raxos,weather icons,latte,meteocons,passly,homey,apple tv,homepod,homepod mini,flowbits',
     authors: [{name: 'Bas Milius', url: 'https://bas.dev'}],
     robots: 'index,follow'
 };

@@ -17,15 +17,6 @@ export default () => (<>
 
     <Work.Grid
         more
-        title="Open Source">
-        <Work.OfMe.WeatherIcons/>
-        <Work.OfMe.Raxos/>
-        <Work.OfMe.Flux/>
-        <Work.OfMe.VisualEffects/>
-    </Work.Grid>
-
-    <Work.Grid
-        more
         title="Apps for Homey">
         <Work.Homey.FlowBits/>
         <Work.Homey.Apple/>
@@ -40,6 +31,15 @@ export default () => (<>
         <Work.OfMe.IsHetPatat/>
         <Work.OfMe.IsHetFriet/>
         <Work.OfMe.StartDeTijd/>
+    </Work.Grid>
+
+    <Work.Grid
+        more
+        title="Open Source">
+        <Work.OfMe.WeatherIcons/>
+        <Work.OfMe.Raxos/>
+        <Work.OfMe.Flux/>
+        <Work.OfMe.VisualEffects/>
     </Work.Grid>
 
     <Work.Grid
