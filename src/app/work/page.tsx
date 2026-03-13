@@ -45,7 +45,6 @@ export default () => (<>
     <Work.Grid
         more
         title="For others">
-        <Work.ForOthers.JaimieVos/>
         <Work.ForOthers.FleurNijhuis/>
         <Work.ForOthers.Marveld/>
         <Work.ForOthers.DeGrolscheGracht/>
