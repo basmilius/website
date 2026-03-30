@@ -5,6 +5,7 @@ import TextButton from '../shell/TextButton';
 
 import appleImage from '@/asset/image/work/homey/com.basmilius.apple.png';
 import basToolsImage from '@/asset/image/work/blueprint/blueprint-bas-tools.svg';
+import claudeImage from '@/asset/image/work/homey/com.basmilius.claude.png';
 import degrolschegrachtImage from '@/asset/image/work/blueprint/blueprint-degrolschegracht.svg';
 import didietNlImage from '@/asset/image/work/blueprint/blueprint-didiet-nl.svg';
 import ditoGroenloImage from '@/asset/image/work/blueprint/blueprint-dito.svg';
@@ -21,6 +22,7 @@ import jaimieVosImage from '@/asset/image/work/blueprint/blueprint-jaimie-vos.sv
 import kapsalonLichtenbergImage from '@/asset/image/work/blueprint/blueprint-kapsalon-lichtenberg.svg';
 import manegeNijhuisImage from '@/asset/image/work/blueprint/blueprint-manege-nijhuis.svg';
 import marveldImage from '@/asset/image/work/blueprint/blueprint-marveld.svg';
+import nlAlertImage from '@/asset/image/work/homey/com.basmilius.nlalert.png';
 import passlyImage from '@/asset/image/work/blueprint/blueprint-passly.svg';
 import raxosImage from '@/asset/image/work/blueprint/blueprint-raxos.svg';
 import sajr5Image from '@/asset/image/work/homey/com.basmilius.sajr5.png';
@@ -234,6 +236,17 @@ export default Object.assign({}, {
                 buttonUrl="https://homey.app/a/com.basmilius.apple/"/>
         )),
 
+        Claude: memo(() => (
+            <Card
+                imageUrl={claudeImage.src}
+                title="Claude"
+                description="Bring Claude AI by Anthropic into your Homey flows."
+                buttonIcon="fas up-right"
+                buttonLabel="Homey App Store"
+                buttonSmall
+                buttonUrl="https://homey.app/a/com.basmilius.claude/"/>
+        )),
+
         FlowBits: memo(() => (
             <Card
                 imageUrl={flowBitsImage.src}
@@ -254,6 +267,17 @@ export default Object.assign({}, {
                 buttonLabel="Homey App Store"
                 buttonSmall
                 buttonUrl="https://homey.app/a/com.basmilius.listri/"/>
+        )),
+
+        NLAlert: memo(() => (
+            <Card
+                imageUrl={nlAlertImage.src}
+                title="NLAlert"
+                description="Get notified when an NL Alert affects your location."
+                buttonIcon="fas up-right"
+                buttonLabel="Homey App Store"
+                buttonSmall
+                buttonUrl="https://homey.app/a/com.basmilius.nlalert/"/>
         )),
 
         SAJR5: memo(() => (
