@@ -21,7 +21,9 @@ export default () => (<>
         <Work.Homey.FlowBits/>
         <Work.Homey.Apple/>
         <Work.Homey.Lists/>
+        <Work.Homey.Claude/>
         <Work.Homey.SAJR5/>
+        <Work.Homey.NLAlert/>
     </Work.Grid>
 
     <Work.Grid
