@@ -10,7 +10,7 @@ const getLocalIdent = ({resourcePath}: { resourcePath: string; }, _: string, nam
         return names[key];
     }
 
-    return names[key] = generateName(Object.values(names).length * 2);
+    return names[key] = generateName(Object.values(names).length * 3);
 };
 
 const config: NextConfig = {
