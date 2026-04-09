@@ -108,10 +108,11 @@ export default Object.assign({}, {
             <Card
                 imageUrl={weatherIconsImage.src}
                 title="Meteocons"
-                description="A set of handcrafted animated weather icons in various formats."
-                buttonLabel="View project"
+                description="Over 475 hand-crafted animated weather icons in four styles."
+                buttonIcon="fas up-right"
+                buttonLabel="meteocons.com"
                 buttonSmall
-                buttonUrl="/work/meteocons"/>
+                buttonUrl="https://meteocons.com"/>
         )),
 
         Flux: memo(() => (

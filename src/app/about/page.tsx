@@ -100,7 +100,7 @@ export default () => (<>
 </>);
 
 const Meteocons = () => (
-    <Link href="/work/meteocons">Meteocons</Link>
+    <a href="https://meteocons.com" rel="noopener" target="_blank">Meteocons</a>
 );
 
 const MyWorkPage = () => (
