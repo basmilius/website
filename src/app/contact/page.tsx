@@ -13,15 +13,11 @@ export default () => (<>
         title="Send a message"
         subTitle="For questions and new projects.">
         <p className="lead">
-            Good to see you are interested in me or one of my projects! If you are looking for a website
-            or app, please email me or say hi at one of the social networks listed at the
-            bottom. Spam will always be reported.
+            Thanks for stopping by. Whether you're planning a website or app, have a question about one of my projects, or just want to get in touch — feel free to reach out using any of the details below.
         </p>
 
         <p>
-            All my open source projects have their own GitHub Repository where you can create issues if
-            you find a bug. Explain what happened when the bug occurred and I’ll see what I can do. Please
-            do note that I'm not always available due to my daily job.
+            If you've found a bug in one of my open source projects, the fastest way to reach me is by opening an issue on the project's GitHub repository. Describe what you were doing when it broke and I'll take a look when I can.
         </p>
     </Row>
 
