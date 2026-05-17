@@ -9,19 +9,19 @@ export default () => (<>
     <Intro
         cards={[
             <img
-                src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/clear-day.svg"
+                src="https://cdn.meteocons.com/3.0.0-next.10/svg/fill/clear-day.svg"
                 alt="Clear day icon from Meteocons"
                 loading="lazy"/>,
             <img
-                src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/overcast-rain.svg"
+                src="https://cdn.meteocons.com/3.0.0-next.10/svg/fill/overcast-rain.svg"
                 alt="Overcast rain icon from Meteocons"
                 loading="lazy"/>,
             <img
-                src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/partly-cloudy-day-snow.svg"
+                src="https://cdn.meteocons.com/3.0.0-next.10/svg/fill/partly-cloudy-day-snow.svg"
                 alt="Partly cloudy snow icon from Meteocons"
                 loading="lazy"/>,
             <img
-                src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/partly-cloudy-night-sleet.svg"
+                src="https://cdn.meteocons.com/3.0.0-next.10/svg/fill/partly-cloudy-night-sleet.svg"
                 alt="Partly cloudy sleet at night icon from Meteocons"
                 loading="lazy"/>
         ]}
