@@ -55,7 +55,6 @@ export default () => (<>
         <Work.ForOthers.ErveNijhuis/>
         <Work.ForOthers.StudioVierentwintig/>
         <Work.ForOthers.ErveTank/>
-        <Work.ForOthers.DidietNl/>
         <Work.ForOthers.KapsalonLichtenberg/>
         <Work.ForOthers.DitoGroenlo/>
     </Work.Grid>
