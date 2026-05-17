@@ -13,7 +13,7 @@ export default () => (<>
         title="Send a message"
         subTitle="For questions and new projects.">
         <p className="lead">
-            Thanks for stopping by. Whether you're planning a website or app, have a question about one of my projects, or just want to get in touch — feel free to reach out using any of the details below.
+            Thanks for stopping by. Whether you're planning a website or app, have a question about one of my projects, or just want to get in touch, feel free to reach out using any of the details below.
         </p>
 
         <p>
