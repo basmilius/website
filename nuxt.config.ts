@@ -1,3 +1,14 @@
+import { createHash } from 'node:crypto';
+
+// Deterministic scoped class names so the server (SSR HTML) and client build
+// produce the SAME mangled name. A content-based hash ([hash:base64:x]) differs
+// between the two builds, which leaves the SSR markup unstyled until hydration.
+function scopedName(name: string, filename: string): string {
+    const file = filename.split('?')[0];
+    const hash = createHash('sha256').update(`${file}#${name}`).digest('hex').slice(0, 7);
+    return process.env.NODE_ENV === 'production' ? `x${hash}` : `${name}_${hash}`;
+}
+
 export default defineNuxtConfig({
     compatibilityDate: '2026-07-10',
 
@@ -80,9 +91,7 @@ export default defineNuxtConfig({
         css: {
             modules: {
                 localsConvention: 'camelCaseOnly',
-                generateScopedName: process.env.NODE_ENV === 'production'
-                    ? '[hash:base64:6]'
-                    : '[name]__[local]__[hash:base64:4]'
+                generateScopedName: scopedName
             }
         }
     },
