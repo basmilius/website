@@ -27,6 +27,7 @@ import passlyImage from '@/asset/image/work/blueprint/blueprint-passly.svg';
 import raxosImage from '@/asset/image/work/blueprint/blueprint-raxos.svg';
 import sajr5Image from '@/asset/image/work/homey/com.basmilius.sajr5.png';
 import startDeTijdImage from '@/asset/image/work/blueprint/blueprint-startdetijd.svg';
+import streamwithlienImage from '@/asset/image/work/blueprint/blueprint-streamwithlien.svg';
 import studiovierentwintigImage from '@/asset/image/work/blueprint/blueprint-studiovierentwintig.svg';
 import typeWriterImage from '@/asset/image/work/blueprint/blueprint-typewriter.svg';
 import visualEffectsImage from '@/asset/image/work/blueprint/blueprint-visual-effects.svg';
@@ -412,6 +413,17 @@ export default Object.assign({}, {
                 buttonLabel="studiovierentwintig.nl"
                 buttonSmall
                 buttonUrl="https://studiovierentwintig.nl"/>
+        )),
+
+        StreamWithLien: memo(() => (
+            <Card
+                imageUrl={streamwithlienImage.src}
+                title="Stream with Lien"
+                description="Home base for a high-energy Dutch Twitch streamer and her Familien."
+                buttonIcon="fas up-right"
+                buttonLabel="streamwithlien.com"
+                buttonSmall
+                buttonUrl="https://streamwithlien.com"/>
         )),
 
         Wervinc: memo(() => (

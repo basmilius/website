@@ -66,11 +66,6 @@ export default () => {
                     notActiveFor={['/work/meteocons']}/>
 
                 <DefaultItem
-                    label="Meteocons"
-                    url="/work/meteocons"
-                    isExact/>
-
-                <DefaultItem
                     label="Contact"
                     url="/contact"
                     isExact/>
@@ -97,11 +92,6 @@ export default () => {
                     label="Work"
                     url="/work"
                     notActiveFor={['/work/meteocons']}/>
-
-                <MobileItem
-                    label="Meteocons"
-                    url="/work/meteocons"
-                    isExact/>
 
                 <MobileItem
                     label="Contact"

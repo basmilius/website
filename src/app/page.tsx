@@ -72,11 +72,11 @@ export default () => (<>
             </TextButton.Stack>
         )}>
         <Work.Deck>
-            <Work.Homey.FlowBits/>
+            <Work.ForOthers.StreamWithLien/>
             <Work.Homey.Apple/>
+            <Work.Homey.FlowBits/>
             <Work.OfMe.WeatherIcons/>
             <Work.OfMe.Passly/>
-            <Work.ForOthers.FleurNijhuis/>
             <Work.ForOthers.ManegeNijhuis/>
         </Work.Deck>
     </Row>
