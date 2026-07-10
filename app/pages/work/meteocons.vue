@@ -3,7 +3,7 @@
         <PageHead
             eyebrow="// ~/work/meteocons"
             title="Animated Weather Icons">
-            <p class="lead">Over 475 hand-crafted animated weather icons. Free and open source.</p>
+            <p class="lead">Over 500 unique animated weather icons. Free and open source.</p>
         </PageHead>
 
         <div class="previews">

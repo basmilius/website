@@ -14,15 +14,14 @@ const image = (name: string): string => `/image/work/${name}`;
 export const projects = {
     weatherIcons: {
         title: 'Meteocons',
-        description: 'Over 475 hand-crafted animated weather icons in four styles.',
+        description: 'Over 500 unique animated weather icons in four styles.',
         url: 'https://meteocons.com',
-        to: '/work/meteocons',
         label: 'meteocons.com',
         icon: 'fas up-right',
         image: image('blueprint-meteocons.svg')
     },
     flux: {
-        title: 'Flux',
+        title: 'Flux UI',
         description: 'A Vue 3 UI framework that I use for most of my projects.',
         url: 'https://flux-ui.dev',
         label: 'Website',
@@ -32,9 +31,9 @@ export const projects = {
     raxos: {
         title: 'Raxos',
         description: 'Custom built building blocks for PHP frameworks.',
-        url: 'https://github.com/basmilius/raxos',
-        label: 'GitHub',
-        icon: 'fab github',
+        url: 'https://raxos.dev',
+        label: 'raxos.dev',
+        icon: 'fas up-right',
         image: image('blueprint-raxos.svg')
     },
     typewriter: {
@@ -45,13 +44,21 @@ export const projects = {
         icon: 'fab github',
         image: image('blueprint-typewriter.svg')
     },
-    visualEffects: {
-        title: 'Visual Effects',
+    sparkle: {
+        title: 'Sparkle',
         description: 'A set of fun visual effects that can be used on any website.',
-        url: 'https://github.com/basmilius/visual-effects',
-        label: 'GitHub',
-        icon: 'fab github',
-        image: image('blueprint-visual-effects.svg')
+        url: 'https://sparkle.graphics',
+        label: 'sparkle.graphics',
+        icon: 'fas up-right',
+        image: image('blueprint-sparkle.svg')
+    },
+    packages: {
+        title: 'Packages',
+        description: 'A collection of personal TypeScript packages I use across my Vue projects.',
+        url: 'https://packages.bas.dev',
+        label: 'packages.bas.dev',
+        icon: 'fas up-right',
+        image: image('blueprint-packages.svg')
     },
     glybe: {
         title: 'Glybe',
@@ -278,9 +285,17 @@ export const homeFeatured: readonly ProjectId[] = [
 
 export const workGroups: readonly WorkGroup[] = [
     {
-        title: 'Featured',
-        description: 'A handful of projects I\'m most proud of - the ones that best capture the kind of work I like to do.',
-        items: ['weatherIcons', 'flux', 'passly']
+        title: 'Open Source',
+        description: 'Freely available building blocks, frameworks and icon sets that anyone is welcome to use and contribute to.',
+        items: ['weatherIcons', 'raxos', 'flux', 'sparkle', 'packages']
+    },
+    {
+        title: 'For others',
+        description: 'Websites and backend applications I built for clients, local businesses and friends.',
+        items: [
+            'streamWithLien', 'marveld', 'deGrolscheGracht', 'wpist', 'manegeNijhuis',
+            'erveNijhuis', 'studioVierentwintig', 'erveTank', 'kapsalonLichtenberg', 'ditoGroenlo'
+        ]
     },
     {
         title: 'Apps for Homey',
@@ -291,19 +306,6 @@ export const workGroups: readonly WorkGroup[] = [
         title: 'Projects',
         description: 'Personal projects and small tools - some genuinely useful, others just built for fun or to scratch my own itch.',
         items: ['passly', 'isHetPatat', 'isHetFriet', 'startDeTijd']
-    },
-    {
-        title: 'Open Source',
-        description: 'Freely available building blocks, frameworks and icon sets that anyone is welcome to use and contribute to.',
-        items: ['weatherIcons', 'raxos', 'flux', 'visualEffects']
-    },
-    {
-        title: 'For others',
-        description: 'Websites and backend applications I built for clients, local businesses and friends.',
-        items: [
-            'streamWithLien', 'marveld', 'deGrolscheGracht', 'wpist', 'manegeNijhuis',
-            'erveNijhuis', 'studioVierentwintig', 'erveTank', 'kapsalonLichtenberg', 'ditoGroenlo'
-        ]
     }
 ];
 

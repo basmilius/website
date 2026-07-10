@@ -129,7 +129,7 @@
         margin-top: auto;
         padding-top: 12px;
         font-family: var(--font-mono);
-        font-size: 14px;
+        font-size: 12px;
         color: var(--accent);
     }
 
