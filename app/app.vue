@@ -46,7 +46,7 @@
         ogImage: `${siteUrl}/og-image.png`,
         ogImageWidth: 2400,
         ogImageHeight: 1260,
-        ogImageAlt: 'Bas Milius — Full-Stack Developer',
+        ogImageAlt: 'Bas Milius, Full-Stack Developer',
         ogLocale: 'en_US',
         twitterCard: 'summary_large_image',
         twitterSite: '@basmilius',
