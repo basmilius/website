@@ -36,11 +36,6 @@
             </div>
         </PageHead>
 
-        <div :class="$style.features">
-            <NowCard/>
-            <MeteoconsShowcase/>
-        </div>
-
         <WorkGrid
             title="Selected work"
             :ids="homeFeatured">
@@ -82,7 +77,7 @@
     .home {
         display: flex;
         flex-direction: column;
-        gap: 48px;
+        gap: 56px;
     }
 
     .terminal {
@@ -97,19 +92,6 @@
 
     .prompt {
         color: var(--accent);
-    }
-
-    .features {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
-        align-items: start;
-    }
-
-    @media (max-width: 700px) {
-        .features {
-            grid-template-columns: 1fr;
-        }
     }
 
     .actions {
