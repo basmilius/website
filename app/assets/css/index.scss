@@ -1,0 +1,11 @@
+@use "tokens";
+@use "reset";
+@use "typography";
+
+/* Page enter/leave view transition (Nuxt) */
+@media (prefers-reduced-motion: no-preference) {
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+        animation-duration: 0.22s;
+    }
+}

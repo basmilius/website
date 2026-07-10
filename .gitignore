@@ -1,6 +1,6 @@
-.idea/
-+.idea/icon.svg
-+.idea/.name
+.idea/*
+!.idea/icon.svg
+!.idea/.name
 dist/
 node_modules/
 
@@ -8,13 +8,13 @@ node_modules/
 .yarn/cache/
 Thumbs.db
 
-.next/
-out/
+# Nuxt
+.nuxt/
+.output/
+.data/
 
-**/public/precache.*.js
-**/public/sw.js
-**/public/workbox-*.js
+# Cloudflare / Wrangler
+.wrangler/
 
-.vercel
+.env
 .env.local
-.open-next
