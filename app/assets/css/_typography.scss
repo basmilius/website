@@ -1,0 +1,53 @@
+body {
+    background-color: var(--bg);
+    background-image: radial-gradient(var(--dot) 1px, transparent 1.4px);
+    background-size: 24px 24px;
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 16px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+p {
+    line-height: 1.7;
+    color: var(--muted);
+    text-wrap: pretty;
+}
+
+a {
+    transition: color 0.15s ease;
+}
+
+code {
+    font-family: var(--font-mono);
+    font-size: 1em;
+    padding: 0.1em 0.4em;
+    border-radius: 5px;
+    background: var(--hover);
+    color: var(--text);
+}
+
+::selection {
+    background: var(--accent);
+    color: var(--on-accent);
+}
+
+.mono {
+    font-family: var(--font-mono);
+}
+
+.lead {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--text);
+}

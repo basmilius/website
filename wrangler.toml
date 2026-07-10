@@ -1,0 +1,9 @@
+name = "website"
+compatibility_date = "2026-07-10"
+compatibility_flags = ["nodejs_compat"]
+
+[observability]
+enabled = true
+
+[vars]
+NUXT_PUBLIC_SITE_URL = "https://bas.dev"
