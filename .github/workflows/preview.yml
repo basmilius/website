@@ -30,9 +30,9 @@ jobs:
       - name: Upload preview version
         id: preview
         run: |
-          output=$(bunx wrangler versions upload 2>&1)
-          echo "$output"
-          url=$(echo "$output" | grep -oE 'https://[a-zA-Z0-9.-]+\.workers\.dev' | head -1)
+          set -o pipefail
+          bunx wrangler versions upload 2>&1 | tee wrangler-output.txt
+          url=$(grep -oE 'https://[a-zA-Z0-9.-]+\.workers\.dev' wrangler-output.txt | head -1)
           echo "url=$url" >> "$GITHUB_OUTPUT"
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
