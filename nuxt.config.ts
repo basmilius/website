@@ -4,7 +4,6 @@ export default defineNuxtConfig({
     devtools: {enabled: true},
 
     modules: [
-        '@nuxt/fonts',
         '@nuxtjs/color-mode'
     ],
 
@@ -24,7 +23,9 @@ export default defineNuxtConfig({
                 {name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover'}
             ],
             link: [
-                {rel: 'icon', href: '/favicon.ico', sizes: 'any'}
+                {rel: 'icon', href: '/favicon.ico', sizes: 'any'},
+                {rel: 'preconnect', href: 'https://font.bmcdn.nl', crossorigin: 'anonymous'},
+                {rel: 'stylesheet', href: 'https://font.bmcdn.nl/css2?family=space-grotesk-variable|inter-variable|jetbrains-mono'}
             ]
         }
     },
@@ -38,17 +39,6 @@ export default defineNuxtConfig({
         fallback: 'light',
         classSuffix: '',
         storageKey: 'bas-color-mode'
-    },
-
-    fonts: {
-        experimental: {
-            processCSSVariables: true
-        },
-        families: [
-            {name: 'Space Grotesk', provider: 'google', weights: [400, 500, 600, 700]},
-            {name: 'JetBrains Mono', provider: 'google', weights: [400, 500, 700]},
-            {name: 'Inter', provider: 'google', weights: [400, 500, 600]}
-        ]
     },
 
     nitro: {
