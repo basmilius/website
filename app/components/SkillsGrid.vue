@@ -1,13 +1,13 @@
 <template>
-    <div class="skills">
+    <div :class="$style.skills">
         <div
             v-for="skill in skills"
             :key="skill.label"
-            class="skill"
+            :class="$style.skill"
             :style="{ '--color': skill.color }">
             <Icon
                 :name="skill.icon"
-                class="skill-icon"/>
+                :class="$style.skillIcon"/>
             <strong>{{ skill.label }}</strong>
         </div>
     </div>
@@ -20,6 +20,7 @@
 </script>
 
 <style
+    module
     scoped
     lang="scss">
     .skills {

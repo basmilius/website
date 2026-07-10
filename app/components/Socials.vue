@@ -1,9 +1,9 @@
 <template>
-    <div class="socials">
+    <div :class="$style.socials">
         <a
             v-for="social in socials"
             :key="social.label"
-            class="social"
+            :class="$style.social"
             :href="social.url"
             target="_blank"
             rel="noopener">
@@ -20,6 +20,7 @@
 </script>
 
 <style
+    module
     scoped
     lang="scss">
     .socials {

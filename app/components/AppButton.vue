@@ -1,13 +1,12 @@
 <template>
     <component
         :is="tag"
-        class="btn"
-        :class="[variant, {small}]"
+        :class="[$style.btn, $style[variant], {[$style.small]: small}]"
         v-bind="bindings">
         <Icon
             v-if="icon && iconPosition === 'leading'"
             :name="icon"
-            class="btn-icon lead"/>
+            :class="$style.btnIcon"/>
 
         <span v-if="label">{{ label }}</span>
         <slot/>
@@ -15,7 +14,7 @@
         <Icon
             v-if="icon && iconPosition === 'trailing'"
             :name="icon"
-            class="btn-icon trail"/>
+            :class="[$style.btnIcon, $style.trail]"/>
     </component>
 </template>
 
@@ -58,6 +57,7 @@
 </script>
 
 <style
+    module
     scoped
     lang="scss">
     .btn {

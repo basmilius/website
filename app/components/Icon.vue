@@ -1,7 +1,7 @@
 <template>
     <svg
         v-if="icon"
-        class="icon"
+        :class="$style.icon"
         :viewBox.attr="icon.viewBox"
         role="img"
         aria-hidden="true"
@@ -22,6 +22,7 @@
 </script>
 
 <style
+    module
     scoped
     lang="scss">
     .icon {

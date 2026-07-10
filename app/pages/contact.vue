@@ -1,5 +1,5 @@
 <template>
-    <div class="contact">
+    <div :class="$style.contact">
         <PageHead
             eyebrow="// ~/contact"
             title="Send a message">
@@ -32,15 +32,12 @@
 </script>
 
 <style
+    module
     scoped
     lang="scss">
     .contact {
         display: flex;
         flex-direction: column;
         gap: 44px;
-    }
-
-    :deep(.info-card) {
-        width: 100%;
     }
 </style>

@@ -1,30 +1,30 @@
 <template>
-    <div class="profile">
+    <div :class="$style.profile">
         <NuxtLink
             to="/"
-            class="brand">
+            :class="$style.brand">
             <img
-                class="logo"
+                :class="$style.logo"
                 src="/logo.svg"
                 alt="Bas Milius"
                 width="48"
                 height="48"/>
 
-            <span class="identity">
-                <span class="name">Bas Milius</span>
-                <span class="role">full-stack developer</span>
+            <span :class="$style.identity">
+                <span :class="$style.name">Bas Milius</span>
+                <span :class="$style.role">full-stack developer</span>
             </span>
         </NuxtLink>
 
-        <p class="meta">Full-stack developer from the Netherlands, building open-source tools, smart home integrations, and the occasional product.</p>
+        <p :class="$style.meta">Full-stack developer from the Netherlands, building open-source tools, smart home integrations, and the occasional product.</p>
 
-        <div class="divider"/>
+        <div :class="$style.divider"/>
 
-        <NavTree class="nav"/>
+        <NavTree/>
 
-        <span class="spacer"/>
+        <span :class="$style.spacer"/>
 
-        <ThemeToggle class="toggle"/>
+        <ThemeToggle :class="$style.toggle"/>
     </div>
 </template>
 
@@ -34,6 +34,7 @@
 </script>
 
 <style
+    module
     scoped
     lang="scss">
     .profile {

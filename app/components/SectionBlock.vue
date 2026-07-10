@@ -1,14 +1,14 @@
 <template>
-    <section class="section">
+    <section :class="$style.section">
         <div
             v-if="eyebrow"
-            class="eyebrow">{{ eyebrow }}</div>
+            :class="$style.eyebrow">{{ eyebrow }}</div>
         <h2>{{ title }}</h2>
         <p
             v-if="subtitle"
-            class="subtitle">{{ subtitle }}</p>
+            :class="$style.subtitle">{{ subtitle }}</p>
 
-        <div class="section-body">
+        <div :class="$style.sectionBody">
             <slot/>
         </div>
     </section>
@@ -25,6 +25,7 @@
 </script>
 
 <style
+    module
     scoped
     lang="scss">
     .eyebrow {

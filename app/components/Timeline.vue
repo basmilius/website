@@ -1,13 +1,13 @@
 <template>
-    <ol class="timeline">
+    <ol :class="$style.timeline">
         <li
             v-for="entry in entries"
             :key="entry.title + entry.date"
-            class="item">
-            <span class="dot"/>
-            <div class="date">{{ entry.date }}</div>
-            <h3 class="title">{{ entry.title }}</h3>
-            <p class="body">{{ entry.body }}</p>
+            :class="$style.item">
+            <span :class="$style.dot"/>
+            <div :class="$style.date">{{ entry.date }}</div>
+            <h3 :class="$style.title">{{ entry.title }}</h3>
+            <p :class="$style.body">{{ entry.body }}</p>
         </li>
     </ol>
 </template>
@@ -23,6 +23,7 @@
 </script>
 
 <style
+    module
     scoped
     lang="scss">
     .timeline {

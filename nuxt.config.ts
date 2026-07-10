@@ -76,6 +76,17 @@ export default defineNuxtConfig({
         viewTransition: true
     },
 
+    vite: {
+        css: {
+            modules: {
+                localsConvention: 'camelCaseOnly',
+                generateScopedName: process.env.NODE_ENV === 'production'
+                    ? '[hash:base64:6]'
+                    : '[name]__[local]__[hash:base64:4]'
+            }
+        }
+    },
+
     typescript: {
         strict: true
     }

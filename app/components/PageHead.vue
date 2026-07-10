@@ -1,6 +1,6 @@
 <template>
-    <header class="page-head">
-        <div class="eyebrow">{{ eyebrow }}</div>
+    <header :class="$style.pageHead">
+        <div :class="$style.eyebrow">{{ eyebrow }}</div>
         <h1>{{ title }}</h1>
         <slot/>
     </header>
@@ -16,6 +16,7 @@
 </script>
 
 <style
+    module
     scoped
     lang="scss">
     .page-head {

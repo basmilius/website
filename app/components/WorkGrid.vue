@@ -1,18 +1,18 @@
 <template>
-    <section class="work-group">
+    <section :class="$style.workGroup">
         <div
             v-if="title || $slots.action"
-            class="group-head">
+            :class="$style.groupHead">
             <h2 v-if="title">{{ title }}</h2>
-            <span class="line"/>
+            <span :class="$style.line"/>
             <slot name="action"/>
         </div>
 
         <p
             v-if="description"
-            class="group-desc">{{ description }}</p>
+            :class="$style.groupDesc">{{ description }}</p>
 
-        <div class="grid">
+        <div :class="$style.grid">
             <WorkCard
                 v-for="id in ids"
                 :key="id"
@@ -34,6 +34,7 @@
 </script>
 
 <style
+    module
     scoped
     lang="scss">
     .work-group + .work-group {

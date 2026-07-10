@@ -1,25 +1,25 @@
 <template>
-    <div class="layout">
-        <aside class="sidebar">
+    <div :class="$style.layout">
+        <aside :class="$style.sidebar">
             <ProfilePanel/>
         </aside>
 
-        <header class="mobilebar">
+        <header :class="$style.mobilebar">
             <NuxtLink
                 to="/"
-                class="mbrand">
+                :class="$style.mbrand">
                 <img
-                    class="mlogo"
+                    :class="$style.mlogo"
                     src="/logo.svg"
                     alt="Bas Milius"
                     width="32"
                     height="32"/>
-                <span class="mname">Bas Milius</span>
+                <span :class="$style.mname">Bas Milius</span>
             </NuxtLink>
 
             <button
                 type="button"
-                class="hamburger"
+                :class="$style.hamburger"
                 aria-label="Open menu"
                 :aria-expanded="open"
                 @click="open = true">
@@ -28,17 +28,15 @@
         </header>
 
         <div
-            class="backdrop"
-            :class="{show: open}"
+            :class="[$style.backdrop, {[$style.show]: open}]"
             @click="close"/>
 
         <aside
-            class="drawer"
-            :class="{open}"
+            :class="[$style.drawer, {[$style.open]: open}]"
             aria-label="Menu">
             <button
                 type="button"
-                class="drawer-close"
+                :class="$style.drawerClose"
                 aria-label="Close menu"
                 @click="close">
                 <Icon name="fas xmark-large"/>
@@ -47,8 +45,8 @@
             <ProfilePanel/>
         </aside>
 
-        <main class="main">
-            <div class="content">
+        <main :class="$style.main">
+            <div :class="$style.content">
                 <slot/>
             </div>
         </main>
@@ -91,6 +89,7 @@
 </script>
 
 <style
+    module
     scoped
     lang="scss">
     .layout {

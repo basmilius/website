@@ -1,13 +1,13 @@
 <template>
     <NuxtLayout>
-        <div class="error">
+        <div :class="$style.error">
             <PageHead
                 eyebrow="// 404"
                 title="Something's missing.">
                 <p class="lead">The requested page was not found.</p>
                 <p>The page you were looking for does not (yet) exist on this website. Did you type the url yourself, please check for errors. If not, please contact me!</p>
 
-                <div class="actions">
+                <div :class="$style.actions">
                     <AppButton
                         label="About me"
                         icon="fas right"
@@ -51,6 +51,7 @@
 </script>
 
 <style
+    module
     scoped
     lang="scss">
     .error {

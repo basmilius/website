@@ -1,16 +1,15 @@
 <template>
     <button
         type="button"
-        class="info-item"
-        :class="{copied}"
+        :class="[$style.infoItem, {[$style.copied]: copied}]"
         @click="copy(item.value)">
-        <span class="icon-mount">
+        <span :class="$style.iconMount">
             <Icon :name="item.icon"/>
         </span>
 
-        <span class="caption">
-            <span class="value">{{ item.value }}</span>
-            <span class="label">{{ copied ? 'Copied!' : item.title }}</span>
+        <span :class="$style.caption">
+            <span :class="$style.value">{{ item.value }}</span>
+            <span :class="$style.label">{{ copied ? 'Copied!' : item.title }}</span>
         </span>
     </button>
 </template>
@@ -28,6 +27,7 @@
 </script>
 
 <style
+    module
     scoped
     lang="scss">
     .info-item {

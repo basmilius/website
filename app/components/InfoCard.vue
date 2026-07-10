@@ -1,5 +1,5 @@
 <template>
-    <div class="info-card">
+    <div :class="$style.infoCard">
         <InfoItem
             v-for="item in items"
             :key="item.title"
@@ -18,12 +18,14 @@
 </script>
 
 <style
+    module
     scoped
     lang="scss">
     .info-card {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
+        width: 100%;
     }
 
     @media (max-width: 560px) {

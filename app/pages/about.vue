@@ -1,7 +1,7 @@
 <template>
-    <div class="about">
-        <header class="about-head">
-            <div class="about-headtext">
+    <div :class="$style.about">
+        <header :class="$style.aboutHead">
+            <div :class="$style.aboutHeadtext">
                 <PageHead
                     eyebrow="// ~/about"
                     title="Hi! I'm Bas">
@@ -9,7 +9,7 @@
                 </PageHead>
             </div>
 
-            <picture class="portrait">
+            <picture :class="$style.portrait">
                 <source
                     srcset="/image/me/spain-1x.webp 1x, /image/me/spain-2x.webp 2x"
                     type="image/webp"/>
@@ -22,7 +22,7 @@
             </picture>
         </header>
 
-        <div class="prose">
+        <div :class="$style.prose">
             <p>
                 I'm a self-taught developer from The Netherlands. Currently working fulltime at
                 <a
@@ -65,7 +65,7 @@
             </p>
         </div>
 
-        <div class="actions">
+        <div :class="$style.actions">
             <AppButton
                 href="https://github.com/basmilius"
                 label="GitHub"
@@ -117,6 +117,7 @@
 </script>
 
 <style
+    module
     scoped
     lang="scss">
     .about {

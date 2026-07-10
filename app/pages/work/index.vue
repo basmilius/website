@@ -1,5 +1,5 @@
 <template>
-    <div class="work">
+    <div :class="$style.work">
         <PageHead
             eyebrow="// ~/work"
             title="Work">
@@ -7,7 +7,7 @@
             <p>Some of it is open source, some are apps for the Homey smart home platform, and a lot of it is client work: websites and backend applications for local businesses. Everything below is grouped by what it is.</p>
         </PageHead>
 
-        <div class="groups">
+        <div :class="$style.groups">
             <WorkGrid
                 v-for="group in workGroups"
                 :key="group.title"
@@ -27,6 +27,7 @@
 </script>
 
 <style
+    module
     scoped
     lang="scss">
     .work {

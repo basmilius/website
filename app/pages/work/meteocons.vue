@@ -1,16 +1,16 @@
 <template>
-    <div class="meteocons">
+    <div :class="$style.meteocons">
         <PageHead
             eyebrow="// ~/work/meteocons"
             title="Animated Weather Icons">
             <p class="lead">Over 500 unique animated weather icons. Free and open source.</p>
         </PageHead>
 
-        <div class="previews">
+        <div :class="$style.previews">
             <div
                 v-for="preview in previews"
                 :key="preview.src"
-                class="preview">
+                :class="$style.preview">
                 <img
                     :src="preview.src"
                     :alt="preview.alt"
@@ -18,7 +18,7 @@
             </div>
         </div>
 
-        <div class="prose">
+        <div :class="$style.prose">
             <p>
                 Meteocons is a collection of weather icons that feel alive. Every icon is meticulously
                 designed in Figma and available in four styles: fill, flat, line and monochrome. They
@@ -41,7 +41,7 @@
             </p>
         </div>
 
-        <div class="actions">
+        <div :class="$style.actions">
             <AppButton
                 href="https://meteocons.com"
                 label="Visit meteocons.com"
@@ -71,6 +71,7 @@
 </script>
 
 <style
+    module
     scoped
     lang="scss">
     .meteocons {

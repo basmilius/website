@@ -1,19 +1,19 @@
 <template>
-    <div class="home">
+    <div :class="$style.home">
         <PageHead
             eyebrow="// ~/index"
             title="Bas Milius">
             <p class="lead">Full-Stack Developer with a passion for creating websites, apps, and backend applications.</p>
             <p>I enjoy experimenting with new techniques and occasionally tinkering with tools like Figma and Docker. As a Full-Stack Developer, I find fulfillment in coding for personal projects as well as collaborating on projects for others.</p>
 
-            <div class="tags">
+            <div :class="$style.tags">
                 <span
                     v-for="tag in tags"
                     :key="tag"
-                    class="tag">{{ tag }}</span>
+                    :class="$style.tag">{{ tag }}</span>
             </div>
 
-            <div class="actions">
+            <div :class="$style.actions">
                 <AppButton
                     to="/about"
                     label="About me"
@@ -59,6 +59,7 @@
 </script>
 
 <style
+    module
     scoped
     lang="scss">
     .home {

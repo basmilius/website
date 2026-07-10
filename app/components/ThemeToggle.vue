@@ -1,14 +1,14 @@
 <template>
     <ClientOnly>
         <div
-            class="toggle"
+            :class="$style.toggle"
             :data-mode="mode">
-            <span class="thumb"/>
+            <span :class="$style.thumb"/>
 
             <button
                 type="button"
                 aria-label="Light mode"
-                :class="{active: mode === 'light'}"
+                :class="{[$style.active]: mode === 'light'}"
                 @click="set('light')">
                 <Icon name="fas sun"/>
             </button>
@@ -16,7 +16,7 @@
             <button
                 type="button"
                 aria-label="Dark mode"
-                :class="{active: mode === 'dark'}"
+                :class="{[$style.active]: mode === 'dark'}"
                 @click="set('dark')">
                 <Icon name="fas moon"/>
             </button>
@@ -24,9 +24,9 @@
 
         <template #fallback>
             <div
-                class="toggle"
+                :class="$style.toggle"
                 data-mode="light">
-                <span class="thumb"/>
+                <span :class="$style.thumb"/>
                 <button type="button"><Icon name="fas sun"/></button>
                 <button type="button"><Icon name="fas moon"/></button>
             </div>
@@ -46,6 +46,7 @@
 </script>
 
 <style
+    module
     scoped
     lang="scss">
     .toggle {

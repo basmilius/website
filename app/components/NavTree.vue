@@ -1,14 +1,13 @@
 <template>
-    <nav class="nav">
+    <nav :class="$style.nav">
         <template
             v-for="item in navigation"
             :key="item.label">
             <NuxtLink
                 v-if="item.to"
                 :to="item.to"
-                class="nav-item"
-                :class="{active: isActive(item)}">
-                <span class="glyph">
+                :class="[$style.navItem, {[$style.active]: isActive(item)}]">
+                <span :class="$style.glyph">
                     <Icon
                         v-if="item.icon"
                         :name="item.icon"/>
@@ -22,8 +21,8 @@
                 :href="item.href"
                 target="_blank"
                 rel="noopener"
-                class="nav-item">
-                <span class="glyph">
+                :class="$style.navItem">
+                <span :class="$style.glyph">
                     <Icon
                         v-if="item.icon"
                         :name="item.icon"/>
@@ -56,6 +55,7 @@
 </script>
 
 <style
+    module
     scoped
     lang="scss">
     .nav {

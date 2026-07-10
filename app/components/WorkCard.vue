@@ -1,10 +1,10 @@
 <template>
     <a
-        class="card"
+        :class="$style.card"
         :href="project.url"
         target="_blank"
         rel="noopener">
-        <div class="thumb">
+        <div :class="$style.thumb">
             <img
                 :src="project.image"
                 :alt="project.title"
@@ -13,21 +13,21 @@
                 loading="lazy"/>
         </div>
 
-        <div class="body">
-            <div class="head">
-                <div class="title">{{ project.title }}</div>
+        <div :class="$style.body">
+            <div :class="$style.head">
+                <div :class="$style.title">{{ project.title }}</div>
                 <Icon
                     name="fas up-right"
-                    class="arrow"/>
+                    :class="$style.arrow"/>
             </div>
             <p
                 v-if="project.descriptionHtml"
-                class="desc"
+                :class="$style.desc"
                 v-html="project.descriptionHtml"/>
             <p
                 v-else
-                class="desc">{{ project.description }}</p>
-            <div class="domain">{{ domain }}</div>
+                :class="$style.desc">{{ project.description }}</p>
+            <div :class="$style.domain">{{ domain }}</div>
         </div>
     </a>
 </template>
@@ -51,6 +51,7 @@
 </script>
 
 <style
+    module
     scoped
     lang="scss">
     .card {
