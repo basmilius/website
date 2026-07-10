@@ -1,4 +1,5 @@
 import {
+    faArrowRight,
     faAt,
     faBadgePercent,
     faBars,
@@ -10,7 +11,6 @@ import {
     faLocationDot,
     faMoon,
     faPhone,
-    faRight,
     faSun,
     faUpRight,
     faXmarkLarge
@@ -54,7 +54,7 @@ type FaIcon = {
 
 const DEFINITIONS = [
     faAt, faBadgePercent, faBars, faBriefcase, faDown, faEnvelope, faFileLines, faFolder,
-    faLocationDot, faMoon, faPhone, faRight, faSun, faUpRight, faXmarkLarge, faCss3, faDiscord,
+    faArrowRight, faLocationDot, faMoon, faPhone, faSun, faUpRight, faXmarkLarge, faCss3, faDiscord,
     faDocker, faFacebook, faFigma, faGitAlt, faGithub, faHtml5, faInstagram, faJava, faJs, faLinkedin,
     faMicrosoft, faNodeJs, faPhp, faReact, faSass, faSnapchat, faSwift, faVuejs, faWordpressSimple,
     faXTwitter

@@ -10,18 +10,18 @@
                 <div :class="$style.actions">
                     <AppButton
                         label="About me"
-                        icon="fas right"
+                        icon="fas arrow-right"
                         icon-position="trailing"
                         variant="accent"
                         @click="go('/about')"/>
                     <AppButton
                         label="My work"
-                        icon="fas right"
+                        icon="fas arrow-right"
                         icon-position="trailing"
                         @click="go('/work')"/>
                     <AppButton
                         label="Contact"
-                        icon="fas right"
+                        icon="fas arrow-right"
                         icon-position="trailing"
                         @click="go('/contact')"/>
                 </div>

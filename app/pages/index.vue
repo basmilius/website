@@ -19,13 +19,13 @@
                 <AppButton
                     to="/about"
                     label="About me"
-                    icon="fas right"
+                    icon="fas arrow-right"
                     icon-position="trailing"
                     variant="accent"/>
                 <AppButton
                     to="/contact"
                     label="Contact"
-                    icon="fas right"
+                    icon="fas arrow-right"
                     icon-position="trailing"/>
                 <AppButton
                     href="https://github.com/basmilius"
@@ -43,7 +43,7 @@
                 <AppButton
                     to="/work"
                     label="view all"
-                    icon="fas right"
+                    icon="fas arrow-right"
                     icon-position="trailing"
                     variant="text"
                     small/>
