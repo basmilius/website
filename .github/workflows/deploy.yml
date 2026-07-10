@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   push:
-    branches: [main, feat/nuxt-redesign]
+    branches: [main]
   workflow_dispatch:
 
 concurrency:
