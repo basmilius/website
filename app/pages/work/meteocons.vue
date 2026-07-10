@@ -61,7 +61,7 @@
     setup>
     useSeoMeta({
         title: 'Meteocons',
-        description: 'Meteocons: 500+ free, open-source animated weather icons in four styles, as SVG and Lottie — ready for React, Vue, Svelte, iOS, Android and any platform.'
+        description: 'Meteocons: 500+ free, open-source animated weather icons in four styles, as SVG and Lottie, ready for React, Vue, Svelte, iOS, Android and any platform.'
     });
 
     const base = 'https://cdn.meteocons.com/3.0.0-next.10/svg/fill';

@@ -58,7 +58,7 @@
     const tags = ['TypeScript', 'Vue 3 · React', 'PHP · Node', 'Docker · Figma'];
 
     useSeoMeta({
-        description: 'Bas Milius — full-stack developer from the Netherlands. I build websites, apps and backend systems, and open-source projects like Meteocons and Flux UI.'
+        description: 'Bas Milius is a full-stack developer from the Netherlands. I build websites, apps and backend systems, and open-source projects like Meteocons and Flux UI.'
     });
 </script>
 

@@ -22,7 +22,7 @@ export default defineNuxtConfig({
     site: {
         url: 'https://bas.dev',
         name: 'Bas Milius',
-        description: 'Full-Stack Developer from the Netherlands building websites, web apps and backend systems — plus open-source projects like Meteocons and Flux UI.',
+        description: 'Full-Stack Developer from the Netherlands building websites, web apps and backend systems, plus open-source projects like Meteocons and Flux UI.',
         defaultLocale: 'en'
     },
 

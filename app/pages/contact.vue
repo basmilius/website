@@ -30,7 +30,7 @@
 
     useSeoMeta({
         title: 'Contact',
-        description: 'Get in touch with Bas Milius about a website, app or backend project. Company details, e-mail, phone and socials — tap any detail to copy it.'
+        description: 'Get in touch with Bas Milius about a website, app or backend project. Company details, e-mail, phone and socials. Tap any detail to copy it.'
     });
 </script>
 
