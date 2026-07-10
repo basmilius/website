@@ -35,12 +35,7 @@
         meta: [
             {name: 'keywords', content: 'bas milius,basmilius,milius,developer,website,app,raxos,weather icons,meteocons,passly,homey,apple tv,homepod,homepod mini,flowbits'},
             {name: 'author', content: 'Bas Milius'},
-            {name: 'theme-color', content: '#0064f2'},
-            {property: 'og:image', content: '/og-image.png'},
-            {property: 'og:image:width', content: '2400'},
-            {property: 'og:image:height', content: '1260'},
-            {property: 'og:image:alt', content: 'Bas Milius, Full-Stack Developer'},
-            {name: 'twitter:image', content: '/og-image.png'}
+            {name: 'theme-color', content: '#0064f2'}
         ],
         script: [
             {type: 'application/ld+json', innerHTML: JSON.stringify(jsonLd)}
@@ -48,6 +43,10 @@
     });
 
     useSeoMeta({
+        ogImage: `${siteUrl}/og-image.png`,
+        ogImageWidth: 2400,
+        ogImageHeight: 1260,
+        ogImageAlt: 'Bas Milius, Full-Stack Developer',
         ogLocale: 'en_US',
         twitterCard: 'summary_large_image',
         twitterSite: '@basmilius',
