@@ -6,13 +6,6 @@
             <p class="lead">Full-Stack Developer with a passion for creating websites, apps, and backend applications.</p>
             <p>I enjoy experimenting with new techniques and occasionally tinkering with tools like Figma and Docker. As a Full-Stack Developer, I find fulfillment in coding for personal projects as well as collaborating on projects for others.</p>
 
-            <div :class="$style.tags">
-                <span
-                    v-for="tag in tags"
-                    :key="tag"
-                    :class="$style.tag">{{ tag }}</span>
-            </div>
-
             <div :class="$style.actions">
                 <AppButton
                     to="/about"
@@ -55,8 +48,6 @@
     setup>
     import { homeFeatured } from '~/data/work';
 
-    const tags = ['TypeScript', 'Vue 3 · React', 'PHP · Node', 'Docker · Figma'];
-
     useSeoMeta({
         description: 'Bas Milius is a full-stack developer from the Netherlands. I build websites, apps and backend systems, and open-source projects like Meteocons and Flux UI.'
     });
@@ -70,22 +61,6 @@
         display: flex;
         flex-direction: column;
         gap: 56px;
-    }
-
-    .tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 26px;
-    }
-
-    .tag {
-        padding: 6px 11px;
-        border: 1px solid var(--line);
-        border-radius: 7px;
-        font-family: var(--font-mono);
-        font-size: 16px;
-        color: var(--muted);
     }
 
     .actions {
