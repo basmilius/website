@@ -108,7 +108,6 @@
         width: var(--sidebar-width);
         flex: none;
         border-right: 1px solid var(--line);
-        background: var(--bg);
     }
 
     .main {
