@@ -2,7 +2,7 @@
     <svg
         v-if="icon"
         class="icon"
-        :viewBox="icon.viewBox"
+        :viewBox.attr="icon.viewBox"
         role="img"
         aria-hidden="true"
         focusable="false"
