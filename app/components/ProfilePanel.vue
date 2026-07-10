@@ -67,7 +67,6 @@
         font-family: var(--font-heading);
         font-weight: 700;
         font-size: 20px;
-        letter-spacing: -0.02em;
         color: var(--text);
     }
 

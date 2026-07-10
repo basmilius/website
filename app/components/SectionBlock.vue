@@ -37,7 +37,6 @@
     h2 {
         margin: 0;
         font-size: clamp(24px, 3vw, 32px);
-        letter-spacing: -0.02em;
         color: var(--text);
     }
 
