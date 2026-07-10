@@ -3,7 +3,6 @@ export type Project = {
     readonly description: string;
     readonly descriptionHtml?: string;
     readonly url: string;
-    readonly to?: string;
     readonly label: string;
     readonly icon: string;
     readonly image: string;
@@ -78,7 +77,7 @@ export const projects = {
     },
     basTools: {
         title: 'Bas Tools',
-        description: 'Plugin that adds a custom theme and a few features to JetBrains IDE\'s',
+        description: 'Plugin that adds a custom theme and a few features to JetBrains IDEs.',
         url: 'https://plugins.jetbrains.com/plugin/15420-bas-tools',
         label: 'jetbrains.com',
         icon: 'fas up-right',
@@ -134,7 +133,7 @@ export const projects = {
     },
     lists: {
         title: 'Lists',
-        description: 'Create and manage shopping lists, tasks, and notes-right from your dashboard.',
+        description: 'Create and manage shopping lists, tasks, and notes - right from your dashboard.',
         url: 'https://homey.app/a/com.basmilius.listri/',
         label: 'Homey App Store',
         icon: 'fas up-right',
@@ -158,7 +157,7 @@ export const projects = {
     },
     deGrolscheGracht: {
         title: 'De Grolsche Gracht',
-        description: 'Discover the best pubs along the Grolsche Gracht',
+        description: 'Discover the best pubs along the Grolsche Gracht.',
         url: 'https://degrolschegracht.nl',
         label: 'degrolschegracht.nl',
         icon: 'fas up-right',

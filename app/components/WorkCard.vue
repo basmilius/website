@@ -1,8 +1,9 @@
 <template>
-    <component
-        :is="tag"
+    <a
         class="card"
-        v-bind="bindings">
+        :href="project.url"
+        target="_blank"
+        rel="noopener">
         <div class="thumb">
             <img
                 :src="project.image"
@@ -16,7 +17,7 @@
             <div class="head">
                 <div class="title">{{ project.title }}</div>
                 <Icon
-                    :name="project.to ? 'fas right' : 'fas up-right'"
+                    name="fas up-right"
                     class="arrow"/>
             </div>
             <p
@@ -28,7 +29,7 @@
                 class="desc">{{ project.description }}</p>
             <div class="domain">{{ domain }}</div>
         </div>
-    </component>
+    </a>
 </template>
 
 <script
@@ -39,12 +40,6 @@
     const props = defineProps<{
         project: Project;
     }>();
-
-    const tag = computed(() => props.project.to ? resolveComponent('NuxtLink') : 'a');
-
-    const bindings = computed(() => props.project.to
-        ? {to: props.project.to}
-        : {href: props.project.url, target: '_blank', rel: 'noopener'});
 
     const domain = computed(() => {
         try {

@@ -38,7 +38,7 @@
                 <a
                     href="https://meteocons.com"
                     rel="noopener"
-                    target="_blank">Meteocons</a>, a free-to use set of animated weather icons.
+                    target="_blank">Meteocons</a>, a free-to-use set of animated weather icons.
             </p>
 
             <h3>Programming</h3>

@@ -28,7 +28,7 @@
         titleTemplate: title => title ? `${title} | Bas Milius - Full-Stack Developer` : 'Bas Milius - Full-Stack Developer',
         meta: [
             {name: 'description', content: description},
-            {name: 'keywords', content: 'bas milius,basmilius,milius,developer,website,app,latte-ui,raxos,weather icons,latte,meteocons,passly,homey,apple tv,homepod,homepod mini,flowbits'},
+            {name: 'keywords', content: 'bas milius,basmilius,milius,developer,website,app,raxos,weather icons,meteocons,passly,homey,apple tv,homepod,homepod mini,flowbits'},
             {name: 'author', content: 'Bas Milius'},
             {name: 'robots', content: 'index,follow'},
             {name: 'theme-color', content: '#0064f2'}

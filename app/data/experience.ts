@@ -6,9 +6,9 @@ export type TimelineEntry = {
 
 export const experience: readonly TimelineEntry[] = [
     {
-        date: 'June 2020 - now',
+        date: 'June 2020 - Now',
         title: 'Self-employed',
-        body: 'Back in 2020, I started my own company. After receiving more and more questions about making small websites for acquaintances or collaborating on projects with others. With my company I am not actively looking for new customers, but if someone knocks on the door for a website, app or simple design, I am always happy to help.'
+        body: 'Back in 2020, I started my own company, after receiving more and more questions about making small websites for acquaintances or collaborating on projects with others. With my company I am not actively looking for new customers, but if someone knocks on the door for a website, app or simple design, I am always happy to help.'
     },
     {
         date: 'August 2024 - Now',

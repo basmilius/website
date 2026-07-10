@@ -21,7 +21,7 @@ Font Awesome npm token is defined, then:
 
 ### 🧱 Tech stack
 - **Nuxt 4** / **Vue 3** with `<script setup>` and scoped SCSS.
-- **@nuxt/fonts** (self-hosted Space Grotesk, JetBrains Mono, Inter).
+- **Web fonts** served from `font.bmcdn.nl` (Space Grotesk, JetBrains Mono, Inter).
 - **@nuxtjs/color-mode** for the light/dark theme.
 - **Font Awesome Pro** icons, rendered inline (`app/utils/icons.ts`).
 - Content lives in `app/data/*` — no CMS.
