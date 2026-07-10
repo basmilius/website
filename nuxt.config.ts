@@ -15,8 +15,20 @@ export default defineNuxtConfig({
     devtools: {enabled: true},
 
     modules: [
-        '@nuxtjs/color-mode'
+        '@nuxtjs/color-mode',
+        '@nuxtjs/seo'
     ],
+
+    site: {
+        url: 'https://bas.dev',
+        name: 'Bas Milius',
+        description: 'Full-Stack Developer from the Netherlands building websites, web apps and backend systems — plus open-source projects like Meteocons and Flux UI.',
+        defaultLocale: 'en'
+    },
+
+    ogImage: {
+        enabled: false
+    },
 
     components: [
         {path: '~/components', pathPrefix: false}

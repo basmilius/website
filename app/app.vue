@@ -12,25 +12,29 @@
     const config = useRuntimeConfig();
     const siteUrl = config.public.siteUrl;
 
-    const description = 'I\'m a full stack developer from Groenlo, The Netherlands.';
-
     const jsonLd = {
-        '@context': 'https://schema.org/',
+        '@context': 'https://schema.org',
         '@type': 'Person',
+        '@id': `${siteUrl}/#person`,
         name: 'Bas Milius',
         url: siteUrl,
         image: `${siteUrl}/image/bas.jpg`,
         jobTitle: 'Full-Stack Developer',
-        sameAs: [...socials.map(social => social.url), siteUrl]
+        description: 'Full-stack developer from Groenlo, the Netherlands.',
+        address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Groenlo',
+            addressCountry: 'NL'
+        },
+        knowsAbout: ['Vue.js', 'Nuxt', 'TypeScript', 'PHP', 'Node.js', 'Flutter', 'WordPress'],
+        sameAs: socials.map(social => social.url)
     };
 
     useHead({
         titleTemplate: title => title ? `${title} | Bas Milius - Full-Stack Developer` : 'Bas Milius - Full-Stack Developer',
         meta: [
-            {name: 'description', content: description},
             {name: 'keywords', content: 'bas milius,basmilius,milius,developer,website,app,raxos,weather icons,meteocons,passly,homey,apple tv,homepod,homepod mini,flowbits'},
             {name: 'author', content: 'Bas Milius'},
-            {name: 'robots', content: 'index,follow'},
             {name: 'theme-color', content: '#0064f2'}
         ],
         script: [
@@ -39,12 +43,13 @@
     });
 
     useSeoMeta({
-        ogTitle: 'Bas Milius - Full-Stack Developer',
-        ogDescription: description,
-        ogType: 'website',
-        ogUrl: siteUrl,
-        ogImage: `${siteUrl}/image/bas.jpg`,
+        ogImage: `${siteUrl}/og-image.png`,
+        ogImageWidth: 2400,
+        ogImageHeight: 1260,
+        ogImageAlt: 'Bas Milius — Full-Stack Developer',
+        ogLocale: 'en_US',
         twitterCard: 'summary_large_image',
-        twitterSite: '@basmilius'
+        twitterSite: '@basmilius',
+        twitterCreator: '@basmilius'
     });
 </script>

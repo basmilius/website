@@ -43,7 +43,11 @@
         error: object;
     }>();
 
-    useHead({title: 'Not found'});
+    useSeoMeta({
+        title: 'Not found',
+        description: 'The page you\'re looking for doesn\'t exist. Head back to the work, about or contact page.',
+        robots: 'noindex, follow'
+    });
 
     function go(path: string): void {
         clearError({redirect: path});

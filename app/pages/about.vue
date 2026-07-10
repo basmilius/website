@@ -113,7 +113,10 @@
     import { experience } from '~/data/experience';
     import { schooling } from '~/data/schooling';
 
-    useHead({title: 'About'});
+    useSeoMeta({
+        title: 'About',
+        description: 'Self-taught full-stack developer from the Netherlands. My story, the tools I use like Vue, PHP and JetBrains, how I work with AI, and my work experience.'
+    });
 </script>
 
 <style

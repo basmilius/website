@@ -23,7 +23,10 @@
     setup>
     import { workGroups } from '~/data/work';
 
-    useHead({title: 'Work'});
+    useSeoMeta({
+        title: 'Work',
+        description: 'Selected work by Bas Milius: open-source tools, Homey smart home apps, and websites and backend applications for clients and local businesses.'
+    });
 </script>
 
 <style
