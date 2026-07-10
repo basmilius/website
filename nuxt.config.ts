@@ -30,6 +30,13 @@ export default defineNuxtConfig({
         enabled: false
     },
 
+    seo: {
+        // Keep og:image/twitter:image relative so they resolve against the
+        // host serving the page — works on preview deploys and on bas.dev.
+        // Canonical and og:url stay absolute (handled separately).
+        fixRequiredAbsoluteMetaTagsLinks: false
+    },
+
     components: [
         {path: '~/components', pathPrefix: false}
     ],
