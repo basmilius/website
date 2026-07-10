@@ -30,10 +30,6 @@ export default defineNuxtConfig({
         }
     },
 
-    css: [
-        '~/assets/css/index.scss'
-    ],
-
     colorMode: {
         preference: 'system',
         fallback: 'light',

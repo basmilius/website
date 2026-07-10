@@ -48,3 +48,7 @@
         twitterSite: '@basmilius'
     });
 </script>
+
+<style lang="scss">
+    @use "~/assets/css/index.scss";
+</style>
