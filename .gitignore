@@ -8,10 +8,9 @@ node_modules/
 .yarn/cache/
 Thumbs.db
 
-# Nuxt
-.nuxt/
-.output/
-.data/
+# React Router
+.react-router/
+build/
 
 # Cloudflare / Wrangler
 .wrangler/
