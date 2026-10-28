@@ -53,6 +53,7 @@
     --color-ink: var(--text);
     --color-muted: var(--muted);
     --color-faint: var(--faint);
+    --color-link: var(--link);
     --color-accent: var(--accent);
     --color-accent-text: var(--accent-text);
     --color-accent-soft: var(--accent-soft);
@@ -78,6 +79,7 @@
     --text: #18181b;
     --muted: #6f6f78;
     --faint: #a1a1aa;
+    --link: #3f3f46;
     --accent: #155dfc;
     --accent-text: #155dfc;
     --accent-soft: rgb(21 93 252 / .09);
@@ -105,6 +107,7 @@
     --text: #ececf1;
     --muted: #9a9aa6;
     --faint: #5f5f6b;
+    --link: #d4d4dc;
     --accent-text: #79a5ff;
     --accent-soft: rgb(21 93 252 / .18);
     --green: #4ade80;

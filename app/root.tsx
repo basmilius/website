@@ -1,7 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from 'react-router';
 import type { Route } from './+types/root';
-import { Eyebrow, PageHeader } from './components/Headings';
+import { BODY_CLASS, Eyebrow, PageHeader } from './components/Headings';
 import { PillLink } from './components/Links';
 import { ProjectGrid } from './components/ProjectGrid';
 import { Shell } from './components/shell/Shell';
@@ -101,7 +101,7 @@ export function ErrorBoundary({error}: Route.ErrorBoundaryProps) {
                 title={notFound ? 'Something\'s missing.' : 'Something went wrong.'}
                 lead={notFound ? 'The requested page was not found.' : 'An unexpected error occurred while loading this page.'}>
                 {notFound && (
-                    <p className="mt-3.5 max-w-[62ch] text-base leading-[1.75] text-muted">The page you were looking for does not (yet) exist on this website. Did you type the url yourself, please check for errors. If not, please contact me!</p>
+                    <p className={BODY_CLASS}>The page you were looking for doesn't exist (yet). If you typed the URL yourself, check it for typos. If not, let me know!</p>
                 )}
 
                 <div className="mt-7 flex flex-wrap items-center gap-2.5">

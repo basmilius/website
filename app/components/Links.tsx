@@ -1,5 +1,11 @@
 import { Link } from 'react-router';
 
+type AnyLinkProps = {
+    readonly to: string;
+    readonly className: string;
+    readonly children: React.ReactNode;
+};
+
 type PillLinkProps = {
     readonly to: string;
     readonly variant?: 'primary' | 'secondary';
@@ -22,9 +28,7 @@ function isExternal(to: string): boolean {
     return /^(https?:|mailto:)/.test(to) || to.endsWith('.pdf');
 }
 
-export function PillLink({to, variant = 'secondary', children}: PillLinkProps) {
-    const className = `${PILL_CLASS} ${PILL_VARIANTS[variant]}`;
-
+function AnyLink({to, className, children}: AnyLinkProps) {
     if (isExternal(to)) {
         return (
             <a
@@ -46,27 +50,23 @@ export function PillLink({to, variant = 'secondary', children}: PillLinkProps) {
     );
 }
 
-export function TextLink({to, children}: TextLinkProps) {
-    const className = 'text-accent-text underline underline-offset-3';
-
-    if (isExternal(to)) {
-        return (
-            <a
-                href={to}
-                target="_blank"
-                rel="noopener"
-                className={className}>
-                {children}
-            </a>
-        );
-    }
-
+export function PillLink({to, variant = 'secondary', children}: PillLinkProps) {
     return (
-        <Link
+        <AnyLink
             to={to}
-            className={className}>
+            className={`${PILL_CLASS} ${PILL_VARIANTS[variant]}`}>
             {children}
-        </Link>
+        </AnyLink>
+    );
+}
+
+export function TextLink({to, children}: TextLinkProps) {
+    return (
+        <AnyLink
+            to={to}
+            className="text-link underline decoration-line-strong underline-offset-3 transition-colors hover:text-ink hover:decoration-current">
+            {children}
+        </AnyLink>
     );
 }
 

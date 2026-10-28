@@ -49,3 +49,11 @@ export function navIcon(item: NavItem, pathname: string): LucideIcon | undefined
 
     return item.icon;
 }
+
+export function navIconColor(item: NavItem, active: boolean): string {
+    if (active) {
+        return 'text-accent-text';
+    }
+
+    return item.folder ? 'text-folder' : 'text-faint';
+}

@@ -25,9 +25,9 @@ export default function Home() {
             <PageHeader
                 eyebrow={<Eyebrow to="/">// ~/</Eyebrow>}
                 title="Bas Milius"
-                lead="Full-Stack Developer with a passion for creating websites, apps, and backend applications."
+                lead="Full-stack developer who builds websites, apps and backend applications."
                 leadWidth="max-w-[44ch]">
-                <p className={BODY_CLASS}>I enjoy experimenting with new techniques and occasionally tinkering with tools like Figma and Docker. As a Full-Stack Developer, I find fulfillment in coding for personal projects as well as collaborating on projects for others.</p>
+                <p className={BODY_CLASS}>I like experimenting with new techniques, and now and then I tinker with tools like Figma and Docker. I enjoy coding on my own projects just as much as working on projects with others.</p>
 
                 <Whoami/>
 
@@ -78,7 +78,7 @@ function Whoami() {
         <>
             <span className="text-[#4ade80]">bas</span>
             <span className="text-[#6b6b76]">@</span>
-            <span className="text-[#60a5fa]">groenlo</span>
+            <span className="text-[#60a5fa]">macbook-pro</span>
             {' '}
             <span className="text-[#6b6b76]">~ $</span>
         </>
@@ -87,7 +87,7 @@ function Whoami() {
     return (
         <div className="mt-7 max-w-[600px] overflow-hidden rounded-xl border border-white/7 bg-term text-[#d6d6de] shadow-float">
             <div className="flex h-9 items-center justify-between border-b border-white/7 px-3.5 font-mono text-xs text-[#6b6b76]">
-                <span>zsh - ~/bas.dev</span>
+                <span>~/bas.dev (zsh)</span>
                 <span className="flex items-center gap-1.5">
                     <span className="size-1.5 rounded-full bg-[#4ade80]"/>
                     online

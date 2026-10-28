@@ -22,6 +22,10 @@ function project(title: string, description: string, url: string, image: string)
     };
 }
 
+function alphabetical(list: readonly Project[]): readonly Project[] {
+    return [...list].sort((left, right) => left.title.localeCompare(right.title, 'en'));
+}
+
 export const projects = {
     meteocons: project('Meteocons', 'Over 500 unique animated weather icons in four styles.', 'https://meteocons.com', 'blueprint-meteocons.svg'),
     flux: project('Flux UI', 'A Vue 3 UI framework that I use for most of my projects.', 'https://flux-ui.dev', 'blueprint-flux.svg'),
@@ -35,7 +39,7 @@ export const projects = {
     apple: project('Apple TV & HomePod', 'Control your Apple devices from your Homey.', 'https://homey.app/a/com.basmilius.apple/', 'com.basmilius.apple.png'),
     claude: project('Claude', 'Bring Claude AI by Anthropic into your Homey flows.', 'https://homey.app/a/com.basmilius.claude/', 'com.basmilius.claude.png'),
     flowBits: project('FlowBits', 'Small bits of logic, big difference in your Flows.', 'https://homey.app/a/com.basmilius.flowbits/', 'com.basmilius.flowbits.png'),
-    lists: project('Lists', 'Create and manage shopping lists, tasks, and notes - right from your dashboard.', 'https://homey.app/a/com.basmilius.listri/', 'com.basmilius.listri.png'),
+    lists: project('Lists', 'Create and manage shopping lists, tasks and notes, right from your dashboard.', 'https://homey.app/a/com.basmilius.listri/', 'com.basmilius.listri.png'),
     nlAlert: project('NLAlert', 'Get notified when an NL Alert affects your location.', 'https://homey.app/a/com.basmilius.nlalert/', 'com.basmilius.nlalert.png'),
     sajr5: project('SAJ R5', 'Monitor your SAJ R5 solar inverter with real-time energy insights.', 'https://homey.app/a/com.basmilius.sajr5/', 'com.basmilius.sajr5.png'),
     jev: project('Jev', 'Ask questions in your Homey Flows and branch on the answer, powered by TypeSafe Jev.', 'https://github.com/basmilius/homey-jev', 'com.basmilius.jev.png'),
@@ -70,29 +74,29 @@ export const featuredProjects: readonly Project[] = [
 
 export const recentProjects: readonly Project[] = [
     projects.ruimte,
-    projects.adecore,
-    projects.lsPhp
+    projects.streamWithLien,
+    projects.meteocons
 ];
 
 export const projectGroups: readonly ProjectGroup[] = [
     {
         title: 'Open Source',
         description: 'Freely available building blocks, frameworks and icon sets that anyone is welcome to use and contribute to.',
-        projects: [projects.adecore, projects.skills, projects.lsCore, projects.lsSql, projects.lsPhp, projects.meteocons, projects.raxos, projects.flux, projects.sparkle, projects.packages]
+        projects: alphabetical([projects.adecore, projects.skills, projects.lsCore, projects.lsSql, projects.lsPhp, projects.meteocons, projects.raxos, projects.flux, projects.sparkle, projects.packages])
     },
     {
         title: 'For others',
         description: 'Websites and backend applications I built for clients, local businesses and friends.',
-        projects: [projects.streamWithLien, projects.marveld, projects.deGrolscheGracht, projects.wpist, projects.manegeNijhuis, projects.erveNijhuis, projects.studioVierentwintig, projects.erveTank, projects.kapsalonLichtenberg, projects.ditoGroenlo]
+        projects: alphabetical([projects.streamWithLien, projects.marveld, projects.deGrolscheGracht, projects.wpist, projects.manegeNijhuis, projects.erveNijhuis, projects.studioVierentwintig, projects.erveTank, projects.kapsalonLichtenberg, projects.ditoGroenlo])
     },
     {
         title: 'Projects',
-        description: 'Personal projects and small tools - some genuinely useful, others just built for fun or to scratch my own itch.',
-        projects: [projects.ruimte, projects.passly, projects.isHetPatat, projects.isHetFriet, projects.startDeTijd]
+        description: 'Personal projects and small tools. Some are useful, others I built for fun or to scratch my own itch.',
+        projects: alphabetical([projects.ruimte, projects.passly, projects.isHetPatat, projects.isHetFriet, projects.startDeTijd])
     }
 ];
 
-export const homeyApps: readonly Project[] = [
+export const homeyApps = alphabetical([
     projects.apple,
     projects.flowBits,
     projects.claude,
@@ -101,8 +105,8 @@ export const homeyApps: readonly Project[] = [
     projects.changelogs,
     projects.sajr5,
     projects.nlAlert
-];
+]);
 
-export const homeyLibraries: readonly Project[] = [
+export const homeyLibraries = alphabetical([
     projects.appleProtocols
-];
+]);

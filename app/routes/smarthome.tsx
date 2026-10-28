@@ -48,7 +48,7 @@ export default function Smarthome() {
                     <div className="flex flex-col gap-3.5 text-base leading-[1.75] text-muted">
                         <p><strong className="font-semibold text-ink">Thuis</strong> is a procedural 3D dashboard of our house, connected to Homey. It runs as a fixed wall dashboard on an iPad Pro, with a web version that serves as the development environment and visual reference.</p>
                         <p>There are no hand-made 3D files. The house, the garden and the furniture are built from one TypeScript data model, and walls, roofs, materials, textures and animations are generated during the build. A small iOS scanner app turns photos and measurements into furniture models.</p>
-                        <p>The style is deliberately a diorama: material, light, soft shadows and ambient occlusion make the shape readable without chasing photorealism.</p>
+                        <p>The style is deliberately a diorama. Material, light, soft shadows and ambient occlusion make the shape readable without chasing photorealism.</p>
                     </div>
 
                     <div>

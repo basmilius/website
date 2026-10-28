@@ -17,8 +17,8 @@ export default function Work() {
             <PageHeader
                 eyebrow={<Eyebrow to="/work">// ~/work</Eyebrow>}
                 title="Work"
-                lead="A mix of things I've built over the years - for myself, for fun, and for the people and companies I've worked with.">
-                <p className={BODY_CLASS}>Some of it is open source, some are apps for the Homey smart home platform, and a lot of it is client work: websites and backend applications for local businesses. Everything below is grouped by what it is.</p>
+                lead="A mix of things I've built over the years. Some for myself or just for fun, others for the people and companies I've worked with.">
+                <p className={BODY_CLASS}>Some of it is open source, and a lot of it is client work for local businesses, websites as well as backend applications.</p>
             </PageHeader>
 
             <section className="mt-12">

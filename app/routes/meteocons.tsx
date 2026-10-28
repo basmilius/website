@@ -64,9 +64,9 @@ export default function Meteocons() {
             </div>
 
             <div className="mt-9 flex max-w-[66ch] flex-col gap-4 text-base leading-[1.75] text-muted">
-                <p>Meteocons is a collection of weather icons that feel alive. Every icon is meticulously designed in Figma and available in four styles: fill, flat, line and monochrome. They come as animated SVG and Lottie JSON, ready to use in any project.</p>
-                <p>Meteocons now has its own website! <TextLink to="https://meteocons.com">meteocons.com</TextLink> is the new home for browsing all icons, reading the documentation and getting started. Install the icons via npm with <Code>@meteocons/svg</Code> or <Code>@meteocons/lottie</Code>, or grab them directly from the GitHub repository.</p>
-                <p>The icons work with React, Vue, Svelte, Angular, iOS, Android - any platform that renders SVG or Lottie. They are available under a MIT-license, which means they're free to use and modify.</p>
+                <p>Meteocons is a set of animated weather icons. I designed every icon in Figma, in four styles: fill, flat, line and monochrome. They come as animated SVG and as Lottie JSON.</p>
+                <p>Meteocons has its own website now. On <TextLink to="https://meteocons.com">meteocons.com</TextLink> you can browse all icons and read the documentation. Install the icons from npm with <Code>@meteocons/svg</Code> or <Code>@meteocons/lottie</Code>, or grab them from the GitHub repository.</p>
+                <p>The icons work on any platform that renders SVG or Lottie, such as React, Vue, Svelte, Angular, iOS and Android. They're MIT-licensed, so you're free to use and modify them.</p>
             </div>
 
             <div className="mt-7 max-w-[600px] overflow-hidden rounded-xl border border-white/7 bg-term text-[#d6d6de]">

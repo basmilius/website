@@ -23,7 +23,7 @@ export default function Contact() {
             <PageHeader
                 eyebrow={<Eyebrow to="/contact">// ~/contact</Eyebrow>}
                 title="Send a message"
-                lead="Thanks for stopping by. Whether you're planning a website or app, have a question about one of my projects, or just want to get in touch, feel free to reach out using any of the details below."
+                lead="Thanks for stopping by. Planning a website or app, got a question about one of my projects, or just want to say hi? Reach out using any of the details below."
                 leadWidth="max-w-[56ch]">
                 <p className={BODY_CLASS}>If you've found a bug in one of my open source projects, the fastest way to reach me is by opening an issue on the project's GitHub repository. Describe what you were doing when it broke and I'll take a look when I can.</p>
 

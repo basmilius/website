@@ -1,9 +1,16 @@
 import { ArrowDown, ArrowUpRight, FileDown, Moon, Sun } from 'lucide-react';
 import { Link, useLocation } from 'react-router';
 import { siGithub } from 'simple-icons';
-import { CV_URL, GITHUB_URL, navIcon, navigation } from '~/data/navigation';
+import { CV_URL, GITHUB_URL, navIcon, navIconColor, navigation } from '~/data/navigation';
 import { useTheme, type Theme } from '~/lib/theme';
 import { BrandIcon } from '../BrandIcon';
+
+type ExternalLinkProps = {
+    readonly href: string;
+    readonly label: string;
+    readonly icon: React.ReactNode;
+    readonly trail: React.ReactNode;
+};
 
 export function Sidebar() {
     const {pathname} = useLocation();
@@ -30,14 +37,13 @@ export function Sidebar() {
                 {navigation.map((item) => {
                     const active = pathname === item.to;
                     const Icon = navIcon(item, pathname);
-                    const iconColor = active ? 'text-accent-text' : (item.folder ? 'text-folder' : 'text-faint');
 
                     return (
                         <Link
                             key={item.to}
                             to={item.to}
                             className={`flex h-[34px] items-center gap-2.5 rounded-[7px] px-2 font-mono text-sm transition-colors duration-[120ms] hover:bg-hover hover:text-ink ${active ? 'bg-active text-ink' : 'text-muted'}`}>
-                            <span className={`grid w-[18px] flex-none place-items-center text-[13px] ${iconColor}`}>
+                            <span className={`grid w-[18px] flex-none place-items-center text-[13px] ${navIconColor(item, active)}`}>
                                 {Icon ? <Icon size={14}/> : item.glyph}
                             </span>
                             <span className="min-w-0 flex-1 truncate">{item.label}</span>
@@ -75,7 +81,7 @@ export function Sidebar() {
     );
 }
 
-function ExternalLink({href, label, icon, trail}: { readonly href: string; readonly label: string; readonly icon: React.ReactNode; readonly trail: React.ReactNode }) {
+function ExternalLink({href, label, icon, trail}: ExternalLinkProps) {
     return (
         <a
             href={href}

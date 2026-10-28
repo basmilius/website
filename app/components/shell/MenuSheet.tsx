@@ -1,7 +1,7 @@
 import { ArrowDown, Moon, Sun } from 'lucide-react';
 import { Link, useLocation } from 'react-router';
 import { siGithub } from 'simple-icons';
-import { CV_URL, GITHUB_URL, navIcon, navigation } from '~/data/navigation';
+import { CV_URL, GITHUB_URL, navIcon, navIconColor, navigation } from '~/data/navigation';
 import { useTheme } from '~/lib/theme';
 import { BrandIcon } from '../BrandIcon';
 
@@ -29,7 +29,6 @@ export function MenuSheet({open, onClose}: Props) {
                     {navigation.map((item) => {
                         const active = pathname === item.to;
                         const Icon = navIcon(item, pathname);
-                        const iconColor = active ? 'text-accent-text' : (item.folder ? 'text-folder' : 'text-faint');
 
                         return (
                             <Link
@@ -37,7 +36,7 @@ export function MenuSheet({open, onClose}: Props) {
                                 to={item.to}
                                 onClick={onClose}
                                 className={`flex h-12 items-center gap-3 rounded-xl px-3 font-mono text-[15px] ${active ? 'bg-active text-ink' : 'text-muted'}`}>
-                                <span className={`grid w-5 place-items-center text-sm ${iconColor}`}>
+                                <span className={`grid w-5 place-items-center text-sm ${navIconColor(item, active)}`}>
                                     {Icon ? <Icon size={15}/> : item.glyph}
                                 </span>
                                 {item.label}
