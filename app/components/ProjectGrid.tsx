@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import { Blueprint } from '~/components/Blueprint';
 import type { Project } from '~/data/projects';
 
 type Props = {
@@ -24,12 +25,18 @@ function ProjectCard({project}: { readonly project: Project }) {
             target="_blank"
             rel="noopener"
             className="relative flex flex-col overflow-hidden rounded-xl border border-line bg-surface shadow-card transition-[translate,border-color,box-shadow] duration-[320ms] ease-card hover:-translate-y-[3px] hover:border-line-strong hover:shadow-card-hover">
-            <div className="aspect-video overflow-hidden border-b border-line bg-sunken">
-                <img
-                    className="block h-[calc(100%+1px)] w-full object-cover"
-                    src={project.image}
-                    alt={project.title}
-                    loading="lazy"/>
+            <div className="overflow-hidden border-b border-line bg-sunken">
+                {project.art.kind === 'blueprint' ? (
+                    <Blueprint
+                        slug={project.art.slug}
+                        title={project.title}/>
+                ) : (
+                    <img
+                        className="block aspect-video w-full object-cover"
+                        src={project.art.src}
+                        alt={project.title}
+                        loading="lazy"/>
+                )}
             </div>
             <div className="flex min-w-0 flex-1 flex-col gap-1.5 px-4 pt-4 pb-3.5">
                 <span className="text-base font-semibold">{project.title}</span>

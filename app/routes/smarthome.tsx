@@ -1,7 +1,7 @@
 import { CloudSun, Lightbulb, MapPin, Zap } from 'lucide-react';
 import { Eyebrow, GroupHeading, H2_CLASS, PageHeader, SectionEyebrow } from '~/components/Headings';
 import { ProjectGrid } from '~/components/ProjectGrid';
-import { homeyApps, homeyLibraries } from '~/data/projects';
+import { homeyApps } from '~/data/projects';
 import { seo } from '~/lib/seo';
 
 const FEATURES = [
@@ -84,13 +84,6 @@ export default function Smarthome() {
                     count={homeyApps.length}
                     description="Apps I built for the Homey smart home platform. They add extra devices, integrations and logic to people's automation flows."/>
                 <ProjectGrid projects={homeyApps}/>
-            </section>
-
-            <section className="mt-14">
-                <GroupHeading
-                    title="Under the hood"
-                    description="Libraries that came out of these apps and are useful on their own."/>
-                <ProjectGrid projects={homeyLibraries}/>
             </section>
         </>
     );

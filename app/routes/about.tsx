@@ -1,6 +1,7 @@
 import { ArrowDown, ArrowUpRight } from 'lucide-react';
 import { useState } from 'react';
 import { siGithub } from 'simple-icons';
+import { Blueprint } from '~/components/Blueprint';
 import { BrandIcon } from '~/components/BrandIcon';
 import { Eyebrow, H1_CLASS, H2_CLASS, LEAD_CLASS, SectionEyebrow } from '~/components/Headings';
 import { PillLink, TextLink } from '~/components/Links';
@@ -112,11 +113,9 @@ function Ruimte() {
                     target="_blank"
                     rel="noopener"
                     className="block overflow-hidden rounded-[14px] border border-line shadow-card transition-[translate,box-shadow] duration-[320ms] ease-card hover:-translate-y-[3px] hover:shadow-card-hover">
-                    <img
-                        className="block aspect-[12/7] w-full bg-sunken object-cover"
-                        src="/image/work/blueprint-ruimte.svg"
-                        alt="Ruimte"
-                        loading="lazy"/>
+                    <Blueprint
+                        slug="ruimte"
+                        title="Ruimte"/>
                 </a>
             </div>
         </section>
