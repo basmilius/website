@@ -19,20 +19,8 @@ export const navigation: readonly NavItem[] = [
     {to: '/contact', label: 'contact.md', short: 'contact', shortcut: '5', railIcon: Mail, icon: Mail}
 ];
 
-const FILES: Readonly<Record<string, string>> = {
-    '/work': 'work/',
-    '/work/meteocons': 'work/meteocons.md',
-    '/smarthome': 'smarthome/',
-    '/about': 'about.md',
-    '/contact': 'contact.md'
-};
-
 export const CV_URL = '/bas-milius-cv.pdf';
 export const GITHUB_URL = 'https://github.com/basmilius';
-
-export function filePath(pathname: string): string {
-    return `~/${FILES[pathname.replace(/\/$/, '')] ?? ''}`;
-}
 
 export function isInSection(item: NavItem, pathname: string): boolean {
     if (item.to === '/') {

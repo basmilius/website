@@ -5,6 +5,10 @@ import { CV_URL, GITHUB_URL, navIcon, navIconColor, navigation } from '~/data/na
 import { useTheme, type Theme } from '~/lib/theme';
 import { BrandIcon } from '../BrandIcon';
 
+type SidebarContentProps = {
+    readonly onNavigate?: () => void;
+};
+
 type ExternalLinkProps = {
     readonly href: string;
     readonly label: string;
@@ -13,13 +17,22 @@ type ExternalLinkProps = {
 };
 
 export function Sidebar() {
+    return (
+        <aside className="sticky top-0 isolate hidden h-dvh w-[280px] flex-none flex-col self-start overflow-hidden border-r border-line bg-surface lg:flex">
+            <SidebarContent/>
+        </aside>
+    );
+}
+
+export function SidebarContent({onNavigate}: SidebarContentProps) {
     const {pathname} = useLocation();
 
     return (
-        <aside className="sticky top-0 isolate hidden h-dvh w-[280px] flex-none flex-col self-start overflow-hidden border-r border-line bg-surface lg:flex">
-            <div className="px-5 pt-14">
+        <>
+            <div className="px-5 pt-14 max-md:pt-8">
                 <Link
                     to="/"
+                    onClick={onNavigate}
                     className="flex items-center gap-3">
                     <img
                         className="size-[42px] flex-none"
@@ -42,12 +55,13 @@ export function Sidebar() {
                         <Link
                             key={item.to}
                             to={item.to}
-                            className={`flex h-[34px] items-center gap-2.5 rounded-[7px] px-2 font-mono text-sm transition-colors duration-[120ms] hover:bg-hover hover:text-ink ${active ? 'bg-active text-ink' : 'text-muted'}`}>
+                            onClick={onNavigate}
+                            className={`flex h-[34px] items-center gap-2.5 rounded-[7px] px-2 font-mono text-sm transition-colors duration-[120ms] hover:bg-hover hover:text-ink max-md:h-11 ${active ? 'bg-active text-ink' : 'text-muted'}`}>
                             <span className={`grid w-[18px] flex-none place-items-center text-[13px] ${navIconColor(item, active)}`}>
                                 {Icon ? <Icon size={14}/> : item.glyph}
                             </span>
                             <span className="min-w-0 flex-1 truncate">{item.label}</span>
-                            <kbd className="grid h-[18px] min-w-[18px] place-items-center rounded-[5px] border border-line font-sans text-[11px] text-faint">{item.shortcut}</kbd>
+                            <kbd className="grid h-[18px] min-w-[18px] place-items-center rounded-[5px] border border-line font-sans text-[11px] text-faint max-md:hidden">{item.shortcut}</kbd>
                         </Link>
                     );
                 })}
@@ -77,7 +91,7 @@ export function Sidebar() {
                 </span>
                 <ThemeSwitch/>
             </div>
-        </aside>
+        </>
     );
 }
 
@@ -87,7 +101,7 @@ function ExternalLink({href, label, icon, trail}: ExternalLinkProps) {
             href={href}
             target="_blank"
             rel="noopener"
-            className="flex h-[34px] items-center gap-2.5 rounded-[7px] px-2 font-mono text-sm text-muted hover:bg-hover hover:text-ink">
+            className="flex h-[34px] items-center gap-2.5 rounded-[7px] px-2 font-mono text-sm text-muted hover:bg-hover hover:text-ink max-md:h-11">
             <span className="grid w-[18px] place-items-center">{icon}</span>
             <span className="flex-1">{label}</span>
             <span className="text-faint">{trail}</span>

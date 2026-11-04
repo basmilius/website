@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router';
 import { navigation } from '~/data/navigation';
-import { MenuSheet } from './MenuSheet';
+import { MenuDrawer } from './MenuDrawer';
 import { MobileHeader } from './MobileHeader';
 import { Rail } from './Rail';
 import { Sidebar } from './Sidebar';
@@ -58,7 +58,7 @@ export function Shell({children}: Props) {
                 </div>
             </div>
 
-            <MenuSheet
+            <MenuDrawer
                 open={menuOpen}
                 onClose={() => setMenuOpen(false)}/>
         </>
