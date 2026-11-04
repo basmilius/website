@@ -13,7 +13,7 @@ The design board this comes from lives in `.ruimte/private/designs/design/Bluepr
 
 - `assets/logos/<slug>.svg`: the logo alone, without background, tightly cropped. Most come from the old `public/image/work/blueprint-*.svg` files. The language servers, Agent Skills and Apple Protocols have new logos because those projects have no real one.
 - `assets/logos/<slug>.dark.svg` and `<slug>.light.svg`: the same logo with another ink for one appearance.
-- `assets/logos/ruimte.png` and `ruimte.dark.png`: the Ruimte app icon (`AppIcon-iOS-Default-256@1x.png` and `AppIcon-iOS-Dark-256@1x.png` from `ruimte/assets/AppIcon.export`). An app icon is the one logo that stays a PNG, marked with `format: 'png'`. 256px stays sharp at 2x on every card size.
+- `assets/logos/ruimte.png`: the Ruimte app icon (`AppIcon-iOS-Default-256@1x.png` from `ruimte/assets/AppIcon.export`). The white icon is used in both appearances. An app icon is the one logo that stays a PNG, marked with `format: 'png'`. 256px stays sharp at 2x on every card size.
 - `assets/patterns/streamwithlien.svg`: the pattern from the Stream with Lien repository, without its orange fill, for use as a mask.
 - `assets/blueprints.ts`: logo sizes, variants, the icon set per project, the icon paths and the tile slots.
 
