@@ -43,8 +43,8 @@ export default function Meteocons() {
                         <span className="text-accent-text">meteocons</span>
                     </div>
                 )}
-                title="Animated Weather Icons"
-                lead="Over 500 unique animated weather icons. Free and open source."
+                title="Animated weather icons"
+                lead="Over 500 animated weather icons. Free and open source."
                 leadWidth=""/>
 
             <div className="mt-9 grid grid-cols-2 gap-3 sm:grid-cols-4">

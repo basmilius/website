@@ -54,11 +54,11 @@ export default function About() {
             </header>
 
             <div className="mt-9 flex max-w-[68ch] flex-col gap-4 text-base leading-[1.8] text-muted">
-                <p>I'm a self-taught developer from the Netherlands, and I work full-time at <TextLink to="https://www.axilium.com/">Axilium</TextLink>. Programming started as a hobby and turned into a career. In my spare time I still like to try new things in programming.</p>
+                <p>I'm a self-taught developer from the Netherlands, and I work full-time at <TextLink to="https://www.axilium.com/">Axilium</TextLink>. Programming started as a hobby and turned into a career, but I still tinker in my spare time.</p>
                 <p>Next to my job I work on projects of my own, many of them open source, which you can find on <TextLink to="/work">my work page</TextLink>. The biggest one right now is <TextLink to="https://ruimte.app">Ruimte</TextLink>, a workspace for coding with AI agents. Another is <TextLink to="https://meteocons.com">Meteocons</TextLink>, a free set of animated weather icons.</p>
                 <h3 className={SUBHEADING_CLASS}>Programming</h3>
-                <p>I started experimenting with code in 2008, mostly by tweaking other people's projects to see what happened when I changed something. Since then I've built up a lot of experience and a style of my own. In 2013 I won two gold medals for programming.</p>
-                <p>I write most of my code in JetBrains IDEs like PhpStorm and IntelliJ IDEA. Every project has its own GitHub repository, and I host everything on my own Debian server. A second, beefier Debian server runs my private projects and tools.</p>
+                <p>I started experimenting with code in 2008, mostly by tweaking other people's projects to see what happened when I changed something. Over the years that turned into a style of my own. In 2013 I won two gold medals for programming.</p>
+                <p>I write most of my code in JetBrains IDEs like PhpStorm and IntelliJ IDEA. Every project has its own GitHub repository, and I host most of it on my own Debian server. A second, beefier Debian server runs my private projects and tools.</p>
                 <h3 className={SUBHEADING_CLASS}>Working with AI</h3>
                 <p>Lately I lean on AI a lot. Tools like Claude Code help me move faster on complex projects. Reverse-engineering Apple's media protocols for my Homey app went a lot quicker with an agent iterating through the protocol layer with me. I still care about code that's well put together. AI just gets me there sooner.</p>
             </div>
@@ -128,7 +128,7 @@ function SkillWall() {
             <SectionEyebrow>## skills</SectionEyebrow>
             <div className="mt-2.5 flex flex-wrap items-end justify-between gap-3">
                 <div>
-                    <h2 className={H2_CLASS}>Skills &amp; Experience</h2>
+                    <h2 className={H2_CLASS}>Skills &amp; experience</h2>
                     <p className="mt-2 text-base text-muted">Programming languages, frameworks and more that I've worked with.</p>
                 </div>
                 <span className="font-mono text-[13px] text-faint">{skills.length} skills</span>

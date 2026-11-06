@@ -27,7 +27,7 @@ export default function Home() {
                 title="Bas Milius"
                 lead="Full-stack developer who builds websites, apps and backend applications."
                 leadWidth="max-w-[44ch]">
-                <p className={BODY_CLASS}>I like experimenting with new techniques, and now and then I tinker with tools like Figma and Docker. I enjoy coding on my own projects just as much as working on projects with others.</p>
+                <p className={BODY_CLASS}>Most of my work starts as something I want myself, like a workspace for AI agents or apps for our smart home. The rest I build for clients, from websites for local businesses to the backend systems of a holiday park.</p>
 
                 <Whoami/>
 

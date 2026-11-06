@@ -18,7 +18,7 @@ export default function Work() {
                 eyebrow={<Eyebrow to="/work">// ~/work</Eyebrow>}
                 title="Work"
                 lead="A mix of things I've built over the years. Some for myself or just for fun, others for the people and companies I've worked with.">
-                <p className={BODY_CLASS}>Some of it is open source, and a lot of it is client work for local businesses, websites as well as backend applications.</p>
+                <p className={BODY_CLASS}>The open-source projects are free to use. The client work is mostly websites for local businesses, plus a few backend applications.</p>
             </PageHeader>
 
             <section className="mt-12">

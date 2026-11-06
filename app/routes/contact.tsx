@@ -10,7 +10,7 @@ const EMAIL = 'bas@mili.us';
 export function meta() {
     return seo({
         title: 'Contact',
-        description: 'Get in touch with Bas Milius about a website, app or backend project. Company details, e-mail, phone and socials. Tap any detail to copy it.',
+        description: 'Get in touch with Bas Milius about a website, app or backend project. Company details, e-mail, phone and socials.',
         path: '/contact'
     });
 }
@@ -43,7 +43,7 @@ export default function Contact() {
                 <SectionHeading
                     eyebrow="// information"
                     title="Information"
-                    description="About my company and more. Tap any detail to copy it."/>
+                    description="Company details for quotes and invoices, and how to reach me. Tap any detail to copy it."/>
 
                 <div className="mt-5 grid grid-cols-[repeat(auto-fill,minmax(min(100%,320px),1fr))] gap-2.5">
                     {companyDetails.map(({icon: Icon, title, value}) => {

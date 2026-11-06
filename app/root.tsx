@@ -99,9 +99,9 @@ export function ErrorBoundary({error}: Route.ErrorBoundaryProps) {
             <PageHeader
                 eyebrow={<Eyebrow to="/">// {notFound ? '404' : 'error'}</Eyebrow>}
                 title={notFound ? 'Something\'s missing.' : 'Something went wrong.'}
-                lead={notFound ? 'The requested page was not found.' : 'An unexpected error occurred while loading this page.'}>
+                lead={notFound ? 'This page doesn\'t exist (yet).' : 'An unexpected error occurred while loading this page.'}>
                 {notFound && (
-                    <p className={BODY_CLASS}>The page you were looking for doesn't exist (yet). If you typed the URL yourself, check it for typos. If not, let me know!</p>
+                    <p className={BODY_CLASS}>If you typed the URL yourself, check it for typos. If you followed a link, let me know so I can fix it.</p>
                 )}
 
                 <div className="mt-7 flex flex-wrap items-center gap-2.5">
