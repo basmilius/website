@@ -19,10 +19,10 @@
     },
     "scripts": {
         "dev": "react-router dev --port 8080",
-        "build": "react-router build",
-        "preview": "bun run build && vite preview",
+        "build": "react-router build && cp build/client/__spa-fallback.html build/client/404.html",
+        "preview": "bun run build && wrangler dev",
         "typecheck": "react-router typegen && tsc",
-        "deploy": "react-router build && wrangler deploy"
+        "deploy": "bun run build && wrangler deploy"
     },
     "dependencies": {
         "isbot": "^5.2.2",
@@ -32,7 +32,6 @@
         "react-router": "^8.5.1"
     },
     "devDependencies": {
-        "@cloudflare/vite-plugin": "^1.67.0",
         "@react-router/dev": "^8.5.1",
         "@tailwindcss/vite": "^4.3.4",
         "@types/node": "^26.6.6",

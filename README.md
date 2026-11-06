@@ -15,15 +15,15 @@ To run the local development server, make sure the `bun` package manager is inst
 - **Start** the development server with `bun run dev` (runs on port 8080).
 
 ### 🧱 Tech stack
-- **React Router** in framework mode with **React 19**, on the Cloudflare Vite plugin.
+- **React Router** in framework mode with **React 19**, prerendered to static HTML.
 - **Tailwind CSS 4**, with the design tokens in `app/app.css`.
 - **Web fonts** served from `font.bmcdn.nl` (Geist, JetBrains Mono).
 - **Lucide** icons, and **Simple Icons** for brand logos.
 - Content lives in `app/data/*`, no CMS.
 
 ### 🚀 Production build & deploy
-The site is prerendered and served from Cloudflare Workers.
-- **Build** with `bun run build` (prerenders every route into `build/client`).
-- **Preview** the Worker locally with `bun run preview`.
-- **Deploy** to Cloudflare with `bun run deploy` (`react-router build && wrangler deploy`).
-- Redirects for old URLs live in `workers/app.ts`.
+The site is fully static. Cloudflare Workers serves it as static assets, without any Worker code.
+- **Build** with `bun run build` (prerenders every route into `build/client`, plus a `404.html`).
+- **Preview** the static build locally with `bun run preview`.
+- **Deploy** to Cloudflare with `bun run deploy`.
+- Redirects for old URLs live in `public/_redirects`.
