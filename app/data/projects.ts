@@ -79,7 +79,7 @@ export const projects = {
 
 export const featuredProjects: readonly Project[] = [
     projects.ruimte,
-    projects.flux,
+    projects.streamWithLien,
     projects.apple,
     projects.adecore,
     projects.meteocons,
@@ -88,7 +88,7 @@ export const featuredProjects: readonly Project[] = [
 
 export const recentProjects: readonly Project[] = [
     projects.ruimte,
-    projects.flux,
+    projects.streamWithLien,
     projects.meteocons
 ];
 
@@ -101,7 +101,7 @@ export const projectGroups: readonly ProjectGroup[] = [
     {
         title: 'For others',
         description: 'Websites and backend applications I built for clients, local businesses and friends.',
-        projects: alphabetical([projects.marveld, projects.deGrolscheGracht, projects.wpist, projects.manegeNijhuis, projects.erveNijhuis, projects.studioVierentwintig, projects.erveTank, projects.kapsalonLichtenberg, projects.ditoGroenlo])
+        projects: alphabetical([projects.streamWithLien, projects.marveld, projects.deGrolscheGracht, projects.wpist, projects.manegeNijhuis, projects.erveNijhuis, projects.studioVierentwintig, projects.erveTank, projects.kapsalonLichtenberg, projects.ditoGroenlo])
     },
     {
         title: 'Projects',
