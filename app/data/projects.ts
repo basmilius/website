@@ -58,7 +58,7 @@ export const projects = {
     sajr5: project('SAJ R5', 'Monitor your SAJ R5 solar inverter with real-time energy insights.', 'https://homey.app/a/com.basmilius.sajr5/', image('com.basmilius.sajr5.png')),
     jev: project('Jev', 'Ask questions in your Homey Flows and branch on the answer, powered by TypeSafe Jev.', 'https://homey.app/a/com.basmilius.jev/', image('com.basmilius.jev.png')),
     changelogs: project('Changelogs', 'Start a Flow with the release notes when an installed Homey app updates.', 'https://homey.app/a/com.basmilius.changelogs/', image('com.basmilius.changelogs.png')),
-    appleProtocols: project('Apple Protocols', 'TypeScript implementations of AirPlay 2, RAOP and Companion Link. The engine behind the Apple TV & HomePod app.', 'https://github.com/basmilius/apple-protocols', blueprint('apple-protocols')),
+    corewire: project('CoreWire', 'Talks to Apple TVs and HomePods from TypeScript, over AirPlay 2, MRP, RAOP and Companion Link. The engine behind the Apple TV & HomePod app.', 'https://corewire.dev', blueprint('corewire')),
     deGrolscheGracht: project('De Grolsche Gracht', 'Discover the best pubs along the Grolsche Gracht.', 'https://degrolschegracht.nl', blueprint('degrolschegracht')),
     ditoGroenlo: project('DITO Groenlo', 'Fun drama club in my local town, Groenlo.', 'https://dito-groenlo.nl', blueprint('dito')),
     erveNijhuis: project('Erve Nijhuis', 'Modern holiday house in Eibergen.', 'https://manege-nijhuis.nl/erve-nijhuis', blueprint('erve-nijhuis')),
@@ -96,7 +96,7 @@ export const projectGroups: readonly ProjectGroup[] = [
     {
         title: 'Open source',
         description: 'Freely available building blocks, frameworks and icon sets that anyone is welcome to use and contribute to.',
-        projects: alphabetical([projects.adecore, projects.appleProtocols, projects.skills, projects.lsCore, projects.lsSql, projects.lsPhp, projects.meteocons, projects.raxos, projects.flux, projects.sparkle, projects.packages])
+        projects: alphabetical([projects.adecore, projects.corewire, projects.skills, projects.lsCore, projects.lsSql, projects.lsPhp, projects.meteocons, projects.raxos, projects.flux, projects.sparkle, projects.packages])
     },
     {
         title: 'For others',

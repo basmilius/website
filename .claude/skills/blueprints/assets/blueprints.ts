@@ -114,5 +114,5 @@ export const blueprints: Record<string, Blueprint> = {
     'passly': {width: 367, height: 197, variant: 'dark', pattern: ['ticket', 'calendar', 'qr', 'note', 'ticket']},
     'ruimte': {width: 256, height: 256, format: 'png', pattern: ['canvas', 'terminal', 'chat', 'window', 'canvas']},
     'startdetijd': {width: 181, height: 180, pattern: ['clock', 'hourglass', 'stopwatch', 'clock', 'hourglass']},
-    'apple-protocols': {width: 325, height: 48, variant: 'dark', pattern: ['speaker', 'tv', 'play', 'signal', 'speaker']}
+    'corewire': {width: 170.67, height: 25.73, variant: 'dark', pattern: ['speaker', 'tv', 'play', 'signal', 'speaker']}
 };
