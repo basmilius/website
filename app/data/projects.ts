@@ -67,7 +67,7 @@ export const projects = {
     manegeNijhuis: project('Manege Nijhuis', 'Horse riding school in Eibergen.', 'https://manege-nijhuis.nl', blueprint('manege-nijhuis')),
     marveld: project('Marveld Recreatie', 'Bungalow park, camping and hotel. Backend applications by me.', 'https://marveld.nl', blueprint('marveld')),
     studioVierentwintig: project('Studio Vierentwintig', 'Photo studio in my local town, Groenlo.', 'https://studiovierentwintig.nl', blueprint('studiovierentwintig')),
-    streamWithLien: project('Stream with Lien', 'Home of Lien, a Dutch variety streamer who games, DJs and goes live with her Familien every week.', 'https://streamwithlien.com', blueprint('streamwithlien')),
+    streamWithLien: project('Stream with Lien', 'Website for Dutch streamer Lien, with her schedule, socials and the Familien community.', 'https://streamwithlien.com', blueprint('streamwithlien')),
     wpist: project('WPIST Registration', 'Registration form for the WPIST indoor soccer tournament.', 'https://wpist-indoorsoccer.nl', blueprint('wpist')),
     ruimte: project('Ruimte', 'Space for AI engineering. A workspace that puts coding agents, terminals and browsers side by side.', 'https://ruimte.app', blueprint('ruimte')),
     adecore: project('ADE CORE', 'The shared core of agentic development environments: UI, terminal and shell.', 'https://github.com/basmilius/adecore', blueprint('adecore')),
