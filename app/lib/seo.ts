@@ -2,7 +2,7 @@ import type { MetaDescriptor } from 'react-router';
 
 export const SITE_URL = 'https://bas.dev';
 
-const SITE_TITLE = 'Bas Milius - Full-Stack Developer';
+const SITE_TITLE = 'Bas Milius - Full-Stack & AI Engineer';
 
 type SeoOptions = {
     readonly title?: string;
@@ -29,7 +29,7 @@ export function seo({title, description, path, noIndex = false}: SeoOptions): Me
         {property: 'og:image', content: `${SITE_URL}/og-image.png`},
         {property: 'og:image:width', content: '2400'},
         {property: 'og:image:height', content: '1260'},
-        {property: 'og:image:alt', content: 'Bas Milius, Full-Stack Developer'},
+        {property: 'og:image:alt', content: 'Bas Milius, Full-Stack & AI Engineer'},
         {name: 'twitter:card', content: 'summary_large_image'},
         {name: 'twitter:site', content: '@basmilius'},
         {name: 'twitter:creator', content: '@basmilius'}

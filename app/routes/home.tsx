@@ -14,7 +14,7 @@ const PURSUITS = ['building websites', 'crafting web apps', 'shipping open sourc
 
 export function meta() {
     return seo({
-        description: 'Bas Milius is a full-stack developer from the Netherlands. I build websites, apps and backend systems, and open-source projects like Ruimte, Meteocons and Flux UI.',
+        description: 'Bas Milius is a full-stack and AI engineer from the Netherlands. I build tools for AI engineering, websites, apps and backend systems, and open-source projects like Ruimte, Meteocons and Flux UI.',
         path: '/'
     });
 }
@@ -25,7 +25,7 @@ export default function Home() {
             <PageHeader
                 eyebrow={<Eyebrow to="/">// ~/</Eyebrow>}
                 title="Bas Milius"
-                lead="Full-stack developer who builds websites, apps and backend applications."
+                lead="Full-stack developer who builds tools for AI engineering, plus websites, apps and backends for clients."
                 leadWidth="max-w-[44ch]">
                 <p className={BODY_CLASS}>Most of my work starts as something I want myself, like a workspace for AI agents or apps for our smart home. The rest I build for clients, from websites for local businesses to the backend systems of a holiday park.</p>
 
@@ -95,7 +95,7 @@ function Whoami() {
             </div>
             <div className="px-[18px] pt-4 pb-[18px] font-mono text-[14.5px] leading-[1.85]">
                 <div>{prompt} whoami</div>
-                <div className="text-[#ececf1]">Bas Milius, full-stack developer</div>
+                <div className="text-[#ececf1]">Bas Milius, full-stack & AI engineer</div>
                 <div className="mt-1.5">{prompt} echo $CURRENTLY</div>
                 <div className="flex items-baseline text-[#ececf1]">
                     <span className="mr-[.6em] text-[#fbbf24]">&gt;</span>

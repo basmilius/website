@@ -18,8 +18,8 @@ const PERSON = {
     name: 'Bas Milius',
     url: SITE_URL,
     image: `${SITE_URL}/image/bas.jpg`,
-    jobTitle: 'Full-Stack Developer',
-    description: 'Full-stack developer from Groenlo, the Netherlands.',
+    jobTitle: 'Full-Stack & AI Engineer',
+    description: 'Full-stack and AI engineer from Groenlo, the Netherlands.',
     address: {
         '@type': 'PostalAddress',
         addressLocality: 'Groenlo',

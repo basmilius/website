@@ -40,10 +40,10 @@ export function SidebarContent({onNavigate}: SidebarContentProps) {
                         alt="Bas Milius"/>
                     <span className="flex flex-col gap-0.5">
                         <span className="text-lg leading-[1.15] font-semibold">Bas Milius</span>
-                        <span className="font-mono text-[12.5px] text-accent-text">full-stack developer</span>
+                        <span className="font-mono text-[12.5px] text-accent-text">full-stack & AI engineer</span>
                     </span>
                 </Link>
-                <p className="mt-4 text-[13.5px] leading-[1.6] text-muted">Full-stack developer from the Netherlands, building open-source tools, smart home integrations, and the occasional product.</p>
+                <p className="mt-4 text-[13.5px] leading-[1.6] text-muted">Full-stack and AI engineer from the Netherlands, building open-source tools for AI engineering, smart home integrations, and the occasional product.</p>
             </div>
 
             <nav className="mt-5 flex flex-col gap-px px-2.5">

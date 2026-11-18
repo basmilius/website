@@ -33,7 +33,7 @@ const SUBHEADING_CLASS = 'mt-3.5 text-[21px] font-semibold text-ink';
 export function meta() {
     return seo({
         title: 'About',
-        description: 'Self-taught full-stack developer from the Netherlands. My story, the tools I use, how I work with AI and Ruimte, my skills and my work experience.',
+        description: 'Self-taught full-stack and AI engineer from the Netherlands. My story, the tools I use, how I work with AI and Ruimte, my skills and my work experience.',
         path: '/about'
     });
 }
@@ -45,7 +45,7 @@ export default function About() {
                 <div className="min-w-0 flex-[1_1_380px]">
                     <Eyebrow to="/about">// ~/about</Eyebrow>
                     <h1 className={H1_CLASS}>Hi! I'm Bas</h1>
-                    <p className={`${LEAD_CLASS} max-w-[44ch]`}>Full-stack developer from the Netherlands. I build websites, apps and backend applications, for myself and for others.</p>
+                    <p className={`${LEAD_CLASS} max-w-[44ch]`}>Full-stack and AI engineer from the Netherlands. I build tools for AI engineering, plus websites, apps and backend applications, for myself and for others.</p>
                 </div>
                 <img
                     className="size-[148px] flex-none rounded-3xl border border-line bg-sunken object-cover"

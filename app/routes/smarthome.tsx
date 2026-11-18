@@ -40,7 +40,7 @@ export default function Smarthome() {
                         alt="Thuis, the 3D dashboard of our house running on an iPad Pro"/>
                     <figcaption className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 border-t border-line bg-surface px-4 py-3 font-mono text-[12.5px] text-muted">
                         <span>Thuis on an iPad Pro, mounted on the wall</span>
-                        <span className="text-faint">private project · source available</span>
+                        <span className="text-faint">private project</span>
                     </figcaption>
                 </figure>
 
