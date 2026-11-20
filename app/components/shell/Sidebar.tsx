@@ -84,11 +84,7 @@ export function SidebarContent({onNavigate}: SidebarContentProps) {
                     trail={<ArrowDown size={12}/>}/>
             </nav>
 
-            <div className="mt-auto flex items-center justify-between gap-3 border-t border-line-soft px-5 pt-4 pb-5">
-                <span className="flex items-center gap-2 font-mono text-xs text-muted">
-                    <span className="size-[7px] animate-beacon rounded-full bg-green"/>
-                    Groenlo, NL
-                </span>
+            <div className="mt-auto flex items-center justify-end border-t border-line-soft px-5 pt-4 pb-5">
                 <ThemeSwitch/>
             </div>
         </>

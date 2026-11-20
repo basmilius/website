@@ -13,18 +13,11 @@
     --ease-card: cubic-bezier(.2, .7, .2, 1);
 
     --animate-blink: blink 1.05s steps(1) infinite;
-    --animate-beacon: beacon 2s cubic-bezier(.4, 0, .6, 1) infinite;
     --animate-rise: rise .32s var(--ease-site) both;
 
     @keyframes blink {
         50% {
             opacity: 0;
-        }
-    }
-
-    @keyframes beacon {
-        50% {
-            opacity: .45;
         }
     }
 
