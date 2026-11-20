@@ -52,7 +52,7 @@ export function GroupHeading({title, count, description}: GroupHeadingProps) {
             <div className="flex items-center gap-3.5">
                 <h2 className="text-[22px] font-semibold">{title}</h2>
                 {count !== undefined && (
-                    <span className="font-mono text-xs text-faint">{count}</span>
+                    <span className="inline-flex h-5 items-center rounded-full bg-sunken px-2 font-mono text-xs text-muted">{count}</span>
                 )}
                 <span className="h-px flex-1 bg-line"/>
             </div>
