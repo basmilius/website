@@ -11,12 +11,12 @@ const FEATURES = [
     {icon: CloudSun, text: 'Daylight, clouds and rain, and a camera that opens up the house per floor.'}
 ];
 
-const STACK = ['TypeScript', 'three.js', 'React', 'Swift 6', 'RealityKit', 'Metal', 'Homey Local API'];
+const STACK = ['Blender', 'Swift 6', 'Metal', 'RealityKit', 'TypeScript', 'WeatherKit', 'Homey Local API'];
 
 export function meta() {
     return seo({
         title: 'Smart home',
-        description: 'The smart home side of Bas Milius: Thuis, a procedural 3D dashboard of our house, and apps for the Homey platform like Apple TV & HomePod, FlowBits and Claude.',
+        description: 'The smart home side of Bas Milius: Thuis, a 3D dashboard of our house, and apps for the Homey platform like Apple TV & HomePod, FlowBits and Claude.',
         path: '/smarthome'
     });
 }
@@ -46,8 +46,8 @@ export default function Smarthome() {
 
                 <div className="mt-7 grid grid-cols-1 gap-x-12 gap-y-6 min-[1100px]:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)]">
                     <div className="flex flex-col gap-3.5 text-base leading-[1.75] text-muted">
-                        <p><strong className="font-semibold text-ink">Thuis</strong> is a procedural 3D dashboard of our house, connected to Homey. It runs as a fixed wall dashboard on an iPad Pro, with a web version that serves as the development environment and visual reference.</p>
-                        <p>There are no hand-made 3D files. The house, the garden and the furniture are built from one TypeScript data model, and walls, roofs, materials, textures and animations are generated during the build. A small iOS scanner app turns photos and measurements into furniture models.</p>
+                        <p><strong className="font-semibold text-ink">Thuis</strong> is a 3D dashboard of our house, connected to Homey. It runs as a native app on an iPad Pro mounted on the wall.</p>
+                        <p>The house, the garden and the furniture are modeled in Blender and exported as GLB files. A TypeScript data model holds the measured house, where everything stands and which Homey device belongs where. A small iOS scanner app collects photos and measurements as reference for the models.</p>
                         <p>The style is deliberately a diorama. Material, light, soft shadows and ambient occlusion make the shape readable without chasing photorealism.</p>
                     </div>
 
